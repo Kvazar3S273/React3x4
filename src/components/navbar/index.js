@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../../src/3x4logo.png";
 
 export class Navbar extends Component {
@@ -6,9 +7,9 @@ export class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             <img src={logo} alt="" width="100" />
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -23,112 +24,138 @@ export class Navbar extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Головна
-                </a>
+                </Link>
               </li>
 
               <li className="navbar-nav nav-item dropdown">
-                <a
+                <Link
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  to="/photo"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="true"
                 >
                   Фотопослуги
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                </Link>
+                <ul className="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/photo">
                       Фото на документи
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="#">
                       Фотодрук
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="#">
                       Сканування фото
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
 
               <li className="nav-item dropdown">
-                <a
+                <Link
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  to="/comp"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Комп'ютерні послуги
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                </Link>
+                <ul className="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/comp">
                       Ксерокопії, друк
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="#">
                       Сканування
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="#">
                       Ламінування
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
 
               <li className="nav-item dropdown">
-                <a
+                <Link
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  to="/poligraph"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Поліграфія
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                </Link>
+                <ul className="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/poligraph">
                       Візитки
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="#">
                       Листівки
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="#">
                       Календарики
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
 
               <li className="nav-item">
-                <a
+                <Link
                   className="nav-link text-white-50"
                   aria-current="page"
-                  href="#"
+                  to="/contacts"
                 >
                   Контакти
-                </a>
+                </Link>
+              </li>
+
+              
+              
+            </ul>
+
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0"> 
+            <li className="nav-item ">
+                <Link
+                  className="nav-link text-end text-white-50"
+                  aria-current="page"
+                  to="/register"
+                >
+                  Реєстрація
+                </Link>
+              </li>
+              <li className="nav-item ">
+                <Link
+                  className="nav-link text-white-50"
+                  aria-current="page"
+                  to="/login"
+                >
+                  Вхід
+                </Link>
               </li>
             </ul>
-            <form className="d-flex">
+            
+            
+            {/* <form className="d-flex">
               <input
                 className="form-control me-2"
                 type="search"
@@ -138,7 +165,8 @@ export class Navbar extends Component {
               <button className="btn btn-outline-success" type="submit">
                 Пошук
               </button>
-            </form>
+            </form> */}
+            
           </div>
         </div>
       </nav>
