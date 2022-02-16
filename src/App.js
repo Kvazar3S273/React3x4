@@ -18,7 +18,7 @@ class App extends React.Component {
     return (
       <Router>
         <Navbar />
-        <div className="container">
+        {/* <div className="container"> */}
           <Switch>
             <Route exact path="/login">
               <LoginPage />
@@ -46,7 +46,7 @@ class App extends React.Component {
 
                         
           </Switch>
-        </div>
+        {/* </div> */}
       </Router>
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './index.css';
+import './indexreg.css';
 
 export class RegisterPage extends Component {
   state = {

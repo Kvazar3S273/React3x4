@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './index.css';
+import './indexlog.css';
 
 export class LoginPage extends Component {
   render() {
@@ -17,12 +17,14 @@ export class LoginPage extends Component {
               </div>
               <label className="remember">
                 <input type="checkbox" />
-                 Запам'ятати мене
+                  Запам'ятати мене
               </label>
               <div className="inputBx">
                 <input type="submit" value="Увійти" />
               </div>
             </form>
+            <p>Забули пароль</p>
+            <p>Зареєструватись</p>
           </div>
         </div>
       </section>
