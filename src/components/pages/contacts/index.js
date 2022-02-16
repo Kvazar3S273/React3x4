@@ -4,7 +4,7 @@ export class ContactsPage extends Component {
   render() {
     return (
       <div>
-        <h2 className="text-light">Контакти</h2>
+        <h2 className="text-dark">Контакти</h2>
       </div>
     )
   }

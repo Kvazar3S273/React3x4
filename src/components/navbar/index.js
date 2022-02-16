@@ -40,9 +40,17 @@ export class Navbar extends Component {
                 >
                   Фотопослуги
                 </Link>
-                <ul className="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+                <ul
+                  className="dropdown-menu bg-secondary"
+                  aria-labelledby="navbarDropdown"
+                >
                   <li>
                     <Link className="dropdown-item" to="/photo">
+                      Повний перелік
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="#">
                       Фото на документи
                     </Link>
                   </li>
@@ -70,9 +78,17 @@ export class Navbar extends Component {
                 >
                   Комп'ютерні послуги
                 </Link>
-                <ul className="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+                <ul
+                  className="dropdown-menu bg-secondary"
+                  aria-labelledby="navbarDropdown"
+                >
                   <li>
                     <Link className="dropdown-item" to="/comp">
+                      Повний перелік
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="#">
                       Ксерокопії, друк
                     </Link>
                   </li>
@@ -100,9 +116,17 @@ export class Navbar extends Component {
                 >
                   Поліграфія
                 </Link>
-                <ul className="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+                <ul
+                  className="dropdown-menu bg-secondary"
+                  aria-labelledby="navbarDropdown"
+                >
                   <li>
                     <Link className="dropdown-item" to="/poligraph">
+                      Повний перелік
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="#">
                       Візитки
                     </Link>
                   </li>
@@ -128,13 +152,10 @@ export class Navbar extends Component {
                   Контакти
                 </Link>
               </li>
-
-              
-              
             </ul>
 
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0"> 
-            <li className="nav-item ">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item ">
                 <Link
                   className="nav-link text-end text-white-50"
                   aria-current="page"
@@ -153,8 +174,7 @@ export class Navbar extends Component {
                 </Link>
               </li>
             </ul>
-            
-            
+
             {/* <form className="d-flex">
               <input
                 className="form-control me-2"
@@ -166,7 +186,6 @@ export class Navbar extends Component {
                 Пошук
               </button>
             </form> */}
-            
           </div>
         </div>
       </nav>
