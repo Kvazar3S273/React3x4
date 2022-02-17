@@ -1,31 +1,52 @@
 import React, { Component } from "react";
-import './indexreg.css';
+import TextBoxField from "../../common/TextBoxField";
+import "./indexreg.css";
 
 export class RegisterPage extends Component {
   state = {
     email: "",
     password: "",
   };
+
+  onChangeHandler = (e) => {
+    // console.log("onChange name", e.target.name);
+    // console.log("onChange value", e.target.value);
+    this.setState({[e.target.name]:e.target.value});
+  };
+
   render() {
+    console.log("state", this.state);
+    const{email,password}=this.state;
     return (
       <section>
         <div className="box">
           <div className="form">
             <h2>Реєстрація</h2>
             <form>
-              <div className="inputBx">
-                <input type="text" placeholder="Email" />
-              </div>
-              <div className="inputBx">
-                <input type="password" placeholder="Password" />
-              </div>
-              {/* <label className="remember">
-                <input type="checkbox" />
-                Запам'ятати мене
-              </label> */}
-              <div className="inputBx">
+              <TextBoxField
+              field="email"
+              value={email}
+              placeholder="Email"
+              onChangeHandler={this.onChangeHandler}
+              />
+              <TextBoxField
+              field="password"
+              type="password"
+              value={password}
+              placeholder="Password"
+              onChangeHandler={this.onChangeHandler}
+              />
+              <TextBoxField
+              field=""
+              type="submit"
+              value="Реєструватись"
+              placeholder=""
+              onChangeHandler={this.onChangeHandler}
+              />
+
+              {/* <div className="inputBx">
                 <input type="submit" value="Реєструватись" />
-              </div>
+              </div> */}
             </form>
           </div>
         </div>

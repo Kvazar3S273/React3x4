@@ -14,7 +14,7 @@ section
     min-height: 100vh;
     /* background: linear-gradient(-30deg, #66abd3 0%, #3a78b7 50%,
     #262626 50%, #575757 100%); */
-    background: linear-gradient(-20deg, rgb(24, 22, 22), rgb(59, 57, 57));
+    /*background: linear-gradient(-20deg, rgb(24, 22, 22), rgb(59, 57, 57));*/
     animation: animate 10s linear infinite;
     background-blend-mode: multiply;
     background-image: url(https://images.pexels.com/photos/4590385/pexels-photo-4590385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
