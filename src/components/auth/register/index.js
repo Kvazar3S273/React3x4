@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import authService from "../../../services/auth.service";
 import TextBoxField from "../../common/TextBoxField";
 import "./indexreg.css";
 
@@ -11,37 +12,48 @@ export class RegisterPage extends Component {
   onChangeHandler = (e) => {
     // console.log("onChange name", e.target.name);
     // console.log("onChange value", e.target.value);
-    this.setState({[e.target.name]:e.target.value});
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  onSubmitFormHandler = async (e) => {
+    e.preventDefault();
+    console.log("Відправка на сервер", this.state);
+    try {
+      const result = await authService.register(this.state);
+      console.log("Server is good", result);
+    } catch (error) {
+      console.log("Server is bad", error.responce);
+    }
   };
 
   render() {
-    console.log("state", this.state);
-    const{email,password}=this.state;
+    //console.log("state", this.state);
+    const { email, password } = this.state;
     return (
       <section>
         <div className="box">
           <div className="form">
             <h2>Реєстрація</h2>
-            <form>
+            <form onSubmit={this.onSubmitFormHandler}>
               <TextBoxField
-              field="email"
-              value={email}
-              placeholder="Email"
-              onChangeHandler={this.onChangeHandler}
+                field="email"
+                value={email}
+                placeholder="Email"
+                onChangeHandler={this.onChangeHandler}
               />
               <TextBoxField
-              field="password"
-              type="password"
-              value={password}
-              placeholder="Password"
-              onChangeHandler={this.onChangeHandler}
+                field="password"
+                type="password"
+                value={password}
+                placeholder="Password"
+                onChangeHandler={this.onChangeHandler}
               />
               <TextBoxField
-              field=""
-              type="submit"
-              value="Реєструватись"
-              placeholder=""
-              onChangeHandler={this.onChangeHandler}
+                field=""
+                type="submit"
+                value="Реєструватись"
+                placeholder=""
+                onChangeHandler={this.onChangeHandler}
               />
 
               {/* <div className="inputBx">
