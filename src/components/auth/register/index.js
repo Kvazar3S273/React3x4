@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom/cjs/react-router-dom.min";
 import authService from "../../../services/auth.service";
 import TextBoxField from "../../common/TextBoxField";
 import "./indexreg.css";
@@ -6,7 +7,7 @@ import "./indexreg.css";
 export class RegisterPage extends Component {
   state = {
     email: "",
-    password: "",
+    password: ""
   };
 
   onChangeHandler = (e) => {
@@ -21,8 +22,9 @@ export class RegisterPage extends Component {
     try {
       const result = await authService.register(this.state);
       console.log("Server is good", result);
+      this.props.history.push("/");
     } catch (error) {
-      console.log("Server is bad", error.responce);
+      console.log("Server is bad", error.response);
     }
   };
 
@@ -48,17 +50,17 @@ export class RegisterPage extends Component {
                 placeholder="Password"
                 onChangeHandler={this.onChangeHandler}
               />
-              <TextBoxField
+              {/* <TextBoxField
                 field=""
                 type="submit"
                 value="Реєструватись"
                 placeholder=""
                 onChangeHandler={this.onChangeHandler}
-              />
+              /> */}
 
-              {/* <div className="inputBx">
+              <div className="inputBx">
                 <input type="submit" value="Реєструватись" />
-              </div> */}
+              </div>
             </form>
           </div>
         </div>
@@ -87,4 +89,4 @@ export class RegisterPage extends Component {
   }
 }
 
-export default RegisterPage;
+export default withRouter(RegisterPage);
