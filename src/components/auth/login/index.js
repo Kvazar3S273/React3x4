@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './indexlog.css';
+//import './indexlog.css';
 
 export class LoginPage extends Component {
   render() {
