@@ -8,7 +8,10 @@ import TextBoxField from "../../common/TextBoxField";
 export class RegisterPage extends Component {
   state = {
     email: "",
-    password: ""
+    password: "",
+    confirmPassword: "",
+    errormessages: {
+    }
   };
 
   onChangeHandler = (e) => {
@@ -25,72 +28,60 @@ export class RegisterPage extends Component {
       console.log("Server is good", result);
       this.props.history.push("/");
     } catch (error) {
-      console.log("Server is bad", error.response);
+      // console.log("Server is bad", error.response);
+      var err = error.response.data.errors;
+      var takeerr = Object.keys(err).map((key) => err[key]);
+      const listErrors = takeerr.map((item) => <li key={item}>{item}</li>);
+      this.setState({ errormessages: listErrors });
+      console.log(this.state.errormessages);
     }
   };
 
   render() {
     //console.log("state", this.state);
-    const { email, password } = this.state;
+    const { email, password, confirmPassword, errormessages, num } = this.state;
     return (
       <div className="row">
-        <div className="offset-md-3 col-md-6">
+        <div className="offset-md-4 col-md-4">
           <h2 className="text-center mt-3">Реєстрація</h2>
-          <form onSubmit={this.onSubmitFormHandler}>
+          <form
+            className="row g-3 was-validated"
+            onSubmit={this.onSubmitFormHandler}
+          >
             <TextBoxField
               field="email"
               label="E-mail"
-              placeholder="Email"
+              num="0"
               value={email}
               onChangeHandler={this.onChangeHandler}
             />
+            <span className="text-danger">{errormessages[num]}</span>
+
             <TextBoxField
               field="password"
-              label="Password"
+              label="Пароль"
+              num="1"
               type="password"
-              placeholder="Password"
               value={password}
               onChangeHandler={this.onChangeHandler}
             />
+            <span className="text-danger">{errormessages[num]}</span>
 
-            <button type="submit" className="btn btn-primary">Реєструватись</button>
+            <TextBoxField
+              field="confirmPassword"
+              label="Підтвердження пароля"
+              num="2"
+              type="password"
+              value={confirmPassword}
+              onChangeHandler={this.onChangeHandler}
+            />
+
+            <button type="submit" className="btn btn-primary mt-4">
+              Реєструватись
+            </button>
           </form>
         </div>
       </div>
-
-      // <section>
-      //   <div className="box">
-      //     <div className="form">
-      //       <h2>Реєстрація</h2>
-      //       <form onSubmit={this.onSubmitFormHandler}>
-      //         <TextBoxField
-      //           field="email"
-      //           value={email}
-      //           placeholder="Email"
-      //           onChangeHandler={this.onChangeHandler}
-      //         />
-      //         <TextBoxField
-      //           field="password"
-      //           type="password"
-      //           value={password}
-      //           placeholder="Password"
-      //           onChangeHandler={this.onChangeHandler}
-      //         />
-      //         {/* <TextBoxField
-      //           field=""
-      //           type="submit"
-      //           value="Реєструватись"
-      //           placeholder=""
-      //           onChangeHandler={this.onChangeHandler}
-      //         /> */}
-
-      //         <div className="inputBx">
-      //           <input type="submit" value="Реєструватись" />
-      //         </div>
-      //       </form>
-      //     </div>
-      //   </div>
-      // </section>
     );
   }
 }
