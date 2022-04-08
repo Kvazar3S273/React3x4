@@ -173,6 +173,36 @@ export class Navbar extends Component {
                   Вхід
                 </Link>
               </li>
+
+              <li className="navbar-nav nav-item dropdown">
+                <Link
+                  className="nav-link dropdown-toggle"
+                  to="/"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="true"
+                >
+                  Language
+                </Link>
+                <ul
+                  className="dropdown-menu bg-secondary"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <li>
+                    <Link className="dropdown-item" to="#">
+                      Українська
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="#">
+                      English
+                    </Link>
+                  </li>
+                  
+                </ul>
+              </li>
+
             </ul>
 
             {/* <form className="d-flex">

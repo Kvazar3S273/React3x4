@@ -1,35 +1,50 @@
-import React, { Component } from 'react'
-//import './indexlog.css';
+import React, { useState } from "react";
+import { Formik, Form } from "formik";
+import MyTextInput from "../../common/MyTextInput";
 
-export class LoginPage extends Component {
-  render() {
-    return (
-      <section>
-        <div className="box">
-          <div className="form">
-            <h2>Вхід</h2>
-            <form>
-              <div className="inputBx">
-                <input type="text" placeholder="Email" />
-              </div>
-              <div className="inputBx">
-                <input type="password" placeholder="Password" />
-              </div>
-              <label className="remember">
-                <input type="checkbox" />
-                  Запам'ятати мене
-              </label>
-              <div className="inputBx">
-                <input type="submit" value="Увійти" />
-              </div>
-            </form>
-            <p>Забули пароль</p>
-            <p>Зареєструватись</p>
-          </div>
-        </div>
-      </section>
-    )
-  }
-}
+const LoginPage = () => {
+ 
+  return (
+    <div className="row">
+        <div className="offset-md-4 col-md-4">
+          <h2 className="text-center mt-3">Вхід на сайт</h2>
+
+      
+      <Formik
+        initialValues={{
+          email: "",
+          password: ""
+        }}
+        onSubmit={(values) => {
+          console.log("values submit", values);
+        }}
+      >
+        <Form>
+          
+          <MyTextInput 
+          label="Логін"
+          id="email" 
+          name="email" 
+          type="text" 
+          />
+
+          <MyTextInput 
+          label="Пароль" 
+          id="password"
+          name="password" 
+          type="password" 
+          />
+          
+          <input 
+          type="submit" 
+          className="btn btn-primary mt-4"
+          value="Вхід">
+            </input>  
+        </Form>
+      </Formik>
+    </div>
+    </div>
+  );
+};
 
 export default LoginPage;
