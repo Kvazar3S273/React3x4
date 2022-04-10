@@ -174,7 +174,7 @@ export class Navbar extends Component {
                 </Link>
               </li>
 
-              <li className="navbar-nav nav-item dropdown">
+              {/* <li className="navbar-nav nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
                   to="/"
@@ -201,7 +201,7 @@ export class Navbar extends Component {
                   </li>
                   
                 </ul>
-              </li>
+              </li> */}
 
             </ul>
 

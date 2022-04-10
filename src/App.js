@@ -6,12 +6,14 @@ import {
   Route
 } from "react-router-dom";
 import Navbar from "./components/navbar";
+import HomePage from "./components/pages/home";
+import PhotoPage from "./components/pages/photo";
+import FNDPage from "./components/pages/photo/fnd";
+import CompPage from "./components/pages/comp";
+import PoligraphPage from "./components/pages/poligraph";
+import ContactsPage from "./components/pages/contacts";
 import RegisterPage from "./components/auth/register";
 import LoginPage from "./components/auth/login";
-import ContactsPage from "./components/pages/contacts";
-import PoligraphPage from "./components/pages/poligraph";
-import CompPage from "./components/pages/comp";
-import PhotoPage from "./components/pages/photo";
 
 class App extends React.Component {
   render() {
@@ -20,6 +22,10 @@ class App extends React.Component {
         <Navbar />
         {/* <div className="container"> */}
           <Switch>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+
             <Route exact path="/login">
               <LoginPage />
             </Route>
@@ -30,6 +36,10 @@ class App extends React.Component {
 
             <Route exact path="/photo">
               <PhotoPage />
+            </Route>
+            
+            <Route exact path="/photo/:fnd">
+              <FNDPage />
             </Route>
 
             <Route exact path="/comp">

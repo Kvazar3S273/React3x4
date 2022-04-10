@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 
-export class PhotoPage extends Component {
-  render() {
-    return (
-      <div>
-        <h2 className="text-dark">Фотопослуги+</h2>
+const PhotoPage = () => {
+  return (
+    <div className="row">
+      <div className="offset-md-4 col-md-4">
+        <h2 className="text-center mt-3">Фотопослуги</h2>
       </div>
-    )
-  }
-}
-
-export default PhotoPage
+    </div>
+  );
+};
+export default PhotoPage;
