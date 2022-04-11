@@ -9,6 +9,9 @@ import Navbar from "./components/navbar";
 import HomePage from "./components/pages/home";
 import PhotoPage from "./components/pages/photo";
 import FNDPage from "./components/pages/photo/fnd";
+import PhotobooksPage from "./components/pages/photo/photobooks";
+import PhotoprintPage from "./components/pages/photo/photoprint";
+import ScanPage from "./components/pages/photo/scan";
 import CompPage from "./components/pages/comp";
 import PoligraphPage from "./components/pages/poligraph";
 import ContactsPage from "./components/pages/contacts";
@@ -38,8 +41,20 @@ class App extends React.Component {
               <PhotoPage />
             </Route>
             
-            <Route exact path="/photo/:fnd">
+            <Route exact path="/photo/fnd">
               <FNDPage />
+            </Route>
+
+            <Route exact path="/photo/photobooks">
+              <PhotobooksPage />
+            </Route>
+
+            <Route exact path="/photo/photoprint">
+              <PhotoprintPage />
+            </Route>
+
+            <Route exact path="/photo/scan">
+              <ScanPage />
             </Route>
 
             <Route exact path="/comp">

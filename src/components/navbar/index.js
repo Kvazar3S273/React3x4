@@ -5,7 +5,7 @@ import logo from "../../../src/3x4logo.png";
 export class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
           <Link className="navbar-brand" to="/">
             <img src={logo} alt="" width="100" />
@@ -50,18 +50,23 @@ export class Navbar extends Component {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="#">
+                    <Link className="dropdown-item" to="/photo/fnd">
                       Фото на документи
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="#">
+                    <Link className="dropdown-item" to="/photo/photoprint">
                       Фотодрук
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="#">
+                    <Link className="dropdown-item" to="/photo/scan">
                       Сканування фото
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/photo/photobooks">
+                      Фотокниги
                     </Link>
                   </li>
                 </ul>
