@@ -2,9 +2,21 @@ import React, { useState } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from 'yup';
 import MyTextInput from "../../common/MyTextInput";
+import { useDispatch } from "react-redux";
 
 const LoginPage = () => {
  
+  const initState = {
+    email: "",
+    password: "",
+  };
+
+  const dispatch = useDispatch();
+
+  const loginComplete = (e) => {
+    e.preventDefault();
+    dispatch({type: "LOGINED_EVENT"});
+  }
   return (
     <div className="row">
         <div className="offset-md-4 col-md-4">
@@ -49,6 +61,12 @@ const LoginPage = () => {
           type="submit" 
           className="btn btn-primary mt-4"
           value="Вхід">
+            </input>  
+          <input 
+          type="button" 
+          className="btn btn-danger mt-4"
+          onClick={loginComplete}
+          value="Зайшов">
             </input>  
         </Form>
       </Formik>
