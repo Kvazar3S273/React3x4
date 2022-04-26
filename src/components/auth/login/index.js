@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Formik, Form } from "formik";
-import * as Yup from 'yup';
 import MyTextInput from "../../common/MyTextInput";
 import { useDispatch } from "react-redux";
+import validationFields from "./validation";
+import { LOGIN } from "../../../constants/actionTypes";
 
 const LoginPage = () => {
  
@@ -13,10 +14,14 @@ const LoginPage = () => {
 
   const dispatch = useDispatch();
 
-  const loginComplete = (e) => {
-    e.preventDefault();
-    dispatch({type: "LOGINED_EVENT"});
-  }
+  
+
+
+  const onSubmitHandler = (values) => {
+    dispatch({type: LOGIN, payload: values.email});
+    console.log("values submit", values);
+  };
+
   return (
     <div className="row">
         <div className="offset-md-4 col-md-4">
@@ -24,22 +29,9 @@ const LoginPage = () => {
 
       
       <Formik
-        initialValues={{
-          email: "",
-          password: ""
-        }}
-        validationSchema = {Yup.object({
-          email: Yup.string()
-          .email("Не коректно вказана пошта")
-          .required("Вкажіть пошту"),
-          password: Yup.string()
-          .required("Введіть пароль")
-          .min(5,"Пароль не може бути коротшим за 5 символів")
-          .matches(/[a-zA-Z]/,"Пароль повинен містити латинські символи")
-        })}
-        onSubmit={(values) => {
-          console.log("values submit", values);
-        }}
+        initialValues={initState}
+        validationSchema = {validationFields()}
+        onSubmit={onSubmitHandler}
       >
         <Form>
           
@@ -62,12 +54,7 @@ const LoginPage = () => {
           className="btn btn-primary mt-4"
           value="Вхід">
             </input>  
-          <input 
-          type="button" 
-          className="btn btn-danger mt-4"
-          onClick={loginComplete}
-          value="Зайшов">
-            </input>  
+          
         </Form>
       </Formik>
     </div>

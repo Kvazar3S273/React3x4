@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import logo from "../../../src/3x4logo.png";
 
 const Navbar = () => {
-  const { isAuth } = useSelector((redux) => redux.auth);
+  const { isAuth, username } = useSelector((redux) => redux.auth);
   console.log("Auth user info ", isAuth);
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -184,6 +184,15 @@ const Navbar = () => {
             </ul>
           ) : (
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item ">
+                <Link
+                  className="nav-link text-white-50"
+                  aria-current="page"
+                  to="/profile"
+                >
+                  {username}
+                </Link>
+              </li>
               <li className="nav-item ">
                 <Link
                   className="nav-link text-white-50"
