@@ -1,11 +1,16 @@
 import http from "../http_common";
 
 class AuthService {
-//   login(data) {
-//     return http.post("api/public/login", data);
-//   }
   register(data) {
-    return http.post("api/account/register", data);
+    return http.post("api/account/register", data, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+  }
+
+  login(data) {
+    return http.post("api/account/login", data);
   }
 }
 

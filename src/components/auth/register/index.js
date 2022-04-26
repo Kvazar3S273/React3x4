@@ -1,11 +1,12 @@
 import { Formik, Form } from "formik";
-import React from "react";
+import React, {useRef}  from "react";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import authService from "../../../services/auth.service";
 import MyTextInput from "../../common/MyTextInput";
 import validationFields from "./validation";
 import { REGISTER } from "../../../constants/actionTypes";
+import MyPhotoInput from "../../common/MyPhotoInput";
 //import "./indexreg.css";
 
 const RegisterPage = () => {
@@ -13,18 +14,29 @@ const RegisterPage = () => {
     email: "",
     password: "",
     confirmPassword: "",
-    errormessages: {},
+    photo: null
   };
 
   const history = useHistory();
   const dispatch = useDispatch();
-
+  const refFormik = useRef();
+  
   const onSubmitHandler = async (values) => {
     try {
-      const result = await authService.register(values);
-      console.log("Server is good", result);
-      dispatch({type: REGISTER, payload: values.email});
-      history.push("/");
+      console.log("submit data ", values);
+
+      console.log("Server submit file", JSON.stringify(
+        {
+          fileName: values.photo.name,
+          type: values.photo.type,
+          size: `${values.photo.size} bytes`
+        }));
+
+
+      // const result = await authService.register(values);
+      // console.log("Server is good", result);
+      // dispatch({ type: REGISTER, payload: values.email });
+      // history.push("/");
     } catch (error) {
       console.log("Server is bad", error.response);
     }
@@ -36,6 +48,7 @@ const RegisterPage = () => {
         <h2 className="text-center mt-3">Реєстрація</h2>
 
         <Formik
+          innerRef={refFormik}
           initialValues={initState}
           validationSchema={validationFields()}
           onSubmit={onSubmitHandler}
@@ -57,10 +70,12 @@ const RegisterPage = () => {
               type="password"
             />
 
-            <button
-              type="submit"
-              className="btn btn-primary mt-4"
-            >
+            <label className="mb-3">Виберіть фото:</label>
+            <MyPhotoInput 
+              refFormik={refFormik}
+              field="photo" />
+
+            <button type="submit" className="btn btn-primary mt-4">
               Реєструватись
             </button>
           </Form>
