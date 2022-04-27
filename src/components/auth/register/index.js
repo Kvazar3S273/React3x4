@@ -14,7 +14,7 @@ const RegisterPage = () => {
     email: "",
     password: "",
     confirmPassword: "",
-    //photo: null
+    photo: null
   };
 
   const history = useHistory();
@@ -71,10 +71,10 @@ const RegisterPage = () => {
               type="password"
             />
 
-            {/* <label className="mb-3">Виберіть фото:</label>
+            <label className="mb-3">Виберіть фото:</label>
             <MyPhotoInput 
               refFormik={refFormik}
-              field="photo" /> */}
+              field="photo" />
 
             <button type="submit" className="btn btn-primary mt-4">
               Реєструватись
