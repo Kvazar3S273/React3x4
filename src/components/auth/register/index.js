@@ -14,7 +14,7 @@ const RegisterPage = () => {
     email: "",
     password: "",
     confirmPassword: "",
-    photo: null
+    //photo: null
   };
 
   const history = useHistory();
@@ -33,10 +33,11 @@ const RegisterPage = () => {
         }));
 
 
-      // const result = await authService.register(values);
-      // console.log("Server is good", result);
-      // dispatch({ type: REGISTER, payload: values.email });
-      // history.push("/");
+      const result = await authService.register(values);
+      console.log("Server is good", result);
+      dispatch({ type: REGISTER, payload: values.email });
+      history.push("/");
+
     } catch (error) {
       console.log("Server is bad", error.response);
     }
@@ -70,10 +71,10 @@ const RegisterPage = () => {
               type="password"
             />
 
-            <label className="mb-3">Виберіть фото:</label>
+            {/* <label className="mb-3">Виберіть фото:</label>
             <MyPhotoInput 
               refFormik={refFormik}
-              field="photo" />
+              field="photo" /> */}
 
             <button type="submit" className="btn btn-primary mt-4">
               Реєструватись
