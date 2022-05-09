@@ -55,7 +55,18 @@ const RegisterPage = () => {
           onSubmit={onSubmitHandler}
         >
           <Form>
-            <MyTextInput label="Логін" id="email" name="email" type="text" />
+          <MyTextInput 
+              label="Ім'я" 
+              id="userName" 
+              name="userName" 
+              type="text" />
+
+            <MyTextInput 
+              label="Логін" 
+              id="email" 
+              name="email" 
+              type="text" />
+
 
             <MyTextInput
               label="Пароль"
