@@ -39,7 +39,7 @@ const RegisterPage = () => {
       history.push("/");
 
     } catch (error) {
-      console.log("Server is bad", error.response);
+      console.log("Server is very bad", error.response);
     }
   };
 
