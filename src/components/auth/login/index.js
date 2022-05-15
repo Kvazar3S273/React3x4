@@ -23,6 +23,7 @@ const LoginPage = () => {
   };
 
   return (
+    <div className="container">
     <div className="row">
         <div className="offset-md-4 col-md-4">
           <h2 className="text-center mt-3">Вхід на сайт</h2>
@@ -57,6 +58,7 @@ const LoginPage = () => {
           
         </Form>
       </Formik>
+    </div>
     </div>
     </div>
   );

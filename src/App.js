@@ -1,10 +1,6 @@
 import "./App.css";
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import HomePage from "./components/pages/home";
 import PhotoPage from "./components/pages/photo";
@@ -23,55 +19,55 @@ class App extends React.Component {
     return (
       <Router>
         <Navbar />
-        {/* <div className="container"> */}
-          <Switch>
-            <Route exact path="/">
-              <HomePage />
-            </Route>
+        <main>
+          
+            <Switch>
+              <Route exact path="/">
+                <HomePage />
+              </Route>
 
-            <Route exact path="/login">
-              <LoginPage />
-            </Route>
+              <Route exact path="/login">
+                <LoginPage />
+              </Route>
 
-            <Route exact path="/register">
-              <RegisterPage />
-            </Route>
+              <Route exact path="/register">
+                <RegisterPage />
+              </Route>
 
-            <Route exact path="/photo">
-              <PhotoPage />
-            </Route>
-            
-            <Route exact path="/photo/fnd">
-              <FNDPage />
-            </Route>
+              <Route exact path="/photo">
+                <PhotoPage />
+              </Route>
 
-            <Route exact path="/photo/photobooks">
-              <PhotobooksPage />
-            </Route>
+              <Route exact path="/photo/fnd">
+                <FNDPage />
+              </Route>
 
-            <Route exact path="/photo/photoprint">
-              <PhotoprintPage />
-            </Route>
+              <Route exact path="/photo/photobooks">
+                <PhotobooksPage />
+              </Route>
 
-            <Route exact path="/photo/scan">
-              <ScanPage />
-            </Route>
+              <Route exact path="/photo/photoprint">
+                <PhotoprintPage />
+              </Route>
 
-            <Route exact path="/comp">
-              <CompPage />
-            </Route>
+              <Route exact path="/photo/scan">
+                <ScanPage />
+              </Route>
 
-            <Route exact path="/poligraph">
-              <PoligraphPage />
-            </Route>
+              <Route exact path="/comp">
+                <CompPage />
+              </Route>
 
-            <Route exact path="/contacts">
-              <ContactsPage />
-            </Route>
+              <Route exact path="/poligraph">
+                <PoligraphPage />
+              </Route>
 
-                        
-          </Switch>
-        {/* </div> */}
+              <Route exact path="/contacts">
+                <ContactsPage />
+              </Route>
+            </Switch>
+          
+        </main>
       </Router>
     );
   }

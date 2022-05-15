@@ -87,8 +87,9 @@ const Carousel = () => {
             <div className="carousel-caption d-none d-md-block">
               <div className="row">
                 <div className="col-sm-5 col-md-6">
-                  <div className="text-start position-absolute bottom-50 start-0" 
-                        style={{textShadow: "4px 4px 10px #000"}}>
+                  <div className="position-relative">
+                  <div className="text-start position-absolute  start-0" 
+                        style={{textShadow: "4px 4px 10px #000", top: "100px"}}>
                     <h2>Комп'ютерні послуги</h2>
                     <div className="fs-5">
                       <p >Ксерокопії, друк, сканування, <br/>
@@ -96,6 +97,7 @@ const Carousel = () => {
                       брошурування, друк на дисках...</p>
                     </div>
                   <button type="button" class="btn btn-danger">Більше...</button>
+                  </div>
                   </div>
                 </div>
                 <div className="col-sm-7 col-md-6">
