@@ -1,9 +1,8 @@
 import React from "react";
 
 const Carousel = () => {
-    return (
-        <section id="main-slider" className="no-margin">
-
+  return (
+    <section id="main-slider" className="no-margin">
       {/* Карусель слайдер */}
 
       <div
@@ -59,15 +58,23 @@ const Carousel = () => {
             <div className="carousel-caption d-none d-md-block">
               <div className="row">
                 <div className="col-sm-5 col-md-6">
-                  <div className="text-start position-absolute bottom-50 start-0" 
-                        style={{textShadow: "4px 4px 10px #000"}}>
-                    <h2>Фотопослуги</h2>
-                    <div className="fs-5">
-                      <p >Фото на документи, друк фотографій, <br/>
-                        фотокниги, сканування фотографій, <br/>
-                        заміна фону, реставрація...</p>
+                  <div className="position-relative">
+                    <div
+                      className="text-start position-absolute start-0"
+                      style={{ textShadow: "4px 4px 10px #000", top: "150px" }}
+                    >
+                      <h2>Фотопослуги</h2>
+                      <div className="fs-5">
+                        <p>
+                          Фото на документи, друк фотографій, <br />
+                          фотокниги, сканування фотографій, <br />
+                          заміна фону, реставрація...
+                        </p>
+                      </div>
+                      <button type="button" class="btn btn-danger">
+                        Більше...
+                      </button>
                     </div>
-                    <button type="button" class="btn btn-danger">Більше...</button>
                   </div>
                 </div>
                 <div className="col-sm-7 col-md-6">
@@ -88,22 +95,30 @@ const Carousel = () => {
               <div className="row">
                 <div className="col-sm-5 col-md-6">
                   <div className="position-relative">
-                  <div className="text-start position-absolute  start-0" 
-                        style={{textShadow: "4px 4px 10px #000", top: "100px"}}>
-                    <h2>Комп'ютерні послуги</h2>
-                    <div className="fs-5">
-                      <p >Ксерокопії, друк, сканування, <br/>
-                      запис цифрових носіїв, ламінування, <br/>
-                      брошурування, друк на дисках...</p>
+                    <div
+                      className="text-start position-absolute  start-0"
+                      style={{ textShadow: "4px 4px 10px #000", top: "150px" }}
+                    >
+                      <h2>Комп'ютерні послуги</h2>
+                      <div className="fs-5">
+                        <p>
+                          Ксерокопії, друк, сканування, <br />
+                          запис цифрових носіїв, ламінування, <br />
+                          брошурування, друк на дисках...
+                        </p>
+                      </div>
+                      <button type="button" class="btn btn-danger">
+                        Більше...
+                      </button>
                     </div>
-                  <button type="button" class="btn btn-danger">Більше...</button>
-                  </div>
                   </div>
                 </div>
                 <div className="col-sm-7 col-md-6">
-                  <div className="position-relative" style={{marginLeft:'-30%'}} >
-                  <img src="/images/slider/img2.png" />
-
+                  <div
+                    className="position-relative"
+                    style={{ marginLeft: "-30%" }}
+                  >
+                    <img src="/images/slider/img2.png" />
                   </div>
                 </div>
               </div>
@@ -120,15 +135,24 @@ const Carousel = () => {
             <div className="carousel-caption d-none d-md-block">
               <div className="row">
                 <div className="col-sm-5 col-md-6">
-                  <div className="text-start position-absolute bottom-50 start-0" 
-                        style={{textShadow: "4px 4px 10px #000"}}>
-                    <h2>Поліграфія</h2>
-                    <div className="fs-5">
-                      <p >Візитки, календарики, листівки, флаєри, <br/>
-                         бірки, цінники, наклейки, хенгери,<br/>
-                         банери, самоклейка...</p>
+                  <div className="position-relative">
+                    <div
+                      className="text-start position-absolute  start-0"
+                      style={{ textShadow: "4px 4px 10px #000", top: "150px" }}
+                    >
+                      <h2>Поліграфія</h2>
+                      <div className="fs-5">
+                        <p>
+                          Візитки, календарики, листівки, флаєри, <br />
+                          бірки, цінники, наклейки, хенгери,
+                          <br />
+                          банери, самоклейка...
+                        </p>
+                      </div>
+                      <button type="button" class="btn btn-danger">
+                        Більше...
+                      </button>
                     </div>
-                    <button type="button" class="btn btn-danger">Більше...</button>
                   </div>
                 </div>
                 <div className="col-sm-7 col-md-6">
@@ -148,19 +172,31 @@ const Carousel = () => {
             <div className="carousel-caption d-none d-md-block">
               <div className="row">
                 <div className="col-sm-5 col-md-6">
-                  <div className="text-start position-absolute bottom-50 start-0" 
-                        style={{textShadow: "4px 4px 10px #000"}}>
-                    <h2>Сувеніри</h2>
-                    <div className="fs-5">
-                      <p >Фото на чашках, пазлах, годинниках, подушках,<br/>
-									етикетки на пляшки, друк на полотні, фотокартини...</p>
+                  <div className="position-relative">
+                    <div
+                      className="text-start position-absolute  start-0"
+                      style={{ textShadow: "4px 4px 10px #000", top: "150px" }}
+                    >
+                      <h2>Сувеніри</h2>
+                      <div className="fs-5">
+                        <p>
+                          Фото на чашках, пазлах, годинниках, подушках,
+                          <br />
+                          етикетки на пляшки, друк на полотні, фотокартини...
+                        </p>
+                      </div>
+                      <button type="button" class="btn btn-danger">
+                        Більше...
+                      </button>
                     </div>
-                    <button type="button" class="btn btn-danger">Більше...</button>
                   </div>
                 </div>
                 <div className="col-sm-7 col-md-6">
-                <div className="position-relative"  >
-                  <img src="/images/slider/img4.png" style={{marginLeft:'0', width:'120%'}} />
+                  <div className="position-relative">
+                    <img
+                      src="/images/slider/img4.png"
+                      style={{ marginLeft: "0", width: "120%" }}
+                    />
                   </div>
                 </div>
               </div>
@@ -177,21 +213,32 @@ const Carousel = () => {
             <div className="carousel-caption d-none d-md-block">
               <div className="row">
                 <div className="col-sm-5 col-md-6">
-                  <div className="text-start position-absolute bottom-50 start-0" 
-                        style={{textShadow: "4px 4px 10px #000"}}>
-                    <h2>Продаж</h2>
-                    <div className="fs-5">
-                      <p >Фоторамки, фотоальбоми, диски, елементи живлення,<br/>
-									канцтовари, обкладинки на документи, LED-лампи...</p>
+                  <div className="position-relative">
+                    <div
+                      className="text-start position-absolute  start-0"
+                      style={{ textShadow: "4px 4px 10px #000", top: "150px" }}
+                    >
+                      <h2>Продаж</h2>
+                      <div className="fs-5">
+                        <p>
+                          Фоторамки, фотоальбоми, диски, елементи живлення,
+                          <br />
+                          канцтовари, обкладинки на документи, LED-лампи...
+                        </p>
+                      </div>
+                      <button type="button" class="btn btn-danger">
+                        Більше...
+                      </button>
                     </div>
-                    <button type="button" class="btn btn-danger">Більше...</button>
                   </div>
                 </div>
                 <div className="col-sm-7 col-md-6">
-                <div className="position-relative"  >
-                  <img src="/images/slider/img5.png" style={{marginLeft:'0', width:'130%'}} />
+                  <div className="position-relative">
+                    <img
+                      src="/images/slider/img5.png"
+                      style={{ marginLeft: "0", width: "130%" }}
+                    />
                   </div>
-                
                 </div>
               </div>
             </div>
@@ -227,8 +274,7 @@ const Carousel = () => {
         </button>
       </div>
     </section>
-
-    );
+  );
 };
 
 export default Carousel;
