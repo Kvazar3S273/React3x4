@@ -57,11 +57,11 @@ const Carousel = () => {
             />
             <div className="carousel-caption d-none d-md-block">
               <div className="row">
-                <div className="col-sm-5 col-md-6">
+                <div className="col-12 col-sm-12 col-md-6">
                   <div className="position-relative">
                     <div
                       className="text-start position-absolute start-0"
-                      style={{ textShadow: "4px 4px 10px #000", top: "150px" }}
+                      style={{ textShadow: "4px 4px 10px #000" }}
                     >
                       <h2>Фотопослуги</h2>
                       <div className="fs-5">
@@ -71,13 +71,13 @@ const Carousel = () => {
                           заміна фону, реставрація...
                         </p>
                       </div>
-                      <button type="button" class="btn btn-danger">
+                      <button type="button" className="btn btn-danger">
                         Більше...
                       </button>
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-7 col-md-6">
+                <div className="col-md-6">
                   <img src="/images/slider/img1.png" />
                 </div>
               </div>
@@ -107,7 +107,7 @@ const Carousel = () => {
                           брошурування, друк на дисках...
                         </p>
                       </div>
-                      <button type="button" class="btn btn-danger">
+                      <button type="button" className="btn btn-danger">
                         Більше...
                       </button>
                     </div>
@@ -124,6 +124,8 @@ const Carousel = () => {
               </div>
             </div>
           </div>
+
+          
 
           {/* Слайд 3 */}
           <div className="carousel-item">
@@ -149,7 +151,7 @@ const Carousel = () => {
                           банери, самоклейка...
                         </p>
                       </div>
-                      <button type="button" class="btn btn-danger">
+                      <button type="button" className="btn btn-danger">
                         Більше...
                       </button>
                     </div>
@@ -185,7 +187,7 @@ const Carousel = () => {
                           етикетки на пляшки, друк на полотні, фотокартини...
                         </p>
                       </div>
-                      <button type="button" class="btn btn-danger">
+                      <button type="button" className="btn btn-danger">
                         Більше...
                       </button>
                     </div>
@@ -226,7 +228,7 @@ const Carousel = () => {
                           канцтовари, обкладинки на документи, LED-лампи...
                         </p>
                       </div>
-                      <button type="button" class="btn btn-danger">
+                      <button type="button" className="btn btn-danger">
                         Більше...
                       </button>
                     </div>
@@ -242,7 +244,7 @@ const Carousel = () => {
                 </div>
               </div>
             </div>
-          </div>
+        </div>
         </div>
 
         {/* Кнопна назад */}

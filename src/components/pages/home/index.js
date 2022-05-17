@@ -1,9 +1,9 @@
 import React from "react";
-import Carousel from "./carousel";
+import Carousel2 from "./carousel2";
 
 const HomePage = () => {
   return (
-    <Carousel/>
+    <Carousel2/>
   );
 };
 
