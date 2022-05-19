@@ -14,16 +14,13 @@ const LoginPage = () => {
 
   const dispatch = useDispatch();
 
-  
-
-
   const onSubmitHandler = (values) => {
     dispatch({type: LOGIN, payload: values.email});
     console.log("values submit", values);
   };
 
   return (
-    <div className="container">
+    // <div className="container">
     <div className="row">
         <div className="offset-md-4 col-md-4">
           <h2 className="text-center mt-3">Вхід на сайт</h2>
@@ -60,7 +57,7 @@ const LoginPage = () => {
       </Formik>
     </div>
     </div>
-    </div>
+    // </div>
   );
 };
 

@@ -1,10 +1,11 @@
 import React from "react";
+import "./index.css";
 
 const ServiceCards = () => {
   return (
-    <div classNameName="container ">
-      {/* Рядок для темно-сірого блока */}
-      <div classNameName="row  ">
+    //  <div classNameName="container ">
+    //   {/* Рядок для темно-сірого блока */}
+      <div classNameName="row">
         {/* Темно-сірий блок для карток */}
         <div className="col bg-dark rounded py-4">
           {/* Рядок для карток */}
@@ -134,7 +135,7 @@ const ServiceCards = () => {
           {/* </div> */}
         </div>
       </div>
-    </div>
+     //</div>
   );
   };
   

@@ -7,7 +7,7 @@ import MyTextInput from "../../common/MyTextInput";
 import validationFields from "./validation";
 import { REGISTER } from "../../../constants/actionTypes";
 import MyPhotoInput from "../../common/MyPhotoInput";
-//import "./indexreg.css";
+import "./index.css";
 
 const RegisterPage = () => {
   const initState = {
@@ -44,7 +44,7 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="container">
+    // <div className="container">
     <div className="row">
       <div className="offset-md-4 col-md-4">
         <h2 className="text-center mt-3">Реєстрація</h2>
@@ -95,7 +95,7 @@ const RegisterPage = () => {
         </Formik>
       </div>
     </div>
-    </div>
+    // </div>
   );
 };
 
