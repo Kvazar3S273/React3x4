@@ -2,14 +2,14 @@ import React from "react";
 import "./lightbox.css";
 
 const Lightbox = () => {
-    function myFunction(imgs) {
+    const myFunction = (imgs) => {
         var expandImg = document.getElementById("expandedImg");
         var imgText = document.getElementById("imgtext");
         expandImg.src = imgs.src;
         imgText.innerHTML = imgs.alt;
         expandImg.parentElement.style.display = "block";
     }
-    function handleClick(){
+    const handleClick = () => {
         this.parentElement.style.display='none';
     }
   return (
