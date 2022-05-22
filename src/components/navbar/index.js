@@ -6,6 +6,7 @@ import logo from "../../../src/3x4logo.png";
 const Navbar = () => {
   const { isAuth, username } = useSelector((redux) => redux.auth);
   console.log("Auth user info ", isAuth);
+  
   return (
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
         <div className="container">

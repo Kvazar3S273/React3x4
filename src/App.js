@@ -13,12 +13,14 @@ import PoligraphPage from "./components/pages/poligraph";
 import ContactsPage from "./components/pages/contacts";
 import RegisterPage from "./components/auth/register";
 import LoginPage from "./components/auth/login";
+import Header from "./components/navbar/indexnew";
 
 class App extends React.Component {
   render() {
     return (
       <Router>
-        <Navbar />
+        <Header />
+        {/* <Navbar /> */}
         <main>
           
             <Switch>
