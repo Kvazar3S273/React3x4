@@ -1,227 +1,204 @@
-import React from "react";
+import React, { useEffect, useState, useRef  } from 'react'
+import { Link } from 'react-router-dom'
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import logo from "../../../src/3x4logo.png";
+import "./index.css";
 
-const Navbar = () => {
-  const { isAuth, username } = useSelector((redux) => redux.auth);
-  console.log("Auth user info ", isAuth);
-  
-  return (
-      <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-        <div className="container">
-          <Link className="navbar-brand" to="/">
-            <img src={logo} alt="" width="100" />
-          </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
-                  Головна
-                </Link>
-              </li>
+const Header = () => {
 
-              <li className="navbar-nav nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  to="/photo"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="true"
-                >
-                  Фотопослуги
-                </Link>
-                <ul
-                  className="dropdown-menu bg-secondary"
-                  aria-labelledby="navbarDropdown"
-                >
-                  <li>
-                    <Link className="dropdown-item" to="/photo">
-                      Повний перелік
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/photo/fnd">
-                      Фото на документи
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/photo/photoprint">
-                      Фотодрук
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/photo/scan">
-                      Сканування фото
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/photo/photobooks">
-                      Фотокниги
-                    </Link>
-                  </li>
-                </ul>
-              </li>
+    const { isAuth, username } = useSelector((redux) => redux.auth);
+    //const dispatch = useDispatch();
 
-              <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  to="/comp"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Комп'ютерні послуги
-                </Link>
-                <ul
-                  className="dropdown-menu bg-secondary"
-                  aria-labelledby="navbarDropdown"
-                >
-                  <li>
-                    <Link className="dropdown-item" to="/comp">
-                      Повний перелік
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Ксерокопії, друк
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Сканування
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Ламінування
-                    </Link>
-                  </li>
-                </ul>
-              </li>
+    const ref = useRef(null);
 
-              <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  to="/poligraph"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Поліграфія
-                </Link>
-                <ul
-                  className="dropdown-menu bg-secondary"
-                  aria-labelledby="navbarDropdown"
-                >
-                  <li>
-                    <Link className="dropdown-item" to="/poligraph">
-                      Повний перелік
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Візитки
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Листівки
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="#">
-                      Календарики
-                    </Link>
-                  </li>
-                </ul>
-              </li>
+    const [navExpanded, setNavExpanded] = useState(false);
 
-              <li className="nav-item">
-                <Link
-                  className="nav-link text-white-50"
-                  aria-current="page"
-                  to="/contacts"
-                >
-                  Контакти
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (ref.current && !ref.current.contains(event.target)) {
+                setNavExpanded(false);
+            }
+          };
+          document.addEventListener('click', handleClickOutside, true);
+          return () => {
+            document.removeEventListener('click', handleClickOutside, true);
+          };
+    },[]);
+
+    return (
+      <Navbar
+        ref={ref}
+        bg="light"
+        expand="lg"
+        onToggle={setNavExpanded}
+        expanded={navExpanded}
+        className="navbar navbar-expand-lg navbar-dark fixed-top bg-dark"
+      >
+        <Container>
+          {/* Лого */}
+            <Nav className="me-auto" onClick={() => setNavExpanded(false)}>
+                <Link className="navbar-brand" aria-current="page" to="/">
+                <img src={logo} alt="" width="100" />
                 </Link>
-              </li>
-            </ul>
+            </Nav>
+
+          {/* Гамбургер */}
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto" onClick={() => setNavExpanded(false)}>
+                <Link className="nav-link" aria-current="page" to="/">
+                Головна
+                </Link>
+            </Nav>
+
+            {/* Фотопослуги */}
+
+            <NavDropdown title="Фотопослуги" id="basic-nav-dropdown">
+
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <Link className="nav-link" aria-current="page" to="/photo">
+                        Повний перелік
+                    </Link>
+                </NavDropdown.Item>
+
+                <NavDropdown.Divider />
+
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <Link className="nav-link" aria-current="page" to="/photo/fnd">
+                        Фото на документи
+                    </Link>
+                </NavDropdown.Item>
+
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <Link className="nav-link" aria-current="page" to="/photo/photoprint">
+                        Фотодрук
+                    </Link>
+                </NavDropdown.Item>
+
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <Link className="nav-link" aria-current="page" to="/photo/scan">
+                        Сканування фото
+                    </Link>
+                </NavDropdown.Item>
+
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <Link className="nav-link" aria-current="page" to="/photo/photobooks">
+                        Фотокниги
+                    </Link>
+                </NavDropdown.Item>
+
+            </NavDropdown>
+
+            {/* Комп'ютерні послуги */}
+
+            <NavDropdown title="Комп'ютерні послуги" id="basic-nav-dropdown">
+
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <Link className="nav-link" aria-current="page" to="/comp">
+                        Повний перелік
+                    </Link>
+                </NavDropdown.Item>
+
+                <NavDropdown.Divider />
+
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <Link className="nav-link" aria-current="page" to="/comp/xerox">
+                        Ксерокопії, друк
+                    </Link>
+                </NavDropdown.Item>
+
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <Link className="nav-link" aria-current="page" to="#">
+                        Сканування
+                    </Link>
+                </NavDropdown.Item>
+
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <Link className="nav-link" aria-current="page" to="#">
+                        Ламінування
+                    </Link>
+                </NavDropdown.Item>
+
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <Link className="nav-link" aria-current="page" to="#">
+                        Брошурування
+                    </Link>
+                </NavDropdown.Item>
+
+            </NavDropdown>
+
+            {/* Поліграфія */}
+
+            <NavDropdown title="Поліграфія" id="basic-nav-dropdown">
+
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <Link className="nav-link" aria-current="page" to="/poligraph">
+                        Повний перелік
+                    </Link>
+                </NavDropdown.Item>
+
+                <NavDropdown.Divider />
+
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <Link className="nav-link" aria-current="page" to="#">
+                        Ксерокопії, друк
+                    </Link>
+                </NavDropdown.Item>
+
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <Link className="nav-link" aria-current="page" to="#">
+                        Візитки
+                    </Link>
+                </NavDropdown.Item>
+
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <Link className="nav-link" aria-current="page" to="#">
+                        Листівки
+                    </Link>
+                </NavDropdown.Item>
+
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <Link className="nav-link" aria-current="page" to="#">
+                        Календарики
+                    </Link>
+                </NavDropdown.Item>
+
+            </NavDropdown>
+
+            {/* Контакти */}
+            <Nav className="me-auto" onClick={() => setNavExpanded(false)}>
+                <Link className="nav-link" aria-current="page" to="/contacts">
+                Контакти
+                </Link>
+            </Nav>
+
 
             {!isAuth ? (
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                
-                <li className="nav-item ">
-                  <Link
-                    className="nav-link text-white-50"
-                    aria-current="page"
-                    to="/register"
-                  >
-                    Реєстрація
-                  </Link>
-                </li>
-                <li className="nav-item ">
-                  <Link
-                    className="nav-link text-white-50"
-                    aria-current="page"
-                    to="/login"
-                  >
-                    Вхід
-                  </Link>
-                </li>
-              </ul>
-            ) : (
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item ">
-                  <Link
-                    className="nav-link text-white-50"
-                    aria-current="page"
-                    to="/profile"
-                  >
-                    {username}
-                  </Link>
-                </li>
-                <li className="nav-item ">
-                  <Link
-                    className="nav-link text-white-50"
-                    aria-current="page"
-                    to="/logout"
-                  >
-                    Вихід
-                  </Link>
-                </li>
-              </ul>
+                <Nav onClick={() => setNavExpanded(false)}>
+                <Link className="nav-link" to="/login">
+                  Вхід
+                </Link>
+                <Link className="nav-link" to="/register">
+                Реєстрація
+                </Link>
+              </Nav>
+                ) : (
+                    <Nav onClick={() => setNavExpanded(false)}>
+              <Link className="nav-link" to="/profile">
+              {username}
+              </Link>
+              <Link className="nav-link" to="/logout">
+                Вихід
+              </Link>
+            </Nav>
             )}
+            
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    );
+}
 
-            {/* <form className="d-flex">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Пошук по сайту"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Пошук
-              </button>
-            </form> */}
-          </div>
-        </div>
-      </nav>
-  );
-};
-
-export default Navbar;
+export default Header;

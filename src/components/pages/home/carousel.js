@@ -45,7 +45,7 @@ const Carousel = () => {
 
     {/* Слайд 1  */}
     <div className="carousel-item active">
-    <img src="/images/slider/bg1.jpg" className="d-block w-100" alt="Canyon at Nigh"/>
+    <img src="/images/slider/bg1.jpg" className="d-block w-100" alt="Backgroung slide 1"/>
       <div className="carousel-caption" style={{ textShadow: "4px 4px 10px #000"}}>
             <div className="row">
                 {/* Є картинка на великих, прихована тільки на sm */}
@@ -77,7 +77,7 @@ const Carousel = () => {
 
     {/* Слайд 2  */}
     <div className="carousel-item">
-      <img src="/images/slider/bg2.jpg" className="d-block w-100" alt="Canyon at Nigh"/>
+      <img src="/images/slider/bg2.jpg" className="d-block w-100" alt="Backgroung slide 2"/>
       <div className="carousel-caption" style={{ textShadow: "4px 4px 10px #000"}}>
             <div className="row">
                 {/* Є картинка на великих, прихована тільки на sm */}
@@ -109,7 +109,7 @@ const Carousel = () => {
 
     {/* Слайд 3 */}
     <div className="carousel-item">
-      <img src="/images/slider/bg3.jpg" className="d-block w-100" alt="Canyon at Nigh"/>
+      <img src="/images/slider/bg3.jpg" className="d-block w-100" alt="Backgroung slide 3"/>
       <div className="carousel-caption" style={{ textShadow: "4px 4px 10px #000"}}>
             <div className="row">
                 {/* Є картинка на великих, прихована тільки на sm */}
@@ -141,7 +141,7 @@ const Carousel = () => {
 
     {/* Слайд 4 */}
     <div className="carousel-item">
-      <img src="/images/slider/bg4.jpg" className="d-block w-100" alt="Canyon at Nigh"/>
+      <img src="/images/slider/bg4.jpg" className="d-block w-100" alt="Backgroung slide 4"/>
       <div className="carousel-caption" style={{ textShadow: "4px 4px 10px #000"}}>
             <div className="row">
                 {/* Є картинка на великих, прихована тільки на sm */}
@@ -173,7 +173,7 @@ const Carousel = () => {
 
     {/* Слайд 5 */}
     <div className="carousel-item">
-      <img src="/images/slider/bg5.jpg" className="d-block w-100" alt="Canyon at Nigh"/>
+      <img src="/images/slider/bg5.jpg" className="d-block w-100" alt="Backgroung slide 5"/>
       <div className="carousel-caption" style={{ textShadow: "4px 4px 10px #000"}}>
             <div className="row">
                 {/* Є картинка на великих, прихована тільки на sm */}

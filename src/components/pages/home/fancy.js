@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
-
 import { Fancybox as NativeFancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox.css";
 
-const Fancybox = (props) => {
+function Fancybox(props) {
   const delegate = props.delegate || "[data-fancybox]";
 
   useEffect(() => {
@@ -16,32 +15,7 @@ const Fancybox = (props) => {
     };
   }, []);
 
-  return (
-  <>
-  
-  {/* <Fancybox options={{ infinite: false }}>
-  <p>
-    <button
-      data-fancybox="gallery"
-      data-src="https://lipsum.app/id/1/800x600"
-      className="button button-secondary"
-    >
-      Image #1
-    </button>
-
-    <button
-      data-fancybox="gallery"
-      data-src="https://lipsum.app/id/2/800x600"
-      className="button button-secondary"
-    >
-      Image #2
-    </button>
-  </p>
-</Fancybox> */}
-  
-  
-  </>
-  );
+  return <>{props.children}</>;
 }
 
 export default Fancybox;

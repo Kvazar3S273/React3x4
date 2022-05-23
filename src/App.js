@@ -1,7 +1,6 @@
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navbar from "./components/navbar";
 import HomePage from "./components/pages/home";
 import PhotoPage from "./components/pages/photo";
 import FNDPage from "./components/pages/photo/fnd";
@@ -13,14 +12,14 @@ import PoligraphPage from "./components/pages/poligraph";
 import ContactsPage from "./components/pages/contacts";
 import RegisterPage from "./components/auth/register";
 import LoginPage from "./components/auth/login";
-import Header from "./components/navbar/indexnew";
+import Header from "./components/navbar";
+import Xerox from "./components/pages/comp/xerox";
 
 class App extends React.Component {
   render() {
     return (
       <Router>
         <Header />
-        {/* <Navbar /> */}
         <main>
           
             <Switch>
@@ -58,6 +57,10 @@ class App extends React.Component {
 
               <Route exact path="/comp">
                 <CompPage />
+              </Route>
+
+              <Route exact path="/comp/xerox">
+                <Xerox />
               </Route>
 
               <Route exact path="/poligraph">

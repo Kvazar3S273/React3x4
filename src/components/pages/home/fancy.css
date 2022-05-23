@@ -1,0 +1,71 @@
+.MakeFancybox {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.service-item {
+    box-shadow: 0 0 45px rgb(0 0 0 / 7%);
+    border: 1px solid transparent;
+    transition: .5s;
+}
+
+.rounded {
+    border-radius: 3px !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.p-4 {
+    padding: 0.35rem !important;
+}
+
+.h-100 {
+    height: 100% !important;
+}
+
+a {
+    color: #222222;
+    text-decoration: none;
+}
+
+.faded-img {
+    position: relative;
+    /* width: 25%; */
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #c23e3e;
+}
+
+.faded-img:hover .overlay {
+    opacity: 0.9;
+}
