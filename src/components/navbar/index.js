@@ -8,12 +8,8 @@ import "./index.css";
 const Header = () => {
 
     const { isAuth, username } = useSelector((redux) => redux.auth);
-    //const dispatch = useDispatch();
-
     const ref = useRef(null);
-
     const [navExpanded, setNavExpanded] = useState(false);
-
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (ref.current && !ref.current.contains(event.target)) {
@@ -26,9 +22,21 @@ const Header = () => {
           };
     },[]);
 
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-73px";
+      }
+      prevScrollpos = currentScrollPos;
+    };
+
     return (
       <Navbar
         ref={ref}
+        id="navbar"
         bg="light"
         expand="lg"
         onToggle={setNavExpanded}
