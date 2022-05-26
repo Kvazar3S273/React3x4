@@ -14,6 +14,7 @@ import RegisterPage from "./components/auth/register";
 import LoginPage from "./components/auth/login";
 import Header from "./components/navbar";
 import Xerox from "./components/pages/comp/xerox";
+import Footer2 from "./components/footer/footer2";
 
 class App extends React.Component {
   render() {
@@ -73,6 +74,7 @@ class App extends React.Component {
             </Switch>
           
         </main>
+        <Footer2 />
       </Router>
     );
   }

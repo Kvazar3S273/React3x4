@@ -3,7 +3,8 @@ import ServiceCards from "./servicecards";
 import Carousel from "./carousel";
 import MakeFancybox from "./MakeFancybox";
 import Products from "./products";
-import Footer from "./footer";
+import Footer from "../../footer/footer";
+import Producers from "./producers";
 
 const HomePage = () => {
   return (
@@ -12,7 +13,8 @@ const HomePage = () => {
       <ServiceCards />
       <MakeFancybox />
       <Products />
-      <Footer />
+      {/* <Footer /> */}
+      <Producers />
     </>
   );
 };

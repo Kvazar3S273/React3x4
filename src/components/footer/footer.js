@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-//import "./index.css";
+import "./footer.css";
 
 const Footer = () => {
 
   return (
-    <div className="row">
-        <div className="col mt-3">
+    <div className="row ">
+        <div className=" col mt-3">
             <div className="row gx-4 justify-content-center">
-                <div className="container bg-dark p-5">
+                <div className="footer container bg-dark p-5">
                     <div className="row g-5">
                         <div className="col-lg-3 col-md-4 col-sm-6">
                             <h5 className="text-light mb-4">Контакти</h5>
