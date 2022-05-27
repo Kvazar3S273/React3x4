@@ -6,7 +6,8 @@ import AdminRoutes from "../../../routes/AdminRoutes";
 const AdminLayout = () => {
     return (
       <Layout>
-        <Suspense fallback={<div>Загрузка...</div>}>
+        <Suspense>
+        {/* <Suspense fallback={<div>Загрузка...</div>}> */}
           <Switch>
             {AdminRoutes.map((route, index) => {
               return route.component ? (
@@ -15,7 +16,7 @@ const AdminLayout = () => {
                   path={route.path}
                   exact={route.exact}
                   name={route.name}
-                  render={props => <route.component {...props} />}
+                  render={props => (<route.component {...props} />)}
                 />
               ) : null;
             })}

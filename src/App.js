@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { Suspense } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router";
 // import HomePage from "./components/pages/home";
 // import PhotoPage from "./components/pages/photo";
 // import FNDPage from "./components/pages/photo/fnd";
@@ -22,7 +22,8 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Suspense fallback={<div>Загрузка...</div>}>
+        <Suspense>
+        {/* <Suspense fallback={<div>Загрузка...</div>}> */}
           <Switch>
             <Route path="/admin" name="Admin" render = {props => <AdminLayout {...props} /> } />
             <Route path="/" name="Default" render = {props => <DefaultLayout {...props} /> } />

@@ -6,7 +6,8 @@ import DefaultRoutes from "../../../routes/DefaultRoutes";
 const DefaultLayout = () => {
     return (
       <Layout>
-        <Suspense fallback={<div>Загрузка...</div>}>
+        {/* <Suspense fallback={<div>Загрузка...</div>}> */}
+        <Suspense>
           <Switch>
             {DefaultRoutes.map((route, index) => {
               return route.component ? (
@@ -15,7 +16,7 @@ const DefaultLayout = () => {
                   path={route.path}
                   exact={route.exact}
                   name={route.name}
-                  render={props => <route.component {...props} />}
+                  render={props => (<route.component {...props} />)}
                 />
               ) : null;
             })}
