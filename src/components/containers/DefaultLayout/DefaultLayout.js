@@ -3,8 +3,7 @@ import Layout from "./Layout";
 import { Switch, Route } from "react-router-dom";
 import DefaultRoutes from "../../../routes/DefaultRoutes";
 
-class DefaultLayout extends Component {
-  render() {
+const DefaultLayout = () => {
     return (
       <Layout>
         <Suspense fallback={<div>Загрузка...</div>}>
@@ -16,7 +15,7 @@ class DefaultLayout extends Component {
                   path={route.path}
                   exact={route.exact}
                   name={route.name}
-                  render={(props) => <route.component {...props} />}
+                  render={props => <route.component {...props} />}
                 />
               ) : null;
             })}
@@ -24,7 +23,6 @@ class DefaultLayout extends Component {
         </Suspense>
       </Layout>
     );
-  }
 }
 
 export default DefaultLayout;

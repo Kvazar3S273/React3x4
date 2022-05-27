@@ -3,8 +3,7 @@ import Layout from "./Layout";
 import { Switch, Route } from "react-router-dom";
 import AdminRoutes from "../../../routes/AdminRoutes";
 
-class AdminLayout extends Component {
-  render() {
+const AdminLayout = () => {
     return (
       <Layout>
         <Suspense fallback={<div>Загрузка...</div>}>
@@ -16,7 +15,7 @@ class AdminLayout extends Component {
                   path={route.path}
                   exact={route.exact}
                   name={route.name}
-                  render={(props) => <route.component {...props} />}
+                  render={props => <route.component {...props} />}
                 />
               ) : null;
             })}
@@ -24,7 +23,6 @@ class AdminLayout extends Component {
         </Suspense>
       </Layout>
     );
-  }
 }
 
 export default AdminLayout;

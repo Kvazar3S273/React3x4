@@ -9,12 +9,12 @@ const Poligraph = React.lazy(() => import("../components/pages/poligraph"));
 const Contacts = React.lazy(() => import("../components/pages/contacts"));
 
 const defaultRoutes = [
-  { path: "/home", exact: true, name: "Головна", component: Home },
-  { path: "/login", exact: true, name: "Вхід", component: Home },
-  { path: "/register", exact: true, name: "Реєстрація", component: Home },
-  { path: "/comp", exact: true, name: "Комп'ютерні послуги", component: Home },
-  { path: "/photo", exact: true, name: "Фотопослуги", component: Home },
-  { path: "/poligraph", exact: true, name: "Поліграфія", component: Home },
-  { path: "/contacts", exact: true, name: "Контакти", component: Home }
+  { path: "/", exact: true, name: "Головна", component: Home },
+  { path: "/login", exact: true, name: "Вхід", component: Login },
+  { path: "/register", exact: true, name: "Реєстрація", component: Register },
+  { path: "/comp", exact: true, name: "Комп'ютерні послуги", component: Comp },
+  { path: "/photo", exact: true, name: "Фотопослуги", component: Photo },
+  { path: "/poligraph", exact: true, name: "Поліграфія", component: Poligraph },
+  { path: "/contacts", exact: true, name: "Контакти", component: Contacts }
 ];
 export default defaultRoutes;

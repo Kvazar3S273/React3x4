@@ -15,8 +15,8 @@ import { Switch, Route } from "react-router-dom";
 // import Header from "./components/navbar";
 // import Xerox from "./components/pages/comp/xerox";
 // import Footer2 from "./components/footer/footer2";
-const DefaultLayout = React.lazy(()=>import('./components/containers/DefaultLayout/DefaultLayout'));
-const AdminLayout = React.lazy(()=>import('./components/containers/AdminLayout/AdminLayout'));
+const DefaultLayout = React.lazy(()=>import('./components/containers/DefaultLayout'));
+const AdminLayout = React.lazy(()=>import('./components/containers/AdminLayout'));
 
 class App extends React.Component {
   render() {
@@ -24,8 +24,8 @@ class App extends React.Component {
       <>
         <Suspense fallback={<div>Загрузка...</div>}>
           <Switch>
-            <Route path="/admin" name="Admin" render={(props) => <AdminLayout {...props} /> } />
-            <Route path="/" name="Default" render={(props) => <DefaultLayout {...props} /> } />
+            <Route path="/admin" name="Admin" render = {props => <AdminLayout {...props} /> } />
+            <Route path="/" name="Default" render = {props => <DefaultLayout {...props} /> } />
           </Switch>
         </Suspense>
       </>
