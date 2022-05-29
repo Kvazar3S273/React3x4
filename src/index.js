@@ -6,15 +6,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'connected-react-router';
+// import { ConnectedRouter } from 'connected-react-router';
 import store, {history} from './store';
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   // <React.StrictMode>
     <Provider store={store}>
-      <ConnectedRouter history={history}>
-        <App />
-      </ConnectedRouter>
+      {/* <ConnectedRouter history={history}> */}
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      {/* </ConnectedRouter> */}
     </Provider>,
   // </React.StrictMode>,
   document.getElementById('root')

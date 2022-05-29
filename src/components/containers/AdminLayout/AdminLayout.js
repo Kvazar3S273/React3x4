@@ -1,28 +1,16 @@
-import React, { Component, Suspense } from "react";
-import Layout from "./Layout";
-import { Switch, Route } from "react-router-dom";
-import AdminRoutes from "../../../routes/AdminRoutes";
+import React from "react";
+import { Outlet } from 'react-router-dom';
+import Header from "./Header";
 
 const AdminLayout = () => {
     return (
-      <Layout>
-        <Suspense>
-        {/* <Suspense fallback={<div>Загрузка...</div>}> */}
-          <Switch>
-            {AdminRoutes.map((route, index) => {
-              return route.component ? (
-                <Route
-                  key={index}
-                  path={route.path}
-                  exact={route.exact}
-                  name={route.name}
-                  render={props => (<route.component {...props} />)}
-                />
-              ) : null;
-            })}
-          </Switch>
-        </Suspense>
-      </Layout>
+      <>
+      <Header />
+        <div className="container">
+            {<Outlet/>}
+        </div>
+      </>
+      
     );
 }
 

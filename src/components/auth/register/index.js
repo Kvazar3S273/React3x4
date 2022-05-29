@@ -1,6 +1,6 @@
 import { Formik, Form } from "formik";
 import React, {useRef}  from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import authService from "../../../services/auth.service";
 import MyTextInput from "../../common/MyTextInput";
@@ -17,7 +17,7 @@ const RegisterPage = () => {
     photo: null
   };
 
-  const history = useHistory();
+  const navigator = useNavigate();
   const dispatch = useDispatch();
   const refFormik = useRef();
   
@@ -36,7 +36,7 @@ const RegisterPage = () => {
       const result = await authService.register(values);
       console.log("Server is good", result);
       dispatch({ type: REGISTER, payload: values.email });
-      history.push("/");
+      await navigator("/");
 
     } catch (error) {
       console.log("Server is very bad", error.response);
