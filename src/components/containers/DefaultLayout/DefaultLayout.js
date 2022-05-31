@@ -9,9 +9,11 @@ const DefaultLayout = () => {
     return (
       <>
       <Header />
-          <div className="container">
+      <main>
+          {/* <div className="container"> */}
               {<Outlet/>}
-          </div>
+          {/* </div> */}
+      </main>
     </>
     );
 }

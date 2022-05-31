@@ -1,6 +1,5 @@
 import "./App.css";
 import React from "react";
-//import { Switch, Route } from "react-router";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./components/pages/home";
 import PhotoPage from "./components/pages/photo";
@@ -15,18 +14,14 @@ import RegisterPage from "./components/auth/register";
 import LoginPage from "./components/auth/login";
 import Header from "./components/navbar";
 import Xerox from "./components/pages/comp/xerox";
-// const DefaultLayout = React.lazy(()=>import('./components/containers/DefaultLayout'));
-// const AdminLayout = React.lazy(()=>import('./components/containers/AdminLayout'));
 import DefaultLayout from "./components/containers/DefaultLayout/DefaultLayout";
 import AdminLayout from "./components/containers/AdminLayout/AdminLayout";
-// import { useSelector } from "react-redux";
 
 const App = () => {
   // const { isAuth, username } = useSelector((redux) => redux.auth);
     return (
       <>
 
-      {/* <h1>Hello</h1> */}
       <Routes>
         <Route path="/" element={<DefaultLayout/>}>
           <Route index element={<HomePage/>}/>
@@ -71,12 +66,7 @@ const App = () => {
 
 
 
-        {/* <Suspense fallback={<div>Загрузка...</div>}>
-          <Switch>
-            <Route path="/admin" name="Admin" render = {props => <AdminLayout {...props} /> } />
-            <Route path="/" name="Default" render = {props => <DefaultLayout {...props} /> } />
-          </Switch>
-        </Suspense> */}
+        
       </>
       // <Router>
       //   <Header />
