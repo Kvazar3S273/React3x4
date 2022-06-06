@@ -21,7 +21,6 @@ body {
     background: #003147;
     transition: 0.5s;
     overflow: hidden;
-    /* margin: 0; */
 }
 
 .navigation.active {
@@ -52,7 +51,8 @@ body {
     width: 100%;
 }
 
-/* .navigation ul li:nth-child(1) {
+/* було закоментоване раніше
+.navigation ul li:nth-child(1) {
     margin-bottom: 20px;
 } */
 
@@ -76,7 +76,11 @@ body {
     line-height: 60px;
     text-align: center;
 }
-
+.aaa i{
+    position: relative;
+    color: #6bbb10;
+    text-align: center;
+}
 .navigation ul li a .icon i {
     color: #fff;
     font-size: 24px;
@@ -133,7 +137,8 @@ body {
     padding: 0 10px 0;
     cursor: pointer;
 }
-/* .toggle::before {
+/* було закоментоване раніше
+.toggle::before {
     content: 'M'; 
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
@@ -410,6 +415,7 @@ body {
         z-index: 10000;
         right: 0;
         left: initial;
+        color: #ffffff;
     }
     .toggle.active::before{
         color: #fff;
@@ -419,5 +425,4 @@ body {
         width: 100%;
         left: 0;
     }
-    
 }
