@@ -150,6 +150,23 @@ body {
     color: #111;
 } */
 
+.card-panel{
+    position: relative;
+    height: 270px;
+}
+.card-panel p{
+    position: relative;
+    height: 250px;
+}
+.card-panel .icon-card{
+    position: relative;
+    height: 80px;
+}
+.card-panel .title-card{
+    position: relative;
+    height: 60px;
+}
+
 .search {
     position: relative;
     width: 400px;
