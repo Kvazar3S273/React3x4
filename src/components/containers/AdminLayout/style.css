@@ -153,10 +153,11 @@ body {
 .card-panel{
     position: relative;
     height: 270px;
+    cursor: pointer;
 }
 .card-panel p{
     position: relative;
-    height: 250px;
+    height: 50px;
 }
 .card-panel .icon-card{
     position: relative;

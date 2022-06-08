@@ -34,7 +34,7 @@ const Navigation = () => {
         </li>
         <li>
           <a>
-            <Link className="navLink" aria-current="page" to="#">
+            <Link className="navLink" aria-current="page" to="/admin/index">
               <span className="icon">
                 <i>
                   <FontAwesomeIcon icon={faGear} />
@@ -46,7 +46,7 @@ const Navigation = () => {
         </li>
         <li>
           <a>
-            <Link className="navLink" aria-current="page" to="#">
+            <Link className="navLink" aria-current="page" to="/admin/users">
               <span className="icon">
                 <i>
                   <FontAwesomeIcon icon={faUserCircle} />
@@ -58,7 +58,7 @@ const Navigation = () => {
         </li>
         <li>
           <a>
-            <Link className="navLink" aria-current="page" to="#">
+            <Link className="navLink" aria-current="page" to="/admin/prices">
               <span className="icon">
                 <i>
                   <FontAwesomeIcon icon={faMoneyBillTrendUp} />
@@ -70,7 +70,7 @@ const Navigation = () => {
         </li>
         <li>
           <a>
-            <Link className="navLink" aria-current="page" to="#">
+            <Link className="navLink" aria-current="page" to="/admin/ad">
               <span className="icon">
                 <i>
                   <FontAwesomeIcon icon={faAd} />

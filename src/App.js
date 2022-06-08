@@ -16,21 +16,24 @@ import Header from "./components/navbar";
 import Xerox from "./components/pages/comp/xerox";
 import DefaultLayout from "./components/containers/DefaultLayout/DefaultLayout";
 import AdminLayout from "./components/containers/AdminLayout/AdminLayout";
+import MainPage from "./components/containers/AdminLayout/MainPage";
+import Users from "./components/containers/AdminLayout/Users";
+import Prices from "./components/containers/AdminLayout/Prices";
+import Advertise from "./components/containers/AdminLayout/Advertise";
 
 const App = () => {
   // const { isAuth, username } = useSelector((redux) => redux.auth);
-    return (
-      <>
-
+  return (
+    <>
       <Routes>
-        <Route path="/" element={<DefaultLayout/>}>
-          <Route index element={<HomePage/>}/>
-            
-               <Route exact path="/login" element={<LoginPage/>}/>
-               <Route exact path="/register" element={<RegisterPage/>}/>
-               <Route exact path="/photo" element={<PhotoPage/>}/>
+        <Route path="/" element={<DefaultLayout />}>
+          <Route index element={<HomePage />} />
 
-               {/* <Route exact path="/photo/fnd">
+          <Route exact path="/login" element={<LoginPage />} />
+          <Route exact path="/register" element={<RegisterPage />} />
+          <Route exact path="/photo" element={<PhotoPage />} />
+
+          {/* <Route exact path="/photo/fnd">
                  <FNDPage />
                </Route>
 
@@ -46,9 +49,9 @@ const App = () => {
                  <ScanPage />
                </Route> */}
 
-               <Route exact path="/comp" element={<CompPage/>}/>
+          <Route exact path="/comp" element={<CompPage />} />
 
-               {/* <Route exact path="/comp/xerox">
+          {/* <Route exact path="/comp/xerox">
                  <Xerox />
                </Route>
 
@@ -56,76 +59,74 @@ const App = () => {
                  <PoligraphPage />
                </Route> */}
 
-               <Route exact path="/contacts" element={<ContactsPage/>}/>
+          <Route exact path="/contacts" element={<ContactsPage />} />
         </Route>
-        <Route path="/admin" element={<AdminLayout/>}>
-          <Route path="/admin/users" element={<h1>Users</h1>}/>
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route path="/admin/index" element={<MainPage />} />
+          <Route path="/admin/users" element={<Users />} />
+          <Route path="/admin/prices" element={<Prices />} />
+          <Route path="/admin/ad" element={<Advertise />} />
         </Route>
       </Routes>
+    </>
+    // <Router>
+    //   <Header />
+    //   <main>
 
+    //       <Switch>
+    //         <Route exact path="/">
+    //           <HomePage />
+    //         </Route>
 
+    //         <Route exact path="/login">
+    //           <LoginPage />
+    //         </Route>
 
+    //         <Route exact path="/register">
+    //           <RegisterPage />
+    //         </Route>
 
-        
-      </>
-      // <Router>
-      //   <Header />
-      //   <main>
+    //         <Route exact path="/photo">
+    //           <PhotoPage />
+    //         </Route>
 
-      //       <Switch>
-      //         <Route exact path="/">
-      //           <HomePage />
-      //         </Route>
+    //         <Route exact path="/photo/fnd">
+    //           <FNDPage />
+    //         </Route>
 
-      //         <Route exact path="/login">
-      //           <LoginPage />
-      //         </Route>
+    //         <Route exact path="/photo/photobooks">
+    //           <PhotobooksPage />
+    //         </Route>
 
-      //         <Route exact path="/register">
-      //           <RegisterPage />
-      //         </Route>
+    //         <Route exact path="/photo/photoprint">
+    //           <PhotoprintPage />
+    //         </Route>
 
-      //         <Route exact path="/photo">
-      //           <PhotoPage />
-      //         </Route>
+    //         <Route exact path="/photo/scan">
+    //           <ScanPage />
+    //         </Route>
 
-      //         <Route exact path="/photo/fnd">
-      //           <FNDPage />
-      //         </Route>
+    //         <Route exact path="/comp">
+    //           <CompPage />
+    //         </Route>
 
-      //         <Route exact path="/photo/photobooks">
-      //           <PhotobooksPage />
-      //         </Route>
+    //         <Route exact path="/comp/xerox">
+    //           <Xerox />
+    //         </Route>
 
-      //         <Route exact path="/photo/photoprint">
-      //           <PhotoprintPage />
-      //         </Route>
+    //         <Route exact path="/poligraph">
+    //           <PoligraphPage />
+    //         </Route>
 
-      //         <Route exact path="/photo/scan">
-      //           <ScanPage />
-      //         </Route>
+    //         <Route exact path="/contacts">
+    //           <ContactsPage />
+    //         </Route>
+    //       </Switch>
 
-      //         <Route exact path="/comp">
-      //           <CompPage />
-      //         </Route>
-
-      //         <Route exact path="/comp/xerox">
-      //           <Xerox />
-      //         </Route>
-
-      //         <Route exact path="/poligraph">
-      //           <PoligraphPage />
-      //         </Route>
-
-      //         <Route exact path="/contacts">
-      //           <ContactsPage />
-      //         </Route>
-      //       </Switch>
-
-      //   </main>
-      //   <Footer2 />
-      // </Router>
-    );
-}
+    //   </main>
+    //   <Footer2 />
+    // </Router>
+  );
+};
 
 export default App;

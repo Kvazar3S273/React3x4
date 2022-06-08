@@ -20,7 +20,7 @@ const AdminLayout = () => {
           <div className="main">
             <Topbar />
 
-            <MainPage />
+            {/* <MainPage /> */}
 
 
             {/* <Cardbox /> */}
