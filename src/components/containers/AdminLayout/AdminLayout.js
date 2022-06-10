@@ -9,6 +9,9 @@ import RecentOrders from "./RecentOrders";
 import RecentCustomers from "./RecentCustomers";
 import Cardbox from "./Cardbox";
 import MainPage from "./MainPage";
+import MainPanel from "./MainPanel";
+import Users from "./Users";
+import Prices from "./Prices";
 
 const AdminLayout = () => {
   return (
@@ -17,10 +20,15 @@ const AdminLayout = () => {
         {<Outlet />}
         <div className="adminContainer">
           <Navigation />
+
+          
           <div className="main">
             <Topbar />
 
             {/* <MainPage /> */}
+            {/* <MainPanel/> */}
+            {/* <Users/> */}
+            {/* <Prices/> */}
 
 
             {/* <Cardbox /> */}

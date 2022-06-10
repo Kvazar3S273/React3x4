@@ -3,6 +3,8 @@ import React from "react";
 const Users = () => {
   return (
     <>
+    <div className="main">
+
       <div className="container p-3">
 
       <h1 className="text-center">Список користувачів</h1>
@@ -36,6 +38,7 @@ const Users = () => {
         </tbody>
       </table>
       </div>
+    </div>
     </>
   );
 };

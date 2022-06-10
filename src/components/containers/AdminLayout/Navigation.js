@@ -19,17 +19,19 @@ const Navigation = () => {
         <li>
           <a>
             {/* <img className="logo" src={logo} alt="logo"/> */}
-            <span className="icon">
-              <i style={{ color: "#03a9f4", fontSize: "35px" }}>
-                <FontAwesomeIcon icon={faCamera} />
-              </i>
-            </span>
-            <span
-              className="title"
-              style={{ color: "#03a9f4", fontSize: "20px" }}
-            >
-              3х4 Фотокопіцентр
-            </span>
+            <Link aria-current="page" to={`/admin`}>
+              <span className="icon">
+                <i style={{ color: "#03a9f4", fontSize: "35px" }}>
+                  <FontAwesomeIcon icon={faCamera} />
+                </i>
+              </span>
+              <span
+                className="title"
+                style={{ color: "#03a9f4", fontSize: "20px" }}
+              >
+                3х4 Фотокопіцентр
+              </span>
+            </Link>
           </a>
         </li>
         <li>
