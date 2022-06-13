@@ -1,11 +1,11 @@
 import React from "react";
 
-const Prices = () => {
+const Info = () => {
   return (
     <>
       <div>
         <div className="container p-3">
-          <h1 className="text-center">Prices</h1>
+          <h1 className="text-center">Info</h1>
           <p>
           Lorem Ipsum is simply dummy text of the printing 
           and typesetting industry. Lorem Ipsum has been the
@@ -26,4 +26,4 @@ const Prices = () => {
     </>
   );
 };
-export default Prices;
+export default Info;

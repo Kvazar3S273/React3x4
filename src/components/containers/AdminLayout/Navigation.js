@@ -19,6 +19,7 @@ const Navigation = () => {
         <li>
           <a>
             {/* <img className="logo" src={logo} alt="logo"/> */}
+              
             <Link aria-current="page" to={`/admin`}>
               <span className="icon">
                 <i style={{ color: "#03a9f4", fontSize: "35px" }}>
@@ -36,7 +37,7 @@ const Navigation = () => {
         </li>
         <li>
           <a>
-            <Link className="navLink" aria-current="page" to="/admin/index">
+            <Link className="navLink" aria-current="page" to="/admin">
               <span className="icon">
                 <i>
                   <FontAwesomeIcon icon={faGear} />

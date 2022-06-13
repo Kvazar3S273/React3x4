@@ -21,16 +21,13 @@ const AdminLayout = () => {
         <div className="adminContainer">
           <Navigation />
 
-          
           <div className="main">
             <Topbar />
-
+            <MainPanel/>
+            
             {/* <MainPage /> */}
-            {/* <MainPanel/> */}
-            {/* <Users/> */}
             {/* <Prices/> */}
-
-
+            {/* <Users/> */}
             {/* <Cardbox /> */}
             {/* <div className="details">
               <RecentOrders />

@@ -28,7 +28,7 @@ const MainPage = () => {
 
   return (
     <>
-    {showPrices && <Cardbox />} 
+    {/* {showPrices && <Cardbox />}  */}
     </>
 
   );
