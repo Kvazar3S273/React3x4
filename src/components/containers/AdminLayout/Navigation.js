@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,15 +11,35 @@ import {
   faMoneyBillTrendUp,
   faUserCircle
 } from "@fortawesome/free-solid-svg-icons";
+import Users from "./Users";
+import { useDispatch } from "react-redux";
+import showReducer from "../../../reducers/showReducer";
+import { SHOW_USERS } from "../../../constants/actionTypes";
+
+export const Show = (dispatch) => {
+  dispatch({type:SHOW_USERS});
+}
 
 const Navigation = () => {
+  // const [showUsers, setShowUsers] = useState(false);
+  // const handleClickUsers = (event) => {
+  //   setShowUsers((current) => !current);
+  //   // setShowAd(false);
+  //   // setShowPrices(false);
+  //   // setShowInfo(false);
+  // };
+
+  const dispatch = useDispatch();
+  const handleClickUsers = ()=>{
+    
+  }
+
   return (
     <div className="navigation">
       <ul>
         <li>
           <a>
             {/* <img className="logo" src={logo} alt="logo"/> */}
-              
             <Link aria-current="page" to={`/admin`}>
               <span className="icon">
                 <i style={{ color: "#03a9f4", fontSize: "35px" }}>
@@ -48,32 +68,32 @@ const Navigation = () => {
           </a>
         </li>
         <li>
-          <a>
-            <Link className="navLink" aria-current="page" to="/admin/users">
+          <a onClick={handleClickUsers}>
+            {/* <Link className="navLink" aria-current="page" to="/admin"> */}
               <span className="icon">
                 <i>
                   <FontAwesomeIcon icon={faUserCircle} />
                 </i>
               </span>
               <span className="title">Користувачі</span>
-            </Link>
+            {/* </Link> */}
           </a>
         </li>
         <li>
           <a>
-            <Link className="navLink" aria-current="page" to="/admin/prices">
+            <Link className="navLink" aria-current="page" to="/admin">
               <span className="icon">
                 <i>
                   <FontAwesomeIcon icon={faMoneyBillTrendUp} />
                 </i>
               </span>
-              <span className="title">Управління цінами</span>
+              <span className="title">Керування цінами</span>
             </Link>
           </a>
         </li>
         <li>
           <a>
-            <Link className="navLink" aria-current="page" to="/admin/ad">
+            <Link className="navLink" aria-current="page" to="/admin">
               <span className="icon">
                 <i>
                   <FontAwesomeIcon icon={faAd} />

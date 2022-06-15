@@ -76,11 +76,13 @@ body {
     line-height: 60px;
     text-align: center;
 }
-.aaa i{
+
+.aaa i {
     position: relative;
     color: #6bbb10;
     text-align: center;
 }
+
 .navigation ul li a .icon i {
     color: #fff;
     font-size: 24px;
@@ -128,7 +130,8 @@ body {
     height: 60px;
     cursor: pointer;
 }
-.toggle label i{
+
+.toggle label i {
     position: relative;
     display: block;
     line-height: 60px;
@@ -137,6 +140,7 @@ body {
     padding: 0 10px 0;
     cursor: pointer;
 }
+
 /* було закоментоване раніше
 .toggle::before {
     content: 'M'; 
@@ -150,23 +154,11 @@ body {
     color: #111;
 } */
 
-.card-panel{
+.card-panel {
     position: relative;
-    height: 270px;
     cursor: pointer;
 }
-.card-panel p{
-    position: relative;
-    height: 50px;
-}
-.card-panel .icon-card{
-    position: relative;
-    height: 80px;
-}
-.card-panel .title-card{
-    position: relative;
-    height: 60px;
-}
+
 
 .search {
     position: relative;
@@ -360,7 +352,8 @@ body {
     background: #fff;
     padding: 20px;
 }
-.details .recentCustomers .imgBx img{
+
+.details .recentCustomers .imgBx img {
     position: absolute;
     top: 0;
     left: 0;
@@ -368,78 +361,91 @@ body {
     height: 100%;
     object-fit: cover;
 }
-.details .recentCustomers .imgBx{
+
+.details .recentCustomers .imgBx {
     position: relative;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     overflow: hidden;
 }
-.details .recentCustomers table tr td h4 span{
+
+.details .recentCustomers table tr td h4 span {
     font-size: 14px;
     color: #999;
 }
+
 .details .recentCustomers table tr:hover,
-.details .recentCustomers table tr:hover td h4 span{
+.details .recentCustomers table tr:hover td h4 span {
     background: #03a9f4;
     color: #fff;
 }
-.details .recentCustomers table tr td{
+
+.details .recentCustomers table tr td {
     padding: 7px 10px;
 }
-.details .recentCustomers table tr td h4{
+
+.details .recentCustomers table tr td h4 {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.2em;
 }
-@media (max-width:992px)
-{
-    .cardBox{
-        grid-template-columns: repeat(2,1fr);
+
+@media (max-width:992px) {
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-@media (max-width:768px)
-{
-    .details{
-        grid-template-columns: repeat(1,1fr);
+
+@media (max-width:768px) {
+    .details {
+        grid-template-columns: repeat(1, 1fr);
     }
-    .cardHeader h2{
+
+    .cardHeader h2 {
         font-weight: 600;
         font-size: 18px;
     }
 }
-@media (max-width:480px)
-{
-    .cardBox{
-        grid-template-columns: repeat(1,1fr);
+
+@media (max-width:480px) {
+    .cardBox {
+        grid-template-columns: repeat(1, 1fr);
     }
-    .details .recentOrders{
+
+    .details .recentOrders {
         overflow-x: auto;
     }
-    .details .recentOrders table{
+
+    .details .recentOrders table {
         width: 600px;
     }
-    .navigation{
+
+    .navigation {
         width: 100%;
         left: -100%;
         z-index: 1000;
     }
-    .navigation.active{
+
+    .navigation.active {
         width: 100%;
         left: 0;
     }
-    .toggle.active{
+
+    .toggle.active {
         position: fixed;
         z-index: 10000;
         right: 0;
         left: initial;
         color: #ffffff;
     }
-    .toggle.active::before{
+
+    .toggle.active::before {
         color: #fff;
     }
+
     .main,
-    .main.active{
+    .main.active {
         width: 100%;
         left: 0;
     }

@@ -4,15 +4,15 @@ import "./index.css";
 const Producers = () => {
   return (
     <div className="row">
-      <div className="col rounded py-3">
+      <div className="col rounded py-3 mt-3" style={{backgroundColor:"#132855"}}>
         <div className="row gx-4 justify-content-center">
-          <div className="container" style={{position: "relative"}}>
-            <img
-              className="bg-img"
-              src="/images/partners/partner_bg.png"
-              alt="..."
-            />
-                  <div style={{position: "absolute", top:"45%", left:"50%", width:"80%", transform: "translate(-50%, -50%)"}}>
+            {/* <img className="bg-img" src="/images/partners/partner_bg.png" alt="..."/> */}
+          <div className="container" 
+          // style={{position: "relative"}}
+          >
+                  <div 
+                  // style={{position: "absolute", top:"45%", left:"50%", width:"80%", transform: "translate(-50%, -50%)"}}
+                  >
                     <h1 className="text-light text-center">Виробники</h1>
                     <p className="text-light text-center">
                       Ми користуємось витратними матеріалами тільки перевірених
@@ -35,10 +35,6 @@ const Producers = () => {
                     </div>
 
                   </div>
-
-            
-              
-            
           </div>
         </div>
       </div>

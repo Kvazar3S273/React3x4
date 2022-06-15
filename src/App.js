@@ -16,7 +16,6 @@ import Header from "./components/navbar";
 import Xerox from "./components/pages/comp/xerox";
 import DefaultLayout from "./components/containers/DefaultLayout/DefaultLayout";
 import AdminLayout from "./components/containers/AdminLayout/AdminLayout";
-import MainPage from "./components/containers/AdminLayout/MainPage";
 import Users from "./components/containers/AdminLayout/Users";
 import Prices from "./components/containers/AdminLayout/Prices";
 import Advertise from "./components/containers/AdminLayout/Advertise";
@@ -64,10 +63,10 @@ const App = () => {
         </Route>
 
         <Route path="/admin" element={<AdminLayout />}>
-          <Route path="/admin/index" element={<MainPanel />} />
+          {/* <Route path="/admin/index" element={<MainPanel />} />
           <Route path="/admin/users" element={<Users />} />
           <Route path="/admin/prices" element={<Prices />} />
-          <Route path="/admin/ad" element={<Advertise />} />
+          <Route path="/admin/ad" element={<Advertise />} /> */}
         </Route>
 
       </Routes>
