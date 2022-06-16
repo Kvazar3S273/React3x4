@@ -13,12 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Users from "./Users";
 import { useDispatch } from "react-redux";
-import showReducer from "../../../reducers/showReducer";
-import { SHOW_USERS } from "../../../constants/actionTypes";
-import { ShowUsers } from "../../../constants/actions/show";
-// const Show = (dispatch) => {
-//   dispatch({type:SHOW_USERS});
-// }
+import { ShowPrices, ShowUsers } from "../../../constants/actions/show";
 
 const Navigation = () => {
   // const [showUsers, setShowUsers] = useState(false);
@@ -32,7 +27,12 @@ const Navigation = () => {
   const dispatch = useDispatch();
   
   const handleClickUsers = () => {
-    dispatch(ShowUsers());
+    console.log("handleClickUsers");
+    dispatch(ShowUsers);
+  }
+  const handleClickPrices = () => {
+    console.log("handleClickPrices");
+    dispatch(ShowPrices);
   }
 
   return (
@@ -69,7 +69,9 @@ const Navigation = () => {
           </a>
         </li>
         <li>
-          <a onClick={handleClickUsers}>
+          <div onClick={handleClickUsers}>
+
+          <a >
             {/* <Link className="navLink" aria-current="page" to="/admin"> */}
               <span className="icon">
                 <i>
@@ -79,17 +81,18 @@ const Navigation = () => {
               <span className="title">Користувачі</span>
             {/* </Link> */}
           </a>
+          </div>
         </li>
         <li>
-          <a>
-            <Link className="navLink" aria-current="page" to="/admin">
+          <a onClick={handleClickPrices}>
+            {/* <Link className="navLink" aria-current="page" to="/admin"> */}
               <span className="icon">
                 <i>
                   <FontAwesomeIcon icon={faMoneyBillTrendUp} />
                 </i>
               </span>
               <span className="title">Керування цінами</span>
-            </Link>
+            {/* </Link> */}
           </a>
         </li>
         <li>

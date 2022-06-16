@@ -50,7 +50,8 @@ const MainPanel = () => {
     setShowPrices(false);
   };
 
-  const isShowUsers = useSelector((state) => state.ShowUsers);
+  const isShowUsers = useSelector((state) => state.show);
+  const isShowPrices = useSelector((state) => state.show);
 
   return (
     <div className="row justify-content-center">
@@ -126,6 +127,7 @@ const MainPanel = () => {
       {showInfo && <Info />}
 
       {isShowUsers ? <Users/> : ""}
+      {isShowPrices ? <Prices/> : ""}
 
     </div>
   );
