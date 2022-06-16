@@ -15,10 +15,10 @@ import Users from "./Users";
 import { useDispatch } from "react-redux";
 import showReducer from "../../../reducers/showReducer";
 import { SHOW_USERS } from "../../../constants/actionTypes";
-
-export const Show = (dispatch) => {
-  dispatch({type:SHOW_USERS});
-}
+import { ShowUsers } from "../../../constants/actions/show";
+// const Show = (dispatch) => {
+//   dispatch({type:SHOW_USERS});
+// }
 
 const Navigation = () => {
   // const [showUsers, setShowUsers] = useState(false);
@@ -30,8 +30,9 @@ const Navigation = () => {
   // };
 
   const dispatch = useDispatch();
-  const handleClickUsers = ()=>{
-    
+  
+  const handleClickUsers = () => {
+    dispatch(ShowUsers());
   }
 
   return (

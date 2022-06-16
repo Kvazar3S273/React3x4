@@ -50,7 +50,7 @@ const MainPanel = () => {
     setShowPrices(false);
   };
 
-  const isShowUsers = useSelector((state) => state.show);
+  const isShowUsers = useSelector((state) => state.ShowUsers);
 
   return (
     <div className="row justify-content-center">
