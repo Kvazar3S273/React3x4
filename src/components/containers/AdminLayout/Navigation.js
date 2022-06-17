@@ -13,26 +13,23 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Users from "./Users";
 import { useDispatch } from "react-redux";
-import { ShowPrices, ShowUsers } from "../../../constants/actions/show";
+import { ShowAdvertise, ShowInfo, ShowPrices, ShowUsers } from "../../../constants/actions/show";
 
 const Navigation = () => {
-  // const [showUsers, setShowUsers] = useState(false);
-  // const handleClickUsers = (event) => {
-  //   setShowUsers((current) => !current);
-  //   // setShowAd(false);
-  //   // setShowPrices(false);
-  //   // setShowInfo(false);
-  // };
 
   const dispatch = useDispatch();
   
   const handleClickUsers = () => {
-    console.log("handleClickUsers");
-    dispatch(ShowUsers);
+    dispatch(ShowUsers());
   }
   const handleClickPrices = () => {
-    console.log("handleClickPrices");
-    dispatch(ShowPrices);
+    dispatch(ShowPrices());
+  }
+  const handleClickAdvertise = () => {
+    dispatch(ShowAdvertise());
+  }
+  const handleClickInfo = () => {
+    dispatch(ShowInfo());
   }
 
   return (
@@ -69,9 +66,7 @@ const Navigation = () => {
           </a>
         </li>
         <li>
-          <div onClick={handleClickUsers}>
-
-          <a >
+          <a onClick={handleClickUsers}>
             {/* <Link className="navLink" aria-current="page" to="/admin"> */}
               <span className="icon">
                 <i>
@@ -81,7 +76,6 @@ const Navigation = () => {
               <span className="title">Користувачі</span>
             {/* </Link> */}
           </a>
-          </div>
         </li>
         <li>
           <a onClick={handleClickPrices}>
@@ -96,27 +90,27 @@ const Navigation = () => {
           </a>
         </li>
         <li>
-          <a>
-            <Link className="navLink" aria-current="page" to="/admin">
+          <a onClick={handleClickAdvertise}>
+            {/* <Link className="navLink" aria-current="page" to="/admin"> */}
               <span className="icon">
                 <i>
                   <FontAwesomeIcon icon={faAd} />
                 </i>
               </span>
               <span className="title">Управління рекламою</span>
-            </Link>
+            {/* </Link> */}
           </a>
         </li>
         <li>
-          <a>
-            <Link className="navLink" aria-current="page" to="#">
+          <a onClick={handleClickInfo}>
+            {/* <Link className="navLink" aria-current="page" to="#"> */}
               <span className="icon">
                 <i>
                   <FontAwesomeIcon icon={faInfoCircle} />
                 </i>
               </span>
               <span className="title">Зміна інформації</span>
-            </Link>
+            {/* </Link> */}
           </a>
         </li>
         <li>

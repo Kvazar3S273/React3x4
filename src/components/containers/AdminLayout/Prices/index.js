@@ -20,7 +20,7 @@ const Prices = () => {
               publishing software like Aldus PageMaker including 
               versions of Lorem Ipsum.
           </p>
-          <p>
+          {/* <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
           Nunc id magna imperdiet, aliquet massa id, laoreet metus. 
           Nullam fringilla augue vitae nibh auctor malesuada. Suspendisse 
@@ -79,7 +79,7 @@ Vestibulum gravida orci in turpis lacinia, sed semper arcu euismod.
  Etiam in placerat magna, lobortis sodales mauris. Nulla facilisi. 
  Suspendisse sagittis euismod neque id facilisis. Sed ut sem et ante
   viverra pretium et in tortor.
-          </p>
+          </p> */}
 
         </div>
       </div>
