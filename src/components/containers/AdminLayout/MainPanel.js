@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,57 +7,34 @@ import {
   faAd,
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import Users from "./Users";
 import Prices from "./Prices";
 import Advertise from "./Advertise";
 import Info from "./Info";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { ShowAdvertise, ShowInfo, ShowPrices, ShowUsers } from "../../../constants/actions/show";
 
 const MainPanel = () => {
-  const [showUsers, setShowUsers] = useState(false);
-  const [showPrices, setShowPrices] = useState(false);
-  const [showAd, setShowAd] = useState(false);
-  const [showInfo, setShowInfo] = useState(false);
+  // const [showUsers, setShowUsers] = useState(false);
 
-  const handleClickUsers = (event) => {
-    // 👇️ щоб по кліку відкривалось і по наступному закривалось
-    setShowUsers((current) => !current);
-    // 👇️ щоб по кліку тільки відкривалось
-    // setShowUsers(true);
-    setShowAd(false);
-    setShowPrices(false);
-    setShowInfo(false);
-  };
+  // const handleClickUsers = (event) => {
+  //   // 👇️ щоб по кліку відкривалось і по наступному закривалось
+  //   setShowUsers((current) => !current);
+  //   // 👇️ щоб по кліку тільки відкривалось
+  //   // setShowUsers(true);
+  //   setShowAd(false);
+  //   setShowPrices(false);
+  //   setShowInfo(false);
+  // };
 
-  const handleClickPrices = (event) => {
-    setShowPrices((current) => !current);
-    // setShowPrices(true);
-    setShowAd(false);
-    setShowUsers(false);
-    setShowInfo(false);
-  };
-
-  const handleClickAd = (event) => {
-    setShowAd((current) => !current);
-    // setShowAd(true);
-    setShowPrices(false);
-    setShowUsers(false);
-    setShowInfo(false);
-  };
-
-  const handleClickInfo = (event) => {
-    setShowInfo((current) => !current);
-    // setShowInfo(true);
-    setShowAd(false);
-    setShowUsers(false);
-    setShowPrices(false);
-  };
-
-  const {isShowU} = useSelector((state) => state.show);
-  const {isShowP} = useSelector((state) => state.show);
-  const {isShowA} = useSelector((state) => state.show);
-  const {isShowI} = useSelector((state) => state.show);
+  const dispatch = useDispatch();
+  
+  const handleClickUsers = () => { dispatch(ShowUsers()); }
+  const handleClickPrices = () => { dispatch(ShowPrices()); }
+  const handleClickAdvertise = () => { dispatch(ShowAdvertise()); }
+  const handleClickInfo = () => { dispatch(ShowInfo()); }
+  const {isShowU, isShowP, isShowA, isShowI, notShowMenu} = useSelector((state) => state.show);
 
   return (
     <div className="row justify-content-center">
@@ -93,7 +70,7 @@ const MainPanel = () => {
       </div>
 
       {/* Картка 3 */}
-      <div className="card-panel col m-3 p-2 border bg-light rounded" onClick={handleClickAd}>
+      <div className="card-panel col m-3 p-2 border bg-light rounded" onClick={handleClickAdvertise}>
         <div className="row">
           <div className="col-md-3">
           <i className="d-flex justify-content-center align-middle mt-1"
@@ -127,20 +104,16 @@ const MainPanel = () => {
       
       {/* стейти для підгрузки компонентів: */}
 
-      {showUsers && <Users />}
+      {/* {showUsers && <Users />}
       {showPrices && <Prices />}
       {showAd && <Advertise />}
-      {showInfo && <Info />}
+      {showInfo && <Info />} */}
 
       {isShowU ? <Users/> : ""}
       {isShowP ? <Prices/> : ""}
       {isShowA ? <Advertise/> : ""}
       {isShowI ? <Info/> : ""}
-
-      {/* {showUsers || isShowU ? <Users/> : ""}
-      {showPrices || isShowP ? <Prices/> : ""}
-      {showAd || isShowA ? <Advertise/> : ""}
-      {showInfo || isShowI ? <Info/> : ""} */}
+      {notShowMenu && ""}
 
     </div>
   );

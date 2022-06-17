@@ -1,14 +1,11 @@
-import { SHOW_USERS, SHOW_PRICES, SHOW_ADVERTISE, SHOW_INFO } from "../constants/actionTypes";
+import { SHOW_USERS, SHOW_PRICES, SHOW_ADVERTISE, SHOW_INFO, NOT_SHOW_MENU } from "../constants/actionTypes";
 
 const initialState = {
   isShowU: false,
   isShowP: false,
   isShowA: false,
   isShowI: false,
-  isShowUM: false,
-  isShowPM: false,
-  isShowAM: false,
-  isShowIM: false
+  notShowMenu: false
 };
 
 function showReducer (state = initialState, action) {
@@ -20,10 +17,7 @@ function showReducer (state = initialState, action) {
         isShowP: false,
         isShowA: false,
         isShowI: false,
-        isShowUM: false,
-        isShowPM: false,
-        isShowAM: false,
-        isShowIM: false
+        notShowMenu: false
       };
     }
     case SHOW_PRICES:{
@@ -31,7 +25,8 @@ function showReducer (state = initialState, action) {
         isShowU: false,
         isShowP: true,
         isShowA: false,
-        isShowI: false
+        isShowI: false,
+        notShowMenu: false
       };
     }
     case SHOW_ADVERTISE:{
@@ -39,7 +34,8 @@ function showReducer (state = initialState, action) {
         isShowU: false,
         isShowP: false,
         isShowA: true,
-        isShowI: false
+        isShowI: false,
+        notShowMenu: false
       };
     }
     case SHOW_INFO:{
@@ -47,7 +43,17 @@ function showReducer (state = initialState, action) {
         isShowU: false,
         isShowP: false,
         isShowA: false,
-        isShowI: true
+        isShowI: true,
+        notShowMenu: false
+      };
+    }
+    case NOT_SHOW_MENU:{
+      return{
+        isShowU: false,
+        isShowP: false,
+        isShowA: false,
+        isShowI: false,
+        notShowMenu: true
       };
     }
     default:{

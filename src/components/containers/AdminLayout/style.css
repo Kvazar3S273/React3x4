@@ -66,6 +66,7 @@ body {
     display: flex;
     text-decoration: none;
     color: #fff;
+    cursor: pointer;
 }
 
 .navigation ul li a .icon {
@@ -90,6 +91,7 @@ body {
 
 .navigation ul li a .title {
     position: relative;
+    color: #fff;
     display: block;
     padding: 0 10px;
     height: 60px;

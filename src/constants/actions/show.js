@@ -1,4 +1,4 @@
-import { SHOW_USERS, SHOW_PRICES, SHOW_ADVERTISE, SHOW_INFO } from "../actionTypes";
+import { SHOW_USERS, SHOW_PRICES, SHOW_ADVERTISE, SHOW_INFO, NOT_SHOW_MENU } from "../actionTypes";
 
 export const ShowUsers = () => (dispatch) => {
   dispatch({ type: SHOW_USERS });
@@ -12,4 +12,7 @@ export const ShowAdvertise = () => (dispatch) => {
 };
 export const ShowInfo = () => (dispatch) => {
   dispatch({ type: SHOW_INFO });
+};
+export const NotShowMenu = () => (dispatch) => {
+  dispatch({ type: NOT_SHOW_MENU });
 };

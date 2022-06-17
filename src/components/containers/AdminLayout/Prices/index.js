@@ -5,7 +5,7 @@ const Prices = () => {
     <>
       <div>
         <div className="container p-3">
-          <h1 className="text-center">Prices</h1>
+          <h1 className="text-center">Керування цінами</h1>
           <p>
           Lorem Ipsum is simply dummy text of the printing 
           and typesetting industry. Lorem Ipsum has been the

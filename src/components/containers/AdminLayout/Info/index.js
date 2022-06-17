@@ -5,7 +5,7 @@ const Info = () => {
     <>
       <div>
         <div className="container p-3">
-          <h1 className="text-center">Info</h1>
+          <h1 className="text-center">Зміна інформації</h1>
           <p>
           Lorem Ipsum is simply dummy text of the printing 
           and typesetting industry. Lorem Ipsum has been the
