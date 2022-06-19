@@ -28,3 +28,8 @@ body {
         transform: translateY(0);
      }
 }
+.producer img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
