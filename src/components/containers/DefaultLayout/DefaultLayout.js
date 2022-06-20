@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Outlet } from 'react-router-dom';
+import Footer from "../../footer/footer";
 // import Layout from "./Layout";
 import Header from "../../navbar";
 // import { Switch, Route } from "react-router-dom";
@@ -14,6 +15,7 @@ const DefaultLayout = () => {
               {<Outlet/>}
           {/* </div> */}
       </main>
+      <Footer/>
     </>
     );
 }
