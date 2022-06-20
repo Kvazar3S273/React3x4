@@ -23,13 +23,13 @@ const Topbar = () => {
         </label>
       </div>
       {/* <div className="search">
-                <label>
-                  <input type="text" placeholder="Search here" />
-                  <i>
-                    <FontAwesomeIcon icon={faSearch} />
-                  </i>
-                </label>
-              </div> */}
+        <label>
+          <input type="text" placeholder="Search here" />
+          <i>
+            <FontAwesomeIcon icon={faBars} />
+          </i>
+        </label>
+      </div> */}
       <div className="user">
         <img src={user} alt="user" />
       </div>

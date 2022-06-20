@@ -3,8 +3,8 @@ import ServiceCards from "./servicecards";
 import Carousel from "./carousel";
 import MakeFancybox from "./MakeFancybox";
 import Products from "./products";
-import Footer from "../../footer/footer";
 import Producers from "./producers";
+import { ScrollToTop } from "react-simple-scroll-up";
 
 const HomePage = () => {
   return (
@@ -14,7 +14,12 @@ const HomePage = () => {
       <MakeFancybox />
       <Products />
       <Producers />
-      {/* <h1>HomePage</h1> */}
+      {/* <ScrollToTop 
+      size={70}
+      offsetTop={200}
+      strokeWidth={5}
+      symbol="🡩"
+      /> */}
     </>
   );
 };

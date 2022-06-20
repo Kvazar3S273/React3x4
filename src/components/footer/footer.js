@@ -5,8 +5,8 @@ import "./footer.css";
 const Footer = () => {
 
   return (
-    <div className="row ">
-        <div className=" col mt-3">
+    <div className="row">
+        <div className="col mt-3">
             <div className="row gx-4 justify-content-center">
                 <div className="footer container bg-dark p-3">
                     <div className="footer-text row g-5">
@@ -42,8 +42,8 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="container bg-dark">
-                        <div className="row mb-5">
+                <div className="bg-dark">
+                        <div className="row mb-4">
                             <div className="col-md-6 text-center text-secondary text-md-start ">
                                 © 
                                 <Link aria-current="page" to="/">3x4.com.ua</Link>, All Right Reserved.

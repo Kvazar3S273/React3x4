@@ -1,23 +1,18 @@
-import React, { Component } from "react";
-import { Outlet } from 'react-router-dom';
+import React from "react";
+import { Outlet } from "react-router-dom";
+import { ScrollToTop } from "react-simple-scroll-up";
 import Footer from "../../footer/footer";
-// import Layout from "./Layout";
 import Header from "../../navbar";
-// import { Switch, Route } from "react-router-dom";
-// import DefaultRoutes from "../../../routes/DefaultRoutes";
 
 const DefaultLayout = () => {
-    return (
-      <>
+  return (
+    <>
+      <ScrollToTop size={70} offsetTop={50} strokeWidth={5} symbol="🡩" style={{marginTop:"90px"}}/>
       <Header />
-      <main>
-          {/* <div className="container"> */}
-              {<Outlet/>}
-          {/* </div> */}
-      </main>
-      <Footer/>
+      <main>{<Outlet />}</main>
+      <Footer />
     </>
-    );
-}
+  );
+};
 
 export default DefaultLayout;
