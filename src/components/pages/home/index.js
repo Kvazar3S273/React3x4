@@ -18,7 +18,7 @@ const HomePage = () => {
       size={70}
       offsetTop={200}
       strokeWidth={5}
-      symbol="🡩"
+      symbol="UP"
       /> */}
     </>
   );
