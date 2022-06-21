@@ -1,19 +1,14 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faUserCircle,
-  faMoneyBillTrendUp,
-  faAd,
-  faInfoCircle,
-  faCamera,
-  faComputer,
-  faPrint,
-  faUser,
-  faImage,
-  faFileExport,
-  faCopy,
-  faWineBottle,
-  faPhotoFilm,
+  faAddressCard,
+  faLayerGroup,
+  faCalendarDays,
+  faTag,
+  faNoteSticky,
+  faDoorClosed,
+  faTape,
+  faRectangleAd
 } from "@fortawesome/free-solid-svg-icons";
 
 const PoligraphChangePrice = () => {
@@ -22,7 +17,6 @@ const PoligraphChangePrice = () => {
       <div>
         <div className="container p-3">
           <h1 className="text-center">Поліграфія</h1>
-          
           <div className="row justify-content-center">
 
       {/* Картка 1 */}
@@ -31,7 +25,7 @@ const PoligraphChangePrice = () => {
           <div className="col-md-3">
           <i className="d-flex justify-content-center align-middle mt-1"
               style={{ fontSize: "2.5em", color: "#000" }}>
-              <FontAwesomeIcon icon={faUser} />
+              <FontAwesomeIcon icon={faAddressCard} />
             </i>
           </div>
           <div className="col-md-9">
@@ -46,7 +40,7 @@ const PoligraphChangePrice = () => {
           <div className="col-md-3">
           <i className="d-flex justify-content-center align-middle  mt-1"
               style={{fontSize: "2.5em", color: "#000"}}>
-              <FontAwesomeIcon icon={faPhotoFilm} />
+              <FontAwesomeIcon icon={faLayerGroup} />
             </i>
           </div>
           <div className="col-md-9">
@@ -61,7 +55,7 @@ const PoligraphChangePrice = () => {
           <div className="col-md-3">
           <i className="d-flex justify-content-center align-middle mt-1"
               style={{fontSize: "2.5em", color: "#000"}}>
-              <FontAwesomeIcon icon={faFileExport} />
+              <FontAwesomeIcon icon={faCalendarDays} />
             </i>
           </div>
           <div className="col-md-9">
@@ -76,7 +70,7 @@ const PoligraphChangePrice = () => {
           <div className="col-md-3">
           <i className="d-flex justify-content-center align-middle mt-1"
               style={{ fontSize: "2.5em", color: "#000" }}>
-              <FontAwesomeIcon icon={faCopy} />
+              <FontAwesomeIcon icon={faTag} />
             </i>
           </div>
           <div className="col-md-9">
@@ -91,7 +85,7 @@ const PoligraphChangePrice = () => {
           <div className="col-md-3">
           <i className="d-flex justify-content-center align-middle  mt-1"
               style={{fontSize: "2.5em", color: "#000"}}>
-              <FontAwesomeIcon icon={faImage} />
+              <FontAwesomeIcon icon={faNoteSticky} />
             </i>
           </div>
           <div className="col-md-9">
@@ -106,7 +100,7 @@ const PoligraphChangePrice = () => {
           <div className="col-md-3">
           <i className="d-flex justify-content-center align-middle mt-1"
               style={{fontSize: "2.5em", color: "#000"}}>
-              <FontAwesomeIcon icon={faWineBottle} />
+              <FontAwesomeIcon icon={faDoorClosed} />
             </i>
           </div>
           <div className="col-md-9">
@@ -121,7 +115,7 @@ const PoligraphChangePrice = () => {
           <div className="col-md-3">
           <i className="d-flex justify-content-center align-middle  mt-1"
               style={{fontSize: "2.5em", color: "#000"}}>
-              <FontAwesomeIcon icon={faImage} />
+              <FontAwesomeIcon icon={faTape} />
             </i>
           </div>
           <div className="col-md-9">
@@ -136,7 +130,7 @@ const PoligraphChangePrice = () => {
           <div className="col-md-3">
           <i className="d-flex justify-content-center align-middle mt-1"
               style={{fontSize: "2.5em", color: "#000"}}>
-              <FontAwesomeIcon icon={faWineBottle} />
+              <FontAwesomeIcon icon={faRectangleAd} />
             </i>
           </div>
           <div className="col-md-9">

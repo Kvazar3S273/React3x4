@@ -1,19 +1,12 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faUserCircle,
-  faMoneyBillTrendUp,
-  faAd,
-  faInfoCircle,
-  faCamera,
-  faComputer,
-  faPrint,
-  faUser,
   faImage,
   faFileExport,
   faCopy,
   faWineBottle,
   faPhotoFilm,
+  faImagePortrait
 } from "@fortawesome/free-solid-svg-icons";
 
 const PhotoChangePrice = () => {
@@ -31,7 +24,7 @@ const PhotoChangePrice = () => {
           <div className="col-md-3">
           <i className="d-flex justify-content-center align-middle mt-1"
               style={{ fontSize: "2.5em", color: "#000" }}>
-              <FontAwesomeIcon icon={faUser} />
+              <FontAwesomeIcon icon={faImagePortrait} />
             </i>
           </div>
           <div className="col-md-9">
