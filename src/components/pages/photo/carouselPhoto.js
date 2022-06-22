@@ -1,12 +1,12 @@
 import React from "react";
-
-const Carousel = () => {
+import "./style.css"
+const CarouselPhoto = () => {
     return (
         
 <div id="carouselBasicExample" className="carousel slide mb-3" data-bs-ride="carousel">
   {/*<!-- Carousel wrapper -->*/}
   {/*<!-- Indicators -->*/}
-  <div className="carousel-indicators" style={{top:"93%"}}>
+  <div className="carousel-indicators" >
     <button
       type="button"
       data-bs-target="#carouselBasicExample"
@@ -33,43 +33,37 @@ const Carousel = () => {
       data-bs-slide-to="3"
       aria-label="Slide 4"
     ></button>
-    <button
-      type="button"
-      data-bs-target="#carouselBasicExample"
-      data-bs-slide-to="4"
-      aria-label="Slide 5"
-    ></button>
   </div>
 
   <div className="carousel-inner">
 
     {/* Слайд 1  */}
     <div className="carousel-item active">
-    <img src="/images/slider/bg1.jpg" className="d-block w-100" alt="Backgroung slide 1"/>
+    <img src="/images/slider/fp1.jpg" className="d-block w-100" alt="Backgroung slide 1"/>
       <div className="carousel-caption" style={{ textShadow: "4px 4px 10px #000"}}>
             <div className="row">
                 {/* Є картинка на великих, прихована тільки на sm */}
                 <div className="d-sm-none d-none d-md-block">
-                    <img src="/images/slider/img1.png" style={{width:"50%"}}/>
+                    <img src="/images/slider/fimg1.png" style={{width:"50%"}}/>
                 </div>
                 {/* Є картинка тільки на sm */}
                 <div className="d-none d-sm-block d-md-none">
-                    <img src="/images/slider/img1.png" style={{width:"45%"}}/>
+                    <img src="/images/slider/fimg1.png" style={{width:"45%"}}/>
                 </div>
                 {/* Є картинка тільки на xs */}
                 <div className="d-block d-sm-none">
-                    <img src="/images/slider/img1.png" style={{width:"40%"}}/>
+                    <img src="/images/slider/fimg1.png" style={{width:"40%"}}/>
                 </div>
 
                 {/*Заголовок і опис на всіх, крім xs */}
                 <div className="d-none d-sm-block">
-                    <h2>Фотопослуги</h2>
+                    <h2>Фото на документи</h2>
                     <p>Фото на документи, друк фотографій, фотокниги,<br />
                         сканування фотографій, заміна фону, реставрація...</p>
                 </div>
                 {/*Лише заголовок тільки на xs */}
                 <div className="d-block d-sm-none">
-                    <h2>Фотопослуги</h2>
+                    <h2>Фото на документи</h2>
                 </div>
             </div>
       </div>
@@ -77,31 +71,31 @@ const Carousel = () => {
 
     {/* Слайд 2  */}
     <div className="carousel-item">
-      <img src="/images/slider/bg2.jpg" className="d-block w-100" alt="Backgroung slide 2"/>
+      <img src="/images/slider/fp2.jpg" className="d-block w-100" alt="Backgroung slide 2"/>
       <div className="carousel-caption" style={{ textShadow: "4px 4px 10px #000"}}>
             <div className="row">
                 {/* Є картинка на великих, прихована тільки на sm */}
                 <div className="d-sm-none d-none d-md-block">
-                    <img src="/images/slider/img2.png" style={{width:"60%"}}/>
+                    <img src="/images/slider/fimg2.png" style={{width:"60%"}}/>
                 </div>
                 {/* Є картинка тільки на sm */}
                 <div className="d-none d-sm-block d-md-none">
-                    <img src="/images/slider/img2.png" style={{width:"50%"}}/>
+                    <img src="/images/slider/fimg2.png" style={{width:"50%"}}/>
                 </div>
                 {/* Є картинка тільки на xs */}
                 <div className="d-block d-sm-none">
-                    <img src="/images/slider/img2.png" style={{width:"40%"}}/>
+                    <img src="/images/slider/fimg2.png" style={{width:"40%"}}/>
                 </div>
 
                 {/*Заголовок і опис на всіх, крім xs */}
                 <div className="d-none d-sm-block">
-                    <h2>Комп'ютерні послуги</h2>
+                    <h2>Друк фотографій</h2>
                     <p>Ксерокопії, друк, сканування, запис цифрових носіїв, <br />
                         ламінування, брошурування, друк на дисках...</p>
                 </div>
                 {/*Лише заголовок тільки на xs */}
                 <div className="d-block d-sm-none">
-                    <h2>Комп'ютерні послуги</h2>
+                    <h2>Друк фотографій</h2>
                 </div>
             </div>
       </div>
@@ -109,31 +103,31 @@ const Carousel = () => {
 
     {/* Слайд 3 */}
     <div className="carousel-item">
-      <img src="/images/slider/bg3.jpg" className="d-block w-100" alt="Backgroung slide 3"/>
+      <img src="/images/slider/fp3.jpg" className="d-block w-100" alt="Backgroung slide 3"/>
       <div className="carousel-caption" style={{ textShadow: "4px 4px 10px #000"}}>
             <div className="row">
                 {/* Є картинка на великих, прихована тільки на sm */}
                 <div className="d-sm-none d-none d-md-block">
-                    <img src="/images/slider/img3.png" style={{width:"60%"}}/>
+                    <img src="/images/slider/fimg3.png" style={{width:"60%"}}/>
                 </div>
                 {/* Є картинка тільки на sm */}
                 <div className="d-none d-sm-block d-md-none">
-                    <img src="/images/slider/img3.png" style={{width:"50%"}}/>
+                    <img src="/images/slider/fimg3.png" style={{width:"50%"}}/>
                 </div>
                 {/* Є картинка тільки на xs */}
                 <div className="d-block d-sm-none">
-                    <img src="/images/slider/img3.png" style={{width:"40%"}}/>
+                    <img src="/images/slider/fimg3.png" style={{width:"40%"}}/>
                 </div>
                 
                 {/*Заголовок і опис на всіх, крім xs */}
                 <div className="d-none d-sm-block">
-                    <h2>Поліграфія</h2>
+                    <h2>Фотокниги</h2>
                     <p>Візитки, календарики, листівки, флаєри, бірки, <br />
                         цінники, наклейки, хенгери, банери, самоклейка...</p>
                 </div>
                 {/*Лише заголовок тільки на xs */}
                 <div className="d-block d-sm-none">
-                    <h2>Поліграфія</h2>
+                    <h2>Фотокниги</h2>
                 </div>
             </div>
       </div>
@@ -141,63 +135,31 @@ const Carousel = () => {
 
     {/* Слайд 4 */}
     <div className="carousel-item">
-      <img src="/images/slider/bg4.jpg" className="d-block w-100" alt="Backgroung slide 4"/>
+      <img src="/images/slider/fp4.jpg" className="d-block w-100" alt="Backgroung slide 4"/>
       <div className="carousel-caption" style={{ textShadow: "4px 4px 10px #000"}}>
             <div className="row">
                 {/* Є картинка на великих, прихована тільки на sm */}
                 <div className="d-sm-none d-none d-md-block">
-                    <img src="/images/slider/img4.png" style={{width:"50%"}}/>
+                    <img src="/images/slider/fimg4.png" style={{width:"50%"}}/>
                 </div>
                 {/* Є картинка тільки на sm */}
                 <div className="d-none d-sm-block d-md-none">
-                    <img src="/images/slider/img4.png" style={{width:"40%"}}/>
+                    <img src="/images/slider/fimg4.png" style={{width:"40%"}}/>
                 </div>
                 {/* Є картинка тільки на xs */}
                 <div className="d-block d-sm-none">
-                    <img src="/images/slider/img4.png" style={{width:"30%"}}/>
+                    <img src="/images/slider/fimg4.png" style={{width:"30%"}}/>
                 </div>
                 
                 {/*Заголовок і опис на всіх, крім xs */}
                 <div className="d-none d-sm-block">
-                    <h2>Нанесення фото</h2>
+                    <h2>Фотокартини</h2>
                     <p> Фото на чашках, пазлах, годинниках <br />
                     етикетки на пляшки, друк на полотні, фотокартини...</p>
                 </div>
                 {/*Лише заголовок тільки на xs */}
                 <div className="d-block d-sm-none">
-                    <h2>Нанесення фото</h2>
-                </div>
-            </div>
-      </div>
-    </div>
-
-    {/* Слайд 5 */}
-    <div className="carousel-item">
-      <img src="/images/slider/bg5.jpg" className="d-block w-100" alt="Backgroung slide 5"/>
-      <div className="carousel-caption" style={{ textShadow: "4px 4px 10px #000"}}>
-            <div className="row">
-                {/* Є картинка на великих, прихована тільки на sm */}
-                <div className="d-sm-none d-none d-md-block">
-                    <img src="/images/slider/img5.png" style={{width:"60%"}}/>
-                </div>
-                {/* Є картинка тільки на sm */}
-                <div className="d-none d-sm-block d-md-none">
-                    <img src="/images/slider/img5.png" style={{width:"50%"}}/>
-                </div>
-                {/* Є картинка тільки на xs */}
-                <div className="d-block d-sm-none">
-                    <img src="/images/slider/img5.png" style={{width:"40%"}}/>
-                </div>
-                
-                {/*Заголовок і опис на всіх, крім xs */}
-                <div className="d-none d-sm-block">
-                    <h2>Продаж</h2>
-                    <p>Фоторамки, фотоальбоми, диски, елементи живлення, <br />
-                    канцтовари, обкладинки на документи, LED-лампи...</p>
-                </div>
-                {/*Лише заголовок тільки на xs */}
-                <div className="d-block d-sm-none">
-                    <h2>Продаж</h2>
+                    <h2>Фотокартини</h2>
                 </div>
             </div>
       </div>
@@ -223,4 +185,4 @@ const Carousel = () => {
         );
     };
     
-    export default Carousel;
+    export default CarouselPhoto;
