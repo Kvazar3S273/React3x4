@@ -1,3 +1,26 @@
-div .carousel-indicators{
-    top:93%
+div .carousel-indicators {
+    top: 93%
+}
+
+div .card {
+    width: 100%;
+}
+
+div .card-body-photo {
+    height: 4em;
+}
+
+div .card-body-photo h6.card-title {
+    position: relative;
+    top: 1em;
+}
+
+div .card h6 {
+    vertical-align: baseline;
+}
+
+.photo-service{
+    /* position: relative; */
+    width: 100%;
+    padding-right: 10px;
 }

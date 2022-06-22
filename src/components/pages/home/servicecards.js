@@ -9,18 +9,17 @@ const ServiceCards = () => {
         {/* Темно-сірий блок для карток */}
         <div className="col bg-dark rounded py-4">
           {/* Рядок для карток */}
-          {/* <div className="container"> */}
 
           <div className="row gx-5 justify-content-center">
             <h1 className="text-light text-center">Наші послуги</h1>
             <p className="text-light text-center">13 років досвіду щоб запропонувати Вам:</p>
             {/* Картка 1 */}
             <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
-              <div className="card" style={{ width: "100%" }}>
+              <div className="card" >
                 <img
                   src="/images/slider/img1.png"
                   className="card-img-top"
-                  alt="..."
+                  alt="Фотопослуги"
                 />
                 <div className="card-body">
                   <h5 className="card-title text-center">Фотопослуги</h5>
@@ -40,11 +39,11 @@ const ServiceCards = () => {
 
             {/* Картка 2 */}
             <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
-              <div className="card" style={{ width: "100%" }}>
+              <div className="card" >
                 <img
                   src="/images/slider/img2.png"
                   className="card-img-top"
-                  alt="..."
+                  alt="Комп'ютерні послуги"
                 />
                 <div className="card-body">
                   <h5 className="card-title text-center">Комп'ютерні послуги</h5>
@@ -63,11 +62,11 @@ const ServiceCards = () => {
             </div>
             {/* Картка 3 */}
             <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
-              <div className="card" style={{ width: "100%" }}>
+              <div className="card" >
                 <img
                   src="/images/slider/img3.png"
                   className="card-img-top"
-                  alt="..."
+                  alt="Поліграфія"
                 />
                 <div className="card-body">
                   <h5 className="card-title text-center">Поліграфія</h5>
@@ -86,11 +85,11 @@ const ServiceCards = () => {
             </div>
             {/* Картка 4 */}
             <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
-              <div className="card" style={{ width: "100%" }}>
+              <div className="card" >
                 <img
                   src="/images/slider/img4.png"
                   className="card-img-top"
-                  alt="..."
+                  alt="Нанесення фото"
                 />
                 <div className="card-body">
                   <h5 className="card-title text-center">Нанесення фото</h5>
@@ -109,11 +108,11 @@ const ServiceCards = () => {
             </div>
             {/* Картка 5 */}
             <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
-              <div className="card" style={{ width: "100%" }}>
+              <div className="card" >
                 <img
                   src="/images/slider/img5.png"
                   className="card-img-top"
-                  alt="..."
+                  alt="Продаж"
                 />
                 <div className="card-body">
                   <h5 className="card-title text-center">Продаж</h5>
@@ -132,10 +131,8 @@ const ServiceCards = () => {
               </div>
             </div>
           </div>
-          {/* </div> */}
         </div>
       </div>
-     //</div>
   );
   };
   

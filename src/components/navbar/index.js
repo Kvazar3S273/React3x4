@@ -74,25 +74,25 @@ const Header = () => {
                 <NavDropdown.Divider />
 
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="/photo/fnd">
+                    <Link className="nav-link" aria-current="page" to="/photo">
                         Фото на документи
                     </Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="/photo/photoprint">
+                    <Link className="nav-link" aria-current="page" to="/photo">
                         Фотодрук
                     </Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="/photo/scan">
+                    <Link className="nav-link" aria-current="page" to="/photo">
                         Сканування фото
                     </Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="/photo/photobooks">
+                    <Link className="nav-link" aria-current="page" to="/photo">
                         Фотокниги
                     </Link>
                 </NavDropdown.Item>
