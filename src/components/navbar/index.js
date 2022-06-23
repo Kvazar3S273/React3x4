@@ -4,9 +4,30 @@ import { useSelector } from "react-redux";
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import logo from "../../../src/3x4logo.png";
 import "./index.css";
+import { useDispatch } from "react-redux";
+import { 
+  PhotoFnd, 
+  PhotoPhotoprint,
+  PhotoPhotobooks,
+  PhotoScan,
+  PhotoDuplicate,
+  PhotoRestoration,
+  PhotoBackground,
+  PhotoAddition,
+  PhotoBottle,
+  PhotoPhotopicture
+} from "../../constants/actions/show";
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const Header = () => {
 
+    const dispatch = useDispatch();
+    
+    const handleClickScan = () => { dispatch(PhotoScan()); }
+    const handleClickAddition = () => { dispatch(PhotoAddition()); }
+    const handleClickBackground = () => { dispatch(PhotoBackground()); }
+    const handleClickRestoration = () => { dispatch(PhotoRestoration()); }
+    
     const { isAuth, username } = useSelector((redux) => redux.auth);
     const ref = useRef(null);
     const [navExpanded, setNavExpanded] = useState(false);
@@ -74,29 +95,57 @@ const Header = () => {
                 <NavDropdown.Divider />
 
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="/photo">
-                        Фото на документи
-                    </Link>
+                    <AnchorLink href="#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickRestoration}>Фото на документи</h6>
+                    </AnchorLink>
                 </NavDropdown.Item>
-
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="/photo">
-                        Фотодрук
-                    </Link>
+                    <AnchorLink href="#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickRestoration}>Друк фотографій</h6>
+                    </AnchorLink>
                 </NavDropdown.Item>
-
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="/photo">
-                        Сканування фото
-                    </Link>
+                    <AnchorLink href="#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickRestoration}>Фотокниги</h6>
+                    </AnchorLink>
                 </NavDropdown.Item>
-
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="/photo">
-                        Фотокниги
-                    </Link>
+                    <AnchorLink href="#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickScan}>Сканування фотографій</h6>
+                    </AnchorLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <AnchorLink href="#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickRestoration}>Дублікати фотографій</h6>
+                    </AnchorLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <AnchorLink href="#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickRestoration}>Реставрація</h6>
+                    </AnchorLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <AnchorLink href="#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickBackground}>Заміна фону</h6>
+                    </AnchorLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <AnchorLink href="#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickAddition}>Об'єднання фотографій</h6>
+                    </AnchorLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <AnchorLink href="#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickRestoration}>Етикетки на пляшку</h6>
+                    </AnchorLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <AnchorLink href="#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickRestoration}>Фотокартини</h6>
+                    </AnchorLink>
                 </NavDropdown.Item>
 
+                
             </NavDropdown>
 
             {/* Комп'ютерні послуги */}

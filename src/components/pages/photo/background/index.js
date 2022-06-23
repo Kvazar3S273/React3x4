@@ -5,7 +5,7 @@ const Background = () => {
   return (
     <>
     <div className="row mt-3 mb-3">
-        <div className="col rounded py-3" style={{backgroundColor:"#c8c8c8"}}>
+        <div className="col py-3" style={{backgroundColor:"#e0e3e5"}}>
             <h1 className="text-center">Заміна фону</h1>
             <div className="row m-3 p-2">
                 <div className="col-md-4">
