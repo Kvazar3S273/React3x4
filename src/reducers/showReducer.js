@@ -1,11 +1,12 @@
-import { SHOW_USERS, SHOW_PRICES, SHOW_ADVERTISE, SHOW_INFO, NOT_SHOW_MENU } from "../constants/actionTypes";
+import { SHOW_USERS, SHOW_PRICES, SHOW_ADVERTISE, SHOW_INFO, NOT_SHOW_MENU, PHOTO_ADDITION } from "../constants/actionTypes";
 
 const initialState = {
   isShowU: false,
   isShowP: false,
   isShowA: false,
   isShowI: false,
-  notShowMenu: false
+  notShowMenu: false,
+  isPhotoAddition: false
 };
 
 function showReducer (state = initialState, action) {
@@ -54,6 +55,20 @@ function showReducer (state = initialState, action) {
         isShowA: false,
         isShowI: false,
         notShowMenu: true
+      };
+    }
+    case PHOTO_ADDITION: {
+      return {
+        // isPhotoFnd: false,
+        // isPhotoPhotoprint: false,
+        // isPhotoPhotobooks: false,
+        // isPhotoScan: false,
+        // isPhotoDuplicate: false,
+        // isPhotoRestoration: false,
+        // isPhotoBackground: false,
+        isPhotoAddition: true,
+        // isPhotoBottle: false,
+        // isPhotoPhotoprint: false
       };
     }
     default:{
