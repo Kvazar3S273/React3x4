@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-const PhotoprintPage = () => {
+const Photoprint = () => {
   return (
     <div className="row">
       <div className="offset-md-4 col-md-4">
@@ -9,4 +9,4 @@ const PhotoprintPage = () => {
     </div>
   );
 };
-export default PhotoprintPage;
+export default Photoprint;

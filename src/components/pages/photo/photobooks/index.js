@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-const PhotobooksPage = () => {
+const Photobooks = () => {
   return (
     <div className="row">
       <div className="offset-md-4 col-md-4">
@@ -9,4 +9,4 @@ const PhotobooksPage = () => {
     </div>
   );
 };
-export default PhotobooksPage;
+export default Photobooks;

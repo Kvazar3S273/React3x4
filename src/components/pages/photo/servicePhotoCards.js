@@ -19,10 +19,16 @@ const ServicePhotoCards = () => {
 
   const dispatch = useDispatch();
 
+  const handleClickFnd = () => { dispatch(PhotoFnd()); }
+  const handleClickPhotoprint = () => { dispatch(PhotoPhotoprint()); }
+  const handleClickPhotobooks = () => { dispatch(PhotoPhotobooks()); }
   const handleClickScan = () => { dispatch(PhotoScan()); }
-  const handleClickAddition = () => { dispatch(PhotoAddition()); }
-  const handleClickBackground = () => { dispatch(PhotoBackground()); }
+  const handleClickDuplicate = () => { dispatch(PhotoDuplicate()); }
   const handleClickRestoration = () => { dispatch(PhotoRestoration()); }
+  const handleClickBackground = () => { dispatch(PhotoBackground()); }
+  const handleClickAddition = () => { dispatch(PhotoAddition()); }
+  const handleClickBottle = () => { dispatch(PhotoBottle()); }
+  const handleClickPhotopicture = () => { dispatch(PhotoPhotopicture()); }
 
   return (
     <>
@@ -37,7 +43,8 @@ const ServicePhotoCards = () => {
             <p className="text-light text-center">Пропонуємо Вам широкий асортимент фотопослуг, серед яких:</p>
             
             {/* Картка 1 */}
-            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded ">
+            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
+            onClick={handleClickFnd}>
               <AnchorLink href="#component" style={{color:"#000"}}>
               <div className="card" >
                 <img
@@ -53,7 +60,8 @@ const ServicePhotoCards = () => {
             </div>
 
             {/* Картка 2 */}
-            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded ">
+            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
+            onClick={handleClickPhotoprint}>
               <AnchorLink href="#component" style={{color:"#000"}}>
               <div className="card" >
                 <img
@@ -69,7 +77,8 @@ const ServicePhotoCards = () => {
             </div>
             
             {/* Картка 3 */}
-            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded ">
+            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
+            onClick={handleClickPhotobooks}>
             <AnchorLink href="#component" style={{color:"#000"}}>
               <div className="card" >
                 <img
@@ -102,7 +111,8 @@ const ServicePhotoCards = () => {
             </div>
             
             {/* Картка 5 */}
-            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded ">
+            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
+            onClick={handleClickDuplicate}>
             <AnchorLink href="#component" style={{color:"#000"}}>
               <div className="card" >
                 <img
@@ -169,7 +179,8 @@ const ServicePhotoCards = () => {
             </div>
             
             {/* Картка 9 */}
-            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded ">
+            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
+            onClick={handleClickBottle}>
               <AnchorLink href="#component" style={{color:"#000"}}>
               <div className="card" >
                 <img
@@ -185,7 +196,8 @@ const ServicePhotoCards = () => {
             </div>
             
             {/* Картка 10 */}
-            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded ">
+            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
+              onClick={handleClickPhotopicture}>
               <AnchorLink href="#component" style={{color:"#000"}}>
               <div className="card" >
                 <img
@@ -204,10 +216,8 @@ const ServicePhotoCards = () => {
       </div>
       <section id="component">
       </section>
-
     </>
   );
   };
-  
 
 export default ServicePhotoCards;

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 const ScanPage = () => {
   return (
@@ -20,7 +20,7 @@ const ScanPage = () => {
               редакторах. З часом стан ваших фотографій може погіршитись, то
               чому б не записати їх на цифрові носії та зберегти якнайдовше?
             </p>
-            <h3 className="text-center">Ціни на сканування</h3>
+            <h3 className="text-center text-danger">Ціни на сканування</h3>
             <table className="table table-striped text-center">
               <thead>
                 <tr>

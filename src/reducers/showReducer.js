@@ -221,7 +221,7 @@ function showReducer (state = initialState, action) {
         isPhotoBackground: false,
         isPhotoAddition: false,
         isPhotoBottle: false,
-        isPhotoPhotoprint: true
+        isPhotoPhotopicture: true
       };
     }
 

@@ -23,10 +23,16 @@ const Header = () => {
 
     const dispatch = useDispatch();
     
+    const handleClickFnd = () => { dispatch(PhotoFnd()); }
+    const handleClickPhotoprint = () => { dispatch(PhotoPhotoprint()); }
+    const handleClickPhotobooks = () => { dispatch(PhotoPhotobooks()); }
     const handleClickScan = () => { dispatch(PhotoScan()); }
-    const handleClickAddition = () => { dispatch(PhotoAddition()); }
-    const handleClickBackground = () => { dispatch(PhotoBackground()); }
+    const handleClickDuplicate = () => { dispatch(PhotoDuplicate()); }
     const handleClickRestoration = () => { dispatch(PhotoRestoration()); }
+    const handleClickBackground = () => { dispatch(PhotoBackground()); }
+    const handleClickAddition = () => { dispatch(PhotoAddition()); }
+    const handleClickBottle = () => { dispatch(PhotoBottle()); }
+    const handleClickPhotopicture = () => { dispatch(PhotoPhotopicture()); }
     
     const { isAuth, username } = useSelector((redux) => redux.auth);
     const ref = useRef(null);
@@ -96,17 +102,17 @@ const Header = () => {
 
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
                     <AnchorLink href="#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickRestoration}>Фото на документи</h6>
+                        <h6 onClick={handleClickFnd}>Фото на документи</h6>
                     </AnchorLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
                     <AnchorLink href="#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickRestoration}>Друк фотографій</h6>
+                        <h6 onClick={handleClickPhotoprint}>Друк фотографій</h6>
                     </AnchorLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
                     <AnchorLink href="#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickRestoration}>Фотокниги</h6>
+                        <h6 onClick={handleClickPhotobooks}>Фотокниги</h6>
                     </AnchorLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
@@ -116,7 +122,7 @@ const Header = () => {
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
                     <AnchorLink href="#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickRestoration}>Дублікати фотографій</h6>
+                        <h6 onClick={handleClickDuplicate}>Дублікати фотографій</h6>
                     </AnchorLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
@@ -136,12 +142,12 @@ const Header = () => {
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
                     <AnchorLink href="#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickRestoration}>Етикетки на пляшку</h6>
+                        <h6 onClick={handleClickBottle}>Етикетки на пляшку</h6>
                     </AnchorLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
                     <AnchorLink href="#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickRestoration}>Фотокартини</h6>
+                        <h6 onClick={handleClickPhotopicture}>Фотокартини</h6>
                     </AnchorLink>
                 </NavDropdown.Item>
 

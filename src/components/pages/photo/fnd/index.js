@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-const FNDPage = () => {
+const Fnd = () => {
   return (
     <div className="row">
       <div className="offset-md-4 col-md-4">
@@ -9,4 +9,4 @@ const FNDPage = () => {
     </div>
   );
 };
-export default FNDPage;
+export default Fnd;
