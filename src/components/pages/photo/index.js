@@ -11,14 +11,14 @@ import Duplicate from "./duplicate";
 import Photopicture from "./photopicture";
 import Bottle from "./bottle";
 import Fnd from "./fnd";
-import Photoprint from "./photoprint";
 import Photobooks from "./photobooks";
+import Fotoprint from "./fotoprint";
 
 const PhotoPage = () => {
 
   const {
     isPhotoFnd, 
-    isPhotoPhotoprint,
+    isPhotoFotoprint,
     isPhotoPhotobooks,
     isPhotoScan,
     isPhotoDuplicate,
@@ -35,7 +35,7 @@ const PhotoPage = () => {
     <ServicePhotoCards />
 
       {isPhotoFnd ? <Fnd /> : ""}
-      {isPhotoPhotoprint ? <Photoprint /> : ""}
+      {isPhotoFotoprint ? <Fotoprint /> : ""}
       {isPhotoPhotobooks ? <Photobooks /> : ""}
       {isPhotoScan ? <ScanPage /> : ""}
       {isPhotoDuplicate ? <Duplicate /> : ""}
@@ -44,7 +44,6 @@ const PhotoPage = () => {
       {isPhotoAddition ? <Addition /> : ""}
       {isPhotoBottle ? <Bottle /> : ""}
       {isPhotoPhotopicture ? <Photopicture /> : ""}
-      
       
     </>
   );

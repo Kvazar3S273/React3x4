@@ -1,6 +1,7 @@
 import React from "react";
 import 'react-slideshow-image/dist/styles.css'
 import { Slide, Zoom } from 'react-slideshow-image';
+import "../style.css"
 
 //see more here:
 //https://www.npmjs.com/package/react-slideshow-image

@@ -3,7 +3,7 @@ import "./style.css";
 import { useDispatch } from "react-redux";
 import { 
   PhotoFnd, 
-  PhotoPhotoprint,
+  PhotoFotoprint,
   PhotoPhotobooks,
   PhotoScan,
   PhotoDuplicate,
@@ -20,7 +20,7 @@ const ServicePhotoCards = () => {
   const dispatch = useDispatch();
 
   const handleClickFnd = () => { dispatch(PhotoFnd()); }
-  const handleClickPhotoprint = () => { dispatch(PhotoPhotoprint()); }
+  const handleClickFotoprint = () => { dispatch(PhotoFotoprint()); }
   const handleClickPhotobooks = () => { dispatch(PhotoPhotobooks()); }
   const handleClickScan = () => { dispatch(PhotoScan()); }
   const handleClickDuplicate = () => { dispatch(PhotoDuplicate()); }
@@ -61,7 +61,7 @@ const ServicePhotoCards = () => {
 
             {/* Картка 2 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClickPhotoprint}>
+            onClick={handleClickFotoprint}>
               <AnchorLink href="#component" style={{color:"#000"}}>
               <div className="card" >
                 <img

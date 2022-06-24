@@ -6,7 +6,7 @@ import {
   NOT_SHOW_MENU, 
   
   PHOTO_FND,
-  PHOTO_PHOTOPRINT,
+  PHOTO_FOTOPRINT,
   PHOTO_PHOTOBOOKS,
   PHOTO_SCAN,
   PHOTO_DUPLICATE,
@@ -24,7 +24,7 @@ const initialState = {
   isShowI: false,
   notShowMenu: false,
   isPhotoFnd: false,
-  isPhotoPhotoprint: false,
+  isPhotoFotoprint: false,
   isPhotoPhotobooks: false,
   isPhotoScan: false,
   isPhotoDuplicate: false,
@@ -87,7 +87,7 @@ function showReducer (state = initialState, action) {
     case PHOTO_FND: {
       return {
         isPhotoFnd: true,
-        isPhotoPhotoprint: false,
+        isPhotoFotoprint: false,
         isPhotoPhotobooks: false,
         isPhotoScan: false,
         isPhotoDuplicate: false,
@@ -98,10 +98,10 @@ function showReducer (state = initialState, action) {
         isPhotoPhotoprint: false
       };
     }
-    case PHOTO_PHOTOPRINT: {
+    case PHOTO_FOTOPRINT: {
       return {
         isPhotoFnd: false,
-        isPhotoPhotoprint: true,
+        isPhotoFotoprint: true,
         isPhotoPhotobooks: false,
         isPhotoScan: false,
         isPhotoDuplicate: false,
@@ -115,7 +115,7 @@ function showReducer (state = initialState, action) {
     case PHOTO_PHOTOBOOKS: {
       return {
         isPhotoFnd: false,
-        isPhotoPhotoprint: false,
+        isPhotoFotoprint: false,
         isPhotoPhotobooks: true,
         isPhotoScan: false,
         isPhotoDuplicate: false,
@@ -129,7 +129,7 @@ function showReducer (state = initialState, action) {
     case PHOTO_SCAN: {
       return {
         isPhotoFnd: false,
-        isPhotoPhotoprint: false,
+        isPhotoFotoprint: false,
         isPhotoPhotobooks: false,
         isPhotoScan: true,
         isPhotoDuplicate: false,
@@ -143,7 +143,7 @@ function showReducer (state = initialState, action) {
     case PHOTO_DUPLICATE: {
       return {
         isPhotoFnd: false,
-        isPhotoPhotoprint: false,
+        isPhotoFotoprint: false,
         isPhotoPhotobooks: false,
         isPhotoScan: false,
         isPhotoDuplicate: true,
@@ -157,7 +157,7 @@ function showReducer (state = initialState, action) {
     case PHOTO_RESTORATION: {
       return {
         isPhotoFnd: false,
-        isPhotoPhotoprint: false,
+        isPhotoFotoprint: false,
         isPhotoPhotobooks: false,
         isPhotoScan: false,
         isPhotoDuplicate: false,
@@ -171,7 +171,7 @@ function showReducer (state = initialState, action) {
     case PHOTO_BACKGROUND: {
       return {
         isPhotoFnd: false,
-        isPhotoPhotoprint: false,
+        isPhotoFotoprint: false,
         isPhotoPhotobooks: false,
         isPhotoScan: false,
         isPhotoDuplicate: false,
@@ -185,7 +185,7 @@ function showReducer (state = initialState, action) {
     case   PHOTO_ADDITION: {
       return {
         isPhotoFnd: false,
-        isPhotoPhotoprint: false,
+        isPhotoFotoprint: false,
         isPhotoPhotobooks: false,
         isPhotoScan: false,
         isPhotoDuplicate: false,
@@ -199,7 +199,7 @@ function showReducer (state = initialState, action) {
     case PHOTO_BOTTLE: {
       return {
         isPhotoFnd: false,
-        isPhotoPhotoprint: false,
+        isPhotoFotoprint: false,
         isPhotoPhotobooks: false,
         isPhotoScan: false,
         isPhotoDuplicate: false,
@@ -213,7 +213,7 @@ function showReducer (state = initialState, action) {
     case PHOTO_PHOTOPICTURE: {
       return {
         isPhotoFnd: false,
-        isPhotoPhotoprint: false,
+        isPhotoFotoprint: false,
         isPhotoPhotobooks: false,
         isPhotoScan: false,
         isPhotoDuplicate: false,

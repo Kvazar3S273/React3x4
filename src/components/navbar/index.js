@@ -7,7 +7,7 @@ import "./index.css";
 import { useDispatch } from "react-redux";
 import { 
   PhotoFnd, 
-  PhotoPhotoprint,
+  PhotoFotoprint,
   PhotoPhotobooks,
   PhotoScan,
   PhotoDuplicate,
@@ -24,7 +24,7 @@ const Header = () => {
     const dispatch = useDispatch();
     
     const handleClickFnd = () => { dispatch(PhotoFnd()); }
-    const handleClickPhotoprint = () => { dispatch(PhotoPhotoprint()); }
+    const handleClickFotoprint = () => { dispatch(PhotoFotoprint()); }
     const handleClickPhotobooks = () => { dispatch(PhotoPhotobooks()); }
     const handleClickScan = () => { dispatch(PhotoScan()); }
     const handleClickDuplicate = () => { dispatch(PhotoDuplicate()); }
@@ -107,7 +107,7 @@ const Header = () => {
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
                     <AnchorLink href="#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickPhotoprint}>Друк фотографій</h6>
+                        <h6 onClick={handleClickFotoprint}>Друк фотографій</h6>
                     </AnchorLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
