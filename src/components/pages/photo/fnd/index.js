@@ -1,21 +1,27 @@
 import React from "react";
-//import "../style.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faPrint,
-    faImage,
-    faFileWord,
-    faEye,
-    faMoneyBill1
+  faUsers,
+  faClock,
+  faUserTie,
+  faCamera,
+  faFileZipper,
+  faHardDrive,
 } from "@fortawesome/free-solid-svg-icons";
-
-
 
 const Fnd = () => {
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
         <h1 className="text-center">Фото на документи</h1>
+
+        <div className="row">
+          <div className="col-md-2"></div>
+          <div className="col-md-8">
+            <img className="photo-service" src="/images/services/fnd.jpg" />
+          </div>
+          <div className="col-md-2"></div>
+        </div>
 
         {/* Текст */}
         <div className="row m-3 p-2">
@@ -135,89 +141,83 @@ const Fnd = () => {
                   <div className="col-md-3 col-3">
                     <i
                       className="d-flex justify-content-center text-light"
-                      style={{ fontSize: "4em" }}
+                      style={{ fontSize: "3.5em" }}
                     >
-                      <FontAwesomeIcon icon={faPrint} />
+                      <FontAwesomeIcon icon={faUsers} />
                     </i>
                   </div>
                   <div className="col-md-9 col-9">
                     <h4>Більше</h4>
-                    <p>
-                    Кожне наступне фото: +5 грн
-                    </p>
+                    <p>Кожне наступне фото: +5 грн</p>
                   </div>
                 </div>
               </div>
 
               <div className="col-md-4">
-              <div className="row">
+                <div className="row">
                   <div className="col-md-3 col-3">
                     <i
                       className="d-flex justify-content-center text-warning"
-                      style={{ fontSize: "4em" }}
-                      >
-                      <FontAwesomeIcon icon={faImage} />
+                      style={{ fontSize: "3.5em" }}
+                    >
+                      <FontAwesomeIcon icon={faClock} />
                     </i>
                   </div>
                   <div className="col-md-9 col-9">
-                      <h4>Швидко</h4>
-                    <p>
-                    Термінове фото: +20 грн за 7-10 хв
-                    </p>
+                    <h4>Швидко</h4>
+                    <p>Термінове фото: +20 грн за 7-10 хв</p>
                   </div>
                 </div>
               </div>
 
               <div className="col-md-4">
-              <div className="row">
+                <div className="row">
                   <div className="col-md-3 col-3">
                     <i
                       className="d-flex justify-content-center text-light"
-                      style={{ fontSize: "4em" }}
+                      style={{ fontSize: "3.5em" }}
                     >
-                      <FontAwesomeIcon icon={faFileWord} />
+                      <FontAwesomeIcon icon={faUserTie} />
                     </i>
                   </div>
                   <div className="col-md-9 col-9">
-                      <h4>Костюм</h4>
+                    <h4>Костюм</h4>
+                    <p>Заміна одягу: +30 грн, вибір з каталога</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="row">
+                  <div className="col-md-3 col-3">
+                    <i
+                      className="d-flex justify-content-center text-warning"
+                      style={{ fontSize: "3.5em" }}
+                    >
+                      <FontAwesomeIcon icon={faCamera} />
+                    </i>
+                  </div>
+                  <div className="col-md-9 col-9">
+                    <h4>Без друку</h4>
                     <p>
-                    Заміна одягу: +30 грн, вибір з каталога
+                      Тільки фотографування, скидання на флешку -10 грн від ціни
                     </p>
                   </div>
                 </div>
               </div>
               <div className="col-md-4">
-              <div className="row">
-                  <div className="col-md-3 col-3">
-                    <i
-                      className="d-flex justify-content-center text-warning"
-                      style={{ fontSize: "4em" }}
-                    >
-                      <FontAwesomeIcon icon={faEye} />
-                    </i>
-                  </div>
-                  <div className="col-md-9 col-9">
-                      <h4>Без друку</h4>
-                    <p>
-                    Тільки фотографування, скидання на флешку -10 грн від ціни
-                    </p>
-                  </div>
-                </div> 
-              </div>
-              <div className="col-md-4">
-              <div className="row">
+                <div className="row">
                   <div className="col-md-3 col-3">
                     <i
                       className="d-flex justify-content-center text-light"
-                      style={{ fontSize: "4em" }}
+                      style={{ fontSize: "3.5em" }}
                     >
-                      <FontAwesomeIcon icon={faMoneyBill1} />
+                      <FontAwesomeIcon icon={faFileZipper} />
                     </i>
                   </div>
                   <div className="col-md-9 col-9">
-                      <h4>Архів</h4>
+                    <h4>Архів</h4>
                     <p>
-                    Зберігання фото в архіві. Друк з архіва зі знижкою 30%
+                      Зберігання фото в архіві. Друк з архіва зі знижкою 30%
                     </p>
                   </div>
                 </div>
@@ -227,25 +227,17 @@ const Fnd = () => {
                   <div className="col-md-3 col-3">
                     <i
                       className="d-flex justify-content-center text-warning"
-                      style={{ fontSize: "4em" }}
+                      style={{ fontSize: "3.5em" }}
                     >
-                      <FontAwesomeIcon icon={faMoneyBill1} />
+                      <FontAwesomeIcon icon={faHardDrive} />
                     </i>
                   </div>
                   <div className="col-md-9 col-9">
-                      <h4>Оригінал</h4>
-                    <p>
-                    Скидання фото з архіва на носій 20 грн
-                    </p>
+                    <h4>Оригінал</h4>
+                    <p>Скидання фото з архіва на носій 20 грн</p>
                   </div>
                 </div>
               </div>
-
-                      
-                
-                
-                
-                
             </div>
           </div>
         </div>
