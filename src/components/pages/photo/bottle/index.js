@@ -26,34 +26,26 @@ const Bottle = () => {
                 <table className="table table-striped text-center">
                   <thead>
                     <tr>
-                      <th scope="col">Формат</th>
+                      <th scope="col">Послуга</th>
                       <th scope="col">Ціна, грн</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row">20x30</th>
-                      <td>410</td>
+                      <th scope="row">Етикетка по шаблону</th>
+                      <td>150</td>
                     </tr>
                     <tr>
-                      <th scope="row">30x40</th>
-                      <td>580</td>
+                      <th scope="row">Індивідуальний дизайн	</th>
+                      <td>250</td>
                     </tr>
                     <tr>
-                      <th scope="row">40x60</th>
-                      <td>770</td>
+                      <th scope="row">Кожна наступна	</th>
+                      <td>40</td>
                     </tr>
                     <tr>
-                      <th scope="row">50x70</th>
-                      <td>1050</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">60x90</th>
-                      <td>1200</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">1 кв.м.</th>
-                      <td>1700</td>
+                      <th scope="row">Поклейка на пляшку	</th>
+                      <td>40</td>
                     </tr>
                   </tbody>
                 </table>

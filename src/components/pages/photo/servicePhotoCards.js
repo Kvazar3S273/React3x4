@@ -13,7 +13,7 @@ import {
   PhotoBottle,
   PhotoPhotopicture
 } from "../../../constants/actions/show";
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { HashLink } from 'react-router-hash-link';
 
 const ServicePhotoCards = () => {
 
@@ -45,7 +45,7 @@ const ServicePhotoCards = () => {
             {/* Картка 1 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
             onClick={handleClickFnd}>
-              <AnchorLink href="#component" style={{color:"#000"}}>
+              <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/fp1.png"
@@ -56,30 +56,30 @@ const ServicePhotoCards = () => {
                   <h6 className="card-title text-center">Фото на документи</h6>
                 </div>
               </div>
-              </AnchorLink>
+              </HashLink>
             </div>
 
             {/* Картка 2 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
             onClick={handleClickFotoprint}>
-              <AnchorLink href="#component" style={{color:"#000"}}>
+              <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/fp2.png"
                   className="card-img-top"
                   alt="Друк фотографій"
-                />
+                  />
                 <div className="card-body-photo">
                   <h6 className="card-title text-center">Друк фотографій</h6>
                 </div>
               </div>
-              </AnchorLink>
+              </HashLink>
             </div>
             
             {/* Картка 3 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
             onClick={handleClickPhotobooks}>
-            <AnchorLink href="#component" style={{color:"#000"}}>
+            <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/fp3.png"
@@ -90,13 +90,13 @@ const ServicePhotoCards = () => {
                   <h6 className="card-title text-center">Фотокниги</h6>
                 </div>
               </div>
-              </AnchorLink>
+              </HashLink>
             </div>
             
             {/* Картка 4 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
             onClick={handleClickScan}>
-            <AnchorLink href="#component" style={{color:"#000"}}>
+            <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/fp4.png"
@@ -107,13 +107,13 @@ const ServicePhotoCards = () => {
                   <h6 className="card-title text-center">Сканування фотографій</h6>
                 </div>
               </div>
-              </AnchorLink>
+              </HashLink>
             </div>
             
             {/* Картка 5 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
             onClick={handleClickDuplicate}>
-            <AnchorLink href="#component" style={{color:"#000"}}>
+            <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/fp5.png"
@@ -124,13 +124,13 @@ const ServicePhotoCards = () => {
                   <h6 className="card-title text-center">Дублікати фотографій</h6>
                 </div>
               </div>
-            </AnchorLink>
+            </HashLink>
             </div>
 
             {/* Картка 6 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
             onClick={handleClickRestoration}>
-              <AnchorLink href="#component" style={{color:"#000"}}>
+              <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/fp6.png"
@@ -141,13 +141,13 @@ const ServicePhotoCards = () => {
                   <h6 className="card-title text-center">Реставрація</h6>
                 </div>
               </div>
-              </AnchorLink>
+              </HashLink>
             </div>
 
             {/* Картка 7 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
             onClick={handleClickBackground}>
-              <AnchorLink href="#component" style={{color:"#000"}}>
+              <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/fp7.png"
@@ -158,13 +158,13 @@ const ServicePhotoCards = () => {
                   <h6 className="card-title text-center">Заміна фону</h6>
                 </div>
               </div>
-            </AnchorLink>
+            </HashLink>
             </div>
             
             {/* Картка 8 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
             onClick={handleClickAddition}>
-              <AnchorLink href="#component" style={{color:"#000"}}>
+              <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/fp8.png"
@@ -175,13 +175,13 @@ const ServicePhotoCards = () => {
                   <h6 className="card-title text-center">Об'єднання фотографій</h6>
                 </div>
               </div>
-              </AnchorLink>
+              </HashLink>
             </div>
             
             {/* Картка 9 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
             onClick={handleClickBottle}>
-              <AnchorLink href="#component" style={{color:"#000"}}>
+              <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/fp9.png"
@@ -192,13 +192,13 @@ const ServicePhotoCards = () => {
                   <h6 className="card-title text-center">Етикетки на пляшку</h6>
                 </div>
               </div>
-              </AnchorLink>
+              </HashLink>
             </div>
             
             {/* Картка 10 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
               onClick={handleClickPhotopicture}>
-              <AnchorLink href="#component" style={{color:"#000"}}>
+              <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/fp10.png"
@@ -209,11 +209,12 @@ const ServicePhotoCards = () => {
                   <h6 className="card-title text-center">Фотокартини</h6>
                 </div>
               </div>
-              </AnchorLink>
+              </HashLink>
             </div>
           </div>
         </div>
       </div>
+      
       <section id="component">
       </section>
     </>

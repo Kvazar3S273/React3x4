@@ -227,38 +227,137 @@ const Fotoprint = () => {
               <thead>
                 <tr>
                   <th scope="col">Формат</th>
+                  <th scope="col">Точні розміри, мм</th>
                   <th scope="col">Ціна, грн</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
+                  <th scope="row">9x13</th>
+                  <td>89x127</td>
+                  <td>4,50</td>
+                </tr>
+                <tr>
+                  <th scope="row">10x15</th>
+                  <td>102x152</td>
+                  <td>5,00</td>
+                </tr>
+                <tr>
+                  <th scope="row">13x18</th>
+                  <td>127x178</td>
+                  <td>10,00</td>
+                </tr>
+                <tr>
+                  <th scope="row">15x21</th>
+                  <td>152x216</td>
+                  <td>11,00</td>
+                </tr>
+                <tr>
                   <th scope="row">20x30</th>
-                  <td>410</td>
+                  <td>203x305</td>
+                  <td>21,00</td>
                 </tr>
                 <tr>
                   <th scope="row">30x40</th>
-                  <td>580</td>
-                </tr>
-                <tr>
-                  <th scope="row">40x60</th>
-                  <td>770</td>
-                </tr>
-                <tr>
-                  <th scope="row">50x70</th>
-                  <td>1050</td>
-                </tr>
-                <tr>
-                  <th scope="row">60x90</th>
-                  <td>1200</td>
-                </tr>
-                <tr>
-                  <th scope="row">1 кв.м.</th>
-                  <td>1700</td>
+                  <td>305x420</td>
+                  <td>42,00</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div className="col-md-2"></div>
+        </div>
+
+        {/* Обладнання */}
+        <div className="row">
+          <div className="col-md-1"></div>
+          <div className="col-md-10">
+            <div class="m-4 p-5 bg-success text-white rounded">
+              <h1 className="text-center">Обладнання</h1>
+              <p className="text-center">
+                Фотографії друкуються на цифрових мінілабах Noritsu QSS 3202
+                Pro. При друці використовується фотопапір Fujicolor Crystal
+                Archive. Все обладнання регулярно калібрується та тестується.
+                Використовується тільки оригінальна хімія.
+              </p>
+              <div className="d-flex justify-content-center">
+                <a href="http://minilab.com.ua/description/noritsu/qss32series/">
+                  <button
+                    type="button"
+                    class="btn btn-light"
+                    style={{ background: "#006D57" }}
+                  >
+                    Детальніше про обладнання...
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-1"></div>
+        </div>
+
+        {/* Кадрування */}
+        <div className="row">
+          <div className="col py-4" style={{ background: "#373737" }}>
+            <div className="row gx-5 p-4 justify-content-center">
+              <h1 className="text-light text-center">Кадрування</h1>
+              <p className="text-light text-center">
+                Декілька слів про нестандартні формати або чому Ваші фото були
+                обрізані під час друку...
+              </p>
+              {/* Картка 1 */}
+              <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
+                <div className="card">
+                  <img
+                    src="/images/services/kadr1.png"
+                    className="card-img-top"
+                    alt="Фотопослуги"
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title text-center">
+                      Оригінальний кадр
+                    </h5>
+                    <p className="card-text">
+                      Співвідношення сторін 3:4 або інше
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Картка 2 */}
+              <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
+                <div className="card">
+                  <img
+                    src="/images/services/kadr2.png"
+                    className="card-img-top"
+                    alt="Комп'ютерні послуги"
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title text-center">Обрізане фото</h5>
+                    <p className="card-text">
+                      Всі фото автоматично обрізаються
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {/* Картка 3 */}
+              <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
+                <div className="card">
+                  <img
+                    src="/images/services/kadr3.png"
+                    className="card-img-top"
+                    alt="Поліграфія"
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title text-center">Кадроване фото</h5>
+                    <p className="card-text">
+                      Додані білі поля, вартість послуги - 1 грн
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

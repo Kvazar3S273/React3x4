@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useRef  } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState, useRef  } from 'react';
+import { Link } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import logo from "../../../src/3x4logo.png";
@@ -17,7 +17,7 @@ import {
   PhotoBottle,
   PhotoPhotopicture
 } from "../../constants/actions/show";
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { HashLink } from 'react-router-hash-link';
 
 const Header = () => {
 
@@ -93,62 +93,63 @@ const Header = () => {
             <NavDropdown title="Фотопослуги" id="basic-nav-dropdown">
 
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="/photo">
-                        Повний перелік
+                    <Link className="nav-link" aria-current="page" to="/photo" >
+                        <h6 style={{color:"#000"}}>Повний перелік</h6>
                     </Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Divider />
 
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <AnchorLink href="#component" style={{color:"#000"}}>
+                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
                         <h6 onClick={handleClickFnd}>Фото на документи</h6>
-                    </AnchorLink>
+                    </HashLink>
+                    
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <AnchorLink href="#component" style={{color:"#000"}}>
+                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
                         <h6 onClick={handleClickFotoprint}>Друк фотографій</h6>
-                    </AnchorLink>
+                    </HashLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <AnchorLink href="#component" style={{color:"#000"}}>
+                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
                         <h6 onClick={handleClickPhotobooks}>Фотокниги</h6>
-                    </AnchorLink>
+                    </HashLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <AnchorLink href="#component" style={{color:"#000"}}>
+                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
                         <h6 onClick={handleClickScan}>Сканування фотографій</h6>
-                    </AnchorLink>
+                    </HashLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <AnchorLink href="#component" style={{color:"#000"}}>
+                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
                         <h6 onClick={handleClickDuplicate}>Дублікати фотографій</h6>
-                    </AnchorLink>
+                    </HashLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <AnchorLink href="#component" style={{color:"#000"}}>
+                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
                         <h6 onClick={handleClickRestoration}>Реставрація</h6>
-                    </AnchorLink>
+                    </HashLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <AnchorLink href="#component" style={{color:"#000"}}>
+                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
                         <h6 onClick={handleClickBackground}>Заміна фону</h6>
-                    </AnchorLink>
+                    </HashLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <AnchorLink href="#component" style={{color:"#000"}}>
+                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
                         <h6 onClick={handleClickAddition}>Об'єднання фотографій</h6>
-                    </AnchorLink>
+                    </HashLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <AnchorLink href="#component" style={{color:"#000"}}>
+                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
                         <h6 onClick={handleClickBottle}>Етикетки на пляшку</h6>
-                    </AnchorLink>
+                    </HashLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <AnchorLink href="#component" style={{color:"#000"}}>
+                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
                         <h6 onClick={handleClickPhotopicture}>Фотокартини</h6>
-                    </AnchorLink>
+                    </HashLink>
                 </NavDropdown.Item>
 
                 
