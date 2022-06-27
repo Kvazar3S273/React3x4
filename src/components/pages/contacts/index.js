@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./indexcont.css";
 
 const ContactsPage = () => {
   return (

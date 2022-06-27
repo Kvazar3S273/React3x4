@@ -13,6 +13,7 @@ import Bottle from "./bottle";
 import Fnd from "./fnd";
 import Photobooks from "./photobooks";
 import Fotoprint from "./fotoprint";
+import { Link } from 'react-router-dom';
 
 const PhotoPage = () => {
 
@@ -36,7 +37,9 @@ const PhotoPage = () => {
 
       {isPhotoFnd ? <Fnd /> : ""}
       {isPhotoFotoprint ? <Fotoprint /> : ""}
-      {isPhotoPhotobooks ? <Photobooks /> : ""}
+      {/* {isPhotoPhotobooks ? <Photobooks /> : ""} */}
+      {isPhotoPhotobooks ? <Link className="nav-link" aria-current="page" to="/page404"/> : ""}
+      
       {isPhotoScan ? <ScanPage /> : ""}
       {isPhotoDuplicate ? <Duplicate /> : ""}
       {isPhotoRestoration ? <Restoration /> : ""}

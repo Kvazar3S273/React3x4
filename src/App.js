@@ -9,6 +9,7 @@ import RegisterPage from "./components/auth/register";
 import LoginPage from "./components/auth/login";
 import DefaultLayout from "./components/containers/DefaultLayout/DefaultLayout";
 import AdminLayout from "./components/containers/AdminLayout/AdminLayout";
+import Page404 from "./components/pages/page404";
 
 const App = () => {
   // const { isAuth, username } = useSelector((redux) => redux.auth);
@@ -49,6 +50,7 @@ const App = () => {
                </Route> */}
 
           <Route exact path="/contacts" element={<ContactsPage />} />
+          <Route exact path="/page404" element={<Page404 />} />
         </Route>
 
         <Route path="/admin" element={<AdminLayout />}>

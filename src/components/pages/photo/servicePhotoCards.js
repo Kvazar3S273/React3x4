@@ -79,7 +79,8 @@ const ServicePhotoCards = () => {
             {/* Картка 3 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
             onClick={handleClickPhotobooks}>
-            <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
+            {/* <HashLink smooth to={'/photo#component'} style={{color:"#000"}}> */}
+            <HashLink smooth to={'/page404'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/fp3.png"
