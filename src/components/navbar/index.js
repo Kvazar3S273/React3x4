@@ -15,7 +15,16 @@ import {
   PhotoBackground,
   PhotoAddition,
   PhotoBottle,
-  PhotoPhotopicture
+  PhotoPhotopicture,
+
+  CompXerox,
+  CompScan,
+  CompLaminate,
+  CompBinder,
+  CompUsbflash,
+  CompDiscprint,
+  CompEmail
+
 } from "../../constants/actions/show";
 import { HashLink } from 'react-router-hash-link';
 
@@ -33,6 +42,14 @@ const Header = () => {
     const handleClickAddition = () => { dispatch(PhotoAddition()); }
     const handleClickBottle = () => { dispatch(PhotoBottle()); }
     const handleClickPhotopicture = () => { dispatch(PhotoPhotopicture()); }
+    
+    const handleClickXerox = () => { dispatch(CompXerox()); }
+    const handleClickScaner = () => { dispatch(CompScan()); }
+    const handleClickLaminate = () => { dispatch(CompLaminate()); }
+    const handleClickBinder = () => { dispatch(CompBinder()); }
+    const handleClickUsbflash = () => { dispatch(CompUsbflash()); }
+    const handleClickDiscprint = () => { dispatch(CompDiscprint()); }
+    const handleClickEmail = () => { dispatch(CompEmail()); }
     
     const { isAuth, username } = useSelector((redux) => redux.auth);
     const ref = useRef(null);
@@ -163,35 +180,47 @@ const Header = () => {
             <NavDropdown title="Комп'ютерні послуги" id="basic-nav-dropdown">
 
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="/comp">
-                        Повний перелік
+                    <Link className="nav-link" aria-current="page" to="/comp" >
+                        <h6 style={{color:"#000"}}>Повний перелік</h6>
                     </Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Divider />
 
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="/comp/xerox">
-                        Ксерокопії, друк
-                    </Link>
+                    <HashLink smooth to="/comp#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickXerox}>Ксерокопії</h6>
+                    </HashLink>
                 </NavDropdown.Item>
-
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="#">
-                        Сканування
-                    </Link>
+                    <HashLink smooth to="/comp#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickScaner}>Сканування</h6>
+                    </HashLink>
                 </NavDropdown.Item>
-
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="#">
-                        Ламінування
-                    </Link>
+                    <HashLink smooth to="/comp#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickLaminate}>Ламінування</h6>
+                    </HashLink>
                 </NavDropdown.Item>
-
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="#">
-                        Брошурування
-                    </Link>
+                    <HashLink smooth to="/comp#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickBinder}>Брошурування</h6>
+                    </HashLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <HashLink smooth to="/comp#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickUsbflash}>Запис цифрових носіїв</h6>
+                    </HashLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <HashLink smooth to="/comp#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickDiscprint}>Друк на дисках</h6>
+                    </HashLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <HashLink smooth to="/comp#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickEmail}>Послуги E-mail</h6>
+                    </HashLink>
                 </NavDropdown.Item>
 
             </NavDropdown>

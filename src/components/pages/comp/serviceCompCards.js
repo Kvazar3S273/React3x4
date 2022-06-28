@@ -2,16 +2,13 @@ import React from "react";
 // import "./style.css";
 import { useDispatch } from "react-redux";
 import { 
-  PhotoFnd, 
-  PhotoFotoprint,
-  PhotoPhotobooks,
-  PhotoScan,
-  PhotoDuplicate,
-  PhotoRestoration,
-  PhotoBackground,
-  PhotoAddition,
-  PhotoBottle,
-  PhotoPhotopicture
+  CompXerox,
+  CompScan,
+  CompLaminate,
+  CompBinder,
+  CompUsbflash,
+  CompDiscprint,
+  CompEmail
 } from "../../../constants/actions/show";
 import { HashLink } from 'react-router-hash-link';
 
@@ -19,17 +16,14 @@ const ServiceCompCards = () => {
 
   const dispatch = useDispatch();
 
-  const handleClickFnd = () => { dispatch(PhotoFnd()); }
-  const handleClickFotoprint = () => { dispatch(PhotoFotoprint()); }
-  const handleClickPhotobooks = () => { dispatch(PhotoPhotobooks()); }
-  const handleClickScan = () => { dispatch(PhotoScan()); }
-  const handleClickDuplicate = () => { dispatch(PhotoDuplicate()); }
-  const handleClickRestoration = () => { dispatch(PhotoRestoration()); }
-  const handleClickBackground = () => { dispatch(PhotoBackground()); }
-  const handleClickAddition = () => { dispatch(PhotoAddition()); }
-  const handleClickBottle = () => { dispatch(PhotoBottle()); }
-  const handleClickPhotopicture = () => { dispatch(PhotoPhotopicture()); }
-
+  const handleClickXerox = () => { dispatch(CompXerox()); }
+  const handleClickScaner = () => { dispatch(CompScan()); }
+  const handleClickLaminate = () => { dispatch(CompLaminate()); }
+  const handleClickBinder = () => { dispatch(CompBinder()); }
+  const handleClickUsbflash = () => { dispatch(CompUsbflash()); }
+  const handleClickDiscprint = () => { dispatch(CompDiscprint()); }
+  const handleClickEmail = () => { dispatch(CompEmail()); }
+    
   return (
     <>
       {/* Рядок для темно-сірого блока */}
@@ -44,13 +38,13 @@ const ServiceCompCards = () => {
             
             {/* Картка 1 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClickFnd}>
-              <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
+            onClick={handleClickXerox}>
+              <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/comp1.png"
                   className="card-img-top"
-                  alt="Фото на документи"
+                  alt="Ксерокопії та друк"
                 />
                 <div className="card-body-photo">
                   <h6 className="card-title text-center">Ксерокопії та друк</h6>
@@ -61,13 +55,13 @@ const ServiceCompCards = () => {
 
             {/* Картка 2 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClickFotoprint}>
-              <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
+            onClick={handleClickScaner}>
+              <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/comp2.png"
                   className="card-img-top"
-                  alt="Друк фотографій"
+                  alt="Сканування"
                   />
                 <div className="card-body-photo">
                   <h6 className="card-title text-center">Сканування</h6>
@@ -78,14 +72,13 @@ const ServiceCompCards = () => {
             
             {/* Картка 3 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClickPhotobooks}>
-            {/* <HashLink smooth to={'/photo#component'} style={{color:"#000"}}> */}
-            <HashLink smooth to={'/page404'} style={{color:"#000"}}>
+            onClick={handleClickLaminate}>
+            <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/comp3.png"
                   className="card-img-top"
-                  alt="Фотокниги"
+                  alt="Ламінування"
                 />
                 <div className="card-body-photo">
                   <h6 className="card-title text-center">Ламінування</h6>
@@ -96,13 +89,13 @@ const ServiceCompCards = () => {
             
             {/* Картка 4 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClickScan}>
-            <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
+            onClick={handleClickBinder}>
+            <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/comp4.png"
                   className="card-img-top"
-                  alt="Сканування фотографій"
+                  alt="Брошурування"
                   />
                 <div className="card-body-photo">
                   <h6 className="card-title text-center">Брошурування</h6>
@@ -113,13 +106,13 @@ const ServiceCompCards = () => {
             
             {/* Картка 5 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClickDuplicate}>
-            <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
+            onClick={handleClickUsbflash}>
+            <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/comp5.png"
                   className="card-img-top"
-                  alt="Дублікати фотографій"
+                  alt="Запис цифрових носіїв"
                 />
                 <div className="card-body-photo">
                   <h6 className="card-title text-center">Запис цифрових носіїв</h6>
@@ -130,13 +123,13 @@ const ServiceCompCards = () => {
 
             {/* Картка 6 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClickRestoration}>
-              <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
+            onClick={handleClickDiscprint}>
+              <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/comp6.png"
                   className="card-img-top"
-                  alt="Реставрація"
+                  alt="Друк на дисках"
                 />
                 <div className="card-body-photo">
                   <h6 className="card-title text-center">Друк на дисках</h6>
@@ -147,13 +140,13 @@ const ServiceCompCards = () => {
 
             {/* Картка 7 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClickBackground}>
-              <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
+            onClick={handleClickEmail}>
+              <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/comp7.png"
                   className="card-img-top"
-                  alt="Заміна фону"
+                  alt="Послуги електронної пошти"
                 />
                 <div className="card-body-photo">
                   <h6 className="card-title text-center">Послуги електронної пошти</h6>
