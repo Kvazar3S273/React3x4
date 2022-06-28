@@ -280,7 +280,7 @@ const Xerox = () => {
                 *Що означає "різна заливка"?
               </p>
               {/* Картка 1 */}
-              <div className="col-7 col-sm-5 col-md-3 col-lg-2 m-2 p-3 border bg-light rounded ">
+              <div className="col-7 col-sm-5 col-md-3 col-lg-2 m-2 p-2 border bg-light rounded ">
                 <div className="card">
                   <img
                     src="/images/services/text.jpg"
@@ -299,7 +299,7 @@ const Xerox = () => {
               </div>
 
               {/* Картка 2 */}
-              <div className="col-7 col-sm-5 col-md-3 col-lg-2 m-2 p-3 border bg-light rounded ">
+              <div className="col-7 col-sm-5 col-md-3 col-lg-2 m-2 p-2 border bg-light rounded ">
                 <div className="card">
                   <img
                     src="/images/services/25.jpg"
@@ -315,7 +315,7 @@ const Xerox = () => {
                 </div>
               </div>
               {/* Картка 3 */}
-              <div className="col-7 col-sm-5 col-md-3 col-lg-2 m-2 p-3 border bg-light rounded ">
+              <div className="col-7 col-sm-5 col-md-3 col-lg-2 m-2 p-2 border bg-light rounded ">
                 <div className="card">
                   <img
                     src="/images/services/50.jpg"
@@ -331,7 +331,7 @@ const Xerox = () => {
                 </div>
               </div>
               {/* Картка 4 */}
-              <div className="col-7 col-sm-5 col-md-3 col-lg-2 m-2 p-3 border bg-light rounded ">
+              <div className="col-7 col-sm-5 col-md-3 col-lg-2 m-2 p-2 border bg-light rounded ">
                 <div className="card">
                   <img
                     src="/images/services/50.jpg"
