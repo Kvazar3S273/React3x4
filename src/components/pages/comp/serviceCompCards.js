@@ -29,7 +29,7 @@ const ServiceCompCards = () => {
       {/* Рядок для темно-сірого блока */}
       <div classNameName="row">
         {/* Темно-сірий блок для карток */}
-        <div className="col bg-dark py-4">
+        <div className="col py-4" style={{background:"#4D4D4D"}}>
           {/* Рядок для карток */}
 
           <div className="row gx-5 justify-content-center">
