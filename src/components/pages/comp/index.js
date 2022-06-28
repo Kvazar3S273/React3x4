@@ -1,13 +1,36 @@
-import React, { Component } from 'react'
+import React from "react";
+import CarouselComp from "./carouselComp";
+// import "./style.css";
+import { useSelector } from "react-redux";
+import { Link } from 'react-router-dom';
+import ServiceCompCards from "./serviceCompCards";
 
 const CompPage = () => {
+  const {
+    isPhotoFnd, 
+    isPhotoFotoprint,
+    isPhotoPhotobooks,
+    isPhotoScan,
+    isPhotoDuplicate,
+    isPhotoRestoration,
+    isPhotoBackground,
+    isPhotoAddition,
+    isPhotoBottle,
+    isPhotoPhotopicture
+  } = useSelector((state) => state.show);
+
   return (
-    <div className="row">
-      <div className="offset-md-4 col-md-4">
-        <h2 className="text-center mt-3">Комп'ютерні послуги</h2>
-      </div>
-    </div>
+    <>
+    <CarouselComp />
+    <ServiceCompCards />
+
+      {/* {isPhotoFnd ? <Fnd /> : ""} */}
+      {/* {isPhotoFotoprint ? <Fotoprint /> : ""} */}
+      
+    </>
   );
+
+  
 };
 
 export default CompPage
