@@ -4,6 +4,12 @@ import CarouselComp from "./carouselComp";
 import { useSelector } from "react-redux";
 import ServiceCompCards from "./serviceCompCards";
 import Xerox from "./xerox";
+import Scaner from "./scaner";
+import Laminate from "./laminate";
+import Binder from "./binder";
+import Usbflash from "./usbflash";
+import Discprint from "./discprint";
+import Email from "./email";
 
 const CompPage = () => {
   const {
@@ -22,7 +28,12 @@ const CompPage = () => {
     <ServiceCompCards />
 
       {isCompXerox ? <Xerox /> : ""}
-      {/* {isPhotoFotoprint ? <Fotoprint /> : ""} */}
+      {isCompScan ? <Scaner /> : ""}
+      {isCompLaminate ? <Laminate /> : ""}
+      {isCompBinder ? <Binder /> : ""}
+      {isCompUsbflash ? <Usbflash /> : ""}
+      {isCompDiscprint ? <Discprint /> : ""}
+      {isCompEmail ? <Email /> : ""}
       
     </>
   );

@@ -100,7 +100,7 @@ const Header = () => {
 
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto" onClick={() => setNavExpanded(false)}>
-                <Link className="nav-link" aria-current="page" to="/">
+                <Link className="nav-link" aria-current="page" to="/" >
                 Головна
                 </Link>
             </Nav>

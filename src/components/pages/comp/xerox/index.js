@@ -334,7 +334,7 @@ const Xerox = () => {
               <div className="col-7 col-sm-5 col-md-3 col-lg-2 m-2 p-2 border bg-light rounded ">
                 <div className="card">
                   <img
-                    src="/images/services/50.jpg"
+                    src="/images/services/100.jpg"
                     className="card-img-top"
                     alt="Поліграфія"
                   />

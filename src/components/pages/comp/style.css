@@ -1,10 +1,10 @@
-div .carousel-indicators {
+/* div .carousel-indicators {
     top: 93%
 }
 
 div .card {
     width: 100%;
-}
+} */
 
 div .card-body-comp {
     height: 4em;
@@ -15,16 +15,16 @@ div .card-body-comp h6.card-title {
     top: 1em;
 }
 
-div .card h6 {
+/* div .card h6 {
     vertical-align: baseline;
-}
+} */
 
 .comp-service{
     /* position: relative; */
     width: 100%;
     padding-right: 10px;
 }
-div href{
+/* div href{
     color: blueviolet;
 }
 .each-slide > div {
@@ -47,4 +47,4 @@ div href{
     width: 40px;
   }
 
-  
+   */
