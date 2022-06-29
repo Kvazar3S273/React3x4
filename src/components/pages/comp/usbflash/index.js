@@ -9,20 +9,18 @@ const Usbflash = () => {
           <div className="col-md-4">
             <img
               className="photo-service"
-              src="/images/services/compscaner.jpg"
+              src="/images/services/compusbflash.jpg"
             />
           </div>
           <div className="col-md-8 px-3">
             <p>
-              Сканування документів до А4 розміру та збереження в форматах *.jpg 
-              або *.pdf. 
+              Записуємо інформацію на диски, флешки, карти пам'яті.
             </p>
             <p>
-              Додаткова послуга: відправка ваших сканованих документів на електронну 
-              пошту. Один лист вміщує до 18 Мб інформації. Якщо об'єм сканованих 
-              документів перевищує 18 Мб, то він розбивається на декілька листів. 
+              Увага! Ми НЕ скачуємо та не копіюємо музику, ігри, програмне 
+              забезпечення та будь-яку іншу інформацію, яка захищена авторськими правами!  
             </p>
-            <h3 className="text-center text-danger">Вартість сканування</h3>
+            <h3 className="text-center text-danger">Вартість послуги</h3>
             <table className="table table-striped text-center">
               <thead>
                 <tr>
@@ -32,16 +30,24 @@ const Usbflash = () => {
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Кольорове сканування</th>
-                  <td>5</td>
+                  <th scope="row">Запис CD дисків 700 Mb</th>
+                  <td>20</td>
                 </tr>
                 <tr>
-                  <th scope="row">Відправка 1 листа на e-mail</th>
-                  <td>10</td>
+                  <th scope="row">Запис DVD дисків 4,7 Gb</th>
+                  <td>25</td>
                 </tr>
                 <tr>
-                  <th scope="row">Відправка документа на Viber</th>
-                  <td>5</td>
+                  <th scope="row">Запис DVD-DL дисків 8,5 Gb</th>
+                  <td>30</td>
+                </tr>
+                <tr>
+                  <th scope="row">Запис флеш-носіїв до 8 Gb</th>
+                  <td>30</td>
+                </tr>
+                <tr>
+                  <th scope="row">Запис флеш-носіїв більше 8 Gb</th>
+                  <td>40</td>
                 </tr>
               </tbody>
             </table>

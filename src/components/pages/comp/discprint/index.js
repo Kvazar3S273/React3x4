@@ -9,20 +9,17 @@ const Discprint = () => {
           <div className="col-md-4">
             <img
               className="photo-service"
-              src="/images/services/compscaner.jpg"
+              src="/images/services/compdiscprint.jpg"
             />
           </div>
           <div className="col-md-8 px-3">
             <p>
-              Сканування документів до А4 розміру та збереження в форматах *.jpg 
-              або *.pdf. 
+              Ми здійснюємо друк на дисках струменевими принтерами. 
+              Для друку підходять виключно спеціальні диски з білою 
+              поверхнею (Printable). Друк не включає в себе розробку 
+              макета, проте за додаткову плату ця послуга також може бути надана.  
             </p>
-            <p>
-              Додаткова послуга: відправка ваших сканованих документів на електронну 
-              пошту. Один лист вміщує до 18 Мб інформації. Якщо об'єм сканованих 
-              документів перевищує 18 Мб, то він розбивається на декілька листів. 
-            </p>
-            <h3 className="text-center text-danger">Вартість сканування</h3>
+            <h3 className="text-center text-danger">Вартість послуги</h3>
             <table className="table table-striped text-center">
               <thead>
                 <tr>
@@ -32,17 +29,14 @@ const Discprint = () => {
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Кольорове сканування</th>
-                  <td>5</td>
+                  <th scope="row">Друк на диску</th>
+                  <td>40</td>
                 </tr>
                 <tr>
-                  <th scope="row">Відправка 1 листа на e-mail</th>
-                  <td>10</td>
+                  <th scope="row">Розробка макету</th>
+                  <td>від 50 грн</td>
                 </tr>
-                <tr>
-                  <th scope="row">Відправка документа на Viber</th>
-                  <td>5</td>
-                </tr>
+                
               </tbody>
             </table>
           </div>

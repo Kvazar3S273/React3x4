@@ -9,39 +9,45 @@ const Laminate = () => {
           <div className="col-md-4">
             <img
               className="photo-service"
-              src="/images/services/compscaner.jpg"
+              src="/images/services/complaminate.jpg"
             />
           </div>
           <div className="col-md-8 px-3">
             <p>
-              Сканування документів до А4 розміру та збереження в форматах *.jpg 
-              або *.pdf. 
+            Конвертне ламінування документів від посвідчення розміром як візитна 
+            картка до аркушів формату А4. Переламіновуємо старі потрепані посвідчення.
+            Ламінація документів надійно захищає їх від пошкоджень і сприяє 
+            довготривалому зберіганню. 
+            Не ламінуємо пластикові посвідчення, товсті документи (грубші за 0,7 мм) та книжки. 
             </p>
-            <p>
-              Додаткова послуга: відправка ваших сканованих документів на електронну 
-              пошту. Один лист вміщує до 18 Мб інформації. Якщо об'єм сканованих 
-              документів перевищує 18 Мб, то він розбивається на декілька листів. 
-            </p>
-            <h3 className="text-center text-danger">Вартість сканування</h3>
+            <h3 className="text-center text-danger">Вартість ламінування</h3>
             <table className="table table-striped text-center">
               <thead>
                 <tr>
-                  <th scope="col">Послуга</th>
+                  <th scope="col">Формат</th>
                   <th scope="col">Ціна, грн</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Кольорове сканування</th>
-                  <td>5</td>
+                  <th scope="row">А4, 20х30, свідоцтва</th>
+                  <td>20</td>
                 </tr>
                 <tr>
-                  <th scope="row">Відправка 1 листа на e-mail</th>
-                  <td>10</td>
+                  <th scope="row">А4, 125 мкм</th>
+                  <td>30</td>
                 </tr>
                 <tr>
-                  <th scope="row">Відправка документа на Viber</th>
-                  <td>5</td>
+                  <th scope="row">А5, 15х21</th>
+                  <td>17</td>
+                </tr>
+                <tr>
+                  <th scope="row">А6, 10х15</th>
+                  <td>15</td>
+                </tr>
+                <tr>
+                  <th scope="row">менше за А6</th>
+                  <td>12</td>
                 </tr>
               </tbody>
             </table>
