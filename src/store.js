@@ -1,10 +1,9 @@
-import { composeWithDevTools } from "@redux-devtools/extension";
 import { createStore, combineReducers, compose, applyMiddleware } from "redux";
-import { connectRouter, routerMiddleware } from 'connected-react-router';
 import thunk from "redux-thunk";
-// import { createBrowserHistory } from 'history';
 import authReducer from "./reducers/authReducer";
 import showReducer from "./reducers/showReducer";
+import fotoReducer from "./reducers/fotoReducer";
+import compReducer from "./reducers/compReducer";
 
 // const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 // export const history = createBrowserHistory({ basename: baseUrl });
@@ -16,7 +15,9 @@ const middleware = [
 
 const rootReducer = combineReducers({
     auth: authReducer,
-    show: showReducer
+    show: showReducer,
+    foto: fotoReducer,
+    comp: compReducer
     // router: connectRouter(history)
 });
 

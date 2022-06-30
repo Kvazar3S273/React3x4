@@ -1,16 +1,6 @@
 import React from "react";
 import "react-slideshow-image/dist/styles.css";
-import { Slide, Zoom } from "react-slideshow-image";
 import "../style.css"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faPrint,
-    faImage,
-    faFileWord,
-    faEye,
-    faMoneyBill1
-
-} from "@fortawesome/free-solid-svg-icons";
 
 const Xerox = () => {
   

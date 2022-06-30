@@ -29,7 +29,7 @@ const Navigation = () => {
       <ul>
         <li>
           <a>
-            <Link aria-current="page" to={`/admin`}>
+            <Link aria-current="page" to={`/`}>
               <span className="icon">
                 <i style={{ color: "#03a9f4", fontSize: "35px" }}>
                   <FontAwesomeIcon icon={faCamera} />

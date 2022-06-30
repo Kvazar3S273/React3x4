@@ -5,6 +5,7 @@ import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import logo from "../../../src/3x4logo.png";
 import "./index.css";
 import { useDispatch } from "react-redux";
+
 import { 
   PhotoFnd, 
   PhotoFotoprint,
@@ -16,7 +17,9 @@ import {
   PhotoAddition,
   PhotoBottle,
   PhotoPhotopicture,
+} from "../../constants/actions/foto";
 
+import { 
   CompXerox,
   CompScan,
   CompLaminate,
@@ -25,7 +28,7 @@ import {
   CompDiscprint,
   CompEmail
 
-} from "../../constants/actions/show";
+} from "../../constants/actions/comp";
 import { HashLink } from 'react-router-hash-link';
 
 const Header = () => {

@@ -28,7 +28,7 @@ const PhotoPage = () => {
     isPhotoAddition,
     isPhotoBottle,
     isPhotoPhotopicture
-  } = useSelector((state) => state.show);
+  } = useSelector((state) => state.foto);
 
   return (
     <>

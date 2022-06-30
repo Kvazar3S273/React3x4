@@ -1,6 +1,6 @@
 import {
   PHOTO_FND,
-  PHOTO_PHOTOPRINT,
+  PHOTO_FOTOPRINT,
   PHOTO_PHOTOBOOKS,
   PHOTO_SCAN,
   PHOTO_DUPLICATE,
@@ -14,8 +14,8 @@ import {
 export const PhotoFnd = () => (dispatch) => {
   dispatch({ type: PHOTO_FND });
 };
-export const PhotoPhotoprint = () => (dispatch) => {
-  dispatch({ type: PHOTO_PHOTOPRINT });
+export const PhotoFotoprint = () => (dispatch) => {
+  dispatch({ type: PHOTO_FOTOPRINT });
 };
 export const PhotoPhotobooks = () => (dispatch) => {
   dispatch({ type: PHOTO_PHOTOBOOKS });

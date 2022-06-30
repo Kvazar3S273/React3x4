@@ -58,9 +58,9 @@ const ServiceCards = () => {
                   Ламінування <br />
                   Брошурування
                 </p>
-                <a href="#" className="btn btn-success">
-                  Детальніше...
-                </a>
+                <Link aria-current="page" to="/comp">
+                  <button type="button" class="btn btn-primary">Детальніше...</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -81,9 +81,9 @@ const ServiceCards = () => {
                   Наклейки <br />
                   Широкоформатний друк
                 </p>
-                <a href="#" className="btn btn-success">
-                  Детальніше...
-                </a>
+                <Link aria-current="page" to="/poligraph">
+                  <button type="button" class="btn btn-primary">Детальніше...</button>
+                </Link>
               </div>
             </div>
           </div>

@@ -20,7 +20,7 @@ const CompPage = () => {
     isCompUsbflash,
     isCompDiscprint,
     isCompEmail,
-  } = useSelector((state) => state.show);
+  } = useSelector((state) => state.comp);
 
   return (
     <>

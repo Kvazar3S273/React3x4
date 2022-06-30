@@ -12,7 +12,7 @@ import {
   PhotoAddition,
   PhotoBottle,
   PhotoPhotopicture
-} from "../../../constants/actions/show";
+} from "../../../constants/actions/foto";
 import { HashLink } from 'react-router-hash-link';
 
 const ServicePhotoCards = () => {

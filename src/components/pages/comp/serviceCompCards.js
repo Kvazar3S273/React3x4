@@ -9,7 +9,7 @@ import {
   CompUsbflash,
   CompDiscprint,
   CompEmail
-} from "../../../constants/actions/show";
+} from "../../../constants/actions/comp";
 import { HashLink } from 'react-router-hash-link';
 
 const ServiceCompCards = () => {
