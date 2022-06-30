@@ -6,7 +6,7 @@ const Products = () => {
   return (
     <div className="row">
         {/* Темно-сірий блок для карток */}
-        <div className="col rounded py-3" style={{backgroundColor:"#595959"}}>
+        <div className="col py-3" style={{backgroundColor:"#595959"}}>
           {/* Рядок для карток */}
 
           <div className="row gx-4 justify-content-center">
