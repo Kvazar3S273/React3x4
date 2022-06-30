@@ -27,21 +27,25 @@ const Email = () => {
               <thead>
                 <tr>
                   <th scope="col">Послуга</th>
-                  <th scope="col">Ціна, грн</th>
+                  <th scope="col">Ціна</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Кольорове сканування</th>
-                  <td>5</td>
+                  <th scope="row">Відправка ел. пошти</th>
+                  <td>10 грн/за 1 лист*</td>
                 </tr>
                 <tr>
-                  <th scope="row">Відправка 1 листа на e-mail</th>
-                  <td>10</td>
+                  <th scope="row">Відправка на Viber</th>
+                  <td>5 грн</td>
                 </tr>
                 <tr>
-                  <th scope="row">Відправка документа на Viber</th>
-                  <td>5</td>
+                  <th scope="row">Використання вашої скриньки</th>
+                  <td>15 грн</td>
+                </tr>
+                <tr>
+                  <th scope="row">Завантаження на файлообмінник</th>
+                  <td>від 50 грн</td>
                 </tr>
               </tbody>
             </table>
