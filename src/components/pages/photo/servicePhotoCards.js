@@ -48,7 +48,7 @@ const ServicePhotoCards = () => {
               <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/fp1.png"
+                  src="/images/services/photo/fp1.png"
                   className="card-img-top"
                   alt="Фото на документи"
                 />
@@ -65,7 +65,7 @@ const ServicePhotoCards = () => {
               <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/fp2.png"
+                  src="/images/services/photo/fp2.png"
                   className="card-img-top"
                   alt="Друк фотографій"
                   />
@@ -83,7 +83,7 @@ const ServicePhotoCards = () => {
             <HashLink smooth to={'/page404'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/fp3.png"
+                  src="/images/services/photo/fp3.png"
                   className="card-img-top"
                   alt="Фотокниги"
                 />
@@ -100,7 +100,7 @@ const ServicePhotoCards = () => {
             <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/fp4.png"
+                  src="/images/services/photo/fp4.png"
                   className="card-img-top"
                   alt="Сканування фотографій"
                   />
@@ -117,7 +117,7 @@ const ServicePhotoCards = () => {
             <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/fp5.png"
+                  src="/images/services/photo/fp5.png"
                   className="card-img-top"
                   alt="Дублікати фотографій"
                 />
@@ -134,7 +134,7 @@ const ServicePhotoCards = () => {
               <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/fp6.png"
+                  src="/images/services/photo/fp6.png"
                   className="card-img-top"
                   alt="Реставрація"
                 />
@@ -151,7 +151,7 @@ const ServicePhotoCards = () => {
               <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/fp7.png"
+                  src="/images/services/photo/fp7.png"
                   className="card-img-top"
                   alt="Заміна фону"
                 />
@@ -168,7 +168,7 @@ const ServicePhotoCards = () => {
               <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/fp8.png"
+                  src="/images/services/photo/fp8.png"
                   className="card-img-top"
                   alt="Об'єднання фотографій"
                   />
@@ -185,7 +185,7 @@ const ServicePhotoCards = () => {
               <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/fp9.png"
+                  src="/images/services/photo/fp9.png"
                   className="card-img-top"
                   alt="Етикетки на пляшку"
                 />
@@ -202,7 +202,7 @@ const ServicePhotoCards = () => {
               <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/fp10.png"
+                  src="/images/services/photo/fp10.png"
                   className="card-img-top"
                   alt="Фотокартини"
                 />

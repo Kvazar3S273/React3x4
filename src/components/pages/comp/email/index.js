@@ -9,7 +9,8 @@ const Email = () => {
           <div className="col-md-4">
             <img
               className="photo-service"
-              src="/images/services/compemail.jpg"
+              src="/images/services/comp/compemail.jpg"
+              alt="Email"
             />
           </div>
           <div className="col-md-8 px-3">

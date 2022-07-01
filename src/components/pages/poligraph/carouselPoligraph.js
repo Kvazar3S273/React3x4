@@ -36,7 +36,7 @@ const CarouselPoligraph = () => {
         {/* Слайд 1  */}
         <div className="carousel-item active">
           <img
-            src="/images/slider/comp1.jpg"
+            src="/images/slider/pol1.jpg"
             className="d-block w-100"
             alt="Backgroung slide 1"
           />
@@ -47,28 +47,27 @@ const CarouselPoligraph = () => {
             <div className="row">
               {/* Є картинка на великих, прихована тільки на sm */}
               <div className="d-sm-none d-none d-md-block">
-                <img src="/images/slider/cimg1.png" style={{ width: "50%" }} />
+                <img src="/images/slider/pimg1.png" style={{ width: "50%" }} />
               </div>
               {/* Є картинка тільки на sm */}
               <div className="d-none d-sm-block d-md-none">
-                <img src="/images/slider/cimg1.png" style={{ width: "45%" }} />
+                <img src="/images/slider/pimg1.png" style={{ width: "45%" }} />
               </div>
               {/* Є картинка тільки на xs */}
               <div className="d-block d-sm-none">
-                <img src="/images/slider/cimg1.png" style={{ width: "40%" }} />
+                <img src="/images/slider/pimg1.png" style={{ width: "40%" }} />
               </div>
 
               {/*Заголовок і опис на всіх, крім xs */}
               <div className="d-none d-sm-block">
-                <h2>Ксерокопії та друк</h2>
+                <h2>Візитки</h2>
                 <p>
-                  Кольоровий та чорно-білий друк формату А4 з усіх видів носіїв.
-                  Різні види паперу.
+                Стандартні, євроформат; різні типи паперу; глянцеве, матове покриття, УФ лак...
                 </p>
               </div>
               {/*Лише заголовок тільки на xs */}
               <div className="d-block d-sm-none">
-                <h2>Ксерокопії та друк</h2>
+                <h2>Візитки</h2>
               </div>
             </div>
           </div>
@@ -77,7 +76,7 @@ const CarouselPoligraph = () => {
         {/* Слайд 2  */}
         <div className="carousel-item">
           <img
-            src="/images/slider/comp2.jpg"
+            src="/images/slider/pol2.jpg"
             className="d-block w-100"
             alt="Backgroung slide 2"
           />
@@ -88,29 +87,27 @@ const CarouselPoligraph = () => {
             <div className="row">
               {/* Є картинка на великих, прихована тільки на sm */}
               <div className="d-sm-none d-none d-md-block">
-                <img src="/images/slider/cimg2.png" style={{ width: "60%" }} />
+                <img src="/images/slider/pimg2.png" style={{ width: "60%" }} />
               </div>
               {/* Є картинка тільки на sm */}
               <div className="d-none d-sm-block d-md-none">
-                <img src="/images/slider/cimg2.png" style={{ width: "50%" }} />
+                <img src="/images/slider/pimg2.png" style={{ width: "50%" }} />
               </div>
               {/* Є картинка тільки на xs */}
               <div className="d-block d-sm-none">
-                <img src="/images/slider/cimg2.png" style={{ width: "40%" }} />
+                <img src="/images/slider/pimg2.png" style={{ width: "40%" }} />
               </div>
 
               {/*Заголовок і опис на всіх, крім xs */}
               <div className="d-none d-sm-block">
-                <h2>Ламінування</h2>
+                <h2>Флаєри</h2>
                 <p>
-                  Ламінування документів форматами від посвідчення до А4. <br />
-                  Надійний захист від пошкоджень, гарантія тривалого
-                  зберігання...
+                Листівки будь-якого формату від А6 до А4, в тому числі євроформатів, папір в асортименті...
                 </p>
               </div>
               {/*Лише заголовок тільки на xs */}
               <div className="d-block d-sm-none">
-                <h2>Ламінування</h2>
+                <h2>Флаєри</h2>
               </div>
             </div>
           </div>
@@ -119,7 +116,7 @@ const CarouselPoligraph = () => {
         {/* Слайд 3 */}
         <div className="carousel-item">
           <img
-            src="/images/slider/comp3.jpg"
+            src="/images/slider/pol3.jpg"
             className="d-block w-100"
             alt="Backgroung slide 3"
           />
@@ -130,28 +127,27 @@ const CarouselPoligraph = () => {
             <div className="row">
               {/* Є картинка на великих, прихована тільки на sm */}
               <div className="d-sm-none d-none d-md-block">
-                <img src="/images/slider/cimg3.png" style={{ width: "60%" }} />
+                <img src="/images/slider/pimg3.png" style={{ width: "60%" }} />
               </div>
               {/* Є картинка тільки на sm */}
               <div className="d-none d-sm-block d-md-none">
-                <img src="/images/slider/cimg3.png" style={{ width: "50%" }} />
+                <img src="/images/slider/pimg3.png" style={{ width: "50%" }} />
               </div>
               {/* Є картинка тільки на xs */}
               <div className="d-block d-sm-none">
-                <img src="/images/slider/cimg3.png" style={{ width: "40%" }} />
+                <img src="/images/slider/pimg3.png" style={{ width: "40%" }} />
               </div>
 
               {/*Заголовок і опис на всіх, крім xs */}
               <div className="d-none d-sm-block">
-                <h2>Брошурування</h2>
+                <h2>Широкоформатний друк</h2>
                 <p>
-                  Зшивання на пластикову пружину в цупку обкладинку рефератів,
-                  курсових, брошур, звітів тощо...
+                Друк на самоклейці, на банері; ламінування, люверсовка, проклейка...
                 </p>
               </div>
               {/*Лише заголовок тільки на xs */}
               <div className="d-block d-sm-none">
-                <h2>Брошурування</h2>
+                <h2>Широкоформатний друк</h2>
               </div>
             </div>
           </div>

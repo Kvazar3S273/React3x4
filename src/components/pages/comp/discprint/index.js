@@ -9,7 +9,8 @@ const Discprint = () => {
           <div className="col-md-4">
             <img
               className="photo-service"
-              src="/images/services/compdiscprint.jpg"
+              src="/images/services/comp/compdiscprint.jpg"
+              alt="Друк на дисках"
             />
           </div>
           <div className="col-md-8 px-3">

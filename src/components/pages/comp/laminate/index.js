@@ -9,7 +9,8 @@ const Laminate = () => {
           <div className="col-md-4">
             <img
               className="photo-service"
-              src="/images/services/complaminate.jpg"
+              src="/images/services/comp/complaminate.jpg"
+              alt="Ламінування"
             />
           </div>
           <div className="col-md-8 px-3">

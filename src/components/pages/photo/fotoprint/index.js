@@ -14,10 +14,10 @@ import {
 
 const Fotoprint = () => {
   const images = [
-    "images/services/fotoprint1.jpg",
-    "images/services/fotoprint2.jpg",
-    "images/services/fotoprint3.jpg",
-    "images/services/fotoprint4.jpg",
+    "images/services/photo/fotoprint1.jpg",
+    "images/services/photo/fotoprint2.jpg",
+    "images/services/photo/fotoprint3.jpg",
+    "images/services/photo/fotoprint4.jpg",
   ];
 
   const zoomInProperties = {
@@ -115,9 +115,9 @@ const Fotoprint = () => {
         <div className="row  m-4">
           <div className="col-md-7 p-3">
             <img
-              src="/images/services/fotoprint500.jpg"
+              src="/images/services/photo/fotoprint500.jpg"
               class="img-fluid img-thumbnail"
-              alt="..."
+              alt="Суперціна"
             />
           </div>
           <div className="col-md-5">
@@ -309,9 +309,9 @@ const Fotoprint = () => {
               <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
                 <div className="card">
                   <img
-                    src="/images/services/kadr1.png"
+                    src="/images/services/photo/kadr1.png"
                     className="card-img-top"
-                    alt="Фотопослуги"
+                    alt="Оригінальний кадр"
                   />
                   <div className="card-body">
                     <h5 className="card-title text-center">
@@ -328,9 +328,9 @@ const Fotoprint = () => {
               <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
                 <div className="card">
                   <img
-                    src="/images/services/kadr2.png"
+                    src="/images/services/photo/kadr2.png"
                     className="card-img-top"
-                    alt="Комп'ютерні послуги"
+                    alt="Обрізане фото"
                   />
                   <div className="card-body">
                     <h5 className="card-title text-center">Обрізане фото</h5>
@@ -344,9 +344,9 @@ const Fotoprint = () => {
               <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
                 <div className="card">
                   <img
-                    src="/images/services/kadr3.png"
+                    src="/images/services/photo/kadr3.png"
                     className="card-img-top"
-                    alt="Поліграфія"
+                    alt="Кадроване фото"
                   />
                   <div className="card-body">
                     <h5 className="card-title text-center">Кадроване фото</h5>

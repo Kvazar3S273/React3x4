@@ -9,7 +9,8 @@ const ScanPage = () => {
           <div className="col-md-4">
             <img
               className="photo-service"
-              src="/images/services/photoservice4.jpg"
+              src="/images/services/photo/photoservice4.jpg"
+              alt="Сканування фото"
             />
           </div>
           <div className="col-md-8 px-3">

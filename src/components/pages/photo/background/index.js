@@ -9,7 +9,10 @@ const Background = () => {
             <h1 className="text-center">Заміна фону</h1>
             <div className="row m-3 p-2">
                 <div className="col-md-4">
-                    <img className="photo-service" src="/images/services/photoservice7.jpg"/>
+                    <img className="photo-service" 
+                    src="/images/services/photo/photoservice7.jpg"
+                    alt="Заміна фону"
+                    />
                 </div>
                 <div className="col-md-8 px-3">
                 <p>

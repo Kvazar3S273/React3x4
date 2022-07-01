@@ -18,7 +18,7 @@ const Fnd = () => {
         <div className="row">
           <div className="col-md-2"></div>
           <div className="col-md-8">
-            <img className="photo-service" src="/images/services/fnd.jpg" />
+            <img className="photo-service" src="/images/services/photo/fnd.jpg" alt="Фото на документи"/>
           </div>
           <div className="col-md-2"></div>
         </div>

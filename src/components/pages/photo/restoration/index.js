@@ -9,7 +9,10 @@ const Restoration = () => {
             <h1 className="text-center">Реставрація</h1>
             <div className="row m-3 p-2">
                 <div className="col-md-4">
-                    <img className="photo-service" src="/images/services/photoservice6.jpg"/>
+                    <img className="photo-service" 
+                    src="/images/services/photo/photoservice6.jpg"
+                    alt="Реставрація"
+                    />
                 </div>
                 <div className="col-md-8 px-3">
                 <p>

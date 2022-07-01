@@ -9,7 +9,8 @@ const Bottle = () => {
           <div className="col-md-4">
             <img
               className="photo-service"
-              src="/images/services/photoservice5.jpg"
+              src="/images/services/photo/photoservice5.jpg"
+              alt="Етикетки"
             />
           </div>
           <div className="col-md-8 px-3">

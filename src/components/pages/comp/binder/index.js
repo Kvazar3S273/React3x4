@@ -9,7 +9,8 @@ const Binder = () => {
           <div className="col-md-4">
             <img
               className="photo-service"
-              src="/images/services/compbinder.jpg"
+              src="/images/services/comp/compbinder.jpg"
+              alt="Брошурування"
             />
           </div>
           <div className="col-md-8 px-3">

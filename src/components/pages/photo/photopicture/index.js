@@ -8,9 +8,9 @@ import "../style.css"
 
 const Photopicture = () => {
   const images = [
-  'images/services/photopicture1.jpg',
-  'images/services/photopicture2.jpg',
-  'images/services/photopicture3.jpg'
+  'images/services/photo/photopicture1.jpg',
+  'images/services/photo/photopicture2.jpg',
+  'images/services/photo/photopicture3.jpg'
   ];
 
   const zoomInProperties = {

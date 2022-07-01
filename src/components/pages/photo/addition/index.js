@@ -9,7 +9,10 @@ const Addition = () => {
             <h1 className="text-center">Об'єднання фотографій</h1>
             <div className="row m-3 p-2">
                 <div className="col-md-4">
-                    <img className="photo-service" src="/images/services/photoservice8.jpg"/>
+                    <img className="photo-service" 
+                    src="/images/services/photo/photoservice8.jpg"
+                    alt="Об'єднання фотографій"
+                    />
                 </div>
                 <div className="col-md-8 px-3">
                 <p>

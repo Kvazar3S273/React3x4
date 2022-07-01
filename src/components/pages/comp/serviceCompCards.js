@@ -42,7 +42,7 @@ const ServiceCompCards = () => {
               <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp1.png"
+                  src="/images/services/comp/comp1.png"
                   className="card-img-top"
                   alt="Ксерокопії та друк"
                 />
@@ -59,7 +59,7 @@ const ServiceCompCards = () => {
               <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp2.png"
+                  src="/images/services/comp/comp2.png"
                   className="card-img-top"
                   alt="Сканування"
                   />
@@ -76,7 +76,7 @@ const ServiceCompCards = () => {
             <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp3.png"
+                  src="/images/services/comp/comp3.png"
                   className="card-img-top"
                   alt="Ламінування"
                 />
@@ -93,7 +93,7 @@ const ServiceCompCards = () => {
             <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp4.png"
+                  src="/images/services/comp/comp4.png"
                   className="card-img-top"
                   alt="Брошурування"
                   />
@@ -110,7 +110,7 @@ const ServiceCompCards = () => {
             <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp5.png"
+                  src="/images/services/comp/comp5.png"
                   className="card-img-top"
                   alt="Запис цифрових носіїв"
                 />
@@ -127,7 +127,7 @@ const ServiceCompCards = () => {
               <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp6.png"
+                  src="/images/services/comp/comp6.png"
                   className="card-img-top"
                   alt="Друк на дисках"
                 />
@@ -144,7 +144,7 @@ const ServiceCompCards = () => {
               <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp7.png"
+                  src="/images/services/comp/comp7.png"
                   className="card-img-top"
                   alt="Послуги електронної пошти"
                 />

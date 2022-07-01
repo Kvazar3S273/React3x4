@@ -9,7 +9,8 @@ const Scaner = () => {
           <div className="col-md-4">
             <img
               className="photo-service"
-              src="/images/services/compscaner.jpg"
+              src="/images/services/comp/compscaner.jpg"
+              alt="Сканування"
             />
           </div>
           <div className="col-md-8 px-3">

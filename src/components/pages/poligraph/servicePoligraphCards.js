@@ -36,7 +36,7 @@ const ServicePoligraphCards = () => {
       {/* Рядок для темно-сірого блока */}
       <div classNameName="row">
         {/* Темно-сірий блок для карток */}
-        <div className="col py-4" style={{background:"#4D4D4D"}}>
+        <div className="col py-4" style={{background:"#883A3A"}}>
           {/* Рядок для карток */}
 
           <div className="row gx-5 justify-content-center">
@@ -49,7 +49,7 @@ const ServicePoligraphCards = () => {
               <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp1.png"
+                  src="/images/services/poligraph/vizitka.png"
                   className="card-img-top"
                   alt="Ксерокопії та друк"
                 />
@@ -66,7 +66,7 @@ const ServicePoligraphCards = () => {
               <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp2.png"
+                  src="/images/services/poligraph/flyer.png"
                   className="card-img-top"
                   alt="Сканування"
                   />
@@ -83,7 +83,7 @@ const ServicePoligraphCards = () => {
             <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp3.png"
+                  src="/images/services/poligraph/calendar.png"
                   className="card-img-top"
                   alt="Ламінування"
                 />
@@ -100,7 +100,7 @@ const ServicePoligraphCards = () => {
             <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp4.png"
+                  src="/images/services/poligraph/birka.png"
                   className="card-img-top"
                   alt="Брошурування"
                   />
@@ -117,7 +117,7 @@ const ServicePoligraphCards = () => {
             <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp5.png"
+                  src="/images/services/poligraph/naklejka.png"
                   className="card-img-top"
                   alt="Запис цифрових носіїв"
                 />
@@ -134,7 +134,7 @@ const ServicePoligraphCards = () => {
               <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp6.png"
+                  src="/images/services/poligraph/henger.png"
                   className="card-img-top"
                   alt="Друк на дисках"
                 />
@@ -151,7 +151,7 @@ const ServicePoligraphCards = () => {
               <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp7.png"
+                  src="/images/services/poligraph/oracal.png"
                   className="card-img-top"
                   alt="Послуги електронної пошти"
                 />
@@ -168,7 +168,7 @@ const ServicePoligraphCards = () => {
               <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp7.png"
+                  src="/images/services/poligraph/bnr.png"
                   className="card-img-top"
                   alt="Послуги електронної пошти"
                 />
@@ -185,7 +185,7 @@ const ServicePoligraphCards = () => {
               <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp7.png"
+                  src="/images/services/poligraph/tablichka.png"
                   className="card-img-top"
                   alt="Послуги електронної пошти"
                 />
@@ -202,7 +202,7 @@ const ServicePoligraphCards = () => {
               <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp7.png"
+                  src="/images/services/poligraph/card.png"
                   className="card-img-top"
                   alt="Послуги електронної пошти"
                 />

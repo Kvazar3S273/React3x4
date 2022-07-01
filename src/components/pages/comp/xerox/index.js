@@ -14,7 +14,7 @@ const Xerox = () => {
         <div className="row">
           <div className="col-md-2"></div>
           <div className="col-md-8">
-            <img className="comp-service" src="/images/services/xerox.jpg" />
+            <img className="comp-service" src="/images/services/comp/xerox.jpg" alt="Копії"/>
           </div>
           <div className="col-md-2"></div>
         </div>
@@ -273,9 +273,9 @@ const Xerox = () => {
               <div className="col-7 col-sm-5 col-md-3 col-lg-2 m-2 p-2 border bg-light rounded ">
                 <div className="card">
                   <img
-                    src="/images/services/text.jpg"
+                    src="/images/services/comp/text.jpg"
                     className="card-img-top"
-                    alt="Фотопослуги"
+                    alt="Текст"
                   />
                   <div className="card-body">
                     <h5 className="card-title text-center">
@@ -292,9 +292,9 @@ const Xerox = () => {
               <div className="col-7 col-sm-5 col-md-3 col-lg-2 m-2 p-2 border bg-light rounded ">
                 <div className="card">
                   <img
-                    src="/images/services/25.jpg"
+                    src="/images/services/comp/25.jpg"
                     className="card-img-top"
-                    alt="Комп'ютерні послуги"
+                    alt="25%"
                   />
                   <div className="card-body">
                     <h5 className="card-title text-center">Заливка 25%</h5>
@@ -308,9 +308,9 @@ const Xerox = () => {
               <div className="col-7 col-sm-5 col-md-3 col-lg-2 m-2 p-2 border bg-light rounded ">
                 <div className="card">
                   <img
-                    src="/images/services/50.jpg"
+                    src="/images/services/comp/50.jpg"
                     className="card-img-top"
-                    alt="Поліграфія"
+                    alt="50%"
                   />
                   <div className="card-body">
                     <h5 className="card-title text-center">Заливка 50%</h5>
@@ -324,9 +324,9 @@ const Xerox = () => {
               <div className="col-7 col-sm-5 col-md-3 col-lg-2 m-2 p-2 border bg-light rounded ">
                 <div className="card">
                   <img
-                    src="/images/services/100.jpg"
+                    src="/images/services/comp/100.jpg"
                     className="card-img-top"
-                    alt="Поліграфія"
+                    alt="100%"
                   />
                   <div className="card-body">
                     <h5 className="card-title text-center">Заливка 100%</h5>

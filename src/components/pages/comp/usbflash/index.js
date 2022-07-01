@@ -9,7 +9,8 @@ const Usbflash = () => {
           <div className="col-md-4">
             <img
               className="photo-service"
-              src="/images/services/compusbflash.jpg"
+              src="/images/services/comp/compusbflash.jpg"
+              alt="Запис цифрових носіїв"
             />
           </div>
           <div className="col-md-8 px-3">
