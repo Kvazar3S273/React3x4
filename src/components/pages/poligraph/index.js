@@ -1,12 +1,42 @@
-import React, { Component } from 'react'
+import React from "react";
+// import "./style.css";
+import { useSelector } from "react-redux";
+import CarouselPoligraph from "./carouselPoligraph";
+import ServicePoligraphCards from "./servicePoligraphCards";
+import Visitcard from "./visitcard";
 
 const PoligraphPage = () => {
+  const {
+    isPoligraphVisitcard,
+    isPoligraphFlyer,
+    isPoligraphCalendar,
+    isPoligraphTag,
+    isPoligraphSticker,
+    isPoligraphHanger,
+    isPoligraphOracal,
+    isPoligraphBaner,
+    isPoligraphPvc,
+    isPoligraphOther
+  } = useSelector((state) => state.poligraph);
+
   return (
-    <div className="row">
-      <div className="offset-md-4 col-md-4">
-        <h2 className="text-center mt-3">Поліграфія</h2>
-      </div>
-    </div>
+
+    <>
+    <CarouselPoligraph />
+    <ServicePoligraphCards />
+
+      {/* {isCompXerox ? <Xerox /> : ""}
+      {isCompScan ? <Scaner /> : ""}
+      {isCompLaminate ? <Laminate /> : ""}
+      {isCompBinder ? <Binder /> : ""}
+      {isCompUsbflash ? <Usbflash /> : ""}
+      {isCompDiscprint ? <Discprint /> : ""}
+      {isCompEmail ? <Email /> : ""} */}
+      
+      {isPoligraphVisitcard ? <Visitcard /> : ""}
+      
+    </>
+    
   );
 };
 

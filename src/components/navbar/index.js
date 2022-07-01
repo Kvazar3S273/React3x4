@@ -5,6 +5,7 @@ import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import logo from "../../../src/3x4logo.png";
 import "./index.css";
 import { useDispatch } from "react-redux";
+import { HashLink } from 'react-router-hash-link';
 
 import { 
   PhotoFnd, 
@@ -27,9 +28,20 @@ import {
   CompUsbflash,
   CompDiscprint,
   CompEmail
-
 } from "../../constants/actions/comp";
-import { HashLink } from 'react-router-hash-link';
+
+import {
+  PoligraphVisitcard,
+  PoligraphFlyer,
+  PoligraphCalendar,
+  PoligraphTag,
+  PoligraphSticker,
+  PoligraphHanger,
+  PoligraphOracal,
+  PoligraphBaner,
+  PoligraphPvc,
+  PoligraphOther,
+} from "../../constants/actions/poligraph";
 
 const Header = () => {
 
@@ -53,6 +65,17 @@ const Header = () => {
     const handleClickUsbflash = () => { dispatch(CompUsbflash()); }
     const handleClickDiscprint = () => { dispatch(CompDiscprint()); }
     const handleClickEmail = () => { dispatch(CompEmail()); }
+
+    const handleClickVisitcard = () => { dispatch(PoligraphVisitcard()); }
+    const handleClickFlyer = () => { dispatch(PoligraphFlyer()); }
+    const handleClickCalendar = () => { dispatch(PoligraphCalendar()); }
+    const handleClickTag = () => { dispatch(PoligraphTag()); }
+    const handleClickSticker = () => { dispatch(PoligraphSticker()); }
+    const handleClickHanger = () => { dispatch(PoligraphHanger()); }
+    const handleClickOracal = () => { dispatch(PoligraphOracal()); }
+    const handleClickBaner = () => { dispatch(PoligraphBaner()); }
+    const handleClickPvc = () => { dispatch(PoligraphPvc()); }
+    const handleClickOther = () => { dispatch(PoligraphOther()); }
     
     const { isAuth, username } = useSelector((redux) => redux.auth);
     const ref = useRef(null);
@@ -233,37 +256,63 @@ const Header = () => {
             <NavDropdown title="Поліграфія" id="basic-nav-dropdown">
 
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="/poligraph">
-                        Повний перелік
+                    <Link className="nav-link" aria-current="page" to="/poligraph" >
+                        <h6 style={{color:"#000"}}>Повний перелік</h6>
                     </Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Divider />
 
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="#">
-                        Ксерокопії, друк
-                    </Link>
+                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickVisitcard}>Візитки</h6>
+                    </HashLink>
                 </NavDropdown.Item>
-
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="#">
-                        Візитки
-                    </Link>
+                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickFlyer}>Листівки, флаєри</h6>
+                    </HashLink>
                 </NavDropdown.Item>
-
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="#">
-                        Листівки
-                    </Link>
+                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickCalendar}>Календарі</h6>
+                    </HashLink>
                 </NavDropdown.Item>
-
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="#">
-                        Календарики
-                    </Link>
+                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickTag}>Цінники, бірки</h6>
+                    </HashLink>
                 </NavDropdown.Item>
-
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickSticker}>Наклейки</h6>
+                    </HashLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickHanger}>Хенгери</h6>
+                    </HashLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickOracal}>Самоклейка плівка</h6>
+                    </HashLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickBaner}>Банер</h6>
+                    </HashLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickPvc}>Друк на ПВХ</h6>
+                    </HashLink>
+                </NavDropdown.Item>
+                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
+                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
+                        <h6 onClick={handleClickOther}>Інша поліграфія</h6>
+                    </HashLink>
+                </NavDropdown.Item>
             </NavDropdown>
 
             {/* Контакти */}

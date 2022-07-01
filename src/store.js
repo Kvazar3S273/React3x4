@@ -4,6 +4,7 @@ import authReducer from "./reducers/authReducer";
 import showReducer from "./reducers/showReducer";
 import fotoReducer from "./reducers/fotoReducer";
 import compReducer from "./reducers/compReducer";
+import poligraphReducer from "./reducers/poligraphReducer";
 
 // const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 // export const history = createBrowserHistory({ basename: baseUrl });
@@ -17,7 +18,8 @@ const rootReducer = combineReducers({
     auth: authReducer,
     show: showReducer,
     foto: fotoReducer,
-    comp: compReducer
+    comp: compReducer,
+    poligraph: poligraphReducer
     // router: connectRouter(history)
 });
 

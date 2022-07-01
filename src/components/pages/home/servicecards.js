@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const ServiceCards = () => {
   return (
@@ -104,9 +105,9 @@ const ServiceCards = () => {
                   Чашки <br />
                   Фотопазли
                 </p>
-                <a href="#" className="btn btn-success">
-                  Детальніше...
-                </a>
+                <Link aria-current="page" to="/photo">
+                  <button type="button" class="btn btn-primary">Детальніше...</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -129,9 +130,9 @@ const ServiceCards = () => {
                   Канцтовари <br />
                   LED-лампи
                 </p>
-                <a href="#" className="btn btn-success">
-                  Детальніше...
-                </a>
+                <HashLink smooth to={'/#products'} style={{color:"#000"}}>
+                  <button type="button" class="btn btn-primary">Детальніше...</button>
+                </HashLink>
               </div>
             </div>
           </div>

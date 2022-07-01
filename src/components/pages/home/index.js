@@ -12,14 +12,11 @@ const HomePage = () => {
       <Carousel />
       <ServiceCards />
       <MakeFancybox />
-      <Products />
+      <section id="products">
+        <Products />
+      </section>
       <Producers />
-      {/* <ScrollToTop 
-      size={70}
-      offsetTop={200}
-      strokeWidth={5}
-      symbol="UP"
-      /> */}
+      
     </>
   );
 };
