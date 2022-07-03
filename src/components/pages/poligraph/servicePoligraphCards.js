@@ -1,44 +1,17 @@
 import React from "react";
+import { useSelector } from "react-redux";
 // import "./style.css";
-import { HashLink } from 'react-router-hash-link';
-import { useDispatch } from "react-redux";
-import { 
-  PoligraphVisitcard,
-  PoligraphFlyer,
-  PoligraphCalendar,
-  PoligraphTag,
-  PoligraphSticker,
-  PoligraphHanger,
-  PoligraphOracal,
-  PoligraphBaner,
-  PoligraphPvc,
-  PoligraphOther
-} from "../../../constants/actions/poligraph";
 import ServiceCardsMain from "./serviceCardsMain";
 import ServiceCardsOther from "./serviceCardsOther";
 
 const ServicePoligraphCards = () => {
+  const { isPoligraphOther } = useSelector((state) => state.poligraph);
 
-  // const dispatch = useDispatch();
-
-  // const handleClickVisitcard = () => { dispatch(PoligraphVisitcard()); }
-  // const handleClickFlyer = () => { dispatch(PoligraphFlyer()); }
-  // const handleClickCalendar = () => { dispatch(PoligraphCalendar()); }
-  // const handleClickTag = () => { dispatch(PoligraphTag()); }
-  // const handleClickSticker = () => { dispatch(PoligraphSticker()); }
-  // const handleClickHanger = () => { dispatch(PoligraphHanger()); }
-  // const handleClickOracal = () => { dispatch(PoligraphOracal()); }
-  // const handleClickBaner = () => { dispatch(PoligraphBaner()); }
-  // const handleClickPvc = () => { dispatch(PoligraphPvc()); }
-  // const handleClickOther = () => { dispatch(PoligraphOther()); }
- 
-    
   return (
     <>
       <div classNameName="row">
         {/* Бордовий блок для карток */}
         <div className="col py-4" style={{ background: "#883A3A" }}>
-          
           {/* Рядок для карток */}
           <div className="row gx-5 justify-content-center">
             <h1 className="text-light text-center">Поліграфічні послуги</h1>
@@ -47,7 +20,7 @@ const ServicePoligraphCards = () => {
             </p>
 
             <ServiceCardsMain />
-            <ServiceCardsOther />
+            {isPoligraphOther ? <ServiceCardsOther /> : ""}
           </div>
         </div>
       </div>
@@ -55,6 +28,6 @@ const ServicePoligraphCards = () => {
       <section id="component"></section>
     </>
   );
-  };
+};
 
 export default ServicePoligraphCards;

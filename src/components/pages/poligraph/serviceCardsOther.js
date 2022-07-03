@@ -3,7 +3,6 @@ import React from "react";
 import { HashLink } from 'react-router-hash-link';
 import { useDispatch } from "react-redux";
 import { 
-
     PoligraphBuklet,
     PoligraphPlakat,
     PoligraphBroshura,
@@ -36,77 +35,84 @@ const ServiceCardsOther = () => {
 
   return (
     <>
-      
-            {/* Картка 1 */}
-            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClickBuklet}>
-              <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
-              <div className="card" >
-                <img
-                  src="/images/services/poligraph/buklet.png"
-                  className="card-img-top"
-                  alt="Буклети"
-                />
-                <div className="card-body-photo">
-                  <h6 className="card-title text-center">Буклети</h6>
-                </div>
-              </div>
-              </HashLink>
+      {/* Картка 1 */}
+      <div
+        className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
+        onClick={handleClickBuklet}
+      >
+        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+          <div className="card">
+            <img
+              src="/images/services/poligraph/buklet.png"
+              className="card-img-top"
+              alt="Буклети"
+            />
+            <div className="card-body-photo">
+              <h6 className="card-title text-center">Буклети</h6>
             </div>
+          </div>
+        </HashLink>
+      </div>
 
-            {/* Картка 2 */}
-            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClickPlakat}>
-              <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
-              <div className="card" >
-                <img
-                  src="/images/services/poligraph/plakat.png"
-                  className="card-img-top"
-                  alt="Плакати"
-                  />
-                <div className="card-body-photo">
-                  <h6 className="card-title text-center">Плакати</h6>
-                </div>
-              </div>
-              </HashLink>
+      {/* Картка 2 */}
+      <div
+        className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
+        onClick={handleClickPlakat}
+      >
+        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+          <div className="card">
+            <img
+              src="/images/services/poligraph/plakat.png"
+              className="card-img-top"
+              alt="Плакати"
+            />
+            <div className="card-body-photo">
+              <h6 className="card-title text-center">Плакати</h6>
             </div>
-            
-            {/* Картка 3 */}
-            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClickBroshura}>
-            <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
-              <div className="card" >
-                <img
-                  src="/images/services/poligraph/broshura.png"
-                  className="card-img-top"
-                  alt="Брошури"
-                />
-                <div className="card-body-photo">
-                  <h6 className="card-title text-center">Брошури</h6>
-                </div>
-              </div>
-              </HashLink>
+          </div>
+        </HashLink>
+      </div>
+
+      {/* Картка 3 */}
+      <div
+        className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
+        onClick={handleClickBroshura}
+      >
+        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+          <div className="card">
+            <img
+              src="/images/services/poligraph/broshura.png"
+              className="card-img-top"
+              alt="Брошури"
+            />
+            <div className="card-body-photo">
+              <h6 className="card-title text-center">Брошури</h6>
             </div>
-            
-            {/* Картка 4 */}
-            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClick3dcalendar}>
-            <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
-              <div className="card" >
-                <img
-                  src="/images/services/poligraph/calendar.png"
-                  className="card-img-top"
-                  alt="Об'ємні календарі"
-                  />
-                <div className="card-body-photo">
-                  <h6 className="card-title text-center">Об'ємні календарі</h6>
-                </div>
-              </div>
-              </HashLink>
+          </div>
+        </HashLink>
+      </div>
+
+      {/* Картка 4 */}
+      <div
+        className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
+        onClick={handleClick3dcalendar}
+      >
+        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+          <div className="card">
+            <img
+              src="/images/services/poligraph/calendar.png"
+              className="card-img-top"
+              alt="Об'ємні календарі"
+            />
+            <div className="card-body-photo">
+              <h6 className="card-title text-center">Об'ємні календарі</h6>
             </div>
-            
-            {/* Картка 5 */}
-            {/* <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
+          </div>
+        </HashLink>
+      </div>
+
+      {/* Картка 5 */}
+      {/* <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
             onClick={handleClickBlank}>
             <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
               <div className="card" >
@@ -122,108 +128,119 @@ const ServiceCardsOther = () => {
             </HashLink>
             </div> */}
 
-            {/* Картка 6 */}
-            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClickMenu}>
-              <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
-              <div className="card" >
-                <img
-                  src="/images/services/poligraph/menu.png"
-                  className="card-img-top"
-                  alt="Меню"
-                />
-                <div className="card-body-photo">
-                  <h6 className="card-title text-center">Меню</h6>
-                </div>
-              </div>
-              </HashLink>
+      {/* Картка 6 */}
+      <div
+        className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
+        onClick={handleClickMenu}
+      >
+        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+          <div className="card">
+            <img
+              src="/images/services/poligraph/menu.png"
+              className="card-img-top"
+              alt="Меню"
+            />
+            <div className="card-body-photo">
+              <h6 className="card-title text-center">Меню</h6>
             </div>
+          </div>
+        </HashLink>
+      </div>
 
-            {/* Картка 7 */}
-            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClickBloknot}>
-              <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
-              <div className="card" >
-                <img
-                  src="/images/services/poligraph/bloknot.png"
-                  className="card-img-top"
-                  alt="Блокноти"
-                />
-                <div className="card-body-photo">
-                  <h6 className="card-title text-center">Блокноти</h6>
-                </div>
-              </div>
-            </HashLink>
+      {/* Картка 7 */}
+      <div
+        className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
+        onClick={handleClickBloknot}
+      >
+        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+          <div className="card">
+            <img
+              src="/images/services/poligraph/bloknot.png"
+              className="card-img-top"
+              alt="Блокноти"
+            />
+            <div className="card-body-photo">
+              <h6 className="card-title text-center">Блокноти</h6>
             </div>
+          </div>
+        </HashLink>
+      </div>
 
-            {/* Картка 8 */}
-            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClickCards}>
-              <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
-              <div className="card" >
-                <img
-                  src="/images/services/poligraph/card.png"
-                  className="card-img-top"
-                  alt="Пластикові картки"
-                />
-                <div className="card-body-photo">
-                  <h6 className="card-title text-center">Пластикові картки</h6>
-                </div>
-              </div>
-            </HashLink>
+      {/* Картка 8 */}
+      <div
+        className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
+        onClick={handleClickCards}
+      >
+        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+          <div className="card">
+            <img
+              src="/images/services/poligraph/card.png"
+              className="card-img-top"
+              alt="Пластикові картки"
+            />
+            <div className="card-body-photo">
+              <h6 className="card-title text-center">Пластикові картки</h6>
             </div>
+          </div>
+        </HashLink>
+      </div>
 
-            {/* Картка 9 */}
-            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClickLeaf}>
-              <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
-              <div className="card" >
-                <img
-                  src="/images/services/poligraph/zapis.png"
-                  className="card-img-top"
-                  alt="Блоки для запису"
-                />
-                <div className="card-body-photo">
-                  <h6 className="card-title text-center">Блоки для запису</h6>
-                </div>
-              </div>
-            </HashLink>
+      {/* Картка 9 */}
+      <div
+        className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
+        onClick={handleClickLeaf}
+      >
+        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+          <div className="card">
+            <img
+              src="/images/services/poligraph/zapis.png"
+              className="card-img-top"
+              alt="Блоки для запису"
+            />
+            <div className="card-body-photo">
+              <h6 className="card-title text-center">Блоки для запису</h6>
             </div>
+          </div>
+        </HashLink>
+      </div>
 
-            {/* Картка 10 */}
-            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClickKonvert}>
-              <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
-              <div className="card" >
-                <img
-                  src="/images/services/poligraph/konvert.png"
-                  className="card-img-top"
-                  alt="Конверти"
-                />
-                <div className="card-body-photo">
-                  <h6 className="card-title text-center">Конверти</h6>
-                </div>
-              </div>
-            </HashLink>
+      {/* Картка 10 */}
+      <div
+        className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
+        onClick={handleClickKonvert}
+      >
+        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+          <div className="card">
+            <img
+              src="/images/services/poligraph/konvert.png"
+              className="card-img-top"
+              alt="Конверти"
+            />
+            <div className="card-body-photo">
+              <h6 className="card-title text-center">Конверти</h6>
             </div>
-            
-            {/* Картка 11 */}
-            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
-            onClick={handleClickFolder}>
-              <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
-              <div className="card" >
-                <img
-                  src="/images/services/poligraph/papka.png"
-                  className="card-img-top"
-                  alt="Фірмові папки"
-                />
-                <div className="card-body-photo">
-                  <h6 className="card-title text-center">Фірмові папки</h6>
-                </div>
-              </div>
-            </HashLink>
+          </div>
+        </HashLink>
+      </div>
+
+      {/* Картка 11 */}
+      <div
+        className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
+        onClick={handleClickFolder}
+      >
+        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+          <div className="card">
+            <img
+              src="/images/services/poligraph/papka.png"
+              className="card-img-top"
+              alt="Фірмові папки"
+            />
+            <div className="card-body-photo">
+              <h6 className="card-title text-center">Фірмові папки</h6>
             </div>
-            
+          </div>
+        </HashLink>
+      </div>
     </>
   );
   };
