@@ -27,6 +27,7 @@ const MainPanel = () => {
   //   setShowPrices(false);
   //   setShowInfo(false);
   // };
+  
 
   const dispatch = useDispatch();
   

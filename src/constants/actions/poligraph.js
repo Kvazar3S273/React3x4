@@ -9,6 +9,17 @@ import {
   POLIGRAPH_BANER,
   POLIGRAPH_PVC,
   POLIGRAPH_OTHER,
+  POLIGRAPH_BUKLET,
+  POLIGRAPH_PLAKAT,
+  POLIGRAPH_BROSHURA,
+  POLIGRAPH_3DCALENDAR,
+  POLIGRAPH_BLANK,
+  POLIGRAPH_MENU,
+  POLIGRAPH_BLOKNOT,
+  POLIGRAPH_CARDS,
+  POLIGRAPH_LEAF,
+  POLIGRAPH_KONVERT,
+  POLIGRAPH_FOLDER
 } from "../actionTypes";
 
 export const PoligraphVisitcard = () => (dispatch) => {
@@ -41,3 +52,37 @@ export const PoligraphPvc = () => (dispatch) => {
 export const PoligraphOther = () => (dispatch) => {
   dispatch({ type: POLIGRAPH_OTHER });
 };
+export const PoligraphBuklet = () => (dispatch) => {
+  dispatch({ type: POLIGRAPH_BUKLET });
+};
+export const PoligraphPlakat = () => (dispatch) => {
+  dispatch({ type: POLIGRAPH_PLAKAT });
+};
+export const PoligraphBroshura = () => (dispatch) => {
+  dispatch({ type: POLIGRAPH_BROSHURA });
+};
+export const Poligraph3dcalendar = () => (dispatch) => {
+  dispatch({ type: POLIGRAPH_3DCALENDAR });
+};
+export const PoligraphBlank = () => (dispatch) => {
+  dispatch({ type: POLIGRAPH_BLANK });
+};
+export const PoligraphMenu = () => (dispatch) => {
+  dispatch({ type: POLIGRAPH_MENU });
+};
+export const PoligraphBloknot = () => (dispatch) => {
+  dispatch({ type: POLIGRAPH_BLOKNOT });
+};
+export const PoligraphCards = () => (dispatch) => {
+  dispatch({ type: POLIGRAPH_CARDS });
+};
+export const PoligraphLeaf = () => (dispatch) => {
+  dispatch({ type: POLIGRAPH_LEAF });
+};
+export const PoligraphKonvert = () => (dispatch) => {
+  dispatch({ type: POLIGRAPH_KONVERT });
+};
+export const PoligraphFolder = () => (dispatch) => {
+  dispatch({ type: POLIGRAPH_FOLDER });
+};
+
