@@ -1,9 +1,61 @@
 import React, { useState } from "react";
 import "react-slideshow-image/dist/styles.css";
 import "./styles.css";
-import Visitcard from "../visitcard";
+import Broshura from "../broshura";
+import Buklet from "../buklet";
+import Plakat from "../plakat";
+import { useSelector, useDispatch  } from "react-redux";
+import { 
+    PoligraphBuklet,
+    PoligraphPlakat,
+    PoligraphBroshura,
+    Poligraph3dcalendar,
+    PoligraphBlank,
+    PoligraphMenu,
+    PoligraphBloknot,
+    PoligraphCards,
+    PoligraphLeaf,
+    PoligraphKonvert,
+    PoligraphFolder
+} from "../../../../constants/actions/poligraph";
+import Calendar3d from "../calendar3d";
+import Menu from "../menu";
+import Bloknot from "../bloknot";
+import Cards from "../cards";
+import Leaf from "../leaf";
+import Konvert from "../konvert";
+import Folder from "../folder";
 
 const Other = () => {
+  
+  const dispatch = useDispatch();
+
+  const handleClickBuklet = () => { dispatch(PoligraphBuklet()); }
+  const handleClickPlakat = () => { dispatch(PoligraphPlakat()); }
+  const handleClickBroshura = () => { dispatch(PoligraphBroshura()); }
+  const handleClick3dcalendar = () => { dispatch(Poligraph3dcalendar()); }
+  const handleClickBlank = () => { dispatch(PoligraphBlank()); }
+  const handleClickMenu = () => { dispatch(PoligraphMenu()); }
+  const handleClickBloknot = () => { dispatch(PoligraphBloknot()); }
+  const handleClickCards = () => { dispatch(PoligraphCards()); }
+  const handleClickLeaf = () => { dispatch(PoligraphLeaf()); }
+  const handleClickKonvert = () => { dispatch(PoligraphKonvert()); }
+  const handleClickFolder = () => { dispatch(PoligraphFolder()); }
+
+  const {
+    isPoligraphBuklet,
+    isPoligraphPlakat,
+    isPoligraphBroshura,
+    isPoligraph3dcalendar,
+    isPoligraphBlank,
+    isPoligraphMenu,
+    isPoligraphBloknot,
+    isPoligraphCards,
+    isPoligraphLeaf,
+    isPoligraphKonvert,
+    isPoligraphFolder
+  } = useSelector((state) => state.poligraph);
+
   return (
     <>
       <div className="row">
@@ -12,23 +64,29 @@ const Other = () => {
           <h1 className="text-center text-light mt-4 mb-4">Інша поліграфія</h1>
 
           <div className="tab ">
-            <button className="tablinks"> Буклети </button>
-            <button className="tablinks active"> Плакати </button>
-            <button className="tablinks"> Брошури </button>
-            <button className="tablinks"> Об'ємні календарі </button>
-            <button className="tablinks"> Меню </button>
-            <button className="tablinks"> Блокноти </button>
-            <button className="tablinks"> Пластикові картки </button>
-            <button className="tablinks"> Блоки для запису </button>
-            <button className="tablinks"> Конверти </button>
-            <button className="tablinks"> Фірмові папки </button>
+            <button className="tablinks active" onClick={handleClickBuklet}> Буклети </button>
+            <button className="tablinks" onClick={handleClickPlakat}> Плакати </button>
+            <button className="tablinks" onClick={handleClickBroshura}> Брошури </button>
+            <button className="tablinks" onClick={handleClick3dcalendar}> Об'ємні календарі </button>
+            <button className="tablinks" onClick={handleClickMenu}> Меню </button>
+            <button className="tablinks" onClick={handleClickBloknot}> Блокноти </button>
+            <button className="tablinks" onClick={handleClickCards}> Пластикові картки </button>
+            <button className="tablinks" onClick={handleClickLeaf}> Блоки для запису </button>
+            <button className="tablinks" onClick={handleClickKonvert}> Конверти </button>
+            <button className="tablinks" onClick={handleClickFolder}> Фірмові папки </button>
           </div>
 
           <div className="tabcontent mb-4">
-            <h3>Буклети</h3>
-            <p>Тут інформація про буклети</p>
-            {/* <Visitcard /> */}
-            
+            {isPoligraphBuklet ? <Buklet /> : ""}
+            {isPoligraphPlakat ? <Plakat /> : ""}
+            {isPoligraphBroshura ? <Broshura /> : ""}
+            {isPoligraph3dcalendar ? <Calendar3d /> : ""}
+            {isPoligraphMenu ? <Menu /> : ""}
+            {isPoligraphBloknot ? <Bloknot /> : ""}
+            {isPoligraphCards ? <Cards /> : ""}
+            {isPoligraphLeaf ? <Leaf /> : ""}
+            {isPoligraphKonvert? <Konvert /> : ""}
+            {isPoligraphFolder ? <Folder /> : ""}
           </div>
 
           
