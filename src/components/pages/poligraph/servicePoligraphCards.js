@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import Other from "./other/index";
 // import "./style.css";
 import ServiceCardsMain from "./serviceCardsMain";
 import ServiceCardsOther from "./serviceCardsOther";
@@ -26,6 +27,7 @@ const ServicePoligraphCards = () => {
       </div>
 
       <section id="component"></section>
+      <Other/>
     </>
   );
 };
