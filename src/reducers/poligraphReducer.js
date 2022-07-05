@@ -19,7 +19,7 @@ import {
   POLIGRAPH_CARDS,
   POLIGRAPH_LEAF,
   POLIGRAPH_KONVERT,
-  POLIGRAPH_FOLDER,
+  POLIGRAPH_FOLDER
 } from "../constants/actionTypes";
 
 const initialState = {
@@ -43,12 +43,11 @@ const initialState = {
   isPoligraphCards: false,
   isPoligraphLeaf: false,
   isPoligraphKonvert: false,
-  isPoligraphFolder: false,
-  isActive:{}
+  isPoligraphFolder: false
 };
 
 function poligraphReducer(state = initialState, action) {
-  const { type, payload } = action;
+  const { type } = action;
   switch (type) {
     case POLIGRAPH_VISITCARD: {
       return {
@@ -72,8 +71,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_FLYER: {
@@ -98,8 +96,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_CALENDAR: {
@@ -124,8 +121,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_TAG: {
@@ -150,8 +146,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_STICKER: {
@@ -176,8 +171,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_HANGER: {
@@ -202,8 +196,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_ORACAL: {
@@ -228,8 +221,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_BANER: {
@@ -254,8 +246,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_PVC: {
@@ -280,8 +271,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_OTHER: {
@@ -306,8 +296,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_BUKLET: {
@@ -332,8 +321,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: payload
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_PLAKAT: {
@@ -358,8 +346,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_BROSHURA: {
@@ -384,8 +371,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_3DCALENDAR: {
@@ -410,8 +396,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_BLANK: {
@@ -436,8 +421,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_MENU: {
@@ -462,8 +446,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_BLOKNOT: {
@@ -488,8 +471,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_CARDS: {
@@ -514,8 +496,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: true,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_LEAF: {
@@ -540,8 +521,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: true,
         isPoligraphKonvert: false,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_KONVERT: {
@@ -566,8 +546,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: true,
-        isPoligraphFolder: false,
-        isActive: true
+        isPoligraphFolder: false
       };
     }
     case POLIGRAPH_FOLDER: {
@@ -592,8 +571,7 @@ function poligraphReducer(state = initialState, action) {
         isPoligraphCards: false,
         isPoligraphLeaf: false,
         isPoligraphKonvert: false,
-        isPoligraphFolder: true,
-        isActive: true
+        isPoligraphFolder: true
       };
     }
 

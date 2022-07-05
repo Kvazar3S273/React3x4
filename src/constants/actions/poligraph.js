@@ -53,7 +53,7 @@ export const PoligraphOther = () => (dispatch) => {
   dispatch({ type: POLIGRAPH_OTHER });
 };
 export const PoligraphBuklet = () => (dispatch) => {
-  dispatch({ type: POLIGRAPH_BUKLET, payload: true });
+  dispatch({ type: POLIGRAPH_BUKLET });
 };
 export const PoligraphPlakat = () => (dispatch) => {
   dispatch({ type: POLIGRAPH_PLAKAT });
