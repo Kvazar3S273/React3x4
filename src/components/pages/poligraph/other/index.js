@@ -25,6 +25,7 @@ import Cards from "../cards";
 import Leaf from "../leaf";
 import Konvert from "../konvert";
 import Folder from "../folder";
+import classNames from "classnames";
 
 const Other = () => {
   
@@ -53,7 +54,8 @@ const Other = () => {
     isPoligraphCards,
     isPoligraphLeaf,
     isPoligraphKonvert,
-    isPoligraphFolder
+    isPoligraphFolder,
+    payload
   } = useSelector((state) => state.poligraph);
 
   return (
@@ -64,16 +66,26 @@ const Other = () => {
           <h1 className="text-center text-light mt-4 mb-4">Інша поліграфія</h1>
 
           <div className="tab ">
-            <button className="tablinks active" onClick={handleClickBuklet}> Буклети </button>
-            <button className="tablinks" onClick={handleClickPlakat}> Плакати </button>
-            <button className="tablinks" onClick={handleClickBroshura}> Брошури </button>
-            <button className="tablinks" onClick={handleClick3dcalendar}> Об'ємні календарі </button>
-            <button className="tablinks" onClick={handleClickMenu}> Меню </button>
-            <button className="tablinks" onClick={handleClickBloknot}> Блокноти </button>
-            <button className="tablinks" onClick={handleClickCards}> Пластикові картки </button>
-            <button className="tablinks" onClick={handleClickLeaf}> Блоки для запису </button>
-            <button className="tablinks" onClick={handleClickKonvert}> Конверти </button>
-            <button className="tablinks" onClick={handleClickFolder}> Фірмові папки </button>
+            <button className={classNames("tablinks", {"active":payload}, {"":!payload})} 
+            onClick={handleClickBuklet}> Буклети </button>
+            <button className={classNames("tablinks", {"active":payload})} 
+            onClick={handleClickPlakat}> Плакати </button>
+            <button className={classNames("tablinks", {"active":payload})} 
+            onClick={handleClickBroshura}> Брошури </button>
+            <button className={classNames("tablinks", {"active":payload})} 
+            onClick={handleClick3dcalendar}> Об'ємні календарі </button>
+            <button className={classNames("tablinks", {"active":payload})}
+            onClick={handleClickMenu}> Меню </button>
+            <button className={classNames("tablinks", {"active":payload})} 
+            onClick={handleClickBloknot}> Блокноти </button>
+            <button className={classNames("tablinks", {"active":payload})} 
+            onClick={handleClickCards}> Пластикові картки </button>
+            <button className={classNames("tablinks", {"active":payload})} 
+            onClick={handleClickLeaf}> Блоки для запису </button>
+            <button className={classNames("tablinks", {"active":payload})} 
+            onClick={handleClickKonvert}> Конверти </button>
+            <button className={classNames("tablinks", {"active":payload})} 
+            onClick={handleClickFolder}> Фірмові папки </button>
           </div>
 
           <div className="tabcontent mb-4">
@@ -82,7 +94,7 @@ const Other = () => {
             {isPoligraphBroshura ? <Broshura /> : ""}
             {isPoligraph3dcalendar ? <Calendar3d /> : ""}
             {isPoligraphMenu ? <Menu /> : ""}
-            {isPoligraphBloknot ? <Bloknot /> : ""}
+            {isPoligraphBloknot ? <Bloknot />  : ""}
             {isPoligraphCards ? <Cards /> : ""}
             {isPoligraphLeaf ? <Leaf /> : ""}
             {isPoligraphKonvert? <Konvert /> : ""}

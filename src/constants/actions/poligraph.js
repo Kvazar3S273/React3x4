@@ -26,7 +26,7 @@ export const PoligraphVisitcard = () => (dispatch) => {
   dispatch({ type: POLIGRAPH_VISITCARD });
 };
 export const PoligraphFlyer = () => (dispatch) => {
-  dispatch({ type: POLIGRAPH_FLYER });
+  dispatch({ type: POLIGRAPH_FLYER});
 };
 export const PoligraphCalendar = () => (dispatch) => {
   dispatch({ type: POLIGRAPH_CALENDAR });
@@ -53,7 +53,7 @@ export const PoligraphOther = () => (dispatch) => {
   dispatch({ type: POLIGRAPH_OTHER });
 };
 export const PoligraphBuklet = () => (dispatch) => {
-  dispatch({ type: POLIGRAPH_BUKLET });
+  dispatch({ type: POLIGRAPH_BUKLET, payload: true });
 };
 export const PoligraphPlakat = () => (dispatch) => {
   dispatch({ type: POLIGRAPH_PLAKAT });
