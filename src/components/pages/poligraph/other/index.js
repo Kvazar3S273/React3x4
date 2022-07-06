@@ -66,19 +66,29 @@ const Other = () => {
           <h1 className="text-center text-light mt-4 mb-4">Інша поліграфія</h1>
 
           <div className="tab ">
-            <button className="tablinks" onClick={handleClickBuklet}> Буклети </button>
-            <button className="tablinks" onClick={handleClickPlakat}> Плакати </button>
-            <button className="tablinks" onClick={handleClickBroshura}> Брошури </button>
-            <button className="tablinks" onClick={handleClick3dcalendar}> Об'ємні календарі </button>
-            <button className="tablinks" onClick={handleClickMenu}> Меню </button>
-            <button className="tablinks" onClick={handleClickBloknot}> Блокноти </button>
-            <button className="tablinks" onClick={handleClickCards}> Пластикові картки </button>
-            <button className="tablinks" onClick={handleClickLeaf}> Блоки для запису </button>
-            <button className="tablinks" onClick={handleClickKonvert}> Конверти </button>
-            <button className="tablinks" onClick={handleClickFolder}> Фірмові папки </button>
+            <button className={classNames("tablinks", isPoligraphBuklet ? "active" : "")} 
+                    onClick={handleClickBuklet}> Буклети </button>
+            <button className={classNames("tablinks", isPoligraphPlakat ? "active" : "")} 
+                    onClick={handleClickPlakat}> Плакати </button>
+            <button className={classNames("tablinks", isPoligraphBroshura ? "active" : "")} 
+                    onClick={handleClickBroshura}> Брошури </button>
+            <button className={classNames("tablinks", isPoligraph3dcalendar ? "active" : "")} 
+                    onClick={handleClick3dcalendar}> Об'ємні календарі </button>
+            <button className={classNames("tablinks", isPoligraphMenu ? "active" : "")} 
+                    onClick={handleClickMenu}> Меню </button>
+            <button className={classNames("tablinks", isPoligraphBloknot ? "active" : "")} 
+                    onClick={handleClickBloknot}> Блокноти </button>
+            <button className={classNames("tablinks", isPoligraphCards ? "active" : "")} 
+                    onClick={handleClickCards}> Пластикові картки </button>
+            <button className={classNames("tablinks", isPoligraphLeaf ? "active" : "")} 
+                    onClick={handleClickLeaf}> Блоки для запису </button>
+            <button className={classNames("tablinks", isPoligraphKonvert ? "active" : "")} 
+                    onClick={handleClickKonvert}> Конверти </button>
+            <button className={classNames("tablinks", isPoligraphFolder ? "active" : "")} 
+                    onClick={handleClickFolder}> Фірмові папки </button>
           </div>
 
-          <div className="tabcontent mb-4">
+          <div className="tabcontent mb-4 overflow-auto">
             {isPoligraphBuklet ? <Buklet /> : ""}
             {isPoligraphPlakat ? <Plakat /> : ""}
             {isPoligraphBroshura ? <Broshura /> : ""}
@@ -87,7 +97,7 @@ const Other = () => {
             {isPoligraphBloknot ? <Bloknot />  : ""}
             {isPoligraphCards ? <Cards /> : ""}
             {isPoligraphLeaf ? <Leaf /> : ""}
-            {isPoligraphKonvert? <Konvert /> : ""}
+            {isPoligraphKonvert ? <Konvert /> : ""}
             {isPoligraphFolder ? <Folder /> : ""}
           </div>
 
@@ -98,3 +108,4 @@ const Other = () => {
   );
 };
 export default Other;
+
