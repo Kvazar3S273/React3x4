@@ -2,6 +2,7 @@ import React from "react";
 // import "./style.css";
 import { useSelector } from "react-redux";
 import CarouselPoligraph from "./carouselPoligraph";
+import Claim from "./claim";
 import ServicePoligraphCards from "./servicePoligraphCards";
 import Visitcard from "./visitcard";
 
@@ -35,6 +36,7 @@ const PoligraphPage = () => {
       
       {isPoligraphVisitcard ? <Visitcard /> : ""}
       
+    <Claim />
     </>
     
   );

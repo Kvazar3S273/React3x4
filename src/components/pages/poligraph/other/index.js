@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "react-slideshow-image/dist/styles.css";
+import React from "react";
+// import "react-slideshow-image/dist/styles.css";
 import "./styles.css";
 import Broshura from "../broshura";
 import Buklet from "../buklet";
@@ -26,7 +26,6 @@ import Leaf from "../leaf";
 import Konvert from "../konvert";
 import Folder from "../folder";
 import classNames from "classnames";
-import Visitcard from "../visitcard";
 
 const Other = () => {
   
