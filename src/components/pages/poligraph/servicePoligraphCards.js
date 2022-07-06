@@ -19,16 +19,18 @@ const ServicePoligraphCards = () => {
             <p className="text-light text-center">
               Ми друкуємо різну поліграфічну продукцію, зокрема:
             </p>
-
             <ServiceCardsMain />
-            {isPoligraphOther ? <ServiceCardsOther /> : ""}
+            {isPoligraphOther ? 
+            <>
+              <ServiceCardsOther />
+              <Other/>
+            </> : ""}
           </div>
         </div>
       </div>
 
-      <section id="component"></section>
-      {/* <Other/> */}
       <Other/>
+      <section id="component"></section>
     </>
   );
 };

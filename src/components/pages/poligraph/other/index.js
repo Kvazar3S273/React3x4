@@ -26,6 +26,7 @@ import Leaf from "../leaf";
 import Konvert from "../konvert";
 import Folder from "../folder";
 import classNames from "classnames";
+import Visitcard from "../visitcard";
 
 const Other = () => {
   
@@ -54,8 +55,7 @@ const Other = () => {
     isPoligraphCards,
     isPoligraphLeaf,
     isPoligraphKonvert,
-    isPoligraphFolder,
-    payload
+    isPoligraphFolder
   } = useSelector((state) => state.poligraph);
 
   return (
@@ -89,6 +89,10 @@ const Other = () => {
           </div>
 
           <div className="tabcontent mb-4 overflow-auto">
+            {!isPoligraphBuklet && !isPoligraphPlakat && !isPoligraphBroshura &&
+              !isPoligraph3dcalendar && !isPoligraphBlank && !isPoligraphMenu &&
+              !isPoligraphBloknot && !isPoligraphCards && !isPoligraphLeaf &&
+              !isPoligraphKonvert && !isPoligraphFolder ? <Buklet/>:""}
             {isPoligraphBuklet ? <Buklet /> : ""}
             {isPoligraphPlakat ? <Plakat /> : ""}
             {isPoligraphBroshura ? <Broshura /> : ""}
@@ -100,7 +104,6 @@ const Other = () => {
             {isPoligraphKonvert ? <Konvert /> : ""}
             {isPoligraphFolder ? <Folder /> : ""}
           </div>
-
           
         </div>
       </div>
