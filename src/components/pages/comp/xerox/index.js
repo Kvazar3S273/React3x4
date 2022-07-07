@@ -193,7 +193,7 @@ const Xerox = () => {
                       rowSpan={2}
                       style={{ verticalAlign: "middle" }}
                     >
-                      Матеріал для друку
+                      Матеріал для друку 
                     </th>
                     <th scope="col" colSpan={3}>
                       Ціна при різній заливці, грн

@@ -226,17 +226,17 @@ const ServiceCardsOther = () => {
       {/* Картка 11 */}
       <div
         className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
-        onClick={handleClickFolder}
+        onClick={handleClickBlank}
       >
         <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
           <div className="card">
             <img
-              src="/images/services/poligraph/papka.png"
+              src="/images/services/poligraph/blank.png"
               className="card-img-top"
-              alt="Фірмові папки"
+              alt="Бланки"
             />
             <div className="card-body-photo">
-              <h6 className="card-title text-center">Фірмові папки</h6>
+              <h6 className="card-title text-center">Бланки</h6>
             </div>
           </div>
         </HashLink>

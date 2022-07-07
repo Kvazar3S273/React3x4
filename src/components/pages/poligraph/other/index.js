@@ -26,6 +26,7 @@ import Leaf from "../leaf";
 import Konvert from "../konvert";
 import Folder from "../folder";
 import classNames from "classnames";
+import Blank from "../blank";
 
 const Other = () => {
   
@@ -84,7 +85,7 @@ const Other = () => {
             <button className={classNames("tablinks", isPoligraphKonvert ? "active" : "")} 
                     onClick={handleClickKonvert}> Конверти </button>
             <button className={classNames("tablinks", isPoligraphFolder ? "active" : "")} 
-                    onClick={handleClickFolder}> Фірмові папки </button>
+                    onClick={handleClickBlank}> Бланки </button>
           </div>
 
           <div className="tabcontent mb-4 overflow-auto">
@@ -101,7 +102,7 @@ const Other = () => {
             {isPoligraphCards ? <Cards /> : ""}
             {isPoligraphLeaf ? <Leaf /> : ""}
             {isPoligraphKonvert ? <Konvert /> : ""}
-            {isPoligraphFolder ? <Folder /> : ""}
+            {isPoligraphBlank ? <Blank /> : ""}
           </div>
           
         </div>
