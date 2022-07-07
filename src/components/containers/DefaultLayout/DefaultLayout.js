@@ -11,14 +11,15 @@ import {
 const DefaultLayout = () => {
   return (
     <>
-      <ScrollToTop 
-      size={70} 
-      offsetTop={50} 
-      strokeWidth={5} 
-      symbol="&#5169;" 
-      style={{marginTop:"100px"}}/>
+      
       <Header />
       <main>{<Outlet />}</main>
+      <ScrollToTop 
+        size={70} 
+        offsetTop={50} 
+        strokeWidth={5} 
+        symbol="&#5169;" 
+        style={{marginTop:"85vh"}}/>
       <Footer />
     </>
   );
