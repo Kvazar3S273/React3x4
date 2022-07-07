@@ -40,7 +40,7 @@ const ServiceCardsOther = () => {
         className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
         onClick={handleClickBuklet}
       >
-        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+        <HashLink smooth to={"/poligraph#other"} style={{ color: "#000" }}>
           <div className="card">
             <img
               src="/images/services/poligraph/buklet.png"
@@ -59,7 +59,7 @@ const ServiceCardsOther = () => {
         className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
         onClick={handleClickPlakat}
       >
-        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+        <HashLink smooth to={"/poligraph#other"} style={{ color: "#000" }}>
           <div className="card">
             <img
               src="/images/services/poligraph/plakat.png"
@@ -78,7 +78,7 @@ const ServiceCardsOther = () => {
         className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
         onClick={handleClickBroshura}
       >
-        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+        <HashLink smooth to={"/poligraph#other"} style={{ color: "#000" }}>
           <div className="card">
             <img
               src="/images/services/poligraph/broshura.png"
@@ -97,7 +97,7 @@ const ServiceCardsOther = () => {
         className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
         onClick={handleClick3dcalendar}
       >
-        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+        <HashLink smooth to={"/poligraph#other"} style={{ color: "#000" }}>
           <div className="card">
             <img
               src="/images/services/poligraph/calendar.png"
@@ -111,29 +111,12 @@ const ServiceCardsOther = () => {
         </HashLink>
       </div>
 
-      {/* Картка 5 */}
-      {/* <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
-            onClick={handleClickBlank}>
-            <HashLink smooth to={'/poligraph#component'} style={{color:"#000"}}>
-              <div className="card" >
-                <img
-                  src="/images/services/poligraph/blank.png"
-                  className="card-img-top"
-                  alt="Бланки"
-                />
-                <div className="card-body-photo">
-                  <h6 className="card-title text-center">Бланки</h6>
-                </div>
-              </div>
-            </HashLink>
-            </div> */}
-
       {/* Картка 6 */}
       <div
         className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
         onClick={handleClickMenu}
       >
-        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+        <HashLink smooth to={"/poligraph#other"} style={{ color: "#000" }}>
           <div className="card">
             <img
               src="/images/services/poligraph/menu.png"
@@ -152,7 +135,7 @@ const ServiceCardsOther = () => {
         className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
         onClick={handleClickBloknot}
       >
-        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+        <HashLink smooth to={"/poligraph#other"} style={{ color: "#000" }}>
           <div className="card">
             <img
               src="/images/services/poligraph/bloknot.png"
@@ -171,7 +154,7 @@ const ServiceCardsOther = () => {
         className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
         onClick={handleClickCards}
       >
-        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+        <HashLink smooth to={"/poligraph#other"} style={{ color: "#000" }}>
           <div className="card">
             <img
               src="/images/services/poligraph/card.png"
@@ -190,7 +173,7 @@ const ServiceCardsOther = () => {
         className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
         onClick={handleClickLeaf}
       >
-        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+        <HashLink smooth to={"/poligraph#other"} style={{ color: "#000" }}>
           <div className="card">
             <img
               src="/images/services/poligraph/zapis.png"
@@ -209,7 +192,7 @@ const ServiceCardsOther = () => {
         className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
         onClick={handleClickKonvert}
       >
-        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+        <HashLink smooth to={"/poligraph#other"} style={{ color: "#000" }}>
           <div className="card">
             <img
               src="/images/services/poligraph/konvert.png"
@@ -228,7 +211,7 @@ const ServiceCardsOther = () => {
         className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
         onClick={handleClickBlank}
       >
-        <HashLink smooth to={"/poligraph#component"} style={{ color: "#000" }}>
+        <HashLink smooth to={"/poligraph#other"} style={{ color: "#000" }}>
           <div className="card">
             <img
               src="/images/services/poligraph/blank.png"

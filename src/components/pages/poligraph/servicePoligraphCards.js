@@ -29,8 +29,10 @@ const ServicePoligraphCards = () => {
         </div>
       </div>
 
-      <section id="component"></section>
+      <section id="other"></section>
       <Other/>
+      <section id="component"></section>
+
     </>
   );
 };

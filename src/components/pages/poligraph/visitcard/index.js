@@ -13,7 +13,9 @@ const Visitcard = () => {
         <div className="row">
           <div className="col-md-2"></div>
           <div className="col-md-8">
-            <img className="comp-service" src="/images/services/poligraph/visitcard.jpg" />
+            <img className="comp-service" 
+            src="/images/services/poligraph/main_img/visitcard.jpg" 
+            alt="Візитки"/>
           </div>
           <div className="col-md-2"></div>
         </div>
@@ -74,6 +76,10 @@ const Visitcard = () => {
           <h3 className="text-center text-danger my-4">
             Ціни на візитки:
           </h3>
+          <p className="text-center">
+            Прайс на найпоширеніші варіанти замовлення 
+            (формат - 50х90 мм, тираж - 1000 екз., термін - 7 роб. днів)
+            </p>
           {/* Таблиця 1 */}
           <div className="col">
             <div className="row">
@@ -82,26 +88,26 @@ const Visitcard = () => {
                 <table className="table table-primary  table-striped text-center">
                   <thead>
                     <tr>
-                      <th scope="col">Вид документа</th>
+                      <th scope="col">Щільність паперу</th>
                       <th scope="col">Ціна, грн</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row">Односторонній</th>
-                      <td>2</td>
+                      <th scope="row">250</th>
+                      <td>2000</td>
                     </tr>
                     <tr>
-                      <th scope="row">Двосторонній</th>
-                      <td>3</td>
+                      <th scope="row">300</th>
+                      <td>3000</td>
                     </tr>
                     <tr>
-                      <th scope="row">Паспорт (3 стор.)</th>
-                      <td>4</td>
+                      <th scope="row">350</th>
+                      <td>4000</td>
                     </tr>
                     <tr>
-                      <th scope="row">Паспорт (4 стор.)</th>
-                      <td>5</td>
+                      <th scope="row">450</th>
+                      <td>5000</td>
                     </tr>
                   </tbody>
                 </table>

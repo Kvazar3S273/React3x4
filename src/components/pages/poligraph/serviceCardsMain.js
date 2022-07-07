@@ -83,7 +83,7 @@ const ServiceCardsMain = () => {
               alt="Календарі"
             />
             <div className="card-body-photo">
-              <h6 className="card-title text-center">Календарі</h6>
+              <h6 className="card-title text-center">Календарики</h6>
             </div>
           </div>
         </HashLink>
