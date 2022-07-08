@@ -51,10 +51,6 @@ const Flyer = () => {
           <h4 className="text-center text-danger my-4">
             Вимоги до розмірів макетів листівок:
           </h4>
-          <p className="text-center">
-          Прайс на найпоширеніші варіанти замовлення (формат - 
-          Єврофлаєр 99х210 мм, без покриття, термін - 7 роб. днів)
-          </p>
           {/* Таблиця 1 */}
           <div className="col">
             <div className="row">

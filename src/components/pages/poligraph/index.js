@@ -6,6 +6,8 @@ import CarouselPoligraph from "./carouselPoligraph";
 import Claim from "./claim";
 import Flyer from "./flyer";
 import ServicePoligraphCards from "./servicePoligraphCards";
+import Sticker from "./sticker";
+import Tag from "./tag";
 import Visitcard from "./visitcard";
 
 const PoligraphPage = () => {
@@ -31,6 +33,8 @@ const PoligraphPage = () => {
       {isPoligraphVisitcard ? <Visitcard /> : ""}
       {isPoligraphFlyer? <Flyer /> : ""}
       {isPoligraphCalendar? <Calendar /> : ""}
+      {isPoligraphTag? <Tag /> : ""}
+      {isPoligraphSticker? <Sticker /> : ""}
       
     <Claim />
     </>
