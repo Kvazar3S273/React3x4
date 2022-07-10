@@ -1,11 +1,14 @@
 import React from "react";
 // import "./style.css";
 import { useSelector } from "react-redux";
+import Baner from "./baner";
 import Calendar from "./calendar";
 import CarouselPoligraph from "./carouselPoligraph";
 import Claim from "./claim";
 import Flyer from "./flyer";
 import Hanger from "./hanger";
+import Oracal from "./oracal";
+import Pvc from "./pvc";
 import ServicePoligraphCards from "./servicePoligraphCards";
 import Sticker from "./sticker";
 import Tag from "./tag";
@@ -21,8 +24,7 @@ const PoligraphPage = () => {
     isPoligraphHanger,
     isPoligraphOracal,
     isPoligraphBaner,
-    isPoligraphPvc,
-    isPoligraphOther
+    isPoligraphPvc
   } = useSelector((state) => state.poligraph);
 
   return (
@@ -37,6 +39,9 @@ const PoligraphPage = () => {
       {isPoligraphTag? <Tag /> : ""}
       {isPoligraphSticker? <Sticker /> : ""}
       {isPoligraphHanger? <Hanger /> : ""}
+      {isPoligraphOracal? <Oracal /> : ""}
+      {isPoligraphBaner? <Baner /> : ""}
+      {isPoligraphPvc? <Pvc /> : ""}
       
     <Claim />
     </>
