@@ -10,7 +10,7 @@ const ServicePoligraphCards = () => {
 
   return (
     <>
-      <div classNameName="row">
+      <div className="row">
         {/* Бордовий блок для карток */}
         <div className="col py-4" style={{ background: "#883A3A" }}>
           {/* Рядок для карток */}

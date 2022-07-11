@@ -7,7 +7,7 @@ const ServiceCards = () => {
   return (
     //  <div classNameName="container ">
     //   {/* Рядок для темно-сірого блока */}
-    <div classNameName="row">
+    <div className="row">
       {/* Темно-сірий блок для карток */}
       <div className="col bg-dark py-4">
         {/* Рядок для карток */}

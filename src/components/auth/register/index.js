@@ -1,15 +1,18 @@
 import { Formik, Form } from "formik";
-import React, {useRef}  from "react";
+import React, {useRef,useEffect}  from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import authService from "../../../services/auth.service";
+// import authService from "../../../services/auth.service";
 import MyTextInput from "../../common/MyTextInput";
 import validationFields from "./validation";
-import { REGISTER } from "../../../constants/actionTypes";
+import { ERRORS } from "../../../constants/actionTypes";
 import MyPhotoInput from "../../common/MyPhotoInput";
 import "./index.css";
+import { useSelector } from 'react-redux';
+import { RegisterUser } from '../register/authAction';
+import { push } from 'connected-react-router';
 
-const RegisterPage = () => {
+const Register = () => {
   const initState = {
     email: "",
     password: "",
@@ -22,26 +25,74 @@ const RegisterPage = () => {
   const refFormik = useRef();
   
   const onSubmitHandler = async (values) => {
+    
     try {
-      console.log("submit data ", values);
 
-      console.log("Server submit file", JSON.stringify(
-        {
-          fileName: values.photo.name,
-          type: values.photo.type,
-          size: `${values.photo.size} bytes`
-        }));
+      const formData = new FormData();
+      Object.entries(values).forEach(([key, value]) => formData.append(key, value));
+      dispatch(RegisterUser(formData))
+          .then(result => {
+             
+              dispatch(push("/"));
+              
+          })
+          .catch(ex => {
+              let answer_errors = {
+                  email: '',
+              };
+              Object.entries(ex.errors).forEach(([key, values]) => {
+                  let str = '';
+                  values.forEach(text => {
+                      str += text + " ";
+                  });
+                  answer_errors.email = str;
+                  dispatch({ type: ERRORS, payloads: answer_errors.email });
+
+              })
+          })
 
 
-      const result = await authService.register(values);
-      console.log("Server is good", result);
-      dispatch({ type: REGISTER, payload: values.email });
-      await navigator("/");
 
-    } catch (error) {
-      console.log("Server is very bad", error.response);
-    }
-  };
+
+  }
+  catch (problem) {
+
+      var res = problem.response.data.errors;
+      console.log("Another errors:", res);
+
+  }
+}
+    
+  const { errorvalid } = useSelector(res => res.auth);
+
+    useEffect(() => {
+        refFormik.current.setErrors({
+           "email": errorvalid
+        })       
+      }, [errorvalid]);    
+
+
+    
+    // try {
+    //   console.log("submit data ", values);
+
+    //   console.log("Server submit file", JSON.stringify(
+    //     {
+    //       fileName: values.photo.name,
+    //       type: values.photo.type,
+    //       size: `${values.photo.size} bytes`
+    //     }));
+
+
+    //   const result = await authService.register(values);
+    //   console.log("Server is good", result);
+    //   dispatch({ type: REGISTER, payload: values.email });
+    //   await navigator("/");
+
+    // } catch (error) {
+    //   console.log("Server is very bad", error.response);
+    // }
+
 
   return (
     // <div className="container">
@@ -99,4 +150,4 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default Register;
