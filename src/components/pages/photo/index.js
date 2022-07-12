@@ -37,7 +37,7 @@ const PhotoPage = () => {
 
       {isPhotoFnd ? <Fnd /> : ""}
       {isPhotoFotoprint ? <Fotoprint /> : ""}
-      {/* {isPhotoPhotobooks ? <Photobooks /> : ""} */}
+      {isPhotoPhotobooks ? <Photobooks /> : ""}
       {isPhotoPhotobooks ? <Link className="nav-link" aria-current="page" to="/page404"/> : ""}
       
       {isPhotoScan ? <ScanPage /> : ""}

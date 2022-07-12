@@ -14,6 +14,7 @@ import { push } from 'connected-react-router';
 
 const Register = () => {
   const initState = {
+    userName: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -30,6 +31,10 @@ const Register = () => {
 
       const formData = new FormData();
       Object.entries(values).forEach(([key, value]) => formData.append(key, value));
+      // Object.entries(values).forEach(([key, value]) =>{console.log("Key:",key)});
+      Object.entries(values).forEach(([key, value]) =>{console.log("Value:",value)});
+      // console.log("FormData: ", formData);
+      // console.log("Values: ", values);
       dispatch(RegisterUser(formData))
           .then(result => {
              
@@ -50,10 +55,6 @@ const Register = () => {
 
               })
           })
-
-
-
-
   }
   catch (problem) {
 
@@ -70,30 +71,7 @@ const Register = () => {
            "email": errorvalid
         })       
       }, [errorvalid]);    
-
-
     
-    // try {
-    //   console.log("submit data ", values);
-
-    //   console.log("Server submit file", JSON.stringify(
-    //     {
-    //       fileName: values.photo.name,
-    //       type: values.photo.type,
-    //       size: `${values.photo.size} bytes`
-    //     }));
-
-
-    //   const result = await authService.register(values);
-    //   console.log("Server is good", result);
-    //   dispatch({ type: REGISTER, payload: values.email });
-    //   await navigator("/");
-
-    // } catch (error) {
-    //   console.log("Server is very bad", error.response);
-    // }
-
-
   return (
     // <div className="container">
     <div className="row">
@@ -114,10 +92,10 @@ const Register = () => {
               type="text" />
 
             <MyTextInput 
-              label="Логін" 
+              label="Електронна пошта" 
               id="email" 
               name="email" 
-              type="text" />
+              type="email" />
 
 
             <MyTextInput

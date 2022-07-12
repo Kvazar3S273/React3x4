@@ -155,12 +155,12 @@ const Header = () => {
                     </HashLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="/page404" >
+                    {/* <Link className="nav-link" aria-current="page" to="/page404" >
                         <h6 style={{color:"#000"}}>Фотокниги</h6>
-                    </Link>
-                    {/* <HashLink smooth to="/photo#component" style={{color:"#000"}}>
+                    </Link> */}
+                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
                         <h6 onClick={handleClickPhotobooks}>Фотокниги</h6>
-                    </HashLink> */}
+                    </HashLink>
                 </NavDropdown.Item>
                 <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
                     <HashLink smooth to="/photo#component" style={{color:"#000"}}>

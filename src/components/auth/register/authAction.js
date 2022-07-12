@@ -3,16 +3,11 @@ import { REGISTER_AUTH,REGISTER_BEGIN, REGISTER_FAIL} from '../../../constants/a
 import jwt from 'jsonwebtoken';
 import register_service from '../../../services/auth.service';
 
-
-
-
 export const RegisterUser=(usermodel)=>async(dispatch)=>{
-   
-    
     try {
-
         // dispatch({type:REGISTER_BEGIN});
-        const result = await register_service.register(usermodel);      
+        console.log("Usermodel: ",usermodel);    
+        const result = await register_service.register(usermodel);  
         var jwt_token=result.data.token;
         var verified = jwt.decode(jwt_token);    
         localStorage.setItem('user', jwt_token);
