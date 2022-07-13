@@ -1,6 +1,7 @@
 import { createStore, combineReducers, compose, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import authReducer from "./reducers/authReducer";
+import loginReducer from "./reducers/loginReducer";
 import showReducer from "./reducers/showReducer";
 import fotoReducer from "./reducers/fotoReducer";
 import compReducer from "./reducers/compReducer";
@@ -16,6 +17,7 @@ const middleware = [
 
 const rootReducer = combineReducers({
     auth: authReducer,
+    login: loginReducer,
     show: showReducer,
     foto: fotoReducer,
     comp: compReducer,

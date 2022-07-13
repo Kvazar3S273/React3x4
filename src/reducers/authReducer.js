@@ -27,7 +27,7 @@ function authReducer(state = initialState, action) {
     }
     case REGISTER_BEGIN: {
       return {
-        ...state
+        ...state,
       };
     }
     case LOGIN_AUTH: {

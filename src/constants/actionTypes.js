@@ -1,18 +1,20 @@
 export const LOGIN = 'LOGIN';
 export const REGISTER = 'REGISTER';
+export const LOGIN_ERROR = 'LOGIN_ERROR';
 
 export const REGISTER_AUTH = "REGISTER_AUTH";
 export const LOGIN_AUTH = "LOGIN_AUTH";
-export const LOG_OUT="LOG_OUT";
-export const ERRORS="ERRORS";
-export const REGISTER_FAIL="REGISTER_FAIL";
-export const REGISTER_BEGIN="REGISTER_BEGIN";
+export const LOG_OUT = "LOG_OUT";
+export const ERRORS = "ERRORS";
+export const REGISTER_FAIL = "REGISTER_FAIL";
+export const REGISTER_BEGIN = "REGISTER_BEGIN";
 
 export const SHOW_USERS = "SHOW_USERS";
 export const SHOW_PRICES = "SHOW_PRICES";
 export const SHOW_ADVERTISE = "SHOW_ADVERTISE";
 export const SHOW_INFO = "SHOW_INFO";
 export const NOT_SHOW_MENU = "NOT_SHOW_MENU";
+
 export const PHOTO_FND = "PHOTO_FND";
 export const PHOTO_FOTOPRINT = "PHOTO_FOTOPRINT";
 export const PHOTO_PHOTOBOOKS = "PHOTO_PHOTOBOOKS";
@@ -23,6 +25,7 @@ export const PHOTO_BACKGROUND = "PHOTO_BACKGROUND";
 export const PHOTO_ADDITION = "PHOTO_ADDITION";
 export const PHOTO_BOTTLE = "PHOTO_BOTTLE";
 export const PHOTO_PHOTOPICTURE = "PHOTO_PHOTOPICTURE";
+
 export const COMP_XEROX = "COMP_XEROX";
 export const COMP_SCAN = "COMP_SCAN";
 export const COMP_LAMINATE = "COMP_LAMINATE";
@@ -30,6 +33,7 @@ export const COMP_BINDER = "COMP_BINDER";
 export const COMP_USBFLASH = "COMP_USBFLASH";
 export const COMP_DISCPRINT = "COMP_DISCPRINT";
 export const COMP_EMAIL = "COMP_EMAIL";
+
 export const POLIGRAPH_VISITCARD = "POLIGRAPH_VISITCARD";
 export const POLIGRAPH_FLYER = "POLIGRAPH_FLYER";
 export const POLIGRAPH_CALENDAR = "POLIGRAPH_CALENDAR";

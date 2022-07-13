@@ -39,7 +39,6 @@ const Register = () => {
           .then(result => {
             console.log("resindex",result);
             navigator("/");   
-              // dispatch(push("/"));
           })
           .catch(ex => {
               let answer_errors = {
@@ -52,20 +51,16 @@ const Register = () => {
                   });
                   answer_errors.email = str;
                   dispatch({ type: ERRORS, payloads: answer_errors.email });
-
               })
           })
   }
   catch (problem) {
-
       var res = problem.response.data.errors;
       console.log("Another errors:", res);
-
   }
 }
     
   const { errorvalid } = useSelector(res => res.auth);
-
     useEffect(() => {
         refFormik.current.setErrors({
            "email": errorvalid
@@ -73,7 +68,6 @@ const Register = () => {
       }, [errorvalid]);    
     
   return (
-    // <div className="container">
     <div className="row">
       <div className="offset-md-4 col-md-4">
         <h2 className="text-center mt-3">Реєстрація</h2>
@@ -97,20 +91,17 @@ const Register = () => {
               name="email" 
               type="email" />
 
-
             <MyTextInput
               label="Пароль"
               id="password"
               name="password"
-              type="password"
-            />
+              type="password" />
 
             <MyTextInput
               label="Підтвердження пароля"
               id="confirmPassword"
               name="confirmPassword"
-              type="password"
-            />
+              type="password" />
 
             {/* <label className="mb-3">Виберіть фото:</label>
             <MyPhotoInput 

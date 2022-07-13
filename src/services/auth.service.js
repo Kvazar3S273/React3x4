@@ -10,7 +10,11 @@ class AuthService {
   }
 
   login(data) {
-    return http.post("api/account/login", data);
+    return http.post("api/account/login", data, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
   }
 }
 
