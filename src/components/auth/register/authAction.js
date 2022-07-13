@@ -9,15 +9,9 @@ import register_service from "../../../services/auth.service";
 
 export const RegisterUser = (usermodel) => async (dispatch) => {
   try {
-    // dispatch({type:REGISTER_BEGIN});
-    
-    Object.entries(usermodel).forEach(([key, value]) => {
-      console.log("Value usermodel:", value);
-    });
-    
-    // console.log("Usermodel: ",usermodel);
-    
+    dispatch({type:REGISTER_BEGIN});
     const result = await register_service.register(usermodel);
+    console.log("register result", result);
     var jwt_token = result.data.token;
     var verified = jwt.decode(jwt_token);
     localStorage.setItem("user", jwt_token);
@@ -27,7 +21,7 @@ export const RegisterUser = (usermodel) => async (dispatch) => {
     // setTimeout(()=>{
     dispatch({ type: REGISTER_AUTH, payload: verified });
     // },3000);
-
+    console.log("1111", verified);
     return Promise.resolve(result);
   } catch (error) {
     const errorsdata = error.response;

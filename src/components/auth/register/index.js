@@ -31,15 +31,15 @@ const Register = () => {
 
       const formData = new FormData();
       Object.entries(values).forEach(([key, value]) => formData.append(key, value));
-      // Object.entries(values).forEach(([key, value]) =>{console.log("Key:",key)});
+      Object.entries(values).forEach(([key, value]) =>{console.log("Key:",key)});
       Object.entries(values).forEach(([key, value]) =>{console.log("Value:",value)});
       // console.log("FormData: ", formData);
       // console.log("Values: ", values);
       dispatch(RegisterUser(formData))
           .then(result => {
-             
-              dispatch(push("/"));
-              
+            console.log("resindex",result);
+            navigator("/");   
+              // dispatch(push("/"));
           })
           .catch(ex => {
               let answer_errors = {

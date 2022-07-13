@@ -25,6 +25,11 @@ function authReducer(state = initialState, action) {
         user: payload,
       };
     }
+    case REGISTER_BEGIN: {
+      return {
+        ...state
+      };
+    }
     case LOGIN_AUTH: {
       return {
         isAuth: true,
