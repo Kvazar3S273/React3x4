@@ -6,6 +6,9 @@ import logo from "../../../src/3x4logo.png";
 import "./index.css";
 import { useDispatch } from "react-redux";
 import { HashLink } from 'react-router-hash-link';
+import { LOG_OUT } from '../../constants/actionTypes';
+import { useNavigate } from "react-router-dom";
+import { logoutservice } from '../../services/logout.service';
 
 import { 
   PhotoFnd, 
@@ -45,8 +48,16 @@ import {
 
 const Header = () => {
 
+    const navigator = useNavigate();
     const dispatch = useDispatch();
-    
+    const logout = () => {
+        logoutservice.logout();
+        dispatch({ type: LOG_OUT });
+        navigator("/");
+    };
+    const { user } = useSelector(res => res.auth);
+    console.log("User: ", user.name);
+
     const handleClickFnd = () => { dispatch(PhotoFnd()); }
     const handleClickFotoprint = () => { dispatch(PhotoFotoprint()); }
     const handleClickPhotobooks = () => { dispatch(PhotoPhotobooks()); }
@@ -335,9 +346,9 @@ const Header = () => {
                 ) : (
                     <Nav onClick={() => setNavExpanded(false)}>
               <Link className="nav-link" to="/profile">
-              {username}
+              {user.name}
               </Link>
-              <Link className="nav-link" to="/logout">
+              <Link className="nav-link" to="/" onClick={logout}>
                 Вихід
               </Link>
             </Nav>

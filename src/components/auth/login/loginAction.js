@@ -5,7 +5,7 @@ import register_service from "../../../services/auth.service";
 
 export const LoginUser = (usermodel) => async (dispatch) => {
   try {
-    const result = await register_service.login(formData);
+    const result = await register_service.login(usermodel);
 
     var jwt_token = result.data.token;
     var cur_user = jwt.decode(jwt_token);

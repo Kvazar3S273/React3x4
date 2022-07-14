@@ -12,6 +12,9 @@ import {
 
 } from "@fortawesome/free-solid-svg-icons";
 
+//see more here:
+//https://www.npmjs.com/package/react-slideshow-image
+
 const Fotoprint = () => {
   const images = [
     "images/services/photo/fotoprint1.jpg",
