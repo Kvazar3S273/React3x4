@@ -14,6 +14,7 @@ export const LoginUser = (usermodel) => async (dispatch) => {
     dispatch({ type: LOGIN_AUTH, payload: cur_user });
     localStorage.setItem("user", jwt_token);
     authTokenRequest(jwt_token);
+    return Promise.resolve(cur_user);
     
   } catch (error) {
     const errorsdata = error.response;

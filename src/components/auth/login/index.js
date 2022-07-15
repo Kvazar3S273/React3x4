@@ -23,6 +23,10 @@ const LoginPage = () => {
       );
       dispatch(LoginUser(formData))
         .then((result) => {
+          if(result.roles==="admin") {
+            navigator("/admin");
+            return;
+          }
           navigator("/");
         })
         .catch((ex) => {
