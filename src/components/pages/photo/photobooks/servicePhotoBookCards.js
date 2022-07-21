@@ -1,10 +1,26 @@
 import React from "react";
 // import "./style.css";
 import { useDispatch } from "react-redux";
-
+import { 
+  PhotoPhotobooksUniBook, 
+  PhotoPhotobooksSlimBook,
+  PhotoPhotobooksBamBook,
+  PhotoPhotobooksPrintBook,
+  PhotoPhotobooksPhotoBook,
+  PhotoPhotobooksPlanshet
+} from "../../../../constants/actions/foto";
 import { HashLink } from 'react-router-hash-link';
 
 const ServicePhotoBookCards = () => {
+
+  const dispatch = useDispatch();
+
+  const handleClickUniBook = () => { dispatch(PhotoPhotobooksUniBook()); }
+  const handleClickSlimBook = () => { dispatch(PhotoPhotobooksSlimBook()); }
+  const handleClickBamBook = () => { dispatch(PhotoPhotobooksBamBook()); }
+  const handleClickPrintBook = () => { dispatch(PhotoPhotobooksPrintBook()); }
+  const handleClickPhotoBook = () => { dispatch(PhotoPhotobooksPhotoBook()); }
+  const handleClickPlanshet = () => { dispatch(PhotoPhotobooksPlanshet()); }
 
   return (
     <>
@@ -16,9 +32,10 @@ const ServicePhotoBookCards = () => {
 
           <div className="row gx-5 justify-content-center">
             {/* Картка 1 */}
-            <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded ">
+            <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded "
+            onClick={handleClickUniBook}>
             {/* onClick={handleClickXerox}> */}
-              <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
+              <HashLink smooth to={'/photo#books'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/photo/photobooks/unibook-menu.png"
@@ -33,9 +50,9 @@ const ServicePhotoBookCards = () => {
             </div>
 
             {/* Картка 2 */}
-            <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded ">
-            {/* onClick={handleClickScaner}> */}
-              <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
+            <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded "
+            onClick={handleClickSlimBook}>
+              <HashLink smooth to={'/photo#books'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/photo/photobooks/slimbook-menu.png"
@@ -50,9 +67,9 @@ const ServicePhotoBookCards = () => {
             </div>
             
             {/* Картка 3 */}
-            <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded ">
-            {/* onClick={handleClickLaminate}> */}
-            <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
+            <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded "
+            onClick={handleClickBamBook}>
+            <HashLink smooth to={'/photo#books'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/photo/photobooks/bambook-menu.png"
@@ -67,9 +84,9 @@ const ServicePhotoBookCards = () => {
             </div>
             
             {/* Картка 4 */}
-            <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded ">
-            {/* onClick={handleClickBinder}> */}
-            <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
+            <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded "
+            onClick={handleClickPhotoBook}>
+            <HashLink smooth to={'/photo#books'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/photo/photobooks/photobook-menu.png"
@@ -84,9 +101,9 @@ const ServicePhotoBookCards = () => {
             </div>
             
             {/* Картка 5 */}
-            <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded ">
-            {/* onClick={handleClickUsbflash}> */}
-            <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
+            <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded "
+            onClick={handleClickPrintBook}>
+            <HashLink smooth to={'/photo#books'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/photo/photobooks/printbook-menu.png"
@@ -101,9 +118,9 @@ const ServicePhotoBookCards = () => {
             </div>
 
             {/* Картка 6 */}
-            <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded ">
-            {/* onClick={handleClickDiscprint}> */}
-              <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
+            <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded "
+            onClick={handleClickPlanshet}>
+              <HashLink smooth to={'/photo#books'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/photo/photobooks/planshet_menu.png"
@@ -123,7 +140,7 @@ const ServicePhotoBookCards = () => {
       <div className="col-md-1 py-4"></div>
       </div>
       
-      <section id="component">
+      <section id="books">
       </section>
     </>
   );

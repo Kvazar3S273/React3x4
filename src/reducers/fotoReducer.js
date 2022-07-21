@@ -104,7 +104,7 @@ function fotoReducer(state = initialState, action) {
       return {
         isPhotoFnd: false,
         isPhotoFotoprint: false,
-        isPhotoPhotobooks: false,
+        isPhotoPhotobooks: true,
         isPhotoPhotobooksUniBook: false,
         isPhotoPhotobooksSlimBook: false,
         isPhotoPhotobooksBamBook: true,
@@ -124,7 +124,7 @@ function fotoReducer(state = initialState, action) {
       return {
         isPhotoFnd: false,
         isPhotoFotoprint: false,
-        isPhotoPhotobooks: false,
+        isPhotoPhotobooks: true,
         isPhotoPhotobooksUniBook: false,
         isPhotoPhotobooksSlimBook: false,
         isPhotoPhotobooksBamBook: false,
@@ -144,7 +144,7 @@ function fotoReducer(state = initialState, action) {
       return {
         isPhotoFnd: false,
         isPhotoFotoprint: false,
-        isPhotoPhotobooks: false,
+        isPhotoPhotobooks: true,
         isPhotoPhotobooksUniBook: false,
         isPhotoPhotobooksSlimBook: false,
         isPhotoPhotobooksBamBook: false,
@@ -164,7 +164,7 @@ function fotoReducer(state = initialState, action) {
       return {
         isPhotoFnd: false,
         isPhotoFotoprint: false,
-        isPhotoPhotobooks: false,
+        isPhotoPhotobooks: true,
         isPhotoPhotobooksUniBook: false,
         isPhotoPhotobooksSlimBook: false,
         isPhotoPhotobooksBamBook: false,
@@ -184,7 +184,7 @@ function fotoReducer(state = initialState, action) {
       return {
         isPhotoFnd: false,
         isPhotoFotoprint: false,
-        isPhotoPhotobooks: false,
+        isPhotoPhotobooks: true,
         isPhotoPhotobooksUniBook: false,
         isPhotoPhotobooksSlimBook: true,
         isPhotoPhotobooksBamBook: false,
@@ -204,7 +204,7 @@ function fotoReducer(state = initialState, action) {
       return {
         isPhotoFnd: false,
         isPhotoFotoprint: false,
-        isPhotoPhotobooks: false,
+        isPhotoPhotobooks: true,
         isPhotoPhotobooksUniBook: true,
         isPhotoPhotobooksSlimBook: false,
         isPhotoPhotobooksBamBook: false,
