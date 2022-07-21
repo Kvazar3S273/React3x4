@@ -2,8 +2,19 @@ import React from "react";
 import { HashLink } from 'react-router-hash-link';
 import { ShowCalculator } from './calculator';
 import ServicePhotoBookCards from "./servicePhotoBookCards";
+import { useSelector } from "react-redux";
+import BamBook from "./bambook";
 
 const Photobooks = () => {
+
+  const {
+    isPhotoPhotobooksUniBook,
+    isPhotoPhotobooksSlimBook,
+    isPhotoPhotobooksBamBook,
+    isPhotoPhotobooksPhotoBook,
+    isPhotoPhotobooksPrintBook,
+    isPhotoPhotobooksPlanshet
+  } = useSelector((state) => state.foto);
 
   return (
     <div className="row">
@@ -12,6 +23,8 @@ const Photobooks = () => {
       </div>
 
       <ServicePhotoBookCards />
+
+      {isPhotoPhotobooksBamBook ? <BamBook /> : ""}
 
       <div className="row">
         <div className="col-md-1"></div>

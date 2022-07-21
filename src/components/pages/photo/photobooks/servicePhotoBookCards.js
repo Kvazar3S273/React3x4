@@ -18,7 +18,7 @@ const ServicePhotoBookCards = () => {
             {/* Картка 1 */}
             <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded ">
             {/* onClick={handleClickXerox}> */}
-              <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
+              <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/photo/photobooks/unibook-menu.png"
@@ -35,7 +35,7 @@ const ServicePhotoBookCards = () => {
             {/* Картка 2 */}
             <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded ">
             {/* onClick={handleClickScaner}> */}
-              <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
+              <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/photo/photobooks/slimbook-menu.png"
@@ -52,7 +52,7 @@ const ServicePhotoBookCards = () => {
             {/* Картка 3 */}
             <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded ">
             {/* onClick={handleClickLaminate}> */}
-            <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
+            <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/photo/photobooks/bambook-menu.png"
@@ -69,7 +69,7 @@ const ServicePhotoBookCards = () => {
             {/* Картка 4 */}
             <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded ">
             {/* onClick={handleClickBinder}> */}
-            <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
+            <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/photo/photobooks/photobook-menu.png"
@@ -86,7 +86,7 @@ const ServicePhotoBookCards = () => {
             {/* Картка 5 */}
             <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded ">
             {/* onClick={handleClickUsbflash}> */}
-            <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
+            <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/photo/photobooks/printbook-menu.png"
@@ -103,7 +103,7 @@ const ServicePhotoBookCards = () => {
             {/* Картка 6 */}
             <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded ">
             {/* onClick={handleClickDiscprint}> */}
-              <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
+              <HashLink smooth to={'/photo#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
                   src="/images/services/photo/photobooks/planshet_menu.png"
