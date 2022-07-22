@@ -1,6 +1,16 @@
 import React from "react";
+import { useEffect,useState } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { GetFnds } from "../../../../constants/actions/photoActions/fnd";
 
 const FndEditPrice = () => {
+
+  const dispatch = useDispatch();
+  const{listfnds}= useSelector(state => state.fnd);
+  useEffect(() => {
+          dispatch(GetFnds());           
+      }, []);
+
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
@@ -8,8 +18,8 @@ const FndEditPrice = () => {
 
         {/* Прайс */}
         <div className="row">
-          <div className="col-md-2 "></div>
-          <div className="col-md-8">
+          <div className="col-md-1 "></div>
+          <div className="col-md-10">
             <h4 className="text-center text-danger">
               Редагування вартості фотографій на документи
             </h4>
@@ -22,10 +32,46 @@ const FndEditPrice = () => {
                     Ціна, грн
                   </th>
                   <th scope="col" style={{ background: "#E8BAC6" }}>Архів, грн</th>
+                  <th scope="col">Редагування</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                
+              {listfnds && listfnds.map((item) =>
+                            <tr key={item.id}>
+                                <td>
+                                   {item.title}
+                                </td>
+                                <td>{item.qty}</td>
+                                <td style={{ background: "#E1A3B3" }}>
+                                  <input 
+                                  id={item.id} 
+                                  value={item.price}
+                                  style={{width:"60px", 
+                                  height:"40px", 
+                                  textAlign:"center", 
+                                  borderRadius: "7px"}}/>
+                                </td>
+                                <td style={{ background: "#E8BAC6" }}>
+                                  <input 
+                                  id={item.id} 
+                                  value={item.archivePice}
+                                  style={{width:"60px", 
+                                  height:"40px", 
+                                  textAlign:"center", 
+                                  borderRadius: "7px"}}/>
+                                </td>
+                                {/* <td style={{ background: "#E1A3B3" }}> {item.price} </td>                        */}
+                                {/* <td style={{ background: "#E8BAC6" }}> {item.archivePice} </td>  */}
+                                <td> 
+                                  <button 
+                                  className="btn btn-primary" 
+                                  style={{width:"60px", height:"40px"}}>
+                                    Save
+                                  </button> </td> 
+                            </tr>)}
+                
+                {/* <tr>
                   <th scope="row">
                     Паспорт
                     <br />
@@ -88,11 +134,11 @@ const FndEditPrice = () => {
                   <td>1</td>
                   <td style={{ background: "#E1A3B3" }}>60</td>
                   <td style={{ background: "#E8BAC6" }}>40</td>
-                </tr>
+                </tr> */}
               </tbody>
             </table>
           </div>
-          <div className="col-md-2"></div>
+          <div className="col-md-1"></div>
         </div>
         
       </div>

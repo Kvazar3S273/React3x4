@@ -8,8 +8,18 @@ import {
   faFileZipper,
   faHardDrive,
 } from "@fortawesome/free-solid-svg-icons";
+import { useEffect,useState } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { GetFnds } from "../../../../constants/actions/photoActions/fnd";
 
 const Fnd = () => {
+
+  const dispatch = useDispatch();
+  const{listfnds}= useSelector(state => state.fnd);
+  useEffect(() => {
+          dispatch(GetFnds());           
+      }, []);
+
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
@@ -18,7 +28,11 @@ const Fnd = () => {
         <div className="row">
           <div className="col-md-2"></div>
           <div className="col-md-8">
-            <img className="photo-service" src="/images/services/photo/fnd.jpg" alt="Фото на документи"/>
+            <img
+              className="photo-service"
+              src="/images/services/photo/fnd.jpg"
+              alt="Фото на документи"
+            />
           </div>
           <div className="col-md-2"></div>
         </div>
@@ -42,6 +56,8 @@ const Fnd = () => {
         </div>
 
         {/* Прайс */}
+
+        
         <div className="row">
           <div className="col-md-2 "></div>
           <div className="col-md-8">
@@ -60,7 +76,17 @@ const Fnd = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                {listfnds &&
+                  listfnds.map((item) => (
+                    <tr key={item.id}>
+                      <td>{item.title}</td>
+                      <td>{item.qty}</td>
+                      <td style={{ background: "#E1A3B3" }}> {item.price} </td>
+                      <td> {item.archivePice} </td>
+                    </tr>
+                  ))}
+
+                {/* <tr>
                   <th scope="row">
                     Паспорт
                     <br />
@@ -123,7 +149,7 @@ const Fnd = () => {
                   <td>1</td>
                   <td style={{ background: "#E1A3B3" }}>60</td>
                   <td>40</td>
-                </tr>
+                </tr> */}
               </tbody>
             </table>
           </div>

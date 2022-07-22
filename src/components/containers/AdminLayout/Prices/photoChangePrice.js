@@ -47,7 +47,7 @@ const PhotoChangePrice = () => {
                   </i>
                 </div>
                 <div className="col-md-9">
-                  <h5 className="text-center">ФНД</h5>
+                  <h5 className="text-center text-dark">ФНД</h5>
                 </div>
               </div>
             </HashLink>
@@ -67,7 +67,7 @@ const PhotoChangePrice = () => {
                   </i>
                 </div>
                 <div className="col-md-9">
-                  <h5 className=" text-center">Фотодрук</h5>
+                  <h5 className="text-center text-dark">Фотодрук</h5>
                 </div>
               </div>
             </HashLink>
