@@ -19,32 +19,39 @@ div .card h6 {
     vertical-align: baseline;
 }
 
-.photo-service{
+.photo-service {
     /* position: relative; */
     width: 100%;
     padding-right: 10px;
 }
-div href{
+
+div href {
     color: blueviolet;
 }
-.each-slide > div {
+
+.each-slide>div {
     display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
     height: 350px;
-  }
-  
-  .each-slide span {
+}
+
+.each-slide span {
     padding: 20px;
     font-size: 20px;
     background: #efefef;
     text-align: center;
-  }
+}
 
-  .react-slideshow-container .default-nav{
+.react-slideshow-container .default-nav {
     border-radius: 0%;
     width: 40px;
-  }
+}
 
- 
+.available-format-img {
+    width: 120px;
+}
+
+
+

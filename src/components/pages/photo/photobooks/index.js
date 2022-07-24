@@ -26,7 +26,10 @@ const Photobooks = () => {
 
       {isPhotoPhotobooksBamBook ? <BamBook /> : ""}
 
-      <div className="row">
+
+
+      {/* Калькулятор */}
+      {/* <div className="row">
         <div className="col-md-1"></div>
         <div className="col-md-10">
           <div>
@@ -50,7 +53,9 @@ const Photobooks = () => {
           </div>
         </div>
         <div className="col-md-1"></div>
-      </div>
+      </div> */}
+
+
     </div>
   );
 };
