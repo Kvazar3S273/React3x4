@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import classNames from "classnames";
 import "./tabstyle.css"
-import MakeFancyboxBamBook24x32 from "../MakeFancyboxBamBook24x32";
-import MakeFancyboxBamBook20x30 from "../MakeFancyboxBamBook20x30";
+import { ShowClaim30x30 } from "./showClaim30x30";
+import { ShowClaim20x30 } from "./showClaim20x30";
+import { ShowClaim24x32 } from "./showClaim24x32";
+import { ShowClaim19x19 } from "./showClaim19x19";
+import { ShowClaim23x23 } from "./showClaim23x23";
+
 const ClaimBambook = () => {
   const [show30x30, setShow30x30] = useState(false);
   const [show24x32, setShow24x32] = useState(false);
@@ -103,133 +106,37 @@ const ClaimBambook = () => {
               !show23x23 &&
               !show23x18 && (
                 <>
-                  <h4 className="m-3 text-center text-danger">BamBook 30x30</h4>
-                  <div className="row">
-                    <div className="col-md-6"></div>
-                    <div className="col-md-6"></div>
-                  </div>
+                  {ShowClaim30x30()}
                 </>
               )}
             {show30x30 && (
               <>
-                <h4 className="m-3 text-center text-danger">BamBook 30x30</h4>
-                <div className="row">
-                  <div className="col-md-6"></div>
-                  <div className="col-md-6"></div>
-                </div>
+                {ShowClaim30x30()}
               </>
             )}
             {show24x32 && (
               <>
-                <h4 className="m-3 text-center text-danger">BamBook 24x32</h4>
-                <div className="row">
-                  <div className="col-md-8">
-                    <h3>Вимоги до файлів</h3>
-                    
-                    <table class="table table-striped">
-                      
-                      <tbody>
-                        <tr>
-                          <th scope="row" className="text-success">Формат файлу</th>
-                          <td>JPG (максимальна якість)</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" className="text-success">Колірна модель</th>
-                          <td>RGB, профіль sRGB IEC61966</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" className="text-success">Розширення</th>
-                          <td>300 dpi(точок на дюйм)</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" className="text-success">Файл обкладинки для 3-25 розворотів</th>
-                          <td>502 х 346 мм (5929 x 4087 пікселів)</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" className="text-success">Файл обкладинки для 26-40 розворотів</th>
-                          <td>516 х 346 мм (6094 x 4087 пікселів)</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" className="text-success">Файл розвороту</th>
-                          <td>454 х 316 мм (5362 x 3732 пікселів)</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div className="col-md-4">
-                    <MakeFancyboxBamBook24x32 />
-                  </div>
-                </div>
+                {ShowClaim24x32()}
               </>
             )}
             {show20x30 && (
               <>
-                <h4 className="m-3 text-center text-danger">BamBook 20x30</h4>
-                <div className="row">
-                  <div className="col-md-8">
-                  <h3>Вимоги до файлів</h3>
-                    
-                    <table class="table table-striped">
-                      
-                      <tbody>
-                        <tr>
-                          <th scope="row" className="text-success">Формат файлу</th>
-                          <td>JPG (максимальна якість)</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" className="text-success">Колірна модель</th>
-                          <td>RGB, профіль sRGB IEC61966</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" className="text-success">Розширення</th>
-                          <td>300 dpi(точок на дюйм)</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" className="text-success">Файл обкладинки для 3-25 розворотів</th>
-                          <td>456 х 320 мм (5386 х 3780 пікселів)</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" className="text-success">Файл обкладинки для 26-40 розворотів</th>
-                          <td>469 х 320 мм (5540 х 3780 пікселів)</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" className="text-success">Файл розвороту</th>
-                          <td>408 х 290 мм (4819 х 3425 пікселів)</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div className="col-md-4">
-                    <MakeFancyboxBamBook20x30 />
-                  </div>
-                </div>
+                {ShowClaim20x30()}
               </>
             )}
             {show19x19 && (
               <>
-                <h4 className="m-3 text-center text-danger">BamBook 19x19</h4>
-                <div className="row">
-                  <div className="col-md-6"></div>
-                  <div className="col-md-6"></div>
-                </div>
+                {ShowClaim19x19()}
               </>
             )}
             {show23x23 && (
               <>
-                <h4 className="m-3 text-center text-danger">BamBook 23x23</h4>
-                <div className="row">
-                  <div className="col-md-6"></div>
-                  <div className="col-md-6"></div>
-                </div>
+                {ShowClaim23x23()}
               </>
             )}
             {show23x18 && (
               <>
-                <h4 className="m-3 text-center text-danger">BamBook 23x18</h4>
-                <div className="row">
-                  <div className="col-md-6"></div>
-                  <div className="col-md-6"></div>
-                </div>
+                
               </>
             )}
           </div>
