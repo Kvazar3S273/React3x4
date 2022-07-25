@@ -239,7 +239,6 @@ const BamBook = () => {
 
           <ul className="list-group list-group-horizontal justify-content-center">
             <li style={{listStyleType: "none"}} >
-            <HashLink smooth to={'/photo#books'}>
               <div>
                 <img
                   src="/images/services/photo/photobooks/formats/30x30.png"
@@ -248,10 +247,8 @@ const BamBook = () => {
                 />
                   <h6 className="text-center text-dark">30x30</h6>
               </div>
-              </HashLink>
             </li>
             <li  style={{listStyleType: "none"}} >
-            <HashLink smooth to={'/photo#books'}>
               <div>
                 <img
                   src="/images/services/photo/photobooks/formats/24x32.png"
@@ -260,10 +257,8 @@ const BamBook = () => {
                 />
                   <h6 className="text-center text-dark">24x32</h6>
               </div>
-              </HashLink>
             </li>
             <li  style={{listStyleType: "none"}} >
-            <HashLink smooth to={'/photo#books'}>
               <div>
                 <img
                   src="/images/services/photo/photobooks/formats/20x30.png"
@@ -272,10 +267,8 @@ const BamBook = () => {
                 />
                   <h6 className="text-center text-dark">20x30</h6>
               </div>
-              </HashLink>
             </li>
             <li  style={{listStyleType: "none"}} >
-            <HashLink smooth to={'/photo#books'}>
               <div>
                 <img
                   src="/images/services/photo/photobooks/formats/19x19.png"
@@ -284,10 +277,8 @@ const BamBook = () => {
                 />
                   <h6 className="text-center text-dark">19x19</h6>
               </div>
-              </HashLink>
             </li>
             <li  style={{listStyleType: "none"}} >
-            <HashLink smooth to={'/photo#books'}>
               <div>
                 <img
                   src="/images/services/photo/photobooks/formats/23x23.png"
@@ -296,10 +287,8 @@ const BamBook = () => {
                 />
                   <h6 className="text-center text-dark">23x23</h6>
               </div>
-              </HashLink>
             </li>
             <li  style={{listStyleType: "none"}} >
-            <HashLink smooth to={'/photo#books'}>
               <div>
                 <img
                   src="/images/services/photo/photobooks/formats/23x18.png"
@@ -308,7 +297,6 @@ const BamBook = () => {
                 />
                   <h6 className="text-center text-dark">23x18</h6>
               </div>
-              </HashLink>
             </li>
           </ul>
           
