@@ -6,6 +6,8 @@ import { ShowClaim20x30 } from "./showClaim20x30";
 import { ShowClaim24x32 } from "./showClaim24x32";
 import { ShowClaim19x19 } from "./showClaim19x19";
 import { ShowClaim23x23 } from "./showClaim23x23";
+import { ShowClaim23x18 } from "./showClaim23x18";
+import { MoreServices } from "../../moreServices";
 
 const ClaimBambook = () => {
   const [show30x30, setShow30x30] = useState(false);
@@ -64,7 +66,6 @@ const ClaimBambook = () => {
     setShow23x18(true);
   };
   
-
   return (
     <>
       <div className="row">
@@ -109,38 +110,17 @@ const ClaimBambook = () => {
                   {ShowClaim30x30()}
                 </>
               )}
-            {show30x30 && (
-              <>
-                {ShowClaim30x30()}
-              </>
-            )}
-            {show24x32 && (
-              <>
-                {ShowClaim24x32()}
-              </>
-            )}
-            {show20x30 && (
-              <>
-                {ShowClaim20x30()}
-              </>
-            )}
-            {show19x19 && (
-              <>
-                {ShowClaim19x19()}
-              </>
-            )}
-            {show23x23 && (
-              <>
-                {ShowClaim23x23()}
-              </>
-            )}
-            {show23x18 && (
-              <>
-                
-              </>
-            )}
+            {show30x30 && (<>{ShowClaim30x30()}</>)}
+            {show24x32 && (<>{ShowClaim24x32()}</>)}
+            {show20x30 && (<>{ShowClaim20x30()}</>)}
+            {show19x19 && (<>{ShowClaim19x19()}</>)}
+            {show23x23 && (<>{ShowClaim23x23()}</>)}
+            {show23x18 && (<>{ShowClaim23x18()}</>)}
           </div>
         </div>
+
+        {MoreServices()}
+        
       </div>
     </>
   );

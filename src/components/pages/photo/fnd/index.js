@@ -267,6 +267,7 @@ const Fnd = () => {
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   );

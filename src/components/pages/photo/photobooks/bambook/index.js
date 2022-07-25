@@ -214,7 +214,7 @@ const BamBook = () => {
                   className="btn btn-success btn-lg mt-4 mb-4 p-3"
                   onClick={ShowCalculator}
                   id="show_calc"
-                  style={{ width: "100%", background: "#688954" }}
+                  style={{ width: "100%", background: "#26979F" }}
                 >
                   Розрахунок вартості фотокниг
                 </button>
