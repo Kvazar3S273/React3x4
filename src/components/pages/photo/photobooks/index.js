@@ -2,6 +2,7 @@ import React from "react";
 import ServicePhotoBookCards from "./servicePhotoBookCards";
 import { useSelector } from "react-redux";
 import BamBook from "./bambook";
+import SlimBook from "./slimbook";
 
 const Photobooks = () => {
 
@@ -23,6 +24,7 @@ const Photobooks = () => {
       <ServicePhotoBookCards />
 
       {isPhotoPhotobooksBamBook ? <BamBook /> : ""}
+      {isPhotoPhotobooksSlimBook? <SlimBook /> : ""}
 
     </div>
   );
