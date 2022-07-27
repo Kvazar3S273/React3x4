@@ -7,7 +7,7 @@ export function ShowCalculator() {
       button.visible = true;
       container.style.display = "block";
     } else {
-      button.innerText = "Розрахунок вартості фотокниг";
+      button.innerText = "Розрахувати вартість фотокниги";
       button.visible = false;
       container.style.display = "none";
     }

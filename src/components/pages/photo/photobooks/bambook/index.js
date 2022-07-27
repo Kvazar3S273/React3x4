@@ -4,6 +4,11 @@ import { HashLink } from 'react-router-hash-link';
 import { ShowCalculator } from '../calculator';
 import "../../style.css";
 import ClaimBambook from "./claimBambook";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCalculator
+} from "@fortawesome/free-solid-svg-icons";
+
 const BamBook = () => {
   //see more here:
   //https://www.npmjs.com/package/react-slideshow-image
@@ -187,13 +192,26 @@ const BamBook = () => {
         >
           <div className="row">
             <div className="col-8 col-sm-8 col-md-8 col-lg-8 p-5">
-              <h4 className="text-danger">
-                Розрахунок вартості друку фотокниги
-              </h4>
-              <p>
-                *Окремо розраховується вартість розробки дизайну (див. Додаткові
-                послуги)
-              </p>
+              <div className="row">
+                <div className="col-2 col-sm-2 col-md-2">
+                <i
+                    className="d-flex justify-content-center text-danger"
+                    style={{ fontSize: "4.5em" }}
+                  >
+                    <FontAwesomeIcon icon={faCalculator} />
+                  </i>
+                </div>
+                <div className="col-10 col-sm-10 col-md-10">
+                  <h4 className="text-danger">
+                    Розрахунок вартості друку фотокниги
+                  </h4>
+                  <p>
+                    *Окремо розраховується вартість розробки дизайну (див. Додаткові
+                    послуги)
+                  </p>
+                </div>
+              </div>
+              
             </div>
             <div className="col-4 col-sm-4 col-md-4 col-lg-4">
               <img
@@ -216,7 +234,7 @@ const BamBook = () => {
                   id="show_calc"
                   style={{ width: "100%", background: "#26979F" }}
                 >
-                  Розрахунок вартості фотокниг
+                  Розрахувати вартість фотокниги
                 </button>
               </HashLink>
               <section id="calculator"></section>
