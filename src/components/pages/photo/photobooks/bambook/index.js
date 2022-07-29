@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalculator
 } from "@fortawesome/free-solid-svg-icons";
+import { AvailableBamBooks } from "../availableBooks";
 
 const BamBook = () => {
   //see more here:
@@ -250,76 +251,7 @@ const BamBook = () => {
           <div className="col-md-1"></div>
         </div>
 
-        <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
-          <h1 className="text-center">Доступні формати</h1>
-          <p className="text-center">
-            Пропонуємо Вам наступні формати фотокниг Bambook:
-          </p>
-
-          <ul className="list-group list-group-horizontal justify-content-center">
-            <li style={{listStyleType: "none"}} >
-              <div>
-                <img
-                  src="/images/services/photo/photobooks/formats/30x30.png"
-                  className="available-format-img"
-                  alt=""
-                />
-                  <h6 className="text-center text-dark">30x30</h6>
-              </div>
-            </li>
-            <li  style={{listStyleType: "none"}} >
-              <div>
-                <img
-                  src="/images/services/photo/photobooks/formats/24x32.png"
-                  className="available-format-img"
-                  alt=""
-                />
-                  <h6 className="text-center text-dark">24x32</h6>
-              </div>
-            </li>
-            <li  style={{listStyleType: "none"}} >
-              <div>
-                <img
-                  src="/images/services/photo/photobooks/formats/20x30.png"
-                  className="available-format-img"
-                  alt=""
-                />
-                  <h6 className="text-center text-dark">20x30</h6>
-              </div>
-            </li>
-            <li  style={{listStyleType: "none"}} >
-              <div>
-                <img
-                  src="/images/services/photo/photobooks/formats/19x19.png"
-                  className="available-format-img"
-                  alt=""
-                />
-                  <h6 className="text-center text-dark">19x19</h6>
-              </div>
-            </li>
-            <li  style={{listStyleType: "none"}} >
-              <div>
-                <img
-                  src="/images/services/photo/photobooks/formats/23x23.png"
-                  className="available-format-img"
-                  alt=""
-                />
-                  <h6 className="text-center text-dark">23x23</h6>
-              </div>
-            </li>
-            <li  style={{listStyleType: "none"}} >
-              <div>
-                <img
-                  src="/images/services/photo/photobooks/formats/23x18.png"
-                  className="available-format-img"
-                  alt=""
-                />
-                  <h6 className="text-center text-dark">23x18</h6>
-              </div>
-            </li>
-          </ul>
-          
-        </div>
+        {AvailableBamBooks()}
 
 
         <ClaimBambook />
