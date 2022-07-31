@@ -2,11 +2,11 @@ import http from "../http_common";
 
 class FotoprintDataService {
   getdatafotoprint() {
-    return http.get("api/photo");
+    return http.get("api/fotoprint");
   }
 
   updateFotoprintData(id, data) {
-    return http.put(`api/photo/fotoprintedit/${id}`, data, {
+    return http.put(`api/fotoprint/fotoprintedit/${id}`, data, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
