@@ -1,6 +1,6 @@
 import React from "react";
 import "react-slideshow-image/dist/styles.css";
-import { Slide, Zoom } from "react-slideshow-image";
+import { Zoom } from "react-slideshow-image";
 import "../style.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,13 +9,22 @@ import {
     faFileWord,
     faEye,
     faMoneyBill1
-
 } from "@fortawesome/free-solid-svg-icons";
+import { useEffect,useState } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { GetFotoprints } from "../../../../constants/actions/photoActions/fotoprint";
 
 //see more here:
 //https://www.npmjs.com/package/react-slideshow-image
 
 const Fotoprint = () => {
+
+  const dispatch = useDispatch();
+  const{listfotoprints}= useSelector(state => state.fotoprint);
+  useEffect(() => {
+          dispatch(GetFotoprints());           
+      }, []);
+
   const images = [
     "images/services/photo/fotoprint1.jpg",
     "images/services/photo/fotoprint2.jpg",
@@ -235,7 +244,17 @@ const Fotoprint = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
+
+              {listfotoprints &&
+                  listfotoprints.map((item) => (
+                    <tr key={item.id}>
+                      <td>{item.format}</td>
+                      <td>{item.exactSizes}</td>
+                      <td style={{ background: "#E1A3B3" }}> {item.price} </td>
+                    </tr>
+                  ))}
+
+                {/* <tr>
                   <th scope="row">9x13</th>
                   <td>89x127</td>
                   <td>4,50</td>
@@ -264,7 +283,7 @@ const Fotoprint = () => {
                   <th scope="row">30x40</th>
                   <td>305x420</td>
                   <td>42,00</td>
-                </tr>
+                </tr> */}
               </tbody>
             </table>
           </div>

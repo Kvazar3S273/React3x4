@@ -7,12 +7,10 @@ import fotoReducer from "./reducers/fotoReducer";
 import compReducer from "./reducers/compReducer";
 import poligraphReducer from "./reducers/poligraphReducer";
 import fndReducer from "./reducers/editPhotoReducers/fndReducer"
-// const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
-// export const history = createBrowserHistory({ basename: baseUrl });
+import fotoprintReducer from "./reducers/editPhotoReducers/fotoprintReducer";
 
 const middleware = [
-    thunk,
-    // routerMiddleware(history)
+    thunk
 ];
 
 const rootReducer = combineReducers({
@@ -22,8 +20,8 @@ const rootReducer = combineReducers({
     foto: fotoReducer,
     comp: compReducer,
     poligraph: poligraphReducer,
-    fnd: fndReducer
-    // router: connectRouter(history)
+    fnd: fndReducer,
+    fotoprint: fotoprintReducer
 });
 
 const enhancers = [];
@@ -31,7 +29,6 @@ const enhancers = [];
 const store = createStore(
     rootReducer,
     {},
-    //composeWithDevTools(applyMiddleware(...middleware))
     compose(applyMiddleware(...middleware), ...enhancers)
 );
 export default store;
