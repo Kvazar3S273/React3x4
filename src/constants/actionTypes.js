@@ -64,3 +64,4 @@ export const POLIGRAPH_FOLDER = "POLIGRAPH_FOLDER";
 
 export const GET_FND = "GET_FND";
 export const GET_FOTOPRINT = "GET_FOTOPRINT";
+export const GET_PHOTOSCAN = "GET_PHOTOSCAN";

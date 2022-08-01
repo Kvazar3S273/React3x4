@@ -8,6 +8,7 @@ import compReducer from "./reducers/compReducer";
 import poligraphReducer from "./reducers/poligraphReducer";
 import fndReducer from "./reducers/editPhotoReducers/fndReducer"
 import fotoprintReducer from "./reducers/editPhotoReducers/fotoprintReducer";
+import photoscanReducer from "./reducers/editPhotoReducers/photoscanReducer";
 
 const middleware = [
     thunk
@@ -21,7 +22,8 @@ const rootReducer = combineReducers({
     comp: compReducer,
     poligraph: poligraphReducer,
     fnd: fndReducer,
-    fotoprint: fotoprintReducer
+    fotoprint: fotoprintReducer,
+    photoscan: photoscanReducer
 });
 
 const enhancers = [];
