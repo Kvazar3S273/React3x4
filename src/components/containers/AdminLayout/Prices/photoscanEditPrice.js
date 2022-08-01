@@ -62,12 +62,12 @@ const PhotoscanEditPrice = () => {
 
          setIsOpen(item.id);  
          setComplete(true);
-         const data={
-          id:item.id,
-          price300dpi:item.price300dpi,
-          price600dpi:item.price600dpi,
-          price1200dpi:item.price1200dpi
-         }
+         const data = {
+           id: item.id,
+           price300dpi: item.price300dpi,
+           price600dpi: item.price600dpi,
+           price1200dpi: item.price1200dpi,
+         };
 
          if(!foc){
           setEditPhotoscan(data);
@@ -95,10 +95,10 @@ const PhotoscanEditPrice = () => {
         const idItem = editPhotoscan.id;
 
         const upd = {
-          price300dpi:editPhotoscan.price300dpi,
-          price600dpi:editPhotoscan.price600dpi,
-          price1200dpi:editPhotoscan.price1200dpi
-        }
+          price300dpi: editPhotoscan.price300dpi,
+          price600dpi: editPhotoscan.price600dpi,
+          price1200dpi: editPhotoscan.price1200dpi,
+        };
 
         dispatch(UpdatePhotoscanTable(idItem,upd))
         .then(res => {
@@ -121,7 +121,7 @@ const PhotoscanEditPrice = () => {
       >
         <th scope="row">{row.format}</th>
         {isOpen == row.id && complete ? (
-          <td colSpan={3} className="position-relative">
+          <td colSpan={3}>
             <td >
               <input
                 ref={
@@ -143,7 +143,8 @@ const PhotoscanEditPrice = () => {
                   height: "35px",
                   textAlign: "center",
                   borderRadius: "7px",
-                  marginRight: "5px"
+                  marginLeft: "2em",
+                  marginRight: "6em"
                 }}
               />
             </td>
@@ -168,7 +169,7 @@ const PhotoscanEditPrice = () => {
                   height: "35px",
                   textAlign: "center",
                   borderRadius: "7px",
-                  marginRight: "5px"
+                  marginRight: "7em"
                 }}
               />
             </td>
@@ -193,13 +194,15 @@ const PhotoscanEditPrice = () => {
                   height: "35px",
                   textAlign: "center",
                   borderRadius: "7px",
-                  marginRight: "8px",
+                  marginRight: "0.5em",
                 }}
               />
-              <td>
+              
+            </td>
+            <td >
                 <button
-                  className="btn btn-primary position-absolute end-0 "
-                  style={{ width: "60px", height: "35px", top:"0.5em", right:"0.5em" }}
+                  className="btn btn-primary "
+                  style={{ width: "60px", height: "35px" }}
                   onClick={updatePhotoscanItem}
                   type="submit"
                 >
@@ -207,7 +210,6 @@ const PhotoscanEditPrice = () => {
                 </button>
 
               </td>
-            </td>
           </td>
         ) : (
           <React.Fragment>

@@ -11,20 +11,29 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import FndEditPrice from "./fndEditPrice";
 import FotoprintEditPrice from "./fotoprintEditPrice";
+import PhotoscanEditPrice from "./photoscanEditPrice";
 
 const PhotoChangePrice = () => {
   const [fndEdit, setfndEdit] = useState(false);
   const [fotoprintEdit, setfotoprintEdit] = useState(false);
+  const [photoscanEdit, setPhotoscanEdit] = useState(false);
   const handleClickFndEdit = (event) => {
     // 👇️ щоб по кліку відкривалось і по наступному закривалось
     // setfndEdit((current) => !current);
     // 👇️ щоб по кліку тільки відкривалось
     setfndEdit(true);
     setfotoprintEdit(false);
+    setPhotoscanEdit(false);
   };
   const handleClickFotoprintEdit = (event) => {
     setfndEdit(false);
     setfotoprintEdit(true);
+    setPhotoscanEdit(false);
+  };
+  const handleClickPhotoscanEdit = (event) => {
+    setfndEdit(false);
+    setfotoprintEdit(false);
+    setPhotoscanEdit(true);
   };
   return (
     <>
@@ -74,7 +83,8 @@ const PhotoChangePrice = () => {
             </div>
 
             {/* Картка 3 */}
-            <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded">
+            <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
+            onClick={handleClickPhotoscanEdit}>
               <div className="row">
                 <div className="col-md-3">
                   <i
@@ -145,6 +155,7 @@ const PhotoChangePrice = () => {
           <section id="more"></section>
           {fndEdit && <FndEditPrice />}
           {fotoprintEdit && <FotoprintEditPrice />}
+          {photoscanEdit && <PhotoscanEditPrice />}
 
         </div>
       </div>

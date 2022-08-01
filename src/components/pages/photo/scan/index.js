@@ -1,6 +1,16 @@
 import React from "react";
+import { GetPhotoscans } from "../../../../constants/actions/photoActions/photoscan";
+import { useEffect,useState } from "react";
+import { useSelector, useDispatch } from 'react-redux';
 
 const ScanPage = () => {
+
+  const dispatch = useDispatch();
+  const{listphotoscans}= useSelector(state => state.photoscan);
+  useEffect(() => {
+          dispatch(GetPhotoscans());           
+      }, []);
+
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
@@ -32,30 +42,16 @@ const ScanPage = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">На документи</th>
-                  <td></td>
-                  <td></td>
-                  <td>15,00</td>
-                </tr>
-                <tr>
-                  <th scope="row">10х15</th>
-                  <td>5,00</td>
-                  <td>9,00</td>
-                  <td>15,00</td>
-                </tr>
-                <tr>
-                  <th scope="row">15х21</th>
-                  <td>8,00</td>
-                  <td>14,00</td>
-                  <td>24,00</td>
-                </tr>
-                <tr>
-                  <th scope="row">20х30</th>
-                  <td>10,00</td>
-                  <td>17,00</td>
-                  <td></td>
-                </tr>
+              {listphotoscans &&
+                  listphotoscans.map((item) => (
+                    <tr key={item.id}>
+                      <td>{item.format}</td>
+                      <td>{item.price300dpi == 0 ? "" :item.price300dpi}</td>
+                      <td>{item.price600dpi == 0 ? "" :item.price600dpi}</td>
+                      <td>{item.price1200dpi == 0 ? "" :item.price1200dpi}</td>
+                    </tr>
+                  ))}
+                
               </tbody>
             </table>
           </div>
