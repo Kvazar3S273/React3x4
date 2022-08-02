@@ -42,63 +42,9 @@ const PhotoscanEditPrice = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Формат</td>
-                  <td colSpan={3}>
-                    <div className="d-flex justify-content-between" style={{left:"3em"}}>
-                      <td></td>
-                      <td>
-                        <input
-                          style={{
-                            width: "100px",
-                            height: "35px",
-                            textAlign: "center",
-                            borderRadius: "7px",
-                            // marginLeft: "2em",
-                            // marginRight: "6em"
-                          }}
-                        />
-                      </td>
-                      <td>
-                        <input
-                          style={{
-                            width: "100px",
-                            height: "35px",
-                            textAlign: "center",
-                            borderRadius: "7px",
-                            // marginLeft: "2em",
-                            // marginRight: "6em"
-                          }}
-                        />
-                      </td>
-                      <td>
-                        <input
-                          style={{
-                            width: "100px",
-                            height: "35px",
-                            textAlign: "center",
-                            borderRadius: "7px",
-                            // marginLeft: "2em",
-                            // marginRight: "6em"
-                          }}
-                        />
-                      </td>
-                      <td>
-                        <button
-                          className="btn btn-primary "
-                          style={{ width: "60px", height: "35px" }}
-                          onClick={updatePhotoscanItem}
-                          type="submit"
-                        >
-                          Save
-                        </button>
-                      </td>
-                    </div>
-                  </td>
-                </tr>
-                {/* {listphotoscans.map((row, index) => (
+                {listphotoscans.map((row, index) => (
                   <TableRow key={row.id} row={row} index={listphotoscans[index]} />
-                ))} */}
+                ))}
               </tbody>
             </table>
           </div>
@@ -175,84 +121,83 @@ const PhotoscanEditPrice = () => {
         <th scope="row">{row.format}</th>
         {isOpen == row.id && complete ? (
           <td colSpan={3}>
-            <td >
-              <input
-                ref={
-                  foc
-                    ? (input1) => {
-                        input1 && input1.focus();
-                      }
-                    : input1
-                }
-                id="price300dpi"
-                value={editPhotoscan.price300dpi}
-                name="price300dpi"
-                onChange={(e) =>
-                  handleInputChange("price300dpi", e.currentTarget.value, index)
-                }
-                onClick={handleToggle}
-                style={{
-                  width: "100px",
-                  height: "35px",
-                  textAlign: "center",
-                  borderRadius: "7px",
-                  marginLeft: "2em",
-                  marginRight: "6em"
-                }}
-              />
-            </td>
-            <td >
-              <input
-                ref={
-                  foc
-                    ? (input2) => {
-                        input2 && input2.focus();
-                      }
-                    : input2
-                }
-                id="price600dpi"
-                value={editPhotoscan.price600dpi}
-                name="price600dpi"
-                onChange={(e) =>
-                  handleInputChange("price600dpi", e.currentTarget.value, index)
-                }
-                onClick={handleToggle}
-                style={{
-                  width: "100px",
-                  height: "35px",
-                  textAlign: "center",
-                  borderRadius: "7px",
-                  marginRight: "7em"
-                }}
-              />
-            </td>
-            <td >
-              <input
-                id="price1200dpi"
-                value={editPhotoscan.price1200dpi}
-                name="price1200dpi"
-                onChange={(e) =>
-                  handleInputChange("price1200dpi", e.currentTarget.value, index)
-                }
-                ref={
-                  !foc
-                    ? (input3) => {
-                        input3 && input3.focus();
-                      }
-                    : input3
-                }
-                onClick={handleToggle}
-                style={{
-                  width: "100px",
-                  height: "35px",
-                  textAlign: "center",
-                  borderRadius: "7px",
-                  marginRight: "0.5em",
-                }}
-              />
-              
-            </td>
-            <td >
+            <div
+              className="d-flex justify-content-between"
+              style={{ left: "3em" }}
+            >
+              <td></td>
+
+              <td>
+                <input
+                  ref = { foc ? (input1) => {
+                          input1 && input1.focus();
+                        } : input1 }
+                  id="price300dpi"
+                  value={editPhotoscan.price300dpi}
+                  name="price300dpi"
+                  onChange={(e) =>
+                    handleInputChange(
+                      "price300dpi",
+                      e.currentTarget.value,
+                      index
+                    )}
+                  onClick={handleToggle}
+                  style={{
+                    width: "100px",
+                    height: "35px",
+                    textAlign: "center",
+                    borderRadius: "7px",
+                  }}
+                />
+              </td>
+              <td>
+                <input
+                  ref = { foc ? (input2) => {
+                          input2 && input2.focus();
+                        } : input2 }
+                  id="price600dpi"
+                  value={editPhotoscan.price600dpi}
+                  name="price600dpi"
+                  onChange={(e) =>
+                    handleInputChange(
+                      "price600dpi",
+                      e.currentTarget.value,
+                      index
+                    )}
+                  onClick={handleToggle}
+                  style={{
+                    width: "100px",
+                    height: "35px",
+                    textAlign: "center",
+                    borderRadius: "7px",
+                  }}
+                />
+              </td>
+              <td>
+                <input
+                  id="price1200dpi"
+                  value={editPhotoscan.price1200dpi}
+                  name="price1200dpi"
+                  onChange={(e) =>
+                    handleInputChange(
+                      "price1200dpi",
+                      e.currentTarget.value,
+                      index
+                    )
+                  }
+                  ref={ !foc ? (input3) => {
+                          input3 && input3.focus();
+                        } : input3 }
+                  onClick={handleToggle}
+                  style={{
+                    width: "100px",
+                    height: "35px",
+                    textAlign: "center",
+                    borderRadius: "7px",
+                  }}
+                />
+              </td>
+              <td>
                 <button
                   className="btn btn-primary "
                   style={{ width: "60px", height: "35px" }}
@@ -261,8 +206,8 @@ const PhotoscanEditPrice = () => {
                 >
                   Save
                 </button>
-
               </td>
+            </div>
           </td>
         ) : (
           <React.Fragment>
@@ -274,11 +219,11 @@ const PhotoscanEditPrice = () => {
       </tr>
     );
 
-
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
-        <h1 className="text-center">Фото на документи</h1>
+        <h1 className="text-center">Сканування фото</h1>
+        <h4 className="text-center text-danger">Редагування цін</h4>
         <Table listphotoscans={listphotoscans}  />       
       </div>
     </div>

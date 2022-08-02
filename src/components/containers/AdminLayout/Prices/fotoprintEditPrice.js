@@ -35,7 +35,7 @@ const FotoprintEditPrice = () => {
           <thead>
             <tr className="table-primary">
               <th scope="col">Формат</th>
-              <th scope="col">Точні розміри, мм</th>
+              <th scope="col" className="text-center">Точні розміри, мм</th>
               <th scope="col" className="text-center">
                 Ціна
               </th>
@@ -111,51 +111,51 @@ const FotoprintEditPrice = () => {
       <th scope="row">{row.format}</th>
       <td className="text-center">{row.exactSizes}</td>
       {isOpen == row.id && complete ? (
-        <td
-          // colSpan={2}
-          className="position-relative"
-        >
           <td>
-            <input
-              ref={
-                foc
-                  ? (input) => {
-                      input && input.focus();
-                    }
-                  : input
-              }
-              id="price"
-              value={editFotoprint.price}
-              name="price"
-              onChange={(e) =>
-                handleInputChange("price", e.currentTarget.value, index)
-              }
-              onClick={handleToggle}
-              style={{
-                width: "100px",
-                height: "35px",
-                textAlign: "center",
-                borderRadius: "7px",
-                marginRight: "5px",
-              }}
-            />
-            <td>
-              <button
-                className="btn btn-primary position-absolute end-0 "
-                style={{
-                  width: "60px",
-                  height: "35px",
-                  top: "0.5em",
-                  right: "0.5em",
-                }}
-                onClick={updateFotoprintItem}
-                type="submit"
-              >
-                Save
-              </button>
-            </td>
+            <div
+              className="d-flex justify-content-end"
+              style={{ left: "3em" }}
+            >
+              <td>
+                <input
+                  ref={
+                    foc
+                      ? (input) => {
+                          input && input.focus();
+                        }
+                      : input
+                  }
+                  id="price"
+                  value={editFotoprint.price}
+                  name="price"
+                  onChange={(e) =>
+                    handleInputChange("price", e.currentTarget.value, index)
+                  }
+                  onClick={handleToggle}
+                  style={{
+                    width: "100px",
+                    height: "35px",
+                    textAlign: "center",
+                    borderRadius: "7px",
+                    marginRight: "2em",
+                  }}
+                />
+              </td>
+              <td>
+                <button
+                  className="btn btn-primary "
+                  style={{
+                    width: "60px",
+                    height: "35px",
+                  }}
+                  onClick={updateFotoprintItem}
+                  type="submit"
+                >
+                  Save
+                </button>
+              </td>
+            </div>
           </td>
-        </td>
       ) : (
         <td className="text-center">{row.price}</td>
       )}
@@ -165,7 +165,8 @@ const FotoprintEditPrice = () => {
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
-        <h1 className="text-center">Фото на документи</h1>
+        <h1 className="text-center">Фотодрук</h1>
+        <h4 className="text-center text-danger">Редагування цін</h4>
         <Table listfotoprints={listfotoprints} />
       </div>
     </div>

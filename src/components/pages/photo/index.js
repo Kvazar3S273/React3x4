@@ -13,7 +13,6 @@ import Bottle from "./bottle";
 import Fnd from "./fnd";
 import Photobooks from "./photobooks";
 import Fotoprint from "./fotoprint";
-import { Link } from 'react-router-dom';
 
 const PhotoPage = () => {
 

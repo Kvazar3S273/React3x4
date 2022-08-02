@@ -18,7 +18,7 @@ const DefaultLayout = () => {
         size={70} 
         offsetTop={50} 
         strokeWidth={5} 
-        symbol="&#5169;" 
+        symbol="&#9650;" 
         style={{marginTop:"85vh"}}/>
       <Footer />
     </>
