@@ -7,7 +7,6 @@ import { ShowClaim24x32 } from "./showClaim24x32";
 import { ShowClaim19x19 } from "./showClaim19x19";
 import { ShowClaim23x23 } from "./showClaim23x23";
 import { ShowClaim23x18 } from "./showClaim23x18";
-import { MoreServices } from "../../moreServices";
 
 const ClaimBambook = () => {
   const [show30x30, setShow30x30] = useState(false);
@@ -119,8 +118,6 @@ const ClaimBambook = () => {
           </div>
         </div>
 
-        {MoreServices()}
-        
       </div>
     </>
   );

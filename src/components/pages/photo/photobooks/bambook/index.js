@@ -9,7 +9,7 @@ import {
   faCalculator
 } from "@fortawesome/free-solid-svg-icons";
 import { AvailableBamBooks } from "../availableBooks";
-
+import { MoreServices } from "../moreServices"
 const BamBook = () => {
   //see more here:
   //https://www.npmjs.com/package/react-slideshow-image
@@ -255,6 +255,9 @@ const BamBook = () => {
 
 
         <ClaimBambook />
+
+        {MoreServices()}
+
 
       </div>
     </>

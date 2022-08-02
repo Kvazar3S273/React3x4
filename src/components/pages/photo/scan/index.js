@@ -1,6 +1,6 @@
 import React from "react";
 import { GetPhotoscans } from "../../../../constants/actions/photoActions/photoscan";
-import { useEffect,useState } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 
 const ScanPage = () => {
@@ -46,9 +46,9 @@ const ScanPage = () => {
                   listphotoscans.map((item) => (
                     <tr key={item.id}>
                       <td>{item.format}</td>
-                      <td>{item.price300dpi == 0 ? "" :item.price300dpi}</td>
-                      <td>{item.price600dpi == 0 ? "" :item.price600dpi}</td>
-                      <td>{item.price1200dpi == 0 ? "" :item.price1200dpi}</td>
+                      <td>{item.price300dpi === 0 ? "" :item.price300dpi}</td>
+                      <td>{item.price600dpi === 0 ? "" :item.price600dpi}</td>
+                      <td>{item.price1200dpi === 0 ? "" :item.price1200dpi}</td>
                     </tr>
                   ))}
                 

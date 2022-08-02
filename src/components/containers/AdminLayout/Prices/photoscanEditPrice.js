@@ -32,9 +32,9 @@ const PhotoscanEditPrice = () => {
         <div className="row">
           <div className="col-md-1"></div>
           <div className="col-md-10">
-          <table className="table table-striped text-center">
+            <table className="table table-striped text-center">
               <thead>
-                <tr>
+                <tr className="table-primary">
                   <th scope="col">Формат</th>
                   <th scope="col">300 dpi</th>
                   <th scope="col">600 dpi</th>
@@ -42,12 +42,65 @@ const PhotoscanEditPrice = () => {
                 </tr>
               </thead>
               <tbody>
-                {listphotoscans.map((row, index) => (
+                <tr>
+                  <td>Формат</td>
+                  <td colSpan={3}>
+                    <div className="d-flex justify-content-between" style={{left:"3em"}}>
+                      <td></td>
+                      <td>
+                        <input
+                          style={{
+                            width: "100px",
+                            height: "35px",
+                            textAlign: "center",
+                            borderRadius: "7px",
+                            // marginLeft: "2em",
+                            // marginRight: "6em"
+                          }}
+                        />
+                      </td>
+                      <td>
+                        <input
+                          style={{
+                            width: "100px",
+                            height: "35px",
+                            textAlign: "center",
+                            borderRadius: "7px",
+                            // marginLeft: "2em",
+                            // marginRight: "6em"
+                          }}
+                        />
+                      </td>
+                      <td>
+                        <input
+                          style={{
+                            width: "100px",
+                            height: "35px",
+                            textAlign: "center",
+                            borderRadius: "7px",
+                            // marginLeft: "2em",
+                            // marginRight: "6em"
+                          }}
+                        />
+                      </td>
+                      <td>
+                        <button
+                          className="btn btn-primary "
+                          style={{ width: "60px", height: "35px" }}
+                          onClick={updatePhotoscanItem}
+                          type="submit"
+                        >
+                          Save
+                        </button>
+                      </td>
+                    </div>
+                  </td>
+                </tr>
+                {/* {listphotoscans.map((row, index) => (
                   <TableRow key={row.id} row={row} index={listphotoscans[index]} />
-                ))}
+                ))} */}
               </tbody>
             </table>
-            
           </div>
           <div className="col-md-1"></div>
         </div>
