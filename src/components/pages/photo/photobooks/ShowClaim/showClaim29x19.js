@@ -1,9 +1,9 @@
-import MakeFancyboxBamBook23x23 from "../MakeFancyboxBamBook23x23";
+import Fancybox29x19 from "../MakeFancyBox/Fancybox29x19";
 
-export function ShowClaim23x23() {
+export function ShowClaim29x19() {
   return (
     <>
-      <h4 className="m-3 text-center text-danger">BamBook 23x23</h4>
+      <h4 className="m-3 text-center text-danger">Розміри 29x19</h4>
       <div className="row">
         <div className="col-md-8">
           <h3>Вимоги до файлів</h3>
@@ -32,25 +32,25 @@ export function ShowClaim23x23() {
                 <th scope="row" className="text-success">
                   Файл обкладинки для 3-25 розворотів
                 </th>
-                <td>519 х 274 мм (6130 х 3236 пікселів)</td>
+                <td>614 х 223 мм (7252 x 2634 пікселів)</td>
               </tr>
               <tr>
                 <th scope="row" className="text-success">
                   Файл обкладинки для 26-40 розворотів
                 </th>
-                <td>532 х 274 мм (6284 х 3236 пікселів)</td>
+                <td>627 х 223 мм (7406 x 2634 пікселів)</td>
               </tr>
               <tr>
                 <th scope="row" className="text-success">
                   Файл розвороту
                 </th>
-                <td>471 х 244 мм (5563 х 2882 пікселів)</td>
+                <td>566 х 193 мм (6685 x 2280 пікселів)</td>
               </tr>
             </tbody>
           </table>
         </div>
         <div className="col-md-4">
-          <MakeFancyboxBamBook23x23 />
+          <Fancybox29x19 />
         </div>
       </div>
     </>

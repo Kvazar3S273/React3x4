@@ -1,7 +1,7 @@
 import "../../../home/fancy.css";
 import Fancybox from "../../../home/fancy.js";
 
-export default function MakeFancyboxBamBook24x32() {
+export default function Fancybox24x32() {
   return (
     <div className="MakeFancybox">
         <div className="container">

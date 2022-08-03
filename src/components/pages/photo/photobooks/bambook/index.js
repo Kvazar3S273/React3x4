@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { AvailableBamBooks } from "../availableBooks";
 import { MoreServices } from "../moreServices"
+import { UpToBooksList } from "../upToBooksList";
 const BamBook = () => {
   //see more here:
   //https://www.npmjs.com/package/react-slideshow-image
@@ -253,10 +254,11 @@ const BamBook = () => {
 
         {AvailableBamBooks()}
 
-
         <ClaimBambook />
 
         {MoreServices()}
+
+        {UpToBooksList()}
 
 
       </div>

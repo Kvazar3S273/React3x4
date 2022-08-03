@@ -3,12 +3,13 @@ import { Zoom } from "react-slideshow-image";
 import { HashLink } from 'react-router-hash-link';
 import { ShowCalculator } from '../calculator';
 import "../../style.css";
-import ClaimBambook from "../bambook/claimBambook";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalculator
 } from "@fortawesome/free-solid-svg-icons";
 import { AvailableSlimBooks } from "../availableBooks";
+import { UpToBooksList } from "../upToBooksList";
+import ClaimSlimbook from "./claimSlimbook";
 
 const SlimBook = () => {
   //see more here:
@@ -318,8 +319,9 @@ const SlimBook = () => {
 
         {AvailableSlimBooks()}
 
+        <ClaimSlimbook />
 
-        <ClaimBambook />
+        {UpToBooksList()}
 
       </div>
     </>

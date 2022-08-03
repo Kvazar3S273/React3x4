@@ -1,7 +1,7 @@
 import "../../../home/fancy.css";
 import Fancybox from "../../../home/fancy.js";
 
-export default function MakeFancyboxBamBook23x23() {
+export default function Fancybox30x30() {
   return (
     <div className="MakeFancybox">
         <div className="container">
@@ -18,9 +18,9 @@ export default function MakeFancyboxBamBook23x23() {
                     <div className="faded-img col-7 p-4 rounded">
                         <a className="service-item d-block rounded text-center h-100 p-4" 
                             data-fancybox="gallery"
-                            href="/images/services/photo/photobooks/parameters/23x23/3-25_cover_23x23.jpg">
+                            href="/images/services/photo/photobooks/parameters/30x30/3-25_cover_30x30.jpg">
                             <img className="img-fluid rounded " 
-                            src="/images/services/photo/photobooks/parameters/23x23/3-25_cover_23x23.jpg" 
+                            src="/images/services/photo/photobooks/parameters/30x30/3-25_cover_30x30.jpg" 
                             alt="Файл обкладинки для 3-25 розворотів"/>
                             <div class="overlay">
                                 <div class="text">Файл обкладинки для 3-25 розворотів</div>
@@ -30,9 +30,9 @@ export default function MakeFancyboxBamBook23x23() {
                     <div className="faded-img col-7 p-4 rounded">
                         <a className="service-item d-block rounded text-center h-100 p-4" 
                             data-fancybox="gallery"
-                            href="/images/services/photo/photobooks/parameters/23x23/26-40_cover_23x23.jpg">
+                            href="/images/services/photo/photobooks/parameters/30x30/26-40_cover_30x30.jpg">
                             <img className="img-fluid rounded " 
-                            src="/images/services/photo/photobooks/parameters/23x23/26-40_cover_23x23.jpg" 
+                            src="/images/services/photo/photobooks/parameters/30x30/26-40_cover_30x30.jpg" 
                             alt="Файл обкладинки для 26-40 розворотів"/>
                             <div class="overlay">
                                 <div class="text">Файл обкладинки для 26-40 розворотів</div>
@@ -42,9 +42,9 @@ export default function MakeFancyboxBamBook23x23() {
                     <div className="faded-img col-7 p-4 rounded">
                         <a className="service-item d-block rounded text-center h-100 p-4" 
                             data-fancybox="gallery"
-                            href="/images/services/photo/photobooks/parameters/23x23/page_23x23.jpg">
+                            href="/images/services/photo/photobooks/parameters/30x30/page_30x30.jpg">
                             <img className="img-fluid rounded " 
-                            src="/images/services/photo/photobooks/parameters/23x23/page_23x23.jpg" 
+                            src="/images/services/photo/photobooks/parameters/30x30/page_30x30.jpg" 
                             alt="Файл розвороту"/>
                             <div class="overlay">
                                 <div class="text">Файл розвороту</div>
