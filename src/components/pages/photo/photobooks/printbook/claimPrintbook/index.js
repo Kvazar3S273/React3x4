@@ -1,26 +1,22 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 import "../../tabstyle.css"
-import { ShowClaim23x23 } from "../../ShowClaim/showClaim23x23";
-import { ShowClaim24x32 } from "../../ShowClaim/showClaim24x32";
-import { ShowClaim30x30 } from "../../ShowClaim/showClaim30x30";
-import { ShowClaim20x30 } from "../../ShowClaim/showClaim20x30";
-
+import { ShowClaim23x23Print } from "../../ShowClaim/showClaim23x23";
 
 
 const ClaimPrintbook = () => {
+  const [show23x23, setShow23x23] = useState(false);
   const [show30x30, setShow30x30] = useState(false);
   const [show20x30, setShow20x30] = useState(false);
   const [show18x24, setShow18x24] = useState(false);
-  const [show23x23, setShow23x23] = useState(false);
   const [show29x19, setShow29x19] = useState(false);
   const [show19x19, setShow19x19] = useState(false);
 
   const handleClick30x30 = (event) => {
+    setShow23x23(false);
     setShow30x30(true);
     setShow20x30(false);
     setShow18x24(false);
-    setShow23x23(false);
     setShow29x19(false);
     setShow19x19(false);
   };
@@ -74,6 +70,10 @@ const ClaimPrintbook = () => {
 
           <div className="books-tab-claim">
             <button
+              className={classNames("books-tablinks-claim", show23x23 ? "active" : "")}
+              onClick={handleClick23x23}> {" "} 23x23
+            </button>
+            <button
               className={classNames("books-tablinks-claim", show30x30 ? "active" : "")}
               onClick={handleClick30x30}> {" "} 30x30
             </button>
@@ -84,10 +84,6 @@ const ClaimPrintbook = () => {
             <button
               className={classNames("books-tablinks-claim", show18x24 ? "active" : "")}
               onClick={handleClick18x24}> {" "} 18x24
-            </button>
-            <button
-              className={classNames("books-tablinks-claim", show23x23 ? "active" : "")}
-              onClick={handleClick23x23}> {" "} 23x23
             </button>
             <button
               className={classNames("books-tablinks-claim", show29x19 ? "active" : "")}
@@ -101,23 +97,19 @@ const ClaimPrintbook = () => {
           </div>
 
           <div className="books-tabcontent-claim mb-4 overflow-auto">
-            {!show30x30 &&
+            {
+              !show23x23 &&
+              !show30x30 &&
               !show20x30 &&
               !show18x24 &&
-              !show23x23 &&
               !show29x19 &&
               !show19x19 &&
               (
                 <>
-                  {ShowClaim30x30()}
+                  {ShowClaim23x23Print()}
                 </>
               )}
-            {show30x30 && (<>{ShowClaim30x30()}</>)}
-            {show18x24 && (<>{ShowClaim18x24()}</>)}
-            {show20x30 && (<>{ShowClaim20x30()}</>)}
-            {show23x23 && (<>{ShowClaim23x23()}</>)}
-            {show29x19 && (<>{ShowClaim29x19()}</>)}
-            {show19x19 && (<>{ShowClaim19x19()}</>)}
+            {show23x23 && (<>{ShowClaim23x23Print()}</>)}
           </div>
         </div>
 

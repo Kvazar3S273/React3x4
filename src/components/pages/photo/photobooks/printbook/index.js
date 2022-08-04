@@ -7,9 +7,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalculator
 } from "@fortawesome/free-solid-svg-icons";
-import { AvailableSlimBooks } from "../availableBooks";
 import { UpToBooksList } from "../upToBooksList";
 import ClaimPrintbook from "./claimPrintbook";
+import { AvailablePrintBooks } from "../availableBooks";
 
 const PrintBook = () => {
   //see more here:
