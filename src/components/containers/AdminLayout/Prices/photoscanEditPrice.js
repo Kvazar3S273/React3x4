@@ -24,7 +24,7 @@ const PhotoscanEditPrice = () => {
   const [ isOpen, setIsOpen ] = useState(null);
   const [ foc, setFoc ] = useState(false); 
   const [ complete, setComplete ] = useState(false);
-  
+  const [ three, setThree]=useState(false);// it's hook for change focus into third input.
 
   useEffect(() => { dispatch(GetPhotoscans()); }, []);     
      
@@ -68,7 +68,8 @@ const PhotoscanEditPrice = () => {
            price1200dpi: item.price1200dpi,
          };
 
-         if(!foc){
+         console.log("data",data);
+         if(!foc && three){
           setEditPhotoscan(data);
          }         
                       
@@ -77,7 +78,7 @@ const PhotoscanEditPrice = () => {
        const handleInputChange =(dataType,values,index) => {
                     
        //console.log("Datatype",dataType);                 
-       //console.log("datas:",values);       
+       console.log("datas:",values);       
        setEditPhotoscan({...editPhotoscan, [dataType]: values})         
        //console.log("Final:",editFnd); 
       };
@@ -85,8 +86,12 @@ const PhotoscanEditPrice = () => {
 
       const handleToggle = () => {
         setFoc(preState => !preState);
+        setThree(false);
       }
 
+      const handleToggleForThree=()=>{
+        setThree(true);
+      }
 
       const updatePhotoscanItem = () => {
 
@@ -129,7 +134,7 @@ const PhotoscanEditPrice = () => {
 
               <td>
                 <input
-                  ref = { foc ? (input1) => {
+                  ref = { foc && !three ? (input1) => {
                           input1 && input1.focus();
                         } : input1 }
                   id="price300dpi"
@@ -152,7 +157,7 @@ const PhotoscanEditPrice = () => {
               </td>
               <td>
                 <input
-                  ref = { foc ? (input2) => {
+                  ref = { !foc && !three ? (input2) => {
                           input2 && input2.focus();
                         } : input2 }
                   id="price600dpi"
@@ -185,10 +190,10 @@ const PhotoscanEditPrice = () => {
                       index
                     )
                   }
-                  ref={ !foc ? (input3) => {
+                  ref={ three ? (input3) => {
                           input3 && input3.focus();
                         } : input3 }
-                  onClick={handleToggle}
+                  onClick={handleToggleForThree}
                   style={{
                     width: "100px",
                     height: "35px",
@@ -199,7 +204,7 @@ const PhotoscanEditPrice = () => {
               </td>
               <td>
                 <button
-                  className="btn btn-primary "
+                  className="btn btn-primary"
                   style={{ width: "60px", height: "35px" }}
                   onClick={updatePhotoscanItem}
                   type="submit"
