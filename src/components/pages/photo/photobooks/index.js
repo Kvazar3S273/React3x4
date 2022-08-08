@@ -3,6 +3,7 @@ import ServicePhotoBookCards from "./servicePhotoBookCards";
 import { useSelector } from "react-redux";
 import BamBook from "./bambook";
 import SlimBook from "./slimbook";
+import PrintBook from "./printbook";
 
 
 const Photobooks = () => {
@@ -26,6 +27,7 @@ const Photobooks = () => {
 
       {isPhotoPhotobooksBamBook ? <BamBook /> : ""}
       {isPhotoPhotobooksSlimBook ? <SlimBook /> : ""}
+      {isPhotoPhotobooksPrintBook? <PrintBook /> : ""}
 
       
     </div>
