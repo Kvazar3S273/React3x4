@@ -48,6 +48,7 @@ export function Available20x30() {
     </>
   );
 }
+
 export function Available19x19() {
   return (
     <>
@@ -64,6 +65,7 @@ export function Available19x19() {
     </>
   );
 }
+
 export function Available23x23() {
   return (
     <>
@@ -80,6 +82,7 @@ export function Available23x23() {
     </>
   );
 }
+
 export function Available23x18() {
   return (
     <>
@@ -96,6 +99,7 @@ export function Available23x18() {
     </>
   );
 }
+
 export function Available18x24() {
   return (
     <>
@@ -112,6 +116,7 @@ export function Available18x24() {
     </>
   );
 }
+
 export function Available29x19() {
   return (
     <>
@@ -128,6 +133,7 @@ export function Available29x19() {
     </>
   );
 }
+
 export function Available30x20() {
   return (
     <>
@@ -144,6 +150,7 @@ export function Available30x20() {
     </>
   );
 }
+
 export function Available20x20() {
   return (
     <>
@@ -160,6 +167,7 @@ export function Available20x20() {
     </>
   );
 }
+
 export function Available15x20() {
   return (
     <>
@@ -176,6 +184,7 @@ export function Available15x20() {
     </>
   );
 }
+
 export function Available20x15() {
   return (
     <>
@@ -192,7 +201,6 @@ export function Available20x15() {
     </>
   );
 }
-
 
 export function AvailableBamBooks() {
   return (
@@ -218,49 +226,47 @@ export function AvailableBamBooks() {
 }
 
 export function AvailableSlimBooks() {
-    return (
-      <>
-        <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
-          <h1 className="text-center">Доступні формати</h1>
-          <p className="text-center">
-            Пропонуємо Вам наступні формати фотокниг Slimbook:
-          </p>
-  
-          <ul className="list-group list-group-horizontal justify-content-center">
-              {Available30x30()}
-              {Available20x30()}
-              {Available18x24()}
-              {Available23x23()}
-              {Available29x19()}
-              {Available19x19()}
-          </ul>
-          
-        </div>
-      </>
-    );
-  }
+  return (
+    <>
+      <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
+        <h1 className="text-center">Доступні формати</h1>
+        <p className="text-center">
+          Пропонуємо Вам наступні формати фотокниг Slimbook:
+        </p>
+
+        <ul className="list-group list-group-horizontal justify-content-center">
+          {Available30x30()}
+          {Available20x30()}
+          {Available18x24()}
+          {Available23x23()}
+          {Available29x19()}
+          {Available19x19()}
+        </ul>
+      </div>
+    </>
+  );
+}
 
 export function AvailablePrintBooks() {
-    return (
-      <>
-        <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
-          <h1 className="text-center">Доступні формати</h1>
-          <p className="text-center">
-            Пропонуємо Вам наступні формати фотокниг Printbook:
-          </p>
-  
-          <ul className="list-group list-group-horizontal justify-content-center">
-            {Available23x23()}
-            {Available24x32()}
-            {Available30x30()}
-            {Available20x30()}
-            {Available30x20()}
-            {Available20x20()}
-            {Available15x20()}
-            {Available20x15()}
-          </ul>
-          
-        </div>
-      </>
-    );
-  }
+  return (
+    <>
+      <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
+        <h1 className="text-center">Доступні формати</h1>
+        <p className="text-center">
+          Пропонуємо Вам наступні формати фотокниг Printbook:
+        </p>
+
+        <ul className="list-group list-group-horizontal justify-content-center">
+          {Available23x23()}
+          {Available24x32()}
+          {Available30x30()}
+          {Available20x30()}
+          {Available30x20()}
+          {Available20x20()}
+          {Available15x20()}
+          {Available20x15()}
+        </ul>
+      </div>
+    </>
+  );
+}
