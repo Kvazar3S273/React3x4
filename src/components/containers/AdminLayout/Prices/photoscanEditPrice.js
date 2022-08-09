@@ -25,6 +25,7 @@ const PhotoscanEditPrice = () => {
   const [ foc, setFoc ] = useState(false); 
   const [ complete, setComplete ] = useState(false);
   const [ three, setThree]=useState(false);// it's hook for change focus into third input.
+  const [changeItem,setChangeItem]=useState(null);//for click item when click to other row.
 
   useEffect(() => { dispatch(GetPhotoscans()); }, []);     
      
@@ -58,6 +59,7 @@ const PhotoscanEditPrice = () => {
          console.log("Row",row);
          //console.log("e.currentTarget.id",e.currentTarget.id)
          const item = listphotoscans.find(row => row.id == e.currentTarget.id)
+         //setEditPhotoscan({...editPhotoscan})
 
          setIsOpen(item.id);  
          setComplete(true);
@@ -68,18 +70,42 @@ const PhotoscanEditPrice = () => {
            price1200dpi: item.price1200dpi,
          };
 
-         console.log("data",data);
-         if(!foc && three){
+         if(item.id!=changeItem){
           setEditPhotoscan(data);
-         }         
-                      
+          setChangeItem(null);
+          console.log("not equal")
+         }
+
+         console.log("data",data);
+         console.log("item:",item);
+         const edit=editPhotoscan.price300dpi;
+         console.log("edit",edit);
+         if(data.price300dpi!=edit){
+          //setEditPhotoscan({price300dpi: edit})
+          console.log("////",editPhotoscan.price300dpi)
+          //console.log("+++")
+         }
+         //  else{
+        //   setEditPhotoscan(data);
+        //  }
+         // if(!foc && three ){
+          //setEditPhotoscan(data);
+        //  console.log("data.price300dpi",data.price300dpi);
+        //  console.log("item.price300dpi",item.price300dpi);
+        //  console.log("editPhotoscan.price300dpi",editPhotoscan.price300dpi);
+        //  console.log("item.id",item.id)
+        // } 
+         
        }
 
        const handleInputChange =(dataType,values,index) => {
-                    
-       //console.log("Datatype",dataType);                 
-       console.log("datas:",values);       
-       setEditPhotoscan({...editPhotoscan, [dataType]: values})         
+        setChangeItem(index.id);       
+        console.log("Datatype",dataType);                 
+        console.log("datas values:",values);     
+        console.log("editPhotoscan:",editPhotoscan); 
+        console.log("INDEX:",index.id);   
+       setEditPhotoscan({...editPhotoscan, [dataType]: values});
+       console.log("edit",editPhotoscan);         
        //console.log("Final:",editFnd); 
       };
 
