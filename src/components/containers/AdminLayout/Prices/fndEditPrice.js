@@ -37,7 +37,7 @@ const FndEditPrice = () => {
             <table className="table table-hover">
               <thead>
                 <tr className="table-primary">
-                  <th scope="col">Документ</th>
+                  <th scope="col">Документ</th> 
                   <th scope="col">Кількість</th>
                   <th scope="col" className="text-center">Ціна</th>
                   <th scope="col">Архів</th>

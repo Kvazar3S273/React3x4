@@ -13,12 +13,11 @@ const DuplicateEditPrice = () => {
     id: null,
     priceFirst: null,
     priceEachOther: null
-    
   };
 
   const navigator = useNavigate();
   const dispatch = useDispatch();
-  const { listDuplicates } = useSelector((state) => state.duplicate);
+  const { listduplicates } = useSelector((state) => state.duplicate);
   const [ editDuplicate, setEditDuplicate ] = useState(initialDuplicateState);
   const [ isOpen, setIsOpen ] = useState(null);
   const [ foc, setFoc ] = useState(false); 
@@ -30,7 +29,7 @@ const DuplicateEditPrice = () => {
           
       }, []);     
      
-      const Table = ({ listDuplicates }) => (
+      const Table = ({ listduplicates }) => (
         <div className="row">
           <div className="col-md-1"></div>
           <div className="col-md-10">
@@ -38,13 +37,13 @@ const DuplicateEditPrice = () => {
               <thead>
                 <tr className="table-primary">
                   <th scope="col">Формат</th>
-                  <th scope="col">Ціна за перший</th>
+                  <th scope="col" className="text-center">Ціна за перший</th>
                   <th scope="col" className="text-center">Кожен наступний</th>
                 </tr>
               </thead>
               <tbody>
-                {listDuplicates.map((row, index) => (
-                  <TableRow key={row.id} row={row} index={listDuplicates[index]} />
+                {listduplicates.map((row, index) => (
+                  <TableRow key={row.id} row={row} index={listduplicates[index]} />
                 ))}
               </tbody>
             </table>
@@ -58,7 +57,7 @@ const DuplicateEditPrice = () => {
                
          console.log("Row",row);
          //console.log("e.currentTarget.id",e.currentTarget.id)
-         const item = listDuplicates.find(row => row.id == e.currentTarget.id)
+         const item = listduplicates.find(row => row.id == e.currentTarget.id)
 
          setIsOpen(item.id);  
          setComplete(true);
@@ -94,8 +93,8 @@ const DuplicateEditPrice = () => {
         const idItem = editDuplicate.id;
 
         const upd = {
-          priceFirst:editDuplicate.priceFirst,
-          priceEachOther:editDuplicate.priceEachOther
+          priceFirst: editDuplicate.priceFirst,
+          priceEachOther: editDuplicate.priceEachOther
         }
 
         dispatch(UpdateDuplicateTable(idItem,upd))
@@ -199,7 +198,7 @@ const DuplicateEditPrice = () => {
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
         <h1 className="text-center">Дублікати фотографій</h1>
         <h4 className="text-center text-danger">Редагування цін</h4>
-        <Table listDuplicates={listDuplicates}  />       
+        <Table listduplicates={listduplicates}  />       
       </div>
     </div>
   );
