@@ -12,11 +12,13 @@ import {
 import FndEditPrice from "./fndEditPrice";
 import FotoprintEditPrice from "./fotoprintEditPrice";
 import PhotoscanEditPrice from "./photoscanEditPrice";
+import DuplicateEditPrice from "./duplicateEditPrice";
 
 const PhotoChangePrice = () => {
   const [fndEdit, setfndEdit] = useState(false);
   const [fotoprintEdit, setfotoprintEdit] = useState(false);
   const [photoscanEdit, setPhotoscanEdit] = useState(false);
+  const [duplicateEdit, setDuplicateEdit] = useState(false);
   const handleClickFndEdit = (event) => {
     // 👇️ щоб по кліку відкривалось і по наступному закривалось
     // setfndEdit((current) => !current);
@@ -24,16 +26,25 @@ const PhotoChangePrice = () => {
     setfndEdit(true);
     setfotoprintEdit(false);
     setPhotoscanEdit(false);
+    setDuplicateEdit(false);
   };
   const handleClickFotoprintEdit = (event) => {
     setfndEdit(false);
     setfotoprintEdit(true);
     setPhotoscanEdit(false);
+    setDuplicateEdit(false);
   };
   const handleClickPhotoscanEdit = (event) => {
     setfndEdit(false);
     setfotoprintEdit(false);
     setPhotoscanEdit(true);
+    setDuplicateEdit(false);
+  };
+  const handleClickDuplicateEdit = (event) => {
+    setfndEdit(false);
+    setfotoprintEdit(false);
+    setPhotoscanEdit(false);
+    setDuplicateEdit(true);
   };
   return (
     <>
@@ -101,7 +112,8 @@ const PhotoChangePrice = () => {
             </div>
 
             {/* Картка 4 */}
-            <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded">
+            <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
+             onClick={handleClickDuplicateEdit}>
               <div className="row">
                 <div className="col-md-3">
                   <i
@@ -156,6 +168,7 @@ const PhotoChangePrice = () => {
           {fndEdit && <FndEditPrice />}
           {fotoprintEdit && <FotoprintEditPrice />}
           {photoscanEdit && <PhotoscanEditPrice />}
+          {duplicateEdit && <DuplicateEditPrice />}
 
         </div>
       </div>

@@ -140,6 +140,9 @@ const Header = () => {
                 <Link className="nav-link" aria-current="page" to="/" >
                 Головна
                 </Link>
+                <Link className="nav-link" to="/admin">
+                  admin
+                </Link>
             </Nav>
 
             {/* Фотопослуги */}
