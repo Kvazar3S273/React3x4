@@ -31,14 +31,12 @@ const FotoprintEditPrice = () => {
     <div className="row">
       <div className="col-md-1"></div>
       <div className="col-md-10">
-        <table className="table table-hover">
+        <table className="table table-striped text-center">
           <thead>
             <tr className="table-primary">
               <th scope="col">Формат</th>
               <th scope="col" className="text-center">Точні розміри, мм</th>
-              <th scope="col" className="text-center">
-                Ціна
-              </th>
+              <th scope="col" className="text-center">Ціна</th>
             </tr>
           </thead>
           <tbody>
@@ -111,7 +109,7 @@ const FotoprintEditPrice = () => {
       <th scope="row">{row.format}</th>
       <td className="text-center">{row.exactSizes}</td>
       {isOpen == row.id && complete ? (
-          <td>
+          <td >
             <div
               className="d-flex justify-content-end"
               style={{ left: "3em" }}

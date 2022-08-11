@@ -10,6 +10,7 @@ import {
 import { AvailableSlimBooks } from "../availableBooks";
 import { UpToBooksList } from "../upToBooksList";
 import ClaimSlimbook from "./claimSlimbook";
+import { MoreServices } from "../moreServices";
 
 const SlimBook = () => {
   //see more here:
@@ -320,6 +321,8 @@ const SlimBook = () => {
         {AvailableSlimBooks()}
 
         <ClaimSlimbook />
+
+        {MoreServices()}
 
         {UpToBooksList()}
 

@@ -2,64 +2,99 @@ import React, { useState } from "react";
 import classNames from "classnames";
 import "../../tabstyle.css"
 import { ShowClaim23x23Print } from "../../ShowClaim/showClaim23x23";
-
+import { ShowClaim24x32Print } from "../../ShowClaim/showClaim24x32";
 
 const ClaimPrintbook = () => {
   const [show23x23, setShow23x23] = useState(false);
+  const [show24x32, setShow24x32] = useState(false);
   const [show30x30, setShow30x30] = useState(false);
   const [show20x30, setShow20x30] = useState(false);
-  const [show18x24, setShow18x24] = useState(false);
-  const [show29x19, setShow29x19] = useState(false);
-  const [show19x19, setShow19x19] = useState(false);
+  const [show30x20, setShow30x20] = useState(false);
+  const [show20x20, setShow20x20] = useState(false);
+  const [show15x20, setShow15x20] = useState(false);
+  const [show20x15, setShow20x15] = useState(false);
 
+  const handleClick23x23 = (event) => {
+    setShow23x23(true);
+    setShow24x32(false);
+    setShow30x30(false);
+    setShow20x30(false);
+    setShow30x20(false);
+    setShow20x20(false);
+    setShow15x20(false);
+    setShow20x15(false);
+  };
+  const handleClick24x32 = (event) => {
+    setShow23x23(false);
+    setShow24x32(true);
+    setShow30x30(false);
+    setShow20x30(false);
+    setShow30x20(false);
+    setShow20x20(false);
+    setShow15x20(false);
+    setShow20x15(false);
+  };
   const handleClick30x30 = (event) => {
     setShow23x23(false);
+    setShow24x32(false);
     setShow30x30(true);
     setShow20x30(false);
-    setShow18x24(false);
-    setShow29x19(false);
-    setShow19x19(false);
+    setShow30x20(false);
+    setShow20x20(false);
+    setShow15x20(false);
+    setShow20x15(false);
   };
   const handleClick20x30 = (event) => {
+    setShow23x23(false);
+    setShow24x32(false);
     setShow30x30(false);
     setShow20x30(true);
-    setShow18x24(false);
-    setShow23x23(false);
-    setShow29x19(false);
-    setShow19x19(false);
+    setShow30x20(false);
+    setShow20x20(false);
+    setShow15x20(false);
+    setShow20x15(false);
   };
-  const handleClick18x24 = (event) => {
+  const handleClick30x20 = (event) => {
+    setShow23x23(false);
+    setShow24x32(false);
     setShow30x30(false);
     setShow20x30(false);
-    setShow18x24(true);
-    setShow23x23(false);
-    setShow29x19(false);
-    setShow19x19(false);
+    setShow30x20(true);
+    setShow20x20(false);
+    setShow15x20(false);
+    setShow20x15(false);
   };
-  const handleClick23x23 = (event) => {
+  const handleClick20x20 = (event) => {
+    setShow23x23(false);
+    setShow24x32(false);
     setShow30x30(false);
     setShow20x30(false);
-    setShow18x24(false);
-    setShow23x23(true);
-    setShow29x19(false);
-    setShow19x19(false);
+    setShow30x20(false);
+    setShow20x20(true);
+    setShow15x20(false);
+    setShow20x15(false);
   };
-  const handleClick29x19 = (event) => {
+  const handleClick15x20 = (event) => {
+    setShow23x23(false);
+    setShow24x32(false);
     setShow30x30(false);
     setShow20x30(false);
-    setShow18x24(false);
-    setShow23x23(false);
-    setShow29x19(true);
-    setShow19x19(false);
+    setShow30x20(false);
+    setShow20x20(false);
+    setShow15x20(true);
+    setShow20x15(false);
   };
-  const handleClick19x19 = (event) => {
+  const handleClick20x15 = (event) => {
+    setShow23x23(false);
+    setShow24x32(false);
     setShow30x30(false);
     setShow20x30(false);
-    setShow18x24(false);
-    setShow23x23(false);
-    setShow29x19(false);
-    setShow19x19(true);
+    setShow30x20(false);
+    setShow20x20(false);
+    setShow15x20(false);
+    setShow20x15(true);
   };
+  
  
   
   return (
@@ -74,6 +109,10 @@ const ClaimPrintbook = () => {
               onClick={handleClick23x23}> {" "} 23x23
             </button>
             <button
+              className={classNames("books-tablinks-claim", show24x32 ? "active" : "")}
+              onClick={handleClick24x32}> {" "} 24x32
+            </button>
+            <button
               className={classNames("books-tablinks-claim", show30x30 ? "active" : "")}
               onClick={handleClick30x30}> {" "} 30x30
             </button>
@@ -82,34 +121,41 @@ const ClaimPrintbook = () => {
               onClick={handleClick20x30}> {" "} 20x30
             </button>
             <button
-              className={classNames("books-tablinks-claim", show18x24 ? "active" : "")}
-              onClick={handleClick18x24}> {" "} 18x24
+              className={classNames("books-tablinks-claim", show30x20 ? "active" : "")}
+              onClick={handleClick30x20}> {" "} 30x20
             </button>
             <button
-              className={classNames("books-tablinks-claim", show29x19 ? "active" : "")}
-              onClick={handleClick29x19}> {" "} 29x19
+              className={classNames("books-tablinks-claim", show20x20 ? "active" : "")}
+              onClick={handleClick20x20}> {" "} 20x20
             </button>
             <button
-              className={classNames("books-tablinks-claim", show19x19 ? "active" : "")}
-              onClick={handleClick19x19}> {" "} 19x19
+              className={classNames("books-tablinks-claim", show15x20 ? "active" : "")}
+              onClick={handleClick15x20}> {" "} 15x20
+            </button>
+            <button
+              className={classNames("books-tablinks-claim", show20x15 ? "active" : "")}
+              onClick={handleClick20x15}> {" "} 20x15
             </button>
             
           </div>
 
-          <div className="books-tabcontent-claim mb-4 overflow-auto">
+          <div className="books-tabcontent-claim-print mb-4 overflow-auto">
             {
               !show23x23 &&
+              !show24x32 &&
               !show30x30 &&
               !show20x30 &&
-              !show18x24 &&
-              !show29x19 &&
-              !show19x19 &&
+              !show30x20 &&
+              !show20x20 &&
+              !show15x20 &&
+              !show20x15 &&
               (
                 <>
                   {ShowClaim23x23Print()}
                 </>
               )}
             {show23x23 && (<>{ShowClaim23x23Print()}</>)}
+            {show24x32 && (<>{ShowClaim24x32Print()}</>)}
           </div>
         </div>
 

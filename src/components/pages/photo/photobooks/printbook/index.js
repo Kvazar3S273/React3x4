@@ -10,49 +10,44 @@ import {
 import { UpToBooksList } from "../upToBooksList";
 import ClaimPrintbook from "./claimPrintbook";
 import { AvailablePrintBooks } from "../availableBooks";
+import { MoreServices } from "../moreServices";
 
 const PrintBook = () => {
   //see more here:
   //https://www.npmjs.com/package/react-slideshow-image
 
   const img_slider1 = [
-    "images/services/photo/photobooks/SlimBook/1.jpg",
-    "images/services/photo/photobooks/SlimBook/2.jpg",
-    "images/services/photo/photobooks/SlimBook/3.jpg",
+    "images/services/photo/photobooks/PrintBook/1.jpg",
+    "images/services/photo/photobooks/PrintBook/2.jpg",
+    "images/services/photo/photobooks/PrintBook/3.jpg",
+    "images/services/photo/photobooks/PrintBook/4.jpg"
   ];
   const img_slider2 = [
-    "images/services/photo/photobooks/SlimBook/4.jpg",
-    "images/services/photo/photobooks/SlimBook/5.jpg",
+    "images/services/photo/photobooks/PrintBook/5.jpg",
+    "images/services/photo/photobooks/PrintBook/6.jpg",
+    "images/services/photo/photobooks/PrintBook/7.jpg"
   ];
   const img_slider3 = [
-    "images/services/photo/photobooks/SlimBook/6.jpg",
-    "images/services/photo/photobooks/SlimBook/7.jpg",
+    "images/services/photo/photobooks/PrintBook/8.jpg",
+    "images/services/photo/photobooks/PrintBook/9.jpg"
   ];
   const img_slider4 = [
-    "images/services/photo/photobooks/SlimBook/8.jpg",
-    "images/services/photo/photobooks/SlimBook/9.jpg",
+    "images/services/photo/photobooks/PrintBook/10.jpg",
+    "images/services/photo/photobooks/PrintBook/11.jpg"
   ];
   const img_slider5 = [
-    "images/services/photo/photobooks/SlimBook/10.jpg",
-    "images/services/photo/photobooks/SlimBook/11.jpg",
-    "images/services/photo/photobooks/SlimBook/12.jpg",
-    "images/services/photo/photobooks/SlimBook/13.jpg",
-    "images/services/photo/photobooks/SlimBook/14.jpg",
-    "images/services/photo/photobooks/SlimBook/15.jpg",
-    "images/services/photo/photobooks/SlimBook/16.jpg",
+    "images/services/photo/photobooks/PrintBook/12.jpg",
+    "images/services/photo/photobooks/PrintBook/13.jpg"
   ];
   const img_slider6 = [
-    "images/services/photo/photobooks/SlimBook/17.jpg",
-    "images/services/photo/photobooks/SlimBook/18.jpg",
-    "images/services/photo/photobooks/SlimBook/19.jpg",
-    "images/services/photo/photobooks/SlimBook/20.jpg",
-    "images/services/photo/photobooks/SlimBook/21.jpg",
+    "images/services/photo/photobooks/PrintBook/14.jpg",
+    "images/services/photo/photobooks/PrintBook/15.jpg",
+    "images/services/photo/photobooks/PrintBook/16.jpg",
+    "images/services/photo/photobooks/PrintBook/17.jpg"
   ];
   const img_slider7 = [
-    "images/services/photo/photobooks/SlimBook/22.jpg",
-    "images/services/photo/photobooks/SlimBook/23.jpg",
-    "images/services/photo/photobooks/SlimBook/24.jpg",
-    "images/services/photo/photobooks/SlimBook/25.jpg",
+    "images/services/photo/photobooks/PrintBook/18.jpg",
+    "images/services/photo/photobooks/PrintBook/19.jpg"
   ];
 
   const zoomInProperties = {
@@ -315,6 +310,8 @@ const PrintBook = () => {
         {AvailablePrintBooks()}
 
         <ClaimPrintbook />
+
+        {MoreServices()}
 
         {UpToBooksList()}
 

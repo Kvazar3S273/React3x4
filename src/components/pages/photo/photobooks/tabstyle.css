@@ -84,6 +84,17 @@
     /* border-left: none; */
     height: 420px;
   }
+  .books-tabcontent-claim-print {
+    float: left;
+    background-color: #f1f1f1;
+    padding: 10px 12px;
+    border: none;
+    /* border: 2px solid rgb(168, 168, 168); */
+    border-left: 2px solid #ccc;
+    width: 91%;
+    /* border-left: none; */
+    height: 560px;
+  }
   .books-tabsimg {
     width: 100px;
   }

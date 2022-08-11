@@ -22,11 +22,11 @@ export default function Fancybox24x32Print() {
                 <a
                   className="service-item d-block rounded text-center h-100 p-4"
                   data-fancybox="gallery"
-                  href="/images/services/photo/photobooks/parameters/Printbooks/23x23/cover_printbook_23x23.jpg"
+                  href="/images/services/photo/photobooks/parameters/Printbooks/24x32/cover_printbook_24x32.jpg"
                 >
                   <img
                     className="img-fluid rounded "
-                    src="/images/services/photo/photobooks/parameters/Printbooks/23x23/cover_printbook_23x23.jpg"
+                    src="/images/services/photo/photobooks/parameters/Printbooks/24x32/cover_printbook_24x32.jpg"
                     alt="Файл обкладинки"
                   />
                   <div class="overlay">
@@ -38,11 +38,11 @@ export default function Fancybox24x32Print() {
                 <a
                   className="service-item d-block rounded text-center h-100 p-4"
                   data-fancybox="gallery"
-                  href="/images/services/photo/photobooks/parameters/Printbooks/23x23/page_printbook_23x23.jpg"
+                  href="/images/services/photo/photobooks/parameters/Printbooks/24x32/page_printbook_24x32.jpg"
                 >
                   <img
                     className="img-fluid rounded "
-                    src="/images/services/photo/photobooks/parameters/Printbooks/23x23/page_printbook_23x23.jpg"
+                    src="/images/services/photo/photobooks/parameters/Printbooks/24x32/page_printbook_24x32.jpg"
                     alt="Файл сторінки"
                   />
                   <div class="overlay">

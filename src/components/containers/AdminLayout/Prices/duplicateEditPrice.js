@@ -33,7 +33,7 @@ const DuplicateEditPrice = () => {
         <div className="row">
           <div className="col-md-1"></div>
           <div className="col-md-10">
-            <table className="table table-hover">
+            <table className="table table-striped text-center">
               <thead>
                 <tr className="table-primary">
                   <th scope="col">Формат</th>
@@ -117,10 +117,13 @@ const DuplicateEditPrice = () => {
         onClick={(e) => RowHandleClick(e, row)}
       >
         <th scope="row">{row.format}</th>
-        {/* <td className="text-center">{row.qty}</td> */}
-        {/* <td>{row.price}</td> */}
         {isOpen == row.id && complete ? (
-          <td colSpan={2} className="position-relative">
+          <td colSpan={2}>
+            <div
+              className="d-flex justify-content-between"
+              style={{ left: "1em" }}
+            >
+              <td></td>
             <td >
               <input
                 ref={
@@ -170,10 +173,11 @@ const DuplicateEditPrice = () => {
                   marginRight: "8px",
                 }}
               />
+              </td>
               <td>
                 <button
-                  className="btn btn-primary position-absolute end-0 "
-                  style={{ width: "60px", height: "35px", top:"0.5em", right:"0.5em" }}
+                  className="btn btn-primary"
+                  style={{ width: "60px", height: "35px"}}
                   onClick={updateDuplicateItem}
                   type="submit"
                 >
@@ -181,8 +185,8 @@ const DuplicateEditPrice = () => {
                 </button>
 
               </td>
+              </div>
             </td>
-          </td>
         ) : (
           <React.Fragment>
             <td className="text-center">{row.priceFirst}</td>
