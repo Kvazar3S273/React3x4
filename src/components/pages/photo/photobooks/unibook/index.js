@@ -12,7 +12,7 @@ import { UpToBooksList } from "../upToBooksList";
 import { MoreServices } from "../moreServices";
 import ClaimSlimbook from "../slimbook/claimSlimbook";
 
-const PhotoBook = () => {
+const UniBook = () => {
   //see more here:
   //https://www.npmjs.com/package/react-slideshow-image
 
@@ -60,9 +60,9 @@ const PhotoBook = () => {
     <>
       <div className="row mt-3 mb-3">
         <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
-          <h1 className="text-center">Фотокниги PhotoBook</h1>
+          <h1 className="text-center">Фотокниги UniBook</h1>
 
-          {/* Про PhotoBook */}
+          {/* Про UniBook */}
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-7">
               <Zoom {...zoomInProperties}>
@@ -333,4 +333,4 @@ const PhotoBook = () => {
     </>
   );
 };
-export default PhotoBook;
+export default UniBook;

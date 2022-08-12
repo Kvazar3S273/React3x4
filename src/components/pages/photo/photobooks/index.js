@@ -5,6 +5,7 @@ import BamBook from "./bambook";
 import SlimBook from "./slimbook";
 import PrintBook from "./printbook";
 import PhotoBook from "./photobook";
+import UniBook from "./unibook";
 
 
 const Photobooks = () => {
@@ -26,6 +27,7 @@ const Photobooks = () => {
 
       <ServicePhotoBookCards />
 
+      {isPhotoPhotobooksUniBook ? <UniBook /> : ""}
       {isPhotoPhotobooksBamBook ? <BamBook /> : ""}
       {isPhotoPhotobooksSlimBook ? <SlimBook /> : ""}
       {isPhotoPhotobooksPrintBook? <PrintBook /> : ""}
