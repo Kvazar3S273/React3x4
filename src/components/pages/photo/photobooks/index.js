@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import BamBook from "./bambook";
 import SlimBook from "./slimbook";
 import PrintBook from "./printbook";
+import PhotoBook from "./photobook";
 
 
 const Photobooks = () => {
@@ -28,6 +29,7 @@ const Photobooks = () => {
       {isPhotoPhotobooksBamBook ? <BamBook /> : ""}
       {isPhotoPhotobooksSlimBook ? <SlimBook /> : ""}
       {isPhotoPhotobooksPrintBook? <PrintBook /> : ""}
+      {isPhotoPhotobooksPhotoBook? <PhotoBook /> : ""}
 
       
     </div>
