@@ -3,6 +3,12 @@ import classNames from "classnames";
 import "../../tabstyle.css"
 import { ShowClaim23x23Print } from "../../ShowClaim/showClaim23x23";
 import { ShowClaim24x32Print } from "../../ShowClaim/showClaim24x32";
+import { ShowClaim30x30Print } from "../../ShowClaim/showClaim30x30";
+import { ShowClaim20x30Print } from "../../ShowClaim/showClaim20x30";
+import { ShowClaim30x20Print } from "../../ShowClaim/showClaim30x20";
+import { ShowClaim20x20Print } from "../../ShowClaim/showClaim20x20";
+import { ShowClaim15x20Print } from "../../ShowClaim/showClaim15x20";
+import { ShowClaim20x15Print } from "../../ShowClaim/showClaim20x15";
 
 const ClaimPrintbook = () => {
   const [show23x23, setShow23x23] = useState(false);
@@ -156,6 +162,12 @@ const ClaimPrintbook = () => {
               )}
             {show23x23 && (<>{ShowClaim23x23Print()}</>)}
             {show24x32 && (<>{ShowClaim24x32Print()}</>)}
+            {show30x30 && (<>{ShowClaim30x30Print()}</>)}
+            {show20x30 && (<>{ShowClaim20x30Print()}</>)}
+            {show30x20 && (<>{ShowClaim30x20Print()}</>)}
+            {show20x20 && (<>{ShowClaim20x20Print()}</>)}
+            {show15x20 && (<>{ShowClaim15x20Print()}</>)}
+            {show20x15 && (<>{ShowClaim20x15Print()}</>)}
           </div>
         </div>
 

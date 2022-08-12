@@ -1,7 +1,7 @@
 import "../../../home/fancy.css";
 import Fancybox from "../../../home/fancy.js";
 
-export default function Fancybox30x20Print() {
+export default function Fancybox20x15Print() {
   return (
     <div className="MakeFancybox">
       <div className="container">
@@ -22,11 +22,11 @@ export default function Fancybox30x20Print() {
                 <a
                   className="service-item d-block rounded text-center h-100 p-4"
                   data-fancybox="gallery"
-                  href="/images/services/photo/photobooks/parameters/Printbooks/30x20/cover_printbook_30x20.jpg"
+                  href="/images/services/photo/photobooks/parameters/Printbooks/20x15/cover_printbook_20x15.jpg"
                 >
                   <img
                     className="img-fluid rounded "
-                    src="/images/services/photo/photobooks/parameters/Printbooks/30x20/cover_printbook_30x20.jpg"
+                    src="/images/services/photo/photobooks/parameters/Printbooks/20x15/cover_printbook_20x15.jpg"
                     alt="Файл обкладинки"
                   />
                   <div class="overlay">
@@ -38,11 +38,11 @@ export default function Fancybox30x20Print() {
                 <a
                   className="service-item d-block rounded text-center h-100 p-4"
                   data-fancybox="gallery"
-                  href="/images/services/photo/photobooks/parameters/Printbooks/30x20/page_printbook_30x20.jpg"
+                  href="/images/services/photo/photobooks/parameters/Printbooks/20x15/page_printbook_20x15.jpg"
                 >
                   <img
                     className="img-fluid rounded "
-                    src="/images/services/photo/photobooks/parameters/Printbooks/30x20/page_printbook_30x20.jpg"
+                    src="/images/services/photo/photobooks/parameters/Printbooks/20x15/page_printbook_20x15.jpg"
                     alt="Файл сторінки"
                   />
                   <div class="overlay">
