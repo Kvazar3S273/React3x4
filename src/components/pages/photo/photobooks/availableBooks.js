@@ -247,6 +247,27 @@ export function AvailableSlimBooks() {
   );
 }
 
+export function AvailableUniBooks() {
+  return (
+    <>
+      <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
+        <h1 className="text-center">Доступні формати</h1>
+        <p className="text-center">
+          Пропонуємо Вам наступні формати фотокниг Unibook:
+        </p>
+
+        <ul className="list-group list-group-horizontal justify-content-center">
+          {Available30x30()}
+          {Available20x30()}
+          {Available23x23()}
+          {Available29x19()}
+          {Available19x19()}
+        </ul>
+      </div>
+    </>
+  );
+}
+
 export function AvailablePrintBooks() {
   return (
     <>

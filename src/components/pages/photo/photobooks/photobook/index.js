@@ -176,6 +176,7 @@ const PhotoBook = () => {
             <img
                 src="images/services/photo/photobooks/PhotoBook/11.jpg"
                 alt="Фотообкладинка"
+                style={{width:"100%"}}
               />
             </div>
             <div className="col-sm-12 col-md-5 px-3">
@@ -218,6 +219,7 @@ const PhotoBook = () => {
             <img
                 src="images/services/photo/photobooks/PhotoBook/19.jpg"
                 alt="Шкірзам з фотовставкою"
+                style={{width:"100%"}}
               />
             </div>
             <div className="col-sm-12 col-md-5 px-3">

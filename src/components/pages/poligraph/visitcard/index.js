@@ -1,6 +1,5 @@
 import React from "react";
 import "react-slideshow-image/dist/styles.css";
-// import "../style.css"
 
 const Visitcard = () => {
 
@@ -69,8 +68,6 @@ const Visitcard = () => {
           <div className="col-md-1"></div>
         </div>
 
-        
-
         {/* Прайс */}
         <div className="row">
           <h3 className="text-center text-danger my-4">
@@ -112,25 +109,18 @@ const Visitcard = () => {
                   </tbody>
                 </table>
 
-                <button
-                  type="submit"
-                  className="btn btn-danger btn-lg mt-4 mb-4 p-3"
-                  // onClick={}
-                  // id=""
-                  style={{ width: "100%", background: "#B31942" }}
+                <a
+                  href="http://localhost:5000/api/files/getfile/prices.xlsx"
+                  target="_blank"
                 >
-                  Скачати прейскурант на візитки
-                </button>
-
+                  Download
+                </a>
 
               </div>
               <div className="col-md-3"></div>
             </div>
           </div>
         </div>
-
-        
-
     
       </div>
     </div>

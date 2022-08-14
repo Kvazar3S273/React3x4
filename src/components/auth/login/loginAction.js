@@ -9,10 +9,11 @@ export const LoginUser = (usermodel) => async (dispatch) => {
 
     var jwt_token = result.data.token;
     var cur_user = jwt.decode(jwt_token);
-    console.log("Verified:", cur_user);
+    console.log("Verified login:", cur_user);
     console.log("Verified.roles:", cur_user.roles);
     dispatch({ type: LOGIN_AUTH, payload: cur_user });
     localStorage.setItem("user", jwt_token);
+    
     authTokenRequest(jwt_token);
     return Promise.resolve(cur_user);
     
@@ -21,4 +22,15 @@ export const LoginUser = (usermodel) => async (dispatch) => {
     dispatch({ type: LOGIN_ERROR, payload: errorsdata.data });
     return Promise.reject(errorsdata.data);
   }
+};
+
+export const setUserToken=(jwt_token)=>async(dispatch)=>{
+
+  authTokenRequest(jwt_token);
+  localStorage.token=jwt_token;
+  var cur_user = jwt.decode(jwt_token);
+    console.log("Verified setuser:", cur_user);
+    console.log("Verified.roles:", cur_user.roles);
+    dispatch({ type: LOGIN_AUTH, payload: cur_user });
+    localStorage.setItem("user", jwt_token);
 };

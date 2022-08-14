@@ -13,7 +13,7 @@ const AdminLayout = () => {
   const { isAuth, user } = useSelector(redux => redux.auth);
 
   return (
-    // isAuth && isRole(user, 'admin') ?
+    isAuth && isRole(user, 'admin') ?
     <>
       <main>
         {<Outlet />}
@@ -27,8 +27,8 @@ const AdminLayout = () => {
         </div>
       </main>
     </>
-    // :
-    // <Link to='/' />
+    :
+    <Link to='/' />
   );
 };
 

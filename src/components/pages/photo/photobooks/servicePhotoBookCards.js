@@ -31,19 +31,19 @@ const ServicePhotoBookCards = () => {
           {/* Рядок для карток */}
 
           <div className="row gx-5 justify-content-center">
+
             {/* Картка 1 */}
             <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded "
-            onClick={handleClickUniBook}>
-            {/* onClick={handleClickXerox}> */}
-              <HashLink smooth to={'/photo#books'} style={{color:"#000"}}>
+            onClick={handleClickBamBook}>
+            <HashLink smooth to={'/photo#books'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/photo/photobooks/unibook-menu.png"
+                  src="/images/services/photo/photobooks/bambook-menu.png"
                   className="card-img-top"
-                  alt="UniBook"
+                  alt="BamBook"
                 />
                 <div className="card-body-photo">
-                  <h6 className="card-title text-center">UniBook</h6>
+                  <h6 className="card-title text-center">BamBook</h6>
                 </div>
               </div>
               </HashLink>
@@ -65,19 +65,20 @@ const ServicePhotoBookCards = () => {
               </div>
               </HashLink>
             </div>
-            
+
             {/* Картка 3 */}
             <div className="col-6 col-sm-4 col-md-3 m-3 p-2 border bg-light rounded "
-            onClick={handleClickBamBook}>
-            <HashLink smooth to={'/photo#books'} style={{color:"#000"}}>
+            onClick={handleClickUniBook}>
+            {/* onClick={handleClickXerox}> */}
+              <HashLink smooth to={'/photo#books'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/photo/photobooks/bambook-menu.png"
+                  src="/images/services/photo/photobooks/unibook-menu.png"
                   className="card-img-top"
-                  alt="BamBook"
+                  alt="UniBook"
                 />
                 <div className="card-body-photo">
-                  <h6 className="card-title text-center">BamBook</h6>
+                  <h6 className="card-title text-center">UniBook</h6>
                 </div>
               </div>
               </HashLink>
