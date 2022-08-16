@@ -13,9 +13,9 @@ const ContactsPage = () => {
         <div className="col">
           <div className="text-center">
             <h2 className="text-center mt-3">Як нас знайти?</h2>
-            <p>Наша адреса: м. Рівне, вул. Богоявленська, 41 відділ 9</p>
+            <h5>Наша адреса: м. Рівне, вул. Богоявленська, 41 відділ 9</h5>
             <p>
-              Наш магазин знаходиться в торговому ряду поблизу супермаркету
+              Магазин знаходиться в торговому ряду поблизу супермаркету
               АРСЕН (по вул. Коновальця)
             </p>
           </div>
@@ -124,7 +124,7 @@ const ContactsPage = () => {
             {/* <div className="col-md-1"></div> */}
             <div className="col-md-4">
               <div className="row">
-                <div className="col-4 col-sm-4 col-md-4">
+                <div className="col-4 col-sm-4 col-md-4 px-5">
                   <i style={{ fontSize: "4.5em", color: "#B31942" }}>
                     <FontAwesomeIcon icon={faLocationDot} />
                   </i>
@@ -141,7 +141,7 @@ const ContactsPage = () => {
             </div>
             <div className="col-md-4">
               <div className="row">
-                <div className="col-4 col-sm-4 col-md-4">
+                <div className="col-4 col-sm-4 col-md-4 px-5">
                   <i style={{ fontSize: "4.5em", color: "#B31942" }}>
                     <FontAwesomeIcon icon={faEarthEurope} />
                   </i>
@@ -154,7 +154,7 @@ const ContactsPage = () => {
             </div>
             <div className="col-md-4">
               <div className="row">
-                <div className="col-4 col-sm-4 col-md-4">
+                <div className="col-4 col-sm-4 col-md-4 px-5">
                   <i style={{ fontSize: "4.5em", color: "#B31942" }}>
                     <FontAwesomeIcon icon={faMobileScreenButton} />
                   </i>
