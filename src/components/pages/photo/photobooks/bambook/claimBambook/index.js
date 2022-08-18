@@ -72,62 +72,56 @@ const ClaimBambook = () => {
           <h1 className="text-center text-dark mt-4 mb-4">Вимоги до макету</h1>
 
           <div className="row"> 
-          <div className="col-md-1 col-sm-1 col-lg-2">
-          <div className="books-tab-claim">
-            <button
-              className={classNames("books-tablinks-claim", show30x30 ? "active" : "")}
-              onClick={handleClick30x30}> {" "} 30x30
-            </button>
-            <button
-              className={classNames("books-tablinks-claim", show24x32 ? "active" : "")}
-              onClick={handleClick24x32}> {" "} 24x32
-            </button>
-            <button
-              className={classNames("books-tablinks-claim", show20x30 ? "active" : "")}
-              onClick={handleClick20x30}> {" "} 20x30
-            </button>
-            <button
-              className={classNames("books-tablinks-claim", show19x19 ? "active" : "")}
-              onClick={handleClick19x19}> {" "} 19x19
-            </button>
-            <button
-              className={classNames("books-tablinks-claim", show23x23 ? "active" : "")}
-              onClick={handleClick23x23}> {" "} 23x23
-            </button>
-            <button
-              className={classNames("books-tablinks-claim", show23x18 ? "active" : "")}
-              onClick={handleClick23x18}> {" "} 23x18
-            </button>
+            <div className="col-3 col-sm-2 col-md-1 col-lg-1">
+              <div className="books-tab-claim">
+                <button
+                  className={classNames("books-tablinks-claim", show30x30 ? "active" : "") }
+                  onClick={handleClick30x30}> {" "} 30x30
+                </button>
+                <button
+                  className={classNames("books-tablinks-claim", show24x32 ? "active" : "")}
+                  onClick={handleClick24x32}> {" "} 24x32
+                </button>
+                <button
+                  className={classNames("books-tablinks-claim", show20x30 ? "active" : "")}
+                  onClick={handleClick20x30}> {" "} 20x30
+                </button>
+                <button
+                  className={classNames("books-tablinks-claim", show19x19 ? "active" : "")}
+                  onClick={handleClick19x19}> {" "} 19x19
+                </button>
+                <button
+                  className={classNames("books-tablinks-claim", show23x23 ? "active" : "")}
+                  onClick={handleClick23x23}> {" "} 23x23
+                </button>
+                <button
+                  className={classNames("books-tablinks-claim", show23x18 ? "active" : "")}
+                  onClick={handleClick23x18}> {" "} 23x18
+                </button>
+              </div>
+            </div>
+            <div className="col-9 col-sm-10 col-md-11 col-lg-11">
+              <div className="books-tabcontent-claim mb-4 overflow-auto">
+                {!show30x30 &&
+                  !show24x32 &&
+                  !show20x30 &&
+                  !show19x19 &&
+                  !show23x23 &&
+                  !show23x18 && (
+                    <>
+                      {ShowClaim30x30()}
+                    </>
+                  )}
+                {show30x30 && (<>{ShowClaim30x30()}</>)}
+                {show24x32 && (<>{ShowClaim24x32()}</>)}
+                {show20x30 && (<>{ShowClaim20x30()}</>)}
+                {show19x19 && (<>{ShowClaim19x19()}</>)}
+                {show23x23 && (<>{ShowClaim23x23()}</>)}
+                {show23x18 && (<>{ShowClaim23x18()}</>)}
+              </div>
+            </div>
           </div>
-          </div>
-          <div className="col-md-11 col-sm-11 col-lg-10">
-          <div className="books-tabcontent-claim mb-4 overflow-auto">
-            {!show30x30 &&
-              !show24x32 &&
-              !show20x30 &&
-              !show19x19 &&
-              !show23x23 &&
-              !show23x18 && (
-                <>
-                  {ShowClaim30x30()}
-                </>
-              )}
-            {show30x30 && (<>{ShowClaim30x30()}</>)}
-            {show24x32 && (<>{ShowClaim24x32()}</>)}
-            {show20x30 && (<>{ShowClaim20x30()}</>)}
-            {show19x19 && (<>{ShowClaim19x19()}</>)}
-            {show23x23 && (<>{ShowClaim23x23()}</>)}
-            {show23x18 && (<>{ShowClaim23x18()}</>)}
-          </div>
-          </div>
-
-          </div>
-
-          
-
-          
         </div>
-
       </div>
       
     </>

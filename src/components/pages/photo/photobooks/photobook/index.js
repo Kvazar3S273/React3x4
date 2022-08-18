@@ -10,7 +10,7 @@ import {
 import { AvailablePhotoBooks } from "../availableBooks";
 import { UpToBooksList } from "../upToBooksList";
 import { MoreServices } from "../moreServices";
-import ClaimSlimbook from "../slimbook/claimSlimbook";
+import ClaimPhotobook from "./claimPhotobook";
 
 const PhotoBook = () => {
   //see more here:
@@ -325,7 +325,7 @@ const PhotoBook = () => {
 
         {AvailablePhotoBooks()}
 
-        <ClaimSlimbook />
+        <ClaimPhotobook />
 
         {MoreServices()}
 

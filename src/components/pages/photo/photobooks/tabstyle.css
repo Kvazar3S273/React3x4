@@ -10,7 +10,8 @@
     float: left;
     /* border: 1px solid #ccc; */
     background-color: #d6d6d6;
-    width: 70px;
+    /* width: 70px; */
+    width: 100%;
     /* max-width: 39%; */
     /* min-width: 9%; */
     height: auto;
@@ -82,9 +83,7 @@
     border: none;
     /* border: 2px solid rgb(168, 168, 168); */
     border-left: 2px solid #ccc;
-    width: 100%;
-    
-    /* border-left: none; */
+    /* width: 100%; */
     height: 420px;
   }
   .books-tabcontent-claim-print {
@@ -94,8 +93,7 @@
     border: none;
     /* border: 2px solid rgb(168, 168, 168); */
     border-left: 2px solid #ccc;
-    width: 200px;
-    /* border-left: none; */
+    /* width: 200px; */
     height: 560px;
   }
   .books-tabcontent-claim-uni {
@@ -105,8 +103,7 @@
     border: none;
     /* border: 2px solid rgb(168, 168, 168); */
     border-left: 2px solid #ccc;
-    width: 91%;
-    /* border-left: none; */
+    /* width: 91%; */
     height: 350px;
   }
   .books-tabsimg {
