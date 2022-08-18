@@ -64,13 +64,15 @@ const ClaimBambook = () => {
     setShow23x23(false);
     setShow23x18(true);
   };
-  
+
   return (
     <>
       <div className="row">
         <div className="col px-3 mb-4">
           <h1 className="text-center text-dark mt-4 mb-4">Вимоги до макету</h1>
 
+          <div className="row"> 
+          <div className="col-md-1 col-sm-1 col-lg-2">
           <div className="books-tab-claim">
             <button
               className={classNames("books-tablinks-claim", show30x30 ? "active" : "")}
@@ -97,7 +99,8 @@ const ClaimBambook = () => {
               onClick={handleClick23x18}> {" "} 23x18
             </button>
           </div>
-
+          </div>
+          <div className="col-md-11 col-sm-11 col-lg-10">
           <div className="books-tabcontent-claim mb-4 overflow-auto">
             {!show30x30 &&
               !show24x32 &&
@@ -116,6 +119,13 @@ const ClaimBambook = () => {
             {show23x23 && (<>{ShowClaim23x23()}</>)}
             {show23x18 && (<>{ShowClaim23x18()}</>)}
           </div>
+          </div>
+
+          </div>
+
+          
+
+          
         </div>
 
       </div>
