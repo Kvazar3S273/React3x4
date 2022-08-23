@@ -125,237 +125,308 @@ const Header = () => {
       >
         <Container>
           {/* Лого */}
-            <Nav className="me-auto" onClick={() => setNavExpanded(false)}>
-                <Link className="navbar-brand" aria-current="page" to="/">
-                <img src={logo} alt="" width="100" />
-                </Link>
-            </Nav>
+          <Nav className="me-auto" onClick={() => setNavExpanded(false)}>
+            <Link className="navbar-brand" aria-current="page" to="/">
+              <img src={logo} alt="" width="100" />
+            </Link>
+          </Nav>
 
           {/* Гамбургер */}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto" onClick={() => setNavExpanded(false)}>
-                <Link className="nav-link" aria-current="page" to="/" >
+              <Link className="nav-link" aria-current="page" to="/">
                 Головна
-                </Link>
-                <Link className="nav-link" to="/admin">
-                  admin
-                </Link>
+              </Link>
             </Nav>
 
             {/* Фотопослуги */}
 
             <NavDropdown title="Фотопослуги" id="basic-nav-dropdown">
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <Link className="nav-link" aria-current="page" to="/photo">
+                  <h6 style={{ color: "#000" }}>Повний перелік</h6>
+                </Link>
+              </NavDropdown.Item>
 
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="/photo" >
-                        <h6 style={{color:"#000"}}>Повний перелік</h6>
-                    </Link>
-                </NavDropdown.Item>
+              <NavDropdown.Divider />
 
-                <NavDropdown.Divider />
-
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickFnd}>Фото на документи</h6>
-                    </HashLink>
-                    
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickFotoprint}>Друк фотографій</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    {/* <Link className="nav-link" aria-current="page" to="/page404" >
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/photo#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickFnd}>Фото на документи</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/photo#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickFotoprint}>Друк фотографій</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                {/* <Link className="nav-link" aria-current="page" to="/page404" >
                         <h6 style={{color:"#000"}}>Фотокниги</h6>
                     </Link> */}
-                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickPhotobooks}>Фотокниги</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickScan}>Сканування фотографій</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickDuplicate}>Дублікати фотографій</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickRestoration}>Реставрація</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickBackground}>Заміна фону</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickAddition}>Об'єднання фотографій</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickBottle}>Етикетки на пляшку</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/photo#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickPhotopicture}>Фотокартини</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-
-                
+                <HashLink
+                  smooth
+                  to="/photo#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickPhotobooks}>Фотокниги</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/photo#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickScan}>Сканування фотографій</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/photo#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickDuplicate}>Дублікати фотографій</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/photo#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickRestoration}>Реставрація</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/photo#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickBackground}>Заміна фону</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/photo#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickAddition}>Об'єднання фотографій</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/photo#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickBottle}>Етикетки на пляшку</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/photo#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickPhotopicture}>Фотокартини</h6>
+                </HashLink>
+              </NavDropdown.Item>
             </NavDropdown>
 
             {/* Комп'ютерні послуги */}
 
             <NavDropdown title="Комп'ютерні послуги" id="basic-nav-dropdown">
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <Link className="nav-link" aria-current="page" to="/comp">
+                  <h6 style={{ color: "#000" }}>Повний перелік</h6>
+                </Link>
+              </NavDropdown.Item>
 
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="/comp" >
-                        <h6 style={{color:"#000"}}>Повний перелік</h6>
-                    </Link>
-                </NavDropdown.Item>
+              <NavDropdown.Divider />
 
-                <NavDropdown.Divider />
-
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/comp#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickXerox}>Ксерокопії</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/comp#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickScaner}>Сканування</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/comp#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickLaminate}>Ламінування</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/comp#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickBinder}>Брошурування</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/comp#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickUsbflash}>Запис цифрових носіїв</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/comp#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickDiscprint}>Друк на дисках</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/comp#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickEmail}>Послуги E-mail</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink smooth to="/comp#component" style={{ color: "#000" }}>
+                  <h6 onClick={handleClickXerox}>Ксерокопії</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink smooth to="/comp#component" style={{ color: "#000" }}>
+                  <h6 onClick={handleClickScaner}>Сканування</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink smooth to="/comp#component" style={{ color: "#000" }}>
+                  <h6 onClick={handleClickLaminate}>Ламінування</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink smooth to="/comp#component" style={{ color: "#000" }}>
+                  <h6 onClick={handleClickBinder}>Брошурування</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink smooth to="/comp#component" style={{ color: "#000" }}>
+                  <h6 onClick={handleClickUsbflash}>Запис цифрових носіїв</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink smooth to="/comp#component" style={{ color: "#000" }}>
+                  <h6 onClick={handleClickDiscprint}>Друк на дисках</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink smooth to="/comp#component" style={{ color: "#000" }}>
+                  <h6 onClick={handleClickEmail}>Послуги E-mail</h6>
+                </HashLink>
+              </NavDropdown.Item>
             </NavDropdown>
 
             {/* Поліграфія */}
 
             <NavDropdown title="Поліграфія" id="basic-nav-dropdown">
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <Link className="nav-link" aria-current="page" to="/poligraph">
+                  <h6 style={{ color: "#000" }}>Повний перелік</h6>
+                </Link>
+              </NavDropdown.Item>
 
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <Link className="nav-link" aria-current="page" to="/poligraph" >
-                        <h6 style={{color:"#000"}}>Повний перелік</h6>
-                    </Link>
-                </NavDropdown.Item>
+              <NavDropdown.Divider />
 
-                <NavDropdown.Divider />
-
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickVisitcard}>Візитки</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickFlyer}>Листівки, флаєри</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickCalendar}>Календарі</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickTag}>Цінники, бірки</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickSticker}>Наклейки</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickHanger}>Хенгери</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickOracal}>Самоклейка плівка</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickBaner}>Банер</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickPvc}>Друк на ПВХ</h6>
-                    </HashLink>
-                </NavDropdown.Item>
-                <NavDropdown.Item  onClick={() => setNavExpanded(false)}>
-                    <HashLink smooth to="/poligraph#component" style={{color:"#000"}}>
-                        <h6 onClick={handleClickOther}>Інша поліграфія</h6>
-                    </HashLink>
-                </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/poligraph#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickVisitcard}>Візитки</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/poligraph#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickFlyer}>Листівки, флаєри</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/poligraph#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickCalendar}>Календарі</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/poligraph#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickTag}>Цінники, бірки</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/poligraph#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickSticker}>Наклейки</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/poligraph#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickHanger}>Хенгери</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/poligraph#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickOracal}>Самоклейка плівка</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/poligraph#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickBaner}>Банер</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/poligraph#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickPvc}>Друк на ПВХ</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                  smooth
+                  to="/poligraph#component"
+                  style={{ color: "#000" }}
+                >
+                  <h6 onClick={handleClickOther}>Інша поліграфія</h6>
+                </HashLink>
+              </NavDropdown.Item>
             </NavDropdown>
 
             {/* Контакти */}
             <Nav className="me-auto" onClick={() => setNavExpanded(false)}>
-                <Link className="nav-link" aria-current="page" to="/contacts">
+              <Link className="nav-link" aria-current="page" to="/contacts">
                 Контакти
-                </Link>
+              </Link>
             </Nav>
 
-
             {!isAuth ? (
-                <Nav onClick={() => setNavExpanded(false)}>
+              <Nav onClick={() => setNavExpanded(false)}>
                 <Link className="nav-link" to="/login">
                   Вхід
                 </Link>
                 <Link className="nav-link" to="/register">
-                Реєстрація
+                  Реєстрація
                 </Link>
               </Nav>
-                ) : (
-                    <Nav onClick={() => setNavExpanded(false)}>
-              <Link className="nav-link" to="/profile">
-              {user.name}
-              </Link>
-              <Link className="nav-link" to="/" onClick={logout}>
-                Вихід
-              </Link>
-            </Nav>
+            ) : (
+              <Nav onClick={() => setNavExpanded(false)}>
+                <Link className="nav-link text-danger" to="/admin">
+                  Admin panel
+                </Link>
+                <Link className="nav-link" to="/profile">
+                  {user.name}
+                </Link>
+                <Link className="nav-link" to="/" onClick={logout}>
+                  Вихід
+                </Link>
+              </Nav>
             )}
-            
           </Navbar.Collapse>
         </Container>
       </Navbar>

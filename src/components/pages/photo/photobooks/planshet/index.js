@@ -35,156 +35,142 @@ const Planshet = () => {
         <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
           <h1 className="text-center">Випускні планшети</h1>
 
-          {/* HD цифровий друк з імітацією фотопаперу FUJI Lustre */}
+          {/* Класичний планшет (фотодрук) */}
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-7">
               <img
                 src="images/services/photo/photobooks/UniBook/1.jpg"
-                alt="Фотообкладинка"
+                alt="Класичний планшет"
                 style={{ width: "100%" }}
               />
             </div>
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">
-                HD цифровий друк з імітацією фотопаперу FUJI Lustre
+                Класичний планшет (фотодрук)
               </h3>
               <p>
-                Друк блоку відбувається на новітній цифровій машині Iridesse®
-                Production Press зі збільшеним кольоровим охопленням та фінішною
-                термообробкою сторінок, що відтворює друк на фотопапері FUJI
-                Lustre. Його практично неможливо відрізнити від сторінок
-                фотокниг, надрукованих класичним фотохімічним способом.
+                Добре відомі планшети з 1 або 2-ма розворотами зі спеціальним 
+                прошарком між сторінками. Класичний фотохімічний друк сторінок 
+                та тверда ламінована обкладинка. Максимальна якість друку та 
+                швидке виготовлення.
+              </p>
+              <p className="mx-5">
+                Формати:
+                <ul>
+                  <li>20x30</li>
+                  <li>18x24</li>
+                  <li>29x19</li>
+                  <li>23x23</li>
+                  <li>19x19</li>
+                </ul>
               </p>
             </div>
           </div>
 
-          {/* Товсті сторінки, що збільшують цінність, але не вартість */}
+          {/* Класичний планшет (цифровий друк) */}
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">
-                Товсті сторінки, що збільшують цінність, але не вартість
+              Класичний планшет (цифровий друк)
               </h3>
               <p>
-                Хтось пропонує фотокниги з прошарком, щоб зменшити кількість
-                сторінок і не втратити загальне враження, а хтось підкреслює цим
-                солідність та вартість альбому. UniBook стандартно виготовляють
-                з картонним прошарком, тому він задовольняє потреби обох
-                категорій.
+                Як і попередній, цей планшет може бути виконано в 1 або 2-х розворотах,
+                але його середину надруковано цифровим способом на крейдованому папері 
+                граматурою 200 г/м² і вкрито глянцевою ламінацією. Обкладинка тверда
+                ламінована. Для друку використовуються поліграфічні машини XEROX . <br/>
+                Можливий формат — 20х30.
               </p>
             </div>
             <div className="col-sm-12 col-md-7">
               <img
                 src="images/services/photo/photobooks/UniBook/2.jpg"
-                alt="Фотообкладинка"
+                alt="Класичний планшет"
                 style={{ width: "100%" }}
               />
             </div>
           </div>
 
-          {/* Новинка - UniBook Light! Сторінки без прошарку роблять його ще цікавішим. */}
+          {/* Трюмо */}
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-7">
               <img
                 src="images/services/photo/photobooks/UniBook/3.jpg"
-                alt="Фотообкладинка"
+                alt="Трюмо"
                 style={{ width: "100%" }}
               />
             </div>
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">
-                Новинка - UniBook Light! Сторінки без прошарку роблять його ще
-                цікавішим.
+                Трюмо
               </h3>
               <p>
-                Тепер UniBook можна замовити і в полегшеній версії - без
-                прошарку. У цьому виконанні ви отримуєте ще доступнішу фотокнигу
-                яку практично неможливо відрізнити від нашого фотокнижкого
-                «флагмана» SlimBook-а.
+                Трюмо — беззаперечний хіт останніх років у початковій школі. 
+                У ньому ідеально розмістяться портрет учня, класного керівника
+                або вихователя та групова фотографія. Зручний формат 30x20 
+                дозволяє встановити його на стіл або полицю. Як і у попередньому
+                планшеті, середину надруковано цифровим способом та вкрито
+                ламінацією. Ідеальний планшет для садочка або початкової школи.
               </p>
             </div>
           </div>
 
-          {/* Звісно, це Lay Flat з розворотом на 180° */}
+          {/* Тріо */}
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">
-                Звісно, це Lay Flat з розворотом на 180°
+                Тріо
               </h3>
               <p>
-                Ну, а як інакше? Фотокниги з панорамними знімками та знімками на
-                весь розворот просто зобов'язані розкриватись на 180°. Це
-                безкомпромісне рішення, тому так, UniBook — це фотокнига саме з
-                такою будовою блоку.
+                Планшет Тріо ми представили ще у 2018 році і за цей час він отримав 
+                неабияку популярність. Зумовлено це тим, що класична планшет-папка 
+                в згорнутому вигляді має стандартний формат 20х30, проте у розгорнутому,
+                 її формат стає 60х30, що дозволяє розмістити багато фото. Планшет 
+                 надруковано цифровим поліграфічним способом з глянцевою ламінацією.
               </p>
             </div>
             <div className="col-sm-12 col-md-7">
               <img
                 src="images/services/photo/photobooks/UniBook/4.jpg"
-                alt="Фотообкладинка"
+                alt="Тріо"
                 style={{ width: "100%" }}
               />
             </div>
           </div>
 
-          {/* Обкладинка */}
-          <div className="row m-3 p-2">
-            <div className="col-sm-12 col-md-7">
-              <Zoom {...zoomInProperties}>
-                {img_slider.map((each, index) => (
-                  <div key={index} style={{ width: "100%" }}>
-                    <img
-                      style={{ objectFit: "cover", width: "100%" }}
-                      src={each}
-                    />
-                  </div>
-                ))}
-              </Zoom>
-            </div>
-            <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">Обкладинка</h3>
-              <p>
-                Будь-яка фотокнига починається з обкладинки. У базовій
-                комплектації всі фотокниги оздоблюють твердою ламінованою
-                фотообкладинкою, але її можна оформити і такими матеріалами як:
-                шкірзам, тканина, велюр.
-                <br />
-                На усіх матеріалах обкладинок можна використати додаткове
-                оздоблення, щоб Ваша книга стала ще більш індивідуальною.
-              </p>
-            </div>
-          </div>
         </div>
 
-        <div
-          className="col py-3 mt-3 mb-3"
-          style={{ backgroundColor: "#CDE8F2" }} >
-          <div className="row">
-            <div className="col-8 col-sm-8 col-md-8 col-lg-8 p-5">
-              <div className="row">
-                <div className="col-2 col-sm-2 col-md-2">
-                  <i
-                    className="d-flex justify-content-center text-danger"
-                    style={{ fontSize: "4.5em" }}
-                  >
-                    <FontAwesomeIcon icon={faCalculator} />
-                  </i>
-                </div>
-                <div className="col-10 col-sm-10 col-md-10">
-                  <h4 className="text-danger">
-                    Розрахунок вартості друку фотокниги
-                  </h4>
-                  <p>
-                    *Окремо розраховується вартість розробки дизайну (див.
-                    Додаткові послуги)
-                  </p>
+        <div className="row">
+          <div
+            className="col py-3 mt-3 mb-3"
+            style={{ backgroundColor: "#CDE8F2" }} >
+            <div className="row">
+              <div className="col-8 col-sm-8 col-md-8 col-lg-8 p-5">
+                <div className="row">
+                  <div className="col-2 col-sm-2 col-md-2">
+                    <i
+                      className="d-flex justify-content-center text-danger"
+                      style={{ fontSize: "4.5em" }}
+                    >
+                      <FontAwesomeIcon icon={faCalculator} />
+                    </i>
+                  </div>
+                  <div className="col-10 col-sm-10 col-md-10">
+                    <h4 className="text-danger">
+                      Розрахунок вартості друку фотокниги
+                    </h4>
+                    <p>
+                      *Окремо розраховується вартість розробки дизайну (див.
+                      Додаткові послуги)
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col-4 col-sm-4 col-md-4 col-lg-4">
-              <img
-                src="images/services/photo/photobooks/calc.png"
-                alt="Розрахунок"
-              />
+              <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+                <img
+                  src="images/services/photo/photobooks/calc.png"
+                  alt="Розрахунок"
+                />
+              </div>
             </div>
           </div>
         </div>

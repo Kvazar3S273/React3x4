@@ -40,7 +40,7 @@ const UniBook = () => {
             <div className="col-sm-12 col-md-7">
               <img
                 src="images/services/photo/photobooks/UniBook/1.jpg"
-                alt="Фотообкладинка"
+                alt="FUJI Lustre"
                 style={{ width: "100%" }}
               />
             </div>
@@ -75,7 +75,7 @@ const UniBook = () => {
             <div className="col-sm-12 col-md-7">
               <img
                 src="images/services/photo/photobooks/UniBook/2.jpg"
-                alt="Фотообкладинка"
+                alt="Товсті сторінки"
                 style={{ width: "100%" }}
               />
             </div>
@@ -86,7 +86,7 @@ const UniBook = () => {
             <div className="col-sm-12 col-md-7">
               <img
                 src="images/services/photo/photobooks/UniBook/3.jpg"
-                alt="Фотообкладинка"
+                alt="UniBook Light"
                 style={{ width: "100%" }}
               />
             </div>
@@ -120,7 +120,7 @@ const UniBook = () => {
             <div className="col-sm-12 col-md-7">
               <img
                 src="images/services/photo/photobooks/UniBook/4.jpg"
-                alt="Фотообкладинка"
+                alt="Flat"
                 style={{ width: "100%" }}
               />
             </div>
