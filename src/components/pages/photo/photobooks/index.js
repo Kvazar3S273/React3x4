@@ -6,6 +6,7 @@ import SlimBook from "./slimbook";
 import PrintBook from "./printbook";
 import PhotoBook from "./photobook";
 import UniBook from "./unibook";
+import Planshet from "./planshet";
 
 
 const Photobooks = () => {
@@ -32,6 +33,7 @@ const Photobooks = () => {
       {isPhotoPhotobooksSlimBook ? <SlimBook /> : ""}
       {isPhotoPhotobooksPrintBook? <PrintBook /> : ""}
       {isPhotoPhotobooksPhotoBook? <PhotoBook /> : ""}
+      {isPhotoPhotobooksPlanshet? <Planshet /> : ""}
 
       
     </div>

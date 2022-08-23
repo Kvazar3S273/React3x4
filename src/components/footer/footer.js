@@ -11,7 +11,7 @@ const Footer = () => {
           <Link aria-current="page" to="/">
             3x4.com.ua
           </Link>
-          , All Right Reserved. <br/>Designed by Hologram-IT, 2022
+          , All Right Reserved. <br/>Designed by Hologram-IT, 2009-{new Date().getFullYear()}
         </div>
       </div>
       <div className="col-md-2 text-secondary text-center p-2">

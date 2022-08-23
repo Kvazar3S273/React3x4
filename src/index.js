@@ -8,12 +8,17 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './store';
 import { BrowserRouter } from "react-router-dom";
-import { setUserToken } from "./components/auth/login/loginAction";
+import { SetUserToken } from './components/auth/login/loginAction';
+import jwt from "jsonwebtoken";
+import { LOGIN_AUTH } from "./constants/actionTypes";
 
-let token = localStorage.token;
- if (token) {
-   setUserToken(token, store.dispatch);
- console.log("App.js",token);
+const token = localStorage.getItem('user'); 
+ if (token) { 
+  store.dispatch(SetUserToken(token))
+//  var cur_user = jwt.decode(token);
+//  store.dispatch({ type: LOGIN_AUTH, payload: cur_user });
+//  localStorage.setItem("user", token);
+ //console.log("+++++",cur_user);
  }
 
 ReactDOM.render(

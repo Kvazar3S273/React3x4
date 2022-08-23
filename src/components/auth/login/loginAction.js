@@ -8,15 +8,16 @@ export const LoginUser = (usermodel) => async (dispatch) => {
     const result = await register_service.login(usermodel);
 
     var jwt_token = result.data.token;
+
     var cur_user = jwt.decode(jwt_token);
     console.log("Verified login:", cur_user);
     console.log("Verified.roles:", cur_user.roles);
+
     dispatch({ type: LOGIN_AUTH, payload: cur_user });
     localStorage.setItem("user", jwt_token);
-    
+
     authTokenRequest(jwt_token);
     return Promise.resolve(cur_user);
-    
   } catch (error) {
     const errorsdata = error.response;
     dispatch({ type: LOGIN_ERROR, payload: errorsdata.data });
@@ -24,13 +25,12 @@ export const LoginUser = (usermodel) => async (dispatch) => {
   }
 };
 
-export const setUserToken=(jwt_token)=>async(dispatch)=>{
-
+export const SetUserToken = (jwt_token) => async (dispatch) => {
   authTokenRequest(jwt_token);
-  localStorage.token=jwt_token;
+  // localStorage.token=jwt_token;
   var cur_user = jwt.decode(jwt_token);
-    console.log("Verified setuser:", cur_user);
-    console.log("Verified.roles:", cur_user.roles);
-    dispatch({ type: LOGIN_AUTH, payload: cur_user });
-    localStorage.setItem("user", jwt_token);
+  console.log("Verified setuser:", cur_user);
+  console.log("Verified.roles:", cur_user.roles);
+  dispatch({ type: LOGIN_AUTH, payload: cur_user });
+  localStorage.setItem("user", jwt_token);
 };

@@ -15,7 +15,7 @@ const ServiceCards = () => {
         <div className="row gx-5 justify-content-center">
           <h1 className="text-light text-center">Наші послуги</h1>
           <p className="text-light text-center">
-            13 років досвіду щоб запропонувати Вам:
+            {new Date().getFullYear()-2009} років досвіду щоб запропонувати Вам:
           </p>
           {/* Картка 1 */}
           <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">

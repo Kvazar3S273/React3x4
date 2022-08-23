@@ -55,8 +55,6 @@ const Header = () => {
         dispatch({ type: LOG_OUT });
         navigator("/");
     };
-    const { user } = useSelector(res => res.auth);
-    console.log("User: ", user.name);
 
     const handleClickFnd = () => { dispatch(PhotoFnd()); }
     const handleClickFotoprint = () => { dispatch(PhotoFotoprint()); }
@@ -88,7 +86,8 @@ const Header = () => {
     const handleClickPvc = () => { dispatch(PoligraphPvc()); }
     const handleClickOther = () => { dispatch(PoligraphOther()); }
     
-    const { isAuth, username } = useSelector((redux) => redux.auth);
+    const { isAuth, user } = useSelector((redux) => redux.auth);
+    console.log("User: ", user.name);
     const ref = useRef(null);
     const [navExpanded, setNavExpanded] = useState(false);
     useEffect(() => {
