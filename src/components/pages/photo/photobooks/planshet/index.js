@@ -16,11 +16,28 @@ const Planshet = () => {
   //see more here:
   //https://www.npmjs.com/package/react-slideshow-image
 
-  const img_slider = [
-    "images/services/photo/photobooks/UniBook/5.jpg",
-    "images/services/photo/photobooks/UniBook/6.jpg",
-    "images/services/photo/photobooks/UniBook/7.jpg",
-    "images/services/photo/photobooks/UniBook/8.jpg"
+  const img_slider1 = [
+    "images/services/photo/photobooks/Planshet/1.jpg",
+    "images/services/photo/photobooks/Planshet/2.jpg",
+    "images/services/photo/photobooks/Planshet/3.jpg"
+  ];
+  
+  const img_slider2 = [
+    "images/services/photo/photobooks/Planshet/4.jpg",
+    "images/services/photo/photobooks/Planshet/5.jpg",
+    "images/services/photo/photobooks/Planshet/6.jpg"
+  ];
+  
+  const img_slider3 = [
+    "images/services/photo/photobooks/Planshet/7.jpg",
+    "images/services/photo/photobooks/Planshet/8.jpg",
+    "images/services/photo/photobooks/Planshet/9.jpg"
+  ];
+  
+  const img_slider4 = [
+    "images/services/photo/photobooks/Planshet/10.jpg",
+    "images/services/photo/photobooks/Planshet/11.jpg",
+    "images/services/photo/photobooks/Planshet/12.jpg"
   ];
 
   const zoomInProperties = {
@@ -38,11 +55,16 @@ const Planshet = () => {
           {/* Класичний планшет (фотодрук) */}
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-7">
-              <img
-                src="images/services/photo/photobooks/UniBook/1.jpg"
-                alt="Класичний планшет"
-                style={{ width: "100%" }}
-              />
+              <Zoom {...zoomInProperties}>
+                {img_slider1.map((each, index) => (
+                  <div key={index} style={{ width: "100%" }}>
+                    <img
+                      style={{ objectFit: "cover", width: "100%" }}
+                      src={each}
+                    />
+                  </div>
+                ))}
+              </Zoom>
             </div>
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">
@@ -82,22 +104,32 @@ const Planshet = () => {
               </p>
             </div>
             <div className="col-sm-12 col-md-7">
-              <img
-                src="images/services/photo/photobooks/UniBook/2.jpg"
-                alt="Класичний планшет"
-                style={{ width: "100%" }}
-              />
+              <Zoom {...zoomInProperties}>
+                {img_slider2.map((each, index) => (
+                  <div key={index} style={{ width: "100%" }}>
+                    <img
+                      style={{ objectFit: "cover", width: "100%" }}
+                      src={each}
+                    />
+                  </div>
+                ))}
+              </Zoom>
             </div>
           </div>
 
           {/* Трюмо */}
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-7">
-              <img
-                src="images/services/photo/photobooks/UniBook/3.jpg"
-                alt="Трюмо"
-                style={{ width: "100%" }}
-              />
+              <Zoom {...zoomInProperties}>
+                {img_slider3.map((each, index) => (
+                  <div key={index} style={{ width: "100%" }}>
+                    <img
+                      style={{ objectFit: "cover", width: "100%" }}
+                      src={each}
+                    />
+                  </div>
+                ))}
+              </Zoom>
             </div>
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">
@@ -129,11 +161,16 @@ const Planshet = () => {
               </p>
             </div>
             <div className="col-sm-12 col-md-7">
-              <img
-                src="images/services/photo/photobooks/UniBook/4.jpg"
-                alt="Тріо"
-                style={{ width: "100%" }}
-              />
+              <Zoom {...zoomInProperties}>
+                {img_slider4.map((each, index) => (
+                  <div key={index} style={{ width: "100%" }}>
+                    <img
+                      style={{ objectFit: "cover", width: "100%" }}
+                      src={each}
+                    />
+                  </div>
+                ))}
+              </Zoom>
             </div>
           </div>
 
