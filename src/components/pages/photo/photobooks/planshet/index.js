@@ -7,10 +7,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalculator
 } from "@fortawesome/free-solid-svg-icons";
-import { AvailableUniBooks } from "../availableBooks";
 import { UpToBooksList } from "../upToBooksList";
 import { MoreServices } from "../moreServices";
 import ClaimUnibook from "../unibook/claimUnibook";
+import { AvailablePlanshets } from "../availableBooks";
+import ClaimPlanshet from "./claimPlanshet";
 
 const Planshet = () => {
   //see more here:
@@ -239,9 +240,9 @@ const Planshet = () => {
           <div className="col-md-1"></div>
         </div>
 
-        {AvailableUniBooks()}
+        {AvailablePlanshets()}
 
-        <ClaimUnibook />
+        <ClaimPlanshet />
 
         {MoreServices()}
 

@@ -154,6 +154,32 @@ export function Available20x15() {
   );
 }
 
+export function AvailablePlanshetTrio20x30() {
+  return (
+    <div className="text-center">
+      <img
+        src="/images/services/photo/photobooks/formats/planshet/trio.png"
+        className="available-format-img"
+        alt="trio"
+      />
+      <h6 className="text-center text-dark">Тріо 20x30</h6>
+    </div>
+  );
+}
+
+export function AvailablePlanshetTrumo30x20() {
+  return (
+    <div className="text-center">
+      <img
+        src="/images/services/photo/photobooks/formats/planshet/trumo.png"
+        className="available-format-img"
+        alt="trumo"
+      />
+      <h6 className="text-center text-dark">Трюмо 30x20</h6>
+    </div>
+  );
+}
+
 export function AvailableBamBooks() {
   return (
     <>
@@ -261,6 +287,30 @@ export function AvailablePhotoBooks() {
           <div className="col">{Available18x24()}</div>
           <div className="col">{Available23x23()}</div>
           <div className="col">{Available29x19()}</div>
+          <div className="col">{Available19x19()}</div>
+        </div>
+
+      </div>
+    </>
+  );
+}
+
+export function AvailablePlanshets() {
+  return (
+    <>
+      <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
+        <h1 className="text-center">Доступні формати</h1>
+        <p className="text-center">
+          Пропонуємо Вам наступні формати Планшетів:
+        </p>
+
+        <div className="row">
+          <div className="col">{AvailablePlanshetTrumo30x20()}</div>
+          <div className="col">{AvailablePlanshetTrio20x30()}</div>
+          <div className="col">{Available20x30()}</div>
+          <div className="col">{Available18x24()}</div>
+          <div className="col">{Available29x19()}</div>
+          <div className="col">{Available23x23()}</div>
           <div className="col">{Available19x19()}</div>
         </div>
 

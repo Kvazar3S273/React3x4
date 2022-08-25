@@ -416,9 +416,9 @@ const Header = () => {
               </Nav>
             ) : (
               <Nav onClick={() => setNavExpanded(false)}>
-                <Link className="nav-link text-danger" to="/admin">
+                {/* <Link className="nav-link text-danger" to="/admin">
                   Admin panel
-                </Link>
+                </Link> */}
                 <Link className="nav-link" to="/profile">
                   {user.name}
                 </Link>
