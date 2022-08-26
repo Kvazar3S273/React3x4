@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import classNames from "classnames";
 import "../../tabstyle.css";
 import { ShowClaim20x30Planshet } from "../../ShowClaim/showClaim20x30";
-import { ShowClaim18x24 } from "../../ShowClaim/showClaim18x24";
+import { ShowClaim18x24Planshet } from "../../ShowClaim/showClaim18x24";
 import { ShowClaim23x23 } from "../../ShowClaim/showClaim23x23";
 import { ShowClaim29x19 } from "../../ShowClaim/showClaim29x19";
 import { ShowClaim19x19 } from "../../ShowClaim/showClaim19x19";
@@ -123,7 +123,7 @@ const ClaimPlanshet = () => {
               </div>
             </div>
             <div className="col-9 col-sm-10 col-md-11 col-lg-11">
-              <div className="books-tabcontent-claim mb-4 overflow-auto">
+              <div className="books-tabcontent-claim-planshet mb-4 overflow-auto">
                 {!showTrumo &&
                   !showTrio &&
                   !show20x30 &&
@@ -137,7 +137,7 @@ const ClaimPlanshet = () => {
                   )}
                 {showTrumo && <>{ShowClaimTrumo()}</>}
                 {showTrio && <>{ShowClaimTrio()}</>}
-                {show18x24 && <>{ShowClaim18x24()}</>}
+                {show18x24 && <>{ShowClaim18x24Planshet()}</>}
                 {show20x30 && <>{ShowClaim20x30Planshet()}</>}
                 {show23x23 && <>{ShowClaim23x23()}</>}
                 {show29x19 && <>{ShowClaim29x19()}</>}
