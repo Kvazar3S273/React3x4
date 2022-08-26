@@ -37,6 +37,19 @@ export function Available20x30() {
   );
 }
 
+export function Available20x30Planshet() {
+  return (
+    <div className="text-center">
+      <img
+        src="/images/services/photo/photobooks/formats/planshet/20x30.png"
+        className="available-format-img"
+        alt="20x30"
+      />
+      <h6 className="text-center text-dark">20x30</h6>
+    </div>
+  );
+}
+
 export function Available19x19() {
   return (
     <div className="text-center">
@@ -50,11 +63,37 @@ export function Available19x19() {
   );
 }
 
+export function Available19x19Planshet() {
+  return (
+    <div className="text-center">
+      <img
+        src="/images/services/photo/photobooks/formats/planshet/19x19.png"
+        className="available-format-img"
+        alt="19x19"
+      />
+      <h6 className="text-center text-dark">19x19</h6>
+    </div>
+  );
+}
+
 export function Available23x23() {
   return (
     <div className="text-center">
       <img
         src="/images/services/photo/photobooks/formats/23x23.png"
+        className="available-format-img"
+        alt="23x23"
+      />
+      <h6 className="text-center text-dark">23x23</h6>
+    </div>
+  );
+}
+
+export function Available23x23Planshet() {
+  return (
+    <div className="text-center">
+      <img
+        src="/images/services/photo/photobooks/formats/planshet/23x23.png"
         className="available-format-img"
         alt="23x23"
       />
@@ -89,11 +128,37 @@ export function Available18x24() {
   );
 }
 
+export function Available18x24Planshet() {
+  return (
+    <div className="text-center">
+      <img
+        src="/images/services/photo/photobooks/formats/planshet/18x24.png"
+        className="available-format-img"
+        alt="18x24"
+      />
+      <h6 className="text-center text-dark">18x24</h6>
+    </div>
+  );
+}
+
 export function Available29x19() {
   return (
     <div className="text-center">
       <img
         src="/images/services/photo/photobooks/formats/29x19.png"
+        className="available-format-img"
+        alt="29x19"
+      />
+      <h6 className="text-center text-dark">29x19</h6>
+    </div>
+  );
+}
+
+export function Available29x19Planshet() {
+  return (
+    <div className="text-center">
+      <img
+        src="/images/services/photo/photobooks/formats/planshet/29x19.png"
         className="available-format-img"
         alt="29x19"
       />
@@ -124,6 +189,19 @@ export function Available20x20() {
         alt="20x20"
       />
       <h6 className="text-center text-dark">20x20</h6>
+    </div>
+  );
+}
+
+export function Available15x15() {
+  return (
+    <div className="text-center">
+      <img
+        src="/images/services/photo/photobooks/formats/15x15.png"
+        className="available-format-img"
+        alt="15x15"
+      />
+      <h6 className="text-center text-dark">15x15</h6>
     </div>
   );
 }
@@ -193,9 +271,9 @@ export function AvailableBamBooks() {
           <div className="col">{Available30x30()}</div>
           <div className="col">{Available24x32()}</div>
           <div className="col">{Available20x30()}</div>
+          <div className="col">{Available29x19()}</div>
           <div className="col">{Available19x19()}</div>
           <div className="col">{Available23x23()}</div>
-          <div className="col">{Available23x18()}</div>
         </div>
       </div>
     </>
@@ -218,6 +296,7 @@ export function AvailableSlimBooks() {
           <div className="col">{Available23x23()}</div>
           <div className="col">{Available29x19()}</div>
           <div className="col">{Available19x19()}</div>
+          <div className="col">{Available15x15()}</div>
         </div>
         
       </div>
@@ -263,8 +342,8 @@ export function AvailablePrintBooks() {
           <div className="col">{Available20x30()}</div>
           <div className="col">{Available30x20()}</div>
           <div className="col">{Available20x20()}</div>
-          <div className="col">{Available15x20()}</div>
-          <div className="col">{Available20x15()}</div>
+          {/* <div className="col">{Available15x20()}</div> */}
+          {/* <div className="col">{Available20x15()}</div> */}
         </div>
 
       </div>
@@ -307,11 +386,11 @@ export function AvailablePlanshets() {
         <div className="row">
           <div className="col">{AvailablePlanshetTrumo30x20()}</div>
           <div className="col">{AvailablePlanshetTrio20x30()}</div>
-          <div className="col">{Available20x30()}</div>
-          <div className="col">{Available18x24()}</div>
-          <div className="col">{Available29x19()}</div>
-          <div className="col">{Available23x23()}</div>
-          <div className="col">{Available19x19()}</div>
+          <div className="col">{Available20x30Planshet()}</div>
+          <div className="col">{Available18x24Planshet()}</div>
+          <div className="col">{Available29x19Planshet()}</div>
+          <div className="col">{Available23x23Planshet()}</div>
+          <div className="col">{Available19x19Planshet()}</div>
         </div>
 
       </div>

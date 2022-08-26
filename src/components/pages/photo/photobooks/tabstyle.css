@@ -76,7 +76,7 @@
     /* border-left: none; */
     height: 700px;
   }
-  .books-tabcontent-claim {
+  .books-tabcontent-claim-6 {
     float: left;
     background-color: #f1f1f1;
     padding: 10px 12px;
@@ -86,7 +86,7 @@
     /* width: 100%; */
     height: 420px;
   }
-  .books-tabcontent-claim-print {
+  .books-tabcontent-claim-8 {
     float: left;
     background-color: #f1f1f1;
     padding: 10px 12px;
@@ -96,7 +96,7 @@
     /* width: 200px; */
     height: 560px;
   }
-  .books-tabcontent-claim-uni {
+  .books-tabcontent-claim-5 {
     float: left;
     background-color: #f1f1f1;
     padding: 10px 12px;
@@ -106,7 +106,7 @@
     /* width: 91%; */
     height: 350px;
   }
-  .books-tabcontent-claim-planshet {
+  .books-tabcontent-claim-7 {
     float: left;
     background-color: #f1f1f1;
     padding: 10px 12px;

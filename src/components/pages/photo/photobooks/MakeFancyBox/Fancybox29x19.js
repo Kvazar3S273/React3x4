@@ -23,7 +23,7 @@ export default function Fancybox29x19() {
                             src="/images/services/photo/photobooks/parameters/29x19/3-25_cover_29x19.jpg" 
                             alt="Файл обкладинки для 3-25 розворотів"/>
                             <div class="overlay">
-                                <div class="text">Файл обкладинки для 3-25 розворотів</div>
+                                <div class="text">Файл обкладинки A</div>
                             </div>
                         </a>
                     </div>
@@ -35,7 +35,7 @@ export default function Fancybox29x19() {
                             src="/images/services/photo/photobooks/parameters/29x19/26-40_cover_29x19.jpg" 
                             alt="Файл обкладинки для 26-40 розворотів"/>
                             <div class="overlay">
-                                <div class="text">Файл обкладинки для 26-40 розворотів</div>
+                                <div class="text">Файл обкладинки B</div>
                             </div>
                         </a>
                     </div>

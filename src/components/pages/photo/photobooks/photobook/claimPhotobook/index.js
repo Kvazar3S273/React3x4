@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 import "../../tabstyle.css";
-import { ShowClaim30x30 } from "../../ShowClaim/showClaim30x30";
-import { ShowClaim20x30 } from "../../ShowClaim/showClaim20x30";
-import { ShowClaim18x24 } from "../../ShowClaim/showClaim18x24";
-import { ShowClaim23x23 } from "../../ShowClaim/showClaim23x23";
-import { ShowClaim29x19 } from "../../ShowClaim/showClaim29x19";
-import { ShowClaim19x19 } from "../../ShowClaim/showClaim19x19";
+import { ShowClaim30x30Photo } from "../../ShowClaim/showClaim30x30";
+import { ShowClaim20x30Photo } from "../../ShowClaim/showClaim20x30";
+import { ShowClaim18x24Photo } from "../../ShowClaim/showClaim18x24";
+import { ShowClaim23x23Photo } from "../../ShowClaim/showClaim23x23";
+import { ShowClaim29x19Photo } from "../../ShowClaim/showClaim29x19";
+import { ShowClaim19x19Photo } from "../../ShowClaim/showClaim19x19";
 
 const ClaimPhotobook = () => {
   const [show30x30, setShow30x30] = useState(false);
@@ -101,7 +101,7 @@ const ClaimPhotobook = () => {
               </div>
             </div>
             <div className="col-9 col-sm-10 col-md-11 col-lg-11">
-              <div className="books-tabcontent-claim mb-4 overflow-auto">
+              <div className="books-tabcontent-claim-6 mb-4 overflow-auto">
                 {!show30x30 &&
                   !show20x30 &&
                   !show18x24 &&
@@ -109,15 +109,15 @@ const ClaimPhotobook = () => {
                   !show29x19 &&
                   !show19x19 && (
                   <>
-                    {ShowClaim30x30()}
+                    {ShowClaim30x30Photo()}
                   </>
                   )}
-                {show30x30 && (<>{ShowClaim30x30()}</>)}
-                {show18x24 && <>{ShowClaim18x24()}</>}
-                {show20x30 && <>{ShowClaim20x30()}</>}
-                {show23x23 && <>{ShowClaim23x23()}</>}
-                {show29x19 && <>{ShowClaim29x19()}</>}
-                {show19x19 && <>{ShowClaim19x19()}</>}
+                {show30x30 && (<>{ShowClaim30x30Photo()}</>)}
+                {show18x24 && <>{ShowClaim18x24Photo()}</>}
+                {show20x30 && <>{ShowClaim20x30Photo()}</>}
+                {show23x23 && <>{ShowClaim23x23Photo()}</>}
+                {show29x19 && <>{ShowClaim29x19Photo()}</>}
+                {show19x19 && <>{ShowClaim19x19Photo()}</>}
               </div>
             </div>
           </div>

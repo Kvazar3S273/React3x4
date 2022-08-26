@@ -23,7 +23,7 @@ export default function Fancybox24x32() {
                             src="/images/services/photo/photobooks/parameters/24x32/3-25_cover_24x32.jpg" 
                             alt="Файл обкладинки для 3-25 розворотів"/>
                             <div class="overlay">
-                                <div class="text">Файл обкладинки для 3-25 розворотів</div>
+                                <div class="text">Файл обкладинки A</div>
                             </div>
                         </a>
                     </div>
@@ -35,7 +35,7 @@ export default function Fancybox24x32() {
                             src="/images/services/photo/photobooks/parameters/24x32/26-40_cover_24x32.jpg" 
                             alt="Файл обкладинки для 26-40 розворотів"/>
                             <div class="overlay">
-                                <div class="text">Файл обкладинки для 26-40 розворотів</div>
+                                <div class="text">Файл обкладинки B</div>
                             </div>
                         </a>
                     </div>

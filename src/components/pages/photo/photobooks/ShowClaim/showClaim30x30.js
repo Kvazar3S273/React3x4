@@ -30,13 +30,129 @@ export function ShowClaim30x30() {
               </tr>
               <tr>
                 <th scope="row" className="text-success">
-                  Файл обкладинки для 3-25 розворотів
+                  Файл обкладинки A (для 3-25 розворотів)
                 </th>
                 <td>608 х 320 мм(7181 х 3780 пікселів)</td>
               </tr>
               <tr>
                 <th scope="row" className="text-success">
-                  Файл обкладинки для 26-40 розворотів
+                  Файл обкладинки B (для 26-40 розворотів)
+                </th>
+                <td>621 х 320 мм(7335 х 3780 пікселів)</td>
+              </tr>
+              <tr>
+                <th scope="row" className="text-success">
+                  Файл розвороту
+                </th>
+                <td>560 х 290 мм(6614 х 3425 пікселів)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div className="col-md-4">
+          <Fancybox30x30 />
+        </div>
+      </div>
+    </>
+  );
+}
+
+export function ShowClaim30x30Photo() {
+  return (
+    <>
+      <h4 className="m-3 text-center text-danger">Розміри 30x30</h4>
+      <div className="row">
+        <div className="col-md-8">
+          <h3>Вимоги до файлів</h3>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th scope="row" className="text-success">
+                  Формат файлу
+                </th>
+                <td>JPG (максимальна якість)</td>
+              </tr>
+              <tr>
+                <th scope="row" className="text-success">
+                  Колірна модель
+                </th>
+                <td>RGB, профіль sRGB IEC61966</td>
+              </tr>
+              <tr>
+                <th scope="row" className="text-success">
+                  Розширення
+                </th>
+                <td>300 dpi(точок на дюйм)</td>
+              </tr>
+              <tr>
+                <th scope="row" className="text-success">
+                  Файл обкладинки A (для 3-8 розворотів)
+                </th>
+                <td>608 х 320 мм(7181 х 3780 пікселів)</td>
+              </tr>
+              <tr>
+                <th scope="row" className="text-success">
+                  Файл обкладинки B (для 9-25 розворотів)
+                </th>
+                <td>621 х 320 мм(7335 х 3780 пікселів)</td>
+              </tr>
+              <tr>
+                <th scope="row" className="text-success">
+                  Файл розвороту
+                </th>
+                <td>560 х 290 мм(6614 х 3425 пікселів)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div className="col-md-4">
+          <Fancybox30x30 />
+        </div>
+      </div>
+    </>
+  );
+}
+
+export function ShowClaim30x30Uni() {
+  return (
+    <>
+      <h4 className="m-3 text-center text-danger">Розміри 30x30</h4>
+      <div className="row">
+        <div className="col-md-8">
+          <h3>Вимоги до файлів</h3>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th scope="row" className="text-success">
+                  Формат файлу
+                </th>
+                <td>JPG (максимальна якість)</td>
+              </tr>
+              <tr>
+                <th scope="row" className="text-success">
+                  Колірна модель
+                </th>
+                <td>RGB, профіль sRGB IEC61966</td>
+              </tr>
+              <tr>
+                <th scope="row" className="text-success">
+                  Розширення
+                </th>
+                <td>300 dpi(точок на дюйм)</td>
+              </tr>
+              <tr>
+                <th scope="row" className="text-success">
+                  Файл обкладинки A <br/>
+                  (для 3-8 розворотів з прошарком)<br/>
+                  (для 3-25 розворотів без прошарку)
+                </th>
+                <td>608 х 320 мм(7181 х 3780 пікселів)</td>
+              </tr>
+              <tr>
+                <th scope="row" className="text-success">
+                  Файл обкладинки B <br/>
+                  (для 9-25 розворотів з прошарком)<br/>
+                  (для 26-40 розворотів без прошарку)
                 </th>
                 <td>621 х 320 мм(7335 х 3780 пікселів)</td>
               </tr>
