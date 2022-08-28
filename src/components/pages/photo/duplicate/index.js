@@ -1,6 +1,16 @@
 import React from "react";
+import { GetDuplicates } from "../../../../constants/actions/photoActions/duplicate";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux';
 
 const Duplicate = () => {
+
+  const dispatch = useDispatch();
+  const{listduplicates}= useSelector(state => state.duplicate);
+  useEffect(() => {
+          dispatch(GetDuplicates());           
+      }, []);
+
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
@@ -33,26 +43,14 @@ const Duplicate = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">10х15</th>
-                  <td>15,00</td>
-                  <td>5,00</td>
-                </tr>
-                <tr>
-                  <th scope="row">13х18</th>
-                  <td>20,00</td>
-                  <td>10,00</td>
-                </tr>
-                <tr>
-                  <th scope="row">15х21</th>
-                  <td>22,00</td>
-                  <td>11,00</td>
-                </tr>
-                <tr>
-                  <th scope="row">20х30</th>
-                  <td>36,00</td>
-                  <td>21,00</td>
-                </tr>
+              {listduplicates &&
+                  listduplicates.map((item) => (
+                    <tr key={item.id}>
+                      <td>{item.format}</td>
+                      <td>{item.priceFirst}</td>
+                      <td>{item.priceEachOther}</td>
+                    </tr>
+                  ))}
               </tbody>
             </table>
           </div>

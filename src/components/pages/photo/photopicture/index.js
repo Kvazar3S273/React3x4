@@ -2,11 +2,21 @@ import React from "react";
 import 'react-slideshow-image/dist/styles.css'
 import { Slide, Zoom } from 'react-slideshow-image';
 import "../style.css"
+import { useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { GetPhotopictures } from "../../../../constants/actions/photoActions/photopicture";
 
 //see more here:
 //https://www.npmjs.com/package/react-slideshow-image
 
 const Photopicture = () => {
+
+  const dispatch = useDispatch();
+  const{listphotopictures}= useSelector(state => state.photopicture);
+  useEffect(() => {
+          dispatch(GetPhotopictures());           
+      }, []);
+
   const images = [
   'images/services/photo/photopicture1.jpg',
   'images/services/photo/photopicture2.jpg',
@@ -64,30 +74,13 @@ const Photopicture = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">20x30</th>
-                      <td>410</td>
+                  {listphotopictures &&
+                  listphotopictures.map((item) => (
+                    <tr key={item.id}>
+                      <td>{item.format}</td>
+                      <td>{item.price}</td>
                     </tr>
-                    <tr>
-                      <th scope="row">30x40</th>
-                      <td>580</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">40x60</th>
-                      <td>770</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">50x70</th>
-                      <td>1050</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">60x90</th>
-                      <td>1200</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">1 кв.м.</th>
-                      <td>1700</td>
-                    </tr>
+                  ))}
                   </tbody>
                 </table>
               </div>

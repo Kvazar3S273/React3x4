@@ -13,12 +13,14 @@ import FndEditPrice from "./fndEditPrice";
 import FotoprintEditPrice from "./fotoprintEditPrice";
 import PhotoscanEditPrice from "./photoscanEditPrice";
 import DuplicateEditPrice from "./duplicateEditPrice";
+import PhotopictureEditPrice from "./photopictureEditPrice";
 
 const PhotoChangePrice = () => {
   const [fndEdit, setfndEdit] = useState(false);
   const [fotoprintEdit, setfotoprintEdit] = useState(false);
   const [photoscanEdit, setPhotoscanEdit] = useState(false);
   const [duplicateEdit, setDuplicateEdit] = useState(false);
+  const [photopictureEdit, setPhotopictureEdit] = useState(false);
   const handleClickFndEdit = (event) => {
     // 👇️ щоб по кліку відкривалось і по наступному закривалось
     // setfndEdit((current) => !current);
@@ -27,24 +29,35 @@ const PhotoChangePrice = () => {
     setfotoprintEdit(false);
     setPhotoscanEdit(false);
     setDuplicateEdit(false);
+    setPhotopictureEdit(false);
   };
   const handleClickFotoprintEdit = (event) => {
     setfndEdit(false);
     setfotoprintEdit(true);
     setPhotoscanEdit(false);
     setDuplicateEdit(false);
+    setPhotopictureEdit(false);
   };
   const handleClickPhotoscanEdit = (event) => {
     setfndEdit(false);
     setfotoprintEdit(false);
     setPhotoscanEdit(true);
     setDuplicateEdit(false);
+    setPhotopictureEdit(false);
   };
   const handleClickDuplicateEdit = (event) => {
     setfndEdit(false);
     setfotoprintEdit(false);
     setPhotoscanEdit(false);
     setDuplicateEdit(true);
+    setPhotopictureEdit(false);
+  };
+  const handleClickPhotopictureEdit  = (event) => {
+    setfndEdit(false);
+    setfotoprintEdit(false);
+    setPhotoscanEdit(false);
+    setDuplicateEdit(false);
+    setPhotopictureEdit(true);
   };
   return (
     <>
@@ -130,7 +143,8 @@ const PhotoChangePrice = () => {
             </div>
 
             {/* Картка 5 */}
-            <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded">
+            <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
+             onClick={handleClickPhotopictureEdit}>
               <div className="row">
                 <div className="col-md-3">
                   <i
@@ -169,6 +183,7 @@ const PhotoChangePrice = () => {
           {fotoprintEdit && <FotoprintEditPrice />}
           {photoscanEdit && <PhotoscanEditPrice />}
           {duplicateEdit && <DuplicateEditPrice />}
+          {photopictureEdit && <PhotopictureEditPrice />}
 
         </div>
       </div>

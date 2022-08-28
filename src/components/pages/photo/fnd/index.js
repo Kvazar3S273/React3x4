@@ -8,7 +8,7 @@ import {
   faFileZipper,
   faHardDrive,
 } from "@fortawesome/free-solid-svg-icons";
-import { useEffect,useState } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { GetFnds } from "../../../../constants/actions/photoActions/fnd";
 

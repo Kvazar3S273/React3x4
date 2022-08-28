@@ -10,6 +10,7 @@ import fndReducer from "./reducers/editPhotoReducers/fndReducer"
 import fotoprintReducer from "./reducers/editPhotoReducers/fotoprintReducer";
 import photoscanReducer from "./reducers/editPhotoReducers/photoscanReducer";
 import duplicateReducer from "./reducers/editPhotoReducers/duplicateReducer";
+import photopictureReducer from "./reducers/editPhotoReducers/photopictureReducer";
 
 const middleware = [
     thunk
@@ -25,7 +26,8 @@ const rootReducer = combineReducers({
     fnd: fndReducer,
     fotoprint: fotoprintReducer,
     photoscan: photoscanReducer,
-    duplicate: duplicateReducer
+    duplicate: duplicateReducer,
+    photopicture: photopictureReducer
 });
 
 const enhancers = [];
