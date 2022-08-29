@@ -2,42 +2,42 @@ import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { GetPhotopictures, UpdatePhotopictureTable } from "../../../../constants/actions/photoActions/photopicture";
+import { GetBottles, UpdateBottleTable } from "../../../../constants/actions/photoActions/bottle";
 
-const PhotopictureEditPrice = () => {
+const BottleEditPrice = () => {
   const input = useRef();
 
-  const initialPhotopictureState = {
+  const initialBottleState = {
     id: null,
     price: null
   };
 
   const navigator = useNavigate();
   const dispatch = useDispatch();
-  const { listphotopictures } = useSelector((state) => state.photopicture);
-  const [editPhotopicture, setEditPhotopicture] = useState(initialPhotopictureState);
+  const { listbottles } = useSelector((state) => state.bottle);
+  const [editBottle, setEditBottle] = useState(initialBottleState);
   const [isOpen, setIsOpen] = useState(null);
   const [foc, setFoc] = useState(false);
   const [complete, setComplete] = useState(false);
 
   useEffect(() => {
-    dispatch(GetPhotopictures());
+    dispatch(GetBottles());
   }, []);
 
-  const Table = ({ listphotopictures }) => (
+  const Table = ({ listbottles }) => (
     <div className="row">
       <div className="col-md-1"></div>
       <div className="col-md-10">
         <table className="table table-striped text-center">
           <thead>
             <tr className="table-primary">
-              <th scope="col">Формат</th>
+              <th scope="col">Послуга</th>
               <th scope="col" className="text-center">Ціна</th>
             </tr>
           </thead>
           <tbody>
-            {listphotopictures.map((row, index) => (
-              <TableRow key={row.id} row={row} index={listphotopictures[index]} />
+            {listbottles.map((row, index) => (
+              <TableRow key={row.id} row={row} index={listbottles[index]} />
             ))}
           </tbody>
         </table>
@@ -51,7 +51,7 @@ const PhotopictureEditPrice = () => {
 
     console.log("Row", row);
     //console.log("e.currentTarget.id",e.currentTarget.id)
-    const item = listphotopictures.find((row) => row.id == e.currentTarget.id);
+    const item = listbottles.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
     setComplete(true);
@@ -61,14 +61,14 @@ const PhotopictureEditPrice = () => {
     };
 
     if (!foc) {
-      setEditPhotopicture(data);
+      setEditBottle(data);
     }
   };
 
   const handleInputChange = (dataType, values, index) => {
     //console.log("Datatype",dataType);
     //console.log("datas:",values);
-    setEditPhotopicture({ ...editPhotopicture, [dataType]: values });
+    setEditBottle({ ...editBottle, [dataType]: values });
     //console.log("Final:",editFnd);
   };
 
@@ -76,20 +76,20 @@ const PhotopictureEditPrice = () => {
     setFoc((preState) => !preState);
   };
 
-  const updatePhotopictureItem = () => {
+  const updateBottleItem = () => {
     //console.log("FND:",editFnd);
-    const idItem = editPhotopicture.id;
+    const idItem = editBottle.id;
 
     const upd = {
-      price: editPhotopicture.price,
+      price: editBottle.price,
     };
 
-    dispatch(UpdatePhotopictureTable(idItem, upd))
+    dispatch(UpdateBottleTable(idItem, upd))
       .then((res) => {
         console.log("Result:", res);
         setComplete(false);
         navigator("/admin");
-        dispatch(GetPhotopictures());
+        dispatch(GetBottles());
       })
       .catch((ex) => {
         console.log("Errorr", ex);
@@ -102,7 +102,7 @@ const PhotopictureEditPrice = () => {
       id={row.id}
       onClick={(e) => RowHandleClick(e, row)}
     >
-      <th scope="row">{row.format}</th>
+      <th scope="row">{row.service}</th>
       {isOpen == row.id && complete ? (
           <td >
             <div
@@ -119,7 +119,7 @@ const PhotopictureEditPrice = () => {
                       : input
                   }
                   id="price"
-                  value={editPhotopicture.price}
+                  value={editBottle.price}
                   name="price"
                   onChange={(e) =>
                     handleInputChange("price", e.currentTarget.value, index)
@@ -141,7 +141,7 @@ const PhotopictureEditPrice = () => {
                     width: "60px",
                     height: "35px",
                   }}
-                  onClick={updatePhotopictureItem}
+                  onClick={updateBottleItem}
                   type="submit"
                 >
                   Save
@@ -158,11 +158,11 @@ const PhotopictureEditPrice = () => {
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
-        <h1 className="text-center">Фотокартини</h1>
+        <h1 className="text-center">Етикетки на пляшки</h1>
         <h4 className="text-center text-danger">Редагування цін</h4>
-        <Table listphotopictures={listphotopictures} />
+        <Table listbottles={listbottles} />
       </div>
     </div>
   );
 };
-export default PhotopictureEditPrice;
+export default BottleEditPrice;

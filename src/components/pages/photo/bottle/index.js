@@ -1,6 +1,16 @@
 import React, { Component } from "react";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { GetBottles } from "../../../../constants/actions/photoActions/bottle";
 
 const Bottle = () => {
+
+  const dispatch = useDispatch();
+  const{listbottles}= useSelector(state => state.bottle);
+  useEffect(() => {
+          dispatch(GetBottles());           
+      }, []);
+
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
@@ -32,22 +42,13 @@ const Bottle = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">Етикетка по шаблону</th>
-                      <td>150</td>
+                  {listbottles &&
+                  listbottles.map((item) => (
+                    <tr key={item.id}>
+                      <td>{item.service}</td>
+                      <td>{item.price}</td>
                     </tr>
-                    <tr>
-                      <th scope="row">Індивідуальний дизайн	</th>
-                      <td>250</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Кожна наступна	</th>
-                      <td>40</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Поклейка на пляшку	</th>
-                      <td>40</td>
-                    </tr>
+                  ))}
                   </tbody>
                 </table>
               </div>

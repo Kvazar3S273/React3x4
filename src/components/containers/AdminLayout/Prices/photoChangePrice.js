@@ -14,6 +14,7 @@ import FotoprintEditPrice from "./fotoprintEditPrice";
 import PhotoscanEditPrice from "./photoscanEditPrice";
 import DuplicateEditPrice from "./duplicateEditPrice";
 import PhotopictureEditPrice from "./photopictureEditPrice";
+import BottleEditPrice from "./bottleEditPrice";
 
 const PhotoChangePrice = () => {
   const [fndEdit, setfndEdit] = useState(false);
@@ -21,6 +22,7 @@ const PhotoChangePrice = () => {
   const [photoscanEdit, setPhotoscanEdit] = useState(false);
   const [duplicateEdit, setDuplicateEdit] = useState(false);
   const [photopictureEdit, setPhotopictureEdit] = useState(false);
+  const [bottleEdit, setBottleEdit] = useState(false);
   const handleClickFndEdit = (event) => {
     // 👇️ щоб по кліку відкривалось і по наступному закривалось
     // setfndEdit((current) => !current);
@@ -30,6 +32,7 @@ const PhotoChangePrice = () => {
     setPhotoscanEdit(false);
     setDuplicateEdit(false);
     setPhotopictureEdit(false);
+    setBottleEdit(false);
   };
   const handleClickFotoprintEdit = (event) => {
     setfndEdit(false);
@@ -37,6 +40,7 @@ const PhotoChangePrice = () => {
     setPhotoscanEdit(false);
     setDuplicateEdit(false);
     setPhotopictureEdit(false);
+    setBottleEdit(false);
   };
   const handleClickPhotoscanEdit = (event) => {
     setfndEdit(false);
@@ -44,6 +48,7 @@ const PhotoChangePrice = () => {
     setPhotoscanEdit(true);
     setDuplicateEdit(false);
     setPhotopictureEdit(false);
+    setBottleEdit(false);
   };
   const handleClickDuplicateEdit = (event) => {
     setfndEdit(false);
@@ -51,6 +56,7 @@ const PhotoChangePrice = () => {
     setPhotoscanEdit(false);
     setDuplicateEdit(true);
     setPhotopictureEdit(false);
+    setBottleEdit(false);
   };
   const handleClickPhotopictureEdit  = (event) => {
     setfndEdit(false);
@@ -58,6 +64,15 @@ const PhotoChangePrice = () => {
     setPhotoscanEdit(false);
     setDuplicateEdit(false);
     setPhotopictureEdit(true);
+    setBottleEdit(false);
+  };
+  const handleClickBottleEdit  = (event) => {
+    setfndEdit(false);
+    setfotoprintEdit(false);
+    setPhotoscanEdit(false);
+    setDuplicateEdit(false);
+    setPhotopictureEdit(false);
+    setBottleEdit(true);
   };
   return (
     <>
@@ -161,7 +176,8 @@ const PhotoChangePrice = () => {
             </div>
 
             {/* Картка 6 */}
-            <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded">
+            <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
+              onClick={handleClickBottleEdit}>
               <div className="row">
                 <div className="col-md-3">
                   <i
@@ -184,6 +200,7 @@ const PhotoChangePrice = () => {
           {photoscanEdit && <PhotoscanEditPrice />}
           {duplicateEdit && <DuplicateEditPrice />}
           {photopictureEdit && <PhotopictureEditPrice />}
+          {bottleEdit && <BottleEditPrice />}
 
         </div>
       </div>
