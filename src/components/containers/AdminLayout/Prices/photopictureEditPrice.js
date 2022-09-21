@@ -161,6 +161,83 @@ const PhotopictureEditPrice = () => {
         <h1 className="text-center">Фотокартини</h1>
         <h4 className="text-center text-danger">Редагування цін</h4>
         <Table listphotopictures={listphotopictures} />
+
+        <div className="row mt-3 mb-3">
+          <h4 className="text-center text-danger mb-4">
+            Збільшити ціни на певний %
+          </h4>
+
+          <div className="row text-center">
+            <div className="col">
+              <h5 className="text-end">
+                Збільшити всі ціни на
+              </h5>
+            </div>
+            <div className="col">
+              <input
+                id="percentValue"
+                style={{
+                  width: "180px",
+                  height: "35px",
+                  textAlign: "center",
+                }}
+              />
+              %
+            </div>
+            <div className="col text-start">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Збільшити
+              </button>
+            </div>
+          </div>
+
+          {/* Modal */}
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Попередження
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  {/* Тут було б добре замість ... вставити значення з інпута */}
+                  Ви справді плануєте збільшити ціну на ...%?
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Ні
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Так, збільшити
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   );
