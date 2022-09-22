@@ -16,7 +16,6 @@
 .modal.active {
     opacity: 1;
     pointer-events: all;
-    
 }
 
 .modal__content {
@@ -25,10 +24,9 @@
     background-color: white;
     width: 50vw;
     transform: scale(0.5);
-    transition: 1s all;
-
+    transition: 0.8s all;
 }
-.modal__content.active{
-    transform: scale(1);
 
+.modal__content.active {
+    transform: scale(1);
 }

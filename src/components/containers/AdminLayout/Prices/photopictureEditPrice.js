@@ -156,9 +156,9 @@ const PhotopictureEditPrice = () => {
     </tr>
   );
 
-  const [modalActive, setModalActive] = useState(true);
-  
-
+  const [modalActive, setModalActive] = useState(false);
+  console.log("Input value",document.getElementById('percentValue').value);
+ 
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
@@ -167,39 +167,8 @@ const PhotopictureEditPrice = () => {
 
         <Table listphotopictures={listphotopictures} />
 
-        <ModalPercent active={modalActive} setActive={setModalActive}>
-          <div id="modalPercent">
+        
 
-                <div className="modal-header">
-                  <h4 className="modal-title">
-                    Попередження
-                  </h4>
-                  <button
-                    type="button"
-                    className="btn-close"
-                    // data-bs-dismiss="modal"
-                    aria-label="Close"
-                    onClick={() => setModalActive(false)}
-                  ></button>
-                </div>
-                <div className="modal-body">
-                  Ви справді плануєте збільшити ціну на ...%?
-                </div>
-                <div className="modal-footer">
-                  <button
-                    type="button"
-                    className="btn btn-secondary"
-                    onClick={() => setModalActive(false)}
-                  >
-                    Ні, я передумав
-                  </button>
-                  <button type="button" className="btn btn-primary">
-                    Так, збільшити
-                  </button>
-                </div>
-          </div>
-          </ModalPercent>
-          
         <div className="row mt-3 mb-3">
           <h4 className="text-center text-danger mb-4">
             Збільшити ціни на певний %
@@ -212,6 +181,7 @@ const PhotopictureEditPrice = () => {
             <div className="col">
               <input
                 id="percentValue"
+                value="0"
                 style={{
                   width: "180px",
                   height: "35px",
@@ -239,45 +209,39 @@ const PhotopictureEditPrice = () => {
             </div>
           </div>
 
-          {/* Modal */}
-          {/* <div
-            class="modal fade"
-            id="exampleModal"
-            tabindex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">
+          <ModalPercent active={modalActive} setActive={setModalActive}>
+          <div id="modalPercent">
+
+                <div className="modal-header">
+                  <h4 className="modal-title">
                     Попередження
-                  </h5>
+                  </h4>
                   <button
                     type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
+                    className="btn-close"
+                    // data-bs-dismiss="modal"
                     aria-label="Close"
+                    onClick={() => setModalActive(false)}
                   ></button>
                 </div>
-                <div class="modal-body">
-                  Ви справді плануєте збільшити ціну на ...%?
+                <div className="modal-body">
+                  Ви справді плануєте збільшити ціну на 
+                  {document.getElementById('percentValue').value}  %?
                 </div>
-                <div class="modal-footer">
+                <div className="modal-footer">
                   <button
                     type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
+                    className="btn btn-secondary"
+                    onClick={() => setModalActive(false)}
                   >
-                    Ні
+                    Ні, я передумав
                   </button>
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" className="btn btn-primary">
                     Так, збільшити
                   </button>
                 </div>
-              </div>
-            </div>
-          </div> */}
+          </div>
+          </ModalPercent>
 
           
         </div>
@@ -286,3 +250,4 @@ const PhotopictureEditPrice = () => {
   );
 };
 export default PhotopictureEditPrice;
+
