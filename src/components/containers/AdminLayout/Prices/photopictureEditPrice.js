@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { GetPhotopictures, UpdatePhotopictureTable } from "../../../../constants/actions/photoActions/photopicture";
+import ModalPercent from "./ModalPercent";
 
 const PhotopictureEditPrice = () => {
   const input = useRef();
@@ -155,13 +156,50 @@ const PhotopictureEditPrice = () => {
     </tr>
   );
 
+  const [modalActive, setModalActive] = useState(true);
+  
+
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
         <h1 className="text-center">Фотокартини</h1>
         <h4 className="text-center text-danger">Редагування цін</h4>
+
         <Table listphotopictures={listphotopictures} />
 
+        <ModalPercent active={modalActive} setActive={setModalActive}>
+          <div id="modalPercent">
+
+                <div className="modal-header">
+                  <h4 className="modal-title">
+                    Попередження
+                  </h4>
+                  <button
+                    type="button"
+                    className="btn-close"
+                    // data-bs-dismiss="modal"
+                    aria-label="Close"
+                    onClick={() => setModalActive(false)}
+                  ></button>
+                </div>
+                <div className="modal-body">
+                  Ви справді плануєте збільшити ціну на ...%?
+                </div>
+                <div className="modal-footer">
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    onClick={() => setModalActive(false)}
+                  >
+                    Ні, я передумав
+                  </button>
+                  <button type="button" className="btn btn-primary">
+                    Так, збільшити
+                  </button>
+                </div>
+          </div>
+          </ModalPercent>
+          
         <div className="row mt-3 mb-3">
           <h4 className="text-center text-danger mb-4">
             Збільшити ціни на певний %
@@ -169,9 +207,7 @@ const PhotopictureEditPrice = () => {
 
           <div className="row text-center">
             <div className="col">
-              <h5 className="text-end">
-                Збільшити всі ціни на
-              </h5>
+              <h5 className="text-end">Збільшити всі ціни на</h5>
             </div>
             <div className="col">
               <input
@@ -185,11 +221,18 @@ const PhotopictureEditPrice = () => {
               %
             </div>
             <div className="col text-start">
-              <button
+              {/* <button
                 type="button"
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
+              >
+                Збільшити
+              </button> */}
+              <button
+                type="button"
+                className="open-btn btn btn-primary"
+                onClick={() => setModalActive(true)}
               >
                 Збільшити
               </button>
@@ -197,14 +240,14 @@ const PhotopictureEditPrice = () => {
           </div>
 
           {/* Modal */}
-          <div
+          {/* <div
             class="modal fade"
             id="exampleModal"
             tabindex="-1"
             aria-labelledby="exampleModalLabel"
             aria-hidden="true"
           >
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel">
@@ -218,7 +261,6 @@ const PhotopictureEditPrice = () => {
                   ></button>
                 </div>
                 <div class="modal-body">
-                  {/* Тут було б добре замість ... вставити значення з інпута */}
                   Ви справді плануєте збільшити ціну на ...%?
                 </div>
                 <div class="modal-footer">
@@ -235,8 +277,9 @@ const PhotopictureEditPrice = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
+          
         </div>
       </div>
     </div>

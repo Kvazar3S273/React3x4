@@ -9,6 +9,7 @@ import PhotoChangePrice from "./photoChangePrice";
 import CompChangePrice from "./compChangePrice";
 import PoligraphChangePrice from "./poligraphChangePrice";
 import "./style.css";
+import ModalPercent from "./ModalPercent";
 
 const Prices = () => {
 
@@ -36,6 +37,7 @@ const Prices = () => {
     setCompChangePrice(false);
     setPoligraphChangePrice(true);
   };
+
 
   return (
     <>
@@ -99,6 +101,8 @@ const Prices = () => {
               {showCompChangePrice && <CompChangePrice />}
               {showPoligraphChangePrice && <PoligraphChangePrice />}
       
+           
+
             </div>
         </div>
       </div>

@@ -419,7 +419,7 @@ const Header = () => {
                 {/* <Link className="nav-link text-danger" to="/admin">
                   Admin panel
                 </Link> */}
-                <Link className="nav-link" to="/profile">
+                <Link className="nav-link" to="/admin">
                   {user.name}
                 </Link>
                 <Link className="nav-link" to="/" onClick={logout}>
