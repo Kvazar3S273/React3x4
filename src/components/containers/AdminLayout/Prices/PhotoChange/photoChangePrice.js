@@ -9,12 +9,12 @@ import {
   faPhotoFilm,
   faImagePortrait,
 } from "@fortawesome/free-solid-svg-icons";
-import FndEditPrice from "./fndEditPrice";
-import FotoprintEditPrice from "./fotoprintEditPrice";
-import PhotoscanEditPrice from "./photoscanEditPrice";
-import DuplicateEditPrice from "./duplicateEditPrice";
-import PhotopictureEditPrice from "./photopictureEditPrice";
-import BottleEditPrice from "./bottleEditPrice";
+import FndEditPrice from "../PhotoChange/fndEditPrice";
+import FotoprintEditPrice from "../PhotoChange/fotoprintEditPrice";
+import PhotoscanEditPrice from "../PhotoChange/photoscanEditPrice";
+import DuplicateEditPrice from "../PhotoChange/duplicateEditPrice";
+import PhotopictureEditPrice from "../PhotoChange/photopictureEditPrice";
+import BottleEditPrice from "../PhotoChange/bottleEditPrice";
 
 const PhotoChangePrice = () => {
   const [fndEdit, setfndEdit] = useState(false);

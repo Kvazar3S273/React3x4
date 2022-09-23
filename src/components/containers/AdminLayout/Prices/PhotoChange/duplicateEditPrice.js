@@ -1,51 +1,49 @@
 import React,{useRef} from "react";
 import { useEffect,useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import { GetFnds, UpdateFndTable } from "../../../../constants/actions/photoActions/fnd";
 import { useNavigate } from "react-router-dom";
+import { GetDuplicates, UpdateDuplicateTable } from "../../../../../constants/actions/photoActions/duplicate";
 
-const FndEditPrice = () => {
+const DuplicateEditPrice = () => {
 
   const input1 = useRef();
   const input2 = useRef();
   
-  const initialFndState = {
+  const initialDuplicateState = {
     id: null,
-    price: null,
-    archivePice:null
-    
+    priceFirst: null,
+    priceEachOther: null
   };
 
   const navigator = useNavigate();
   const dispatch = useDispatch();
-  const { listfnds } = useSelector((state) => state.fnd);
-  const [ editFnd, setEditFnd ] = useState(initialFndState);
+  const { listduplicates } = useSelector((state) => state.duplicate);
+  const [ editDuplicate, setEditDuplicate ] = useState(initialDuplicateState);
   const [ isOpen, setIsOpen ] = useState(null);
   const [ foc, setFoc ] = useState(false); 
   const [ complete, setComplete ] = useState(false);
   
 
   useEffect(() => {
-          dispatch(GetFnds());  
+          dispatch(GetDuplicates());  
           
       }, []);     
      
-      const Table = ({ listfnds }) => (
+      const Table = ({ listduplicates }) => (
         <div className="row">
           <div className="col-md-1"></div>
           <div className="col-md-10">
             <table className="table table-striped text-center">
               <thead>
                 <tr className="table-primary">
-                  <th scope="col">Документ</th> 
-                  <th scope="col" className="text-center">Кількість</th>
-                  <th scope="col" className="text-center">Ціна</th>
-                  <th scope="col" className="text-center">Архів</th>
+                  <th scope="col">Формат</th>
+                  <th scope="col" className="text-center">Ціна за перший</th>
+                  <th scope="col" className="text-center">Кожен наступний</th>
                 </tr>
               </thead>
               <tbody>
-                {listfnds.map((row, index) => (
-                  <TableRow key={row.id} row={row} index={listfnds[index]} />
+                {listduplicates.map((row, index) => (
+                  <TableRow key={row.id} row={row} index={listduplicates[index]} />
                 ))}
               </tbody>
             </table>
@@ -59,18 +57,18 @@ const FndEditPrice = () => {
                
          console.log("Row",row);
          //console.log("e.currentTarget.id",e.currentTarget.id)
-         const item = listfnds.find(row => row.id == e.currentTarget.id)
+         const item = listduplicates.find(row => row.id == e.currentTarget.id)
 
          setIsOpen(item.id);  
          setComplete(true);
          const data={
           id:item.id,
-          price:item.price,
-          archivePice:item.archivePice         
+          priceFirst:item.priceFirst,
+          priceEachOther:item.priceEachOther         
          }
 
          if(!foc){
-          setEditFnd(data);
+          setEditDuplicate(data);
          }         
                       
        }
@@ -79,7 +77,7 @@ const FndEditPrice = () => {
                     
        //console.log("Datatype",dataType);                 
        //console.log("datas:",values);       
-       setEditFnd({...editFnd, [dataType]: values})         
+       setEditDuplicate({...editDuplicate, [dataType]: values})         
        //console.log("Final:",editFnd); 
       };
 
@@ -89,22 +87,22 @@ const FndEditPrice = () => {
       }
 
 
-      const updateFndItem = () => {
+      const updateDuplicateItem = () => {
 
         //console.log("FND:",editFnd);
-        const idItem = editFnd.id;
+        const idItem = editDuplicate.id;
 
         const upd = {
-          price:editFnd.price,
-          archivePice:editFnd.archivePice
+          priceFirst: editDuplicate.priceFirst,
+          priceEachOther: editDuplicate.priceEachOther
         }
 
-        dispatch(UpdateFndTable(idItem,upd))
+        dispatch(UpdateDuplicateTable(idItem,upd))
         .then(res => {
           console.log("Result:", res);
           setComplete(false);
           navigator("/admin");
-          dispatch(GetFnds());
+          dispatch(GetDuplicates());
         })
         .catch(ex => {
           console.log("Errorr", ex);
@@ -118,11 +116,9 @@ const FndEditPrice = () => {
         id={row.id}
         onClick={(e) => RowHandleClick(e, row)}
       >
-        <th scope="row" className="text-start">{row.title}</th>
-        <td className="text-center">{row.qty}</td>
-        {/* <td>{row.price}</td> */}
+        <th scope="row">{row.format}</th>
         {isOpen == row.id && complete ? (
-          <td colSpan={3}>
+          <td colSpan={2}>
             <div
               className="d-flex justify-content-between"
               style={{ left: "1em" }}
@@ -137,11 +133,11 @@ const FndEditPrice = () => {
                       }
                     : input1
                 }
-                id="price"
-                value={editFnd.price}
-                name="price"
+                id="priceFirst"
+                value={editDuplicate.priceFirst}
+                name="priceFirst"
                 onChange={(e) =>
-                  handleInputChange("price", e.currentTarget.value, index)
+                  handleInputChange("priceFirst", e.currentTarget.value, index)
                 }
                 onClick={handleToggle}
                 style={{
@@ -155,11 +151,11 @@ const FndEditPrice = () => {
             </td>
             <td >
               <input
-                id="archivePice"
-                value={editFnd.archivePice}
-                name="archivePice"
+                id="priceEachOther"
+                value={editDuplicate.priceEachOther}
+                name="priceEachOther"
                 onChange={(e) =>
-                  handleInputChange("archivePice", e.currentTarget.value, index)
+                  handleInputChange("priceEachOther", e.currentTarget.value, index)
                 }
                 ref={
                   !foc
@@ -182,19 +178,19 @@ const FndEditPrice = () => {
                 <button
                   className="btn btn-primary"
                   style={{ width: "60px", height: "35px"}}
-                  onClick={updateFndItem}
+                  onClick={updateDuplicateItem}
                   type="submit"
                 >
                   Save
                 </button>
 
               </td>
-            </div>
-          </td>
+              </div>
+            </td>
         ) : (
           <React.Fragment>
-            <td className="text-center">{row.price}</td>
-            <td>{row.archivePice}</td>
+            <td className="text-center">{row.priceFirst}</td>
+            <td>{row.priceEachOther}</td>
           </React.Fragment>
         )}
       </tr>
@@ -204,13 +200,13 @@ const FndEditPrice = () => {
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
-        <h1 className="text-center">Фото на документи</h1>
+        <h1 className="text-center">Дублікати фотографій</h1>
         <h4 className="text-center text-danger">Редагування цін</h4>
-        <Table listfnds={listfnds}  />       
+        <Table listduplicates={listduplicates}  />       
       </div>
     </div>
   );
 
   
 };
-export default FndEditPrice;
+export default DuplicateEditPrice;

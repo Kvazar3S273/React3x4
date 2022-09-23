@@ -2,8 +2,8 @@ import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { GetPhotopictures, UpdatePhotopictureTable } from "../../../../constants/actions/photoActions/photopicture";
-import ModalPercent from "./ModalPercent";
+import { GetPhotopictures, UpdatePhotopictureTable } from "../../../../../constants/actions/photoActions/photopicture";
+import ModalPercent from "../ModalPercent";
 
 const PhotopictureEditPrice = () => {
   const input = useRef();

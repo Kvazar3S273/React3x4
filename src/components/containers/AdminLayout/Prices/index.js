@@ -5,9 +5,9 @@ import {
   faComputer,
   faPrint
 } from "@fortawesome/free-solid-svg-icons";
-import PhotoChangePrice from "./photoChangePrice";
-import CompChangePrice from "./compChangePrice";
-import PoligraphChangePrice from "./poligraphChangePrice";
+import PhotoChangePrice from "../Prices/PhotoChange/photoChangePrice";
+import CompChangePrice from "./CompChange/compChangePrice";
+import PoligraphChangePrice from "./PoligraphChange/poligraphChangePrice";
 import "./style.css";
 import ModalPercent from "./ModalPercent";
 

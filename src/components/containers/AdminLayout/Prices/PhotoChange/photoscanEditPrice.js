@@ -1,7 +1,7 @@
 import React,{useRef} from "react";
 import { useEffect,useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import { GetPhotoscans, UpdatePhotoscanTable } from "../../../../constants/actions/photoActions/photoscan";
+import { GetPhotoscans, UpdatePhotoscanTable } from "../../../../../constants/actions/photoActions/photoscan";
 import { useNavigate } from "react-router-dom";
 
 const PhotoscanEditPrice = () => {
