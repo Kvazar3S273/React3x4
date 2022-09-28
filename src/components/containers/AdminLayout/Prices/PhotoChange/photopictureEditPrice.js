@@ -20,6 +20,7 @@ const PhotopictureEditPrice = () => {
   const [isOpen, setIsOpen] = useState(null);
   const [foc, setFoc] = useState(false);
   const [complete, setComplete] = useState(false);
+  const [percent, setPersent] = useState(1);
 
   useEffect(() => {
     dispatch(GetPhotopictures());
@@ -72,6 +73,10 @@ const PhotopictureEditPrice = () => {
     setEditPhotopicture({ ...editPhotopicture, [dataType]: values });
     //console.log("Final:",editFnd);
   };
+
+  const handleInputPercentChange=(value)=>{
+    setPersent(value);
+  }
 
   const handleToggle = () => {
     setFoc((preState) => !preState);
@@ -157,7 +162,7 @@ const PhotopictureEditPrice = () => {
   );
 
   const [modalActive, setModalActive] = useState(false);
-  console.log("Input value",document.getElementById('percentValue').value);
+  //console.log("Input value",document.getElementById('percentValue').value);
  
   return (
     <div className="row mt-3 mb-3">
@@ -166,8 +171,6 @@ const PhotopictureEditPrice = () => {
         <h4 className="text-center text-danger">Редагування цін</h4>
 
         <Table listphotopictures={listphotopictures} />
-
-        
 
         <div className="row mt-3 mb-3">
           <h4 className="text-center text-danger mb-4">
@@ -179,9 +182,12 @@ const PhotopictureEditPrice = () => {
               <h5 className="text-end">Збільшити всі ціни на</h5>
             </div>
             <div className="col">
-              <input
+            <input
                 id="percentValue"
-                value="0"
+                name="percent"
+                  onChange={(e) =>
+                    handleInputPercentChange( e.currentTarget.value)
+                  }
                 style={{
                   width: "180px",
                   height: "35px",
@@ -209,39 +215,7 @@ const PhotopictureEditPrice = () => {
             </div>
           </div>
 
-          <ModalPercent active={modalActive} setActive={setModalActive}>
-          <div id="modalPercent">
-
-                <div className="modal-header">
-                  <h4 className="modal-title">
-                    Попередження
-                  </h4>
-                  <button
-                    type="button"
-                    className="btn-close"
-                    // data-bs-dismiss="modal"
-                    aria-label="Close"
-                    onClick={() => setModalActive(false)}
-                  ></button>
-                </div>
-                <div className="modal-body">
-                  Ви справді плануєте збільшити ціну на 
-                  {document.getElementById('percentValue').value}  %?
-                </div>
-                <div className="modal-footer">
-                  <button
-                    type="button"
-                    className="btn btn-secondary"
-                    onClick={() => setModalActive(false)}
-                  >
-                    Ні, я передумав
-                  </button>
-                  <button type="button" className="btn btn-primary">
-                    Так, збільшити
-                  </button>
-                </div>
-          </div>
-          </ModalPercent>
+          <ModalPercent active={modalActive} onClose={()=>setModalActive(false)} children={percent}/> 
 
           
         </div>
