@@ -68,3 +68,5 @@ export const GET_PHOTOSCAN = "GET_PHOTOSCAN";
 export const GET_DUPLICATE = "GET_DUPLICATE";
 export const GET_PHOTOPICTURE = "GET_PHOTOPICTURE";
 export const GET_BOTTLE = "GET_BOTTLE";
+
+export const GET_VISITCARD = "GET_VISITCARD";

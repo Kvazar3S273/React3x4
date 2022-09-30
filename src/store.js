@@ -12,6 +12,7 @@ import photoscanReducer from "./reducers/editPhotoReducers/photoscanReducer";
 import duplicateReducer from "./reducers/editPhotoReducers/duplicateReducer";
 import photopictureReducer from "./reducers/editPhotoReducers/photopictureReducer";
 import bottleReducer from "./reducers/editPhotoReducers/bottleReducer";
+import visitcardReducer from "./reducers/editPoligraphReducer/visitcardReducer";
 
 const middleware = [
     thunk
@@ -29,7 +30,8 @@ const rootReducer = combineReducers({
     photoscan: photoscanReducer,
     duplicate: duplicateReducer,
     photopicture: photopictureReducer,
-    bottle: bottleReducer
+    bottle: bottleReducer,
+    visitcard: visitcardReducer
 });
 
 const enhancers = [];

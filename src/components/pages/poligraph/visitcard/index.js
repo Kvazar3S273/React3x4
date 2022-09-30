@@ -4,8 +4,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalculator
 } from "@fortawesome/free-solid-svg-icons";
+import { useSelector, useDispatch } from 'react-redux';
+import { GetVisitcards } from "../../../../constants/actions/poligraphActions/visitcard";
+import { useEffect, useState } from "react";
 
 const Visitcard = () => {
+
+  const dispatch = useDispatch();
+  const { listvisitcards } = useSelector(state => state.visitcard);
+  useEffect(() => {
+          dispatch(GetVisitcards());           
+      }, []);
 
   return (
     <div className="row mt-3 mb-3">
@@ -86,31 +95,26 @@ const Visitcard = () => {
             <div className="row">
               <div className="col-md-3"></div>
               <div className="col-md-6">
-                <table className="table table-primary  table-striped text-center">
+                <table className="table table-striped text-center">
                   <thead>
                     <tr>
                       <th scope="col">Щільність паперу</th>
-                      <th scope="col">Ціна, грн</th>
+                      <th scope="col">Покриття</th>
+                      <th scope="col" style={{ background: "#E1A3B3" }}>Ціна, грн</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">250</th>
-                      <td>2000</td>
+
+              {listvisitcards &&
+                  listvisitcards.map((item) => (
+                    <tr key={item.id}>
+                      <td>{item.density}</td>
+                      <td>{item.laminating}</td>
+                      <td style={{ background: "#E1A3B3" }}> {item.price} </td>
                     </tr>
-                    <tr>
-                      <th scope="row">300</th>
-                      <td>3000</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">350</th>
-                      <td>4000</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">450</th>
-                      <td>5000</td>
-                    </tr>
-                  </tbody>
+                  ))}
+
+              </tbody>
                 </table>
               </div>
               <div className="col-md-3"></div>
