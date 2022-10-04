@@ -33,6 +33,8 @@ export const PHOTO_BOTTLE = "PHOTO_BOTTLE";
 export const PHOTO_PHOTOPICTURE = "PHOTO_PHOTOPICTURE";
 
 export const COMP_XEROX = "COMP_XEROX";
+export const COMP_BLACKPRINT = "COMP_BLACKPRINT";
+export const COMP_COLORPRINT = "COMP_COLORPRINT";
 export const COMP_SCAN = "COMP_SCAN";
 export const COMP_LAMINATE = "COMP_LAMINATE";
 export const COMP_BINDER = "COMP_BINDER";
@@ -68,5 +70,15 @@ export const GET_PHOTOSCAN = "GET_PHOTOSCAN";
 export const GET_DUPLICATE = "GET_DUPLICATE";
 export const GET_PHOTOPICTURE = "GET_PHOTOPICTURE";
 export const GET_BOTTLE = "GET_BOTTLE";
+
+export const GET_XEROX = "GET_XEROX";
+export const GET_BLACKPRINT = "GET_BLACKPRINT";
+export const GET_COLORPRINT = "GET_COLORPRINT";
+export const GET_SCAN = "GET_SCAN";
+export const GET_LAMINATE = "GET_LAMINATE";
+export const GET_BINDER = "GET_BINDER";
+export const GET_USBFLASH = "GET_USBFLASH";
+export const GET_DISCPRINT = "GET_DISCPRINT";
+export const GET_EMAIL = "GET_EMAIL";
 
 export const GET_VISITCARD = "GET_VISITCARD";
