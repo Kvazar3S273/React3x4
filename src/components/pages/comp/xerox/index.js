@@ -1,9 +1,17 @@
 import React from "react";
 import "react-slideshow-image/dist/styles.css";
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from "react";
+import { GetXeroxes } from "../../../../constants/actions/compActions/xerox";
 import "../style.css"
 
 const Xerox = () => {
   
+  const dispatch = useDispatch();
+  const { listxeroxes } = useSelector(state => state.xerox);
+  useEffect(() => {
+          dispatch(GetXeroxes());           
+      }, []);
 
   return (
     <div className="row mt-3 mb-3">
@@ -97,22 +105,13 @@ const Xerox = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">Односторонній</th>
-                      <td>2</td>
+                  {listxeroxes &&
+                  listxeroxes.map((item) => (
+                    <tr key={item.id}>
+                      <td>{item.name}</td>
+                      <td> {item.price} </td>
                     </tr>
-                    <tr>
-                      <th scope="row">Двосторонній</th>
-                      <td>3</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Паспорт (3 стор.)</th>
-                      <td>4</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Паспорт (4 стор.)</th>
-                      <td>5</td>
-                    </tr>
+                  ))}
                   </tbody>
                 </table>
               </div>
