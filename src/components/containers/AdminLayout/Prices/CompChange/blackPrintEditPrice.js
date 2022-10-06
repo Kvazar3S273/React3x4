@@ -1,56 +1,53 @@
 import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  GetFnds,
-  UpdateFndTable,
-} from "../../../../../constants/actions/photoActions/fnd";
 import { useNavigate } from "react-router-dom";
+import {
+  GetBlackPrints,
+  UpdateBlackPrintTable,
+} from "../../../../../constants/actions/compActions/blackprint";
 
-const FndEditPrice = () => {
+const BlackPrintEditPrice = () => {
   const input1 = useRef();
   const input2 = useRef();
 
-  const initialFndState = {
+  const initialBlackPrintState = {
     id: null,
-    price: null,
-    archivePice: null,
+    priceText: null,
+    price100: null,
   };
 
   const navigator = useNavigate();
   const dispatch = useDispatch();
-  const { listfnds } = useSelector((state) => state.fnd);
-  const [editFnd, setEditFnd] = useState(initialFndState);
-  const [isOpen, setIsOpen] = useState(null);
-  const [foc, setFoc] = useState(false);
-  const [complete, setComplete] = useState(false);
+  const { listblackprints } = useSelector((state) => state.blackprint);
+  const [ editBlackPrint, setEditBlackPrint ] = useState(initialBlackPrintState);
+  const [ isOpen, setIsOpen ] = useState(null);
+  const [ foc, setFoc ] = useState(false);
+  const [ complete, setComplete ] = useState(false);
 
   useEffect(() => {
-    dispatch(GetFnds());
+    dispatch(GetBlackPrints());
   }, []);
 
-  const Table = ({ listfnds }) => (
+  const Table = ({ listblackprints }) => (
     <div className="row">
       <div className="col-md-1"></div>
       <div className="col-md-10">
         <table className="table table-striped text-center">
           <thead>
             <tr className="table-primary">
-              <th scope="col">Документ</th>
+              <th scope="col">Матеріал для друку</th>
               <th scope="col" className="text-center">
-                Кількість
+                Текст
               </th>
               <th scope="col" className="text-center">
-                Ціна
-              </th>
-              <th scope="col" className="text-center">
-                Архів
+                Заливка 100%
               </th>
             </tr>
           </thead>
           <tbody>
-            {listfnds.map((row, index) => (
-              <TableRow key={row.id} row={row} index={listfnds[index]} />
+            {listblackprints.map((row, index) => (
+              <TableRow key={row.id} row={row} index={listblackprints[index]} />
             ))}
           </tbody>
         </table>
@@ -64,25 +61,25 @@ const FndEditPrice = () => {
 
     console.log("Row", row);
     //console.log("e.currentTarget.id",e.currentTarget.id)
-    const item = listfnds.find((row) => row.id == e.currentTarget.id);
+    const item = listblackprints.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
     setComplete(true);
     const data = {
       id: item.id,
-      price: item.price,
-      archivePice: item.archivePice,
+      priceText: item.priceText,
+      price100: item.price100,
     };
 
     if (!foc) {
-      setEditFnd(data);
+      setEditBlackPrint(data);
     }
   };
 
   const handleInputChange = (dataType, values, index) => {
     //console.log("Datatype",dataType);
     //console.log("datas:",values);
-    setEditFnd({ ...editFnd, [dataType]: values });
+    setEditBlackPrint({ ...editBlackPrint, [dataType]: values });
     //console.log("Final:",editFnd);
   };
 
@@ -90,21 +87,21 @@ const FndEditPrice = () => {
     setFoc((preState) => !preState);
   };
 
-  const updateFndItem = () => {
+  const updateBlackPrintItem = () => {
     //console.log("FND:",editFnd);
-    const idItem = editFnd.id;
+    const idItem = editBlackPrint.id;
 
     const upd = {
-      price: editFnd.price,
-      archivePice: editFnd.archivePice,
+      priceText: editBlackPrint.priceText,
+      price100: editBlackPrint.price100,
     };
 
-    dispatch(UpdateFndTable(idItem, upd))
+    dispatch(UpdateBlackPrintTable(idItem, upd))
       .then((res) => {
         console.log("Result:", res);
         setComplete(false);
         navigator("/admin");
-        dispatch(GetFnds());
+        dispatch(GetBlackPrints());
       })
       .catch((ex) => {
         console.log("Errorr", ex);
@@ -118,10 +115,8 @@ const FndEditPrice = () => {
       onClick={(e) => RowHandleClick(e, row)}
     >
       <th scope="row" className="text-start">
-        {row.title}
+        {row.material}
       </th>
-      <td className="text-center">{row.qty}</td>
-      {/* <td>{row.price}</td> */}
       {isOpen == row.id && complete ? (
         <td colSpan={3}>
           <div
@@ -138,11 +133,11 @@ const FndEditPrice = () => {
                       }
                     : input1
                 }
-                id="price"
-                value={editFnd.price}
-                name="price"
+                id="priceText"
+                value={editBlackPrint.priceText}
+                name="priceText"
                 onChange={(e) =>
-                  handleInputChange("price", e.currentTarget.value, index)
+                  handleInputChange("priceText", e.currentTarget.value, index)
                 }
                 onClick={handleToggle}
                 style={{
@@ -156,11 +151,11 @@ const FndEditPrice = () => {
             </td>
             <td>
               <input
-                id="archivePice"
-                value={editFnd.archivePice}
-                name="archivePice"
+                id="price100"
+                value={editBlackPrint.price100}
+                name="price100"
                 onChange={(e) =>
-                  handleInputChange("archivePice", e.currentTarget.value, index)
+                  handleInputChange("price100", e.currentTarget.value, index)
                 }
                 ref={
                   !foc
@@ -183,7 +178,7 @@ const FndEditPrice = () => {
               <button
                 className="btn btn-primary"
                 style={{ width: "60px", height: "35px" }}
-                onClick={updateFndItem}
+                onClick={updateBlackPrintItem}
                 type="submit"
               >
                 Save
@@ -193,8 +188,8 @@ const FndEditPrice = () => {
         </td>
       ) : (
         <React.Fragment>
-          <td className="text-center">{row.price}</td>
-          <td>{row.archivePice}</td>
+          <td className="text-center">{row.priceText}</td>
+          <td>{row.price100}</td>
         </React.Fragment>
       )}
     </tr>
@@ -203,11 +198,11 @@ const FndEditPrice = () => {
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
-        <h1 className="text-center">Фото на документи</h1>
+        <h1 className="text-center">Чорно-білий друк</h1>
         <h4 className="text-center text-danger">Редагування цін</h4>
-        <Table listfnds={listfnds} />
+        <Table listblackprints={listblackprints} />
       </div>
     </div>
   );
 };
-export default FndEditPrice;
+export default BlackPrintEditPrice;

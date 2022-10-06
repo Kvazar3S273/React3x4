@@ -9,6 +9,8 @@ const Xerox = () => {
   
   const dispatch = useDispatch();
   const { listxeroxes } = useSelector(state => state.xerox);
+  const { listblackprints } = useSelector(state => state.blackprint);
+  const { listcolorprints } = useSelector(state => state.colorprint);
   useEffect(() => {
           dispatch(GetXeroxes());           
       }, []);
@@ -148,26 +150,14 @@ const Xerox = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">Звичайний папір</th>
-                    <td>2</td>
-                    <td>4</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Цупкий папір</th>
-                    <td>4</td>
-                    <td>7</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Кольоровий папір</th>
-                    <td>5</td>
-                    <td>8</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Кольоровий картон</th>
-                    <td>6</td>
-                    <td>9</td>
-                  </tr>
+                {listblackprints &&
+                  listblackprints.map((item) => (
+                    <tr key={item.id}>
+                      <td> {item.material}</td>
+                      <td> {item.priceText} </td>
+                      <td> {item.price100} </td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -205,54 +195,15 @@ const Xerox = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">Звичайний папір</th>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Цупкий папір</th>
-                    <td>9</td>
-                    <td>10</td>
-                    <td>11</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Кольоровий папір</th>
-                    <td>9</td>
-                    <td>10</td>
-                    <td>11</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Кольоровий картон</th>
-                    <td>10</td>
-                    <td>11</td>
-                    <td>12</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Самоклейка звичайна</th>
-                    <td>12</td>
-                    <td>12</td>
-                    <td>12</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Фотопапір тонкий</th>
-                    <td>16</td>
-                    <td>16</td>
-                    <td>16</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Фотопапір цупкий</th>
-                    <td>18</td>
-                    <td>18</td>
-                    <td>18</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Фотопапір самоклейка</th>
-                    <td>20</td>
-                    <td>20</td>
-                    <td>20</td>
-                  </tr>
+                {listcolorprints &&
+                  listcolorprints.map((item) => (
+                    <tr key={item.id}>
+                      <td> {item.material}</td>
+                      <td> {item.price25} </td>
+                      <td> {item.price50} </td>
+                      <td> {item.price100} </td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>

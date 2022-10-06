@@ -1,54 +1,54 @@
 import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  GetPhotoscans,
-  UpdatePhotoscanTable,
-} from "../../../../../constants/actions/photoActions/photoscan";
 import { useNavigate } from "react-router-dom";
+import {
+  GetColorPrints,
+  UpdateColorPrintTable,
+} from "../../../../../constants/actions/compActions/colorprint";
 
-const PhotoscanEditPrice = () => {
+const ColorPrintEditPrice = () => {
   const input1 = useRef();
   const input2 = useRef();
   const input3 = useRef();
 
-  const initialPhotoscanState = {
+  const initialColorPrintState = {
     id: null,
-    price300dpi: null,
-    price600dpi: null,
-    price1200dpi: null,
+    price25: null,
+    price50: null,
+    price100: null
   };
 
   const navigator = useNavigate();
   const dispatch = useDispatch();
-  const { listphotoscans } = useSelector((state) => state.photoscan);
-  const [editPhotoscan, setEditPhotoscan] = useState(initialPhotoscanState);
-  const [isOpen, setIsOpen] = useState(null);
-  const [foc, setFoc] = useState(false);
-  const [complete, setComplete] = useState(false);
-  const [three, setThree] = useState(false); // it's hook for change focus into third input.
-  const [changeItem, setChangeItem] = useState(null); //for click item when click to other row.
+  const { listcolorprints } = useSelector((state) => state.colorprint);
+  const [ editColorPrint, setEditColorPrint ] = useState(initialColorPrintState);
+  const [ isOpen, setIsOpen ] = useState(null);
+  const [ foc, setFoc ] = useState(false);
+  const [ complete, setComplete ] = useState(false);
+  const [ three, setThree ] = useState(false);// it's hook for change focus into third input.
+  const [ changeItem, setChangeItem ] = useState(null);//for click item when click to other row.
 
   useEffect(() => {
-    dispatch(GetPhotoscans());
+    dispatch(GetColorPrints());
   }, []);
 
-  const Table = ({ listphotoscans }) => (
+  const Table = ({ listcolorprints }) => (
     <div className="row">
       <div className="col-md-1"></div>
       <div className="col-md-10">
         <table className="table table-striped text-center">
           <thead>
             <tr className="table-primary">
-              <th scope="col">Формат</th>
-              <th scope="col">300 dpi</th>
-              <th scope="col">600 dpi</th>
-              <th scope="col">1200 dpi</th>
+              <th scope="col">Матеріал для друку</th>
+              <th scope="col">Заливка 25%</th>
+              <th scope="col">Заливка 50%</th>
+              <th scope="col">Заливка 100%</th>
             </tr>
           </thead>
           <tbody>
-            {listphotoscans.map((row, index) => (
-              <TableRow key={row.id} row={row} index={listphotoscans[index]} />
+            {listcolorprints.map((row, index) => (
+              <TableRow key={row.id} row={row} index={listcolorprints[index]} />
             ))}
           </tbody>
         </table>
@@ -62,51 +62,41 @@ const PhotoscanEditPrice = () => {
 
     console.log("Row", row);
     //console.log("e.currentTarget.id",e.currentTarget.id)
-    const item = listphotoscans.find((row) => row.id == e.currentTarget.id);
-    //setEditPhotoscan({...editPhotoscan})
+    const item = listcolorprints.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
     setComplete(true);
     const data = {
       id: item.id,
-      price300dpi: item.price300dpi,
-      price600dpi: item.price600dpi,
-      price1200dpi: item.price1200dpi
+      price25: item.price25,
+      price50: item.price50,
+      price100: item.price100
     };
 
     if (item.id != changeItem) {
-      setEditPhotoscan(data);
+      setEditColorPrint(data);
       setChangeItem(null);
       console.log("not equal");
     }
 
     console.log("data", data);
     console.log("item:", item);
-    const edit = editPhotoscan.price300dpi;
+    const edit = editColorPrint.price25;
     console.log("edit", edit);
-    if (data.price300dpi != edit) {
-      console.log("////", editPhotoscan.price300dpi);
+    if (data.price25 != edit) {
+      console.log("////", editColorPrint.price25);
     }
-    //  else{
-    //   setEditPhotoscan(data);
-    //  }
-    // if(!foc && three ){
-    //setEditPhotoscan(data);
-    //  console.log("data.price300dpi",data.price300dpi);
-    //  console.log("item.price300dpi",item.price300dpi);
-    //  console.log("editPhotoscan.price300dpi",editPhotoscan.price300dpi);
-    //  console.log("item.id",item.id)
-    // }
+
   };
 
   const handleInputChange = (dataType, values, index) => {
     setChangeItem(index.id);
     console.log("Datatype", dataType);
     console.log("datas values:", values);
-    console.log("editPhotoscan:", editPhotoscan);
+    console.log("editColorPrint:", editColorPrint);
     console.log("INDEX:", index.id);
-    setEditPhotoscan({ ...editPhotoscan, [dataType]: values });
-    console.log("edit", editPhotoscan);
+    setEditColorPrint({ ...editColorPrint, [dataType]: values });
+    console.log("edit", editColorPrint);
     //console.log("Final:",editFnd);
   };
 
@@ -119,22 +109,22 @@ const PhotoscanEditPrice = () => {
     setThree(true);
   };
 
-  const updatePhotoscanItem = () => {
+  const updateColorPrintItem = () => {
     //console.log("FND:",editFnd);
-    const idItem = editPhotoscan.id;
+    const idItem = editColorPrint.id;
 
     const upd = {
-      price300dpi: editPhotoscan.price300dpi,
-      price600dpi: editPhotoscan.price600dpi,
-      price1200dpi: editPhotoscan.price1200dpi,
+      price25: editColorPrint.price25,
+      price50: editColorPrint.price50,
+      price100: editColorPrint.price100
     };
 
-    dispatch(UpdatePhotoscanTable(idItem, upd))
+    dispatch(UpdateColorPrintTable(idItem, upd))
       .then((res) => {
         console.log("Result:", res);
         setComplete(false);
         navigator("/admin");
-        dispatch(GetPhotoscans());
+        dispatch(GetColorPrints());
       })
       .catch((ex) => {
         console.log("Errorr", ex);
@@ -147,15 +137,16 @@ const PhotoscanEditPrice = () => {
       id={row.id}
       onClick={(e) => RowHandleClick(e, row)}
     >
-      <th scope="row">{row.format}</th>
+      <th scope="row" className="text-start">
+        {row.material}
+      </th>
       {isOpen == row.id && complete ? (
         <td colSpan={3}>
           <div
             className="d-flex justify-content-between"
-            style={{ left: "3em" }}
+            style={{ left: "3em" }} 
           >
             <td></td>
-
             <td>
               <input
                 ref={
@@ -165,11 +156,11 @@ const PhotoscanEditPrice = () => {
                       }
                     : input1
                 }
-                id="price300dpi"
-                value={editPhotoscan.price300dpi}
-                name="price300dpi"
+                id="price25"
+                value={editColorPrint.price25}
+                name="price25"
                 onChange={(e) =>
-                  handleInputChange("price300dpi", e.currentTarget.value, index)
+                  handleInputChange("price25", e.currentTarget.value, index)
                 }
                 onClick={handleToggle}
                 style={{
@@ -189,11 +180,11 @@ const PhotoscanEditPrice = () => {
                       }
                     : input2
                 }
-                id="price600dpi"
-                value={editPhotoscan.price600dpi}
-                name="price600dpi"
+                id="price50"
+                value={editColorPrint.price50}
+                name="price50"
                 onChange={(e) =>
-                  handleInputChange("price600dpi", e.currentTarget.value, index)
+                  handleInputChange("price50", e.currentTarget.value, index)
                 }
                 onClick={handleToggle}
                 style={{
@@ -206,15 +197,11 @@ const PhotoscanEditPrice = () => {
             </td>
             <td>
               <input
-                id="price1200dpi"
-                value={editPhotoscan.price1200dpi}
-                name="price1200dpi"
+                id="price100"
+                value={editColorPrint.price100}
+                name="price100"
                 onChange={(e) =>
-                  handleInputChange(
-                    "price1200dpi",
-                    e.currentTarget.value,
-                    index
-                  )
+                  handleInputChange("price100", e.currentTarget.value, index)
                 }
                 ref={
                   three
@@ -236,7 +223,7 @@ const PhotoscanEditPrice = () => {
               <button
                 className="btn btn-primary"
                 style={{ width: "60px", height: "35px" }}
-                onClick={updatePhotoscanItem}
+                onClick={updateColorPrintItem}
                 type="submit"
               >
                 Save
@@ -246,9 +233,9 @@ const PhotoscanEditPrice = () => {
         </td>
       ) : (
         <React.Fragment>
-          <td className="text-center">{row.price300dpi}</td>
-          <td>{row.price600dpi}</td>
-          <td>{row.price1200dpi}</td>
+          <td className="text-center">{row.price25}</td>
+          <td className="text-center">{row.price50}</td>
+          <td className="text-center">{row.price100}</td>
         </React.Fragment>
       )}
     </tr>
@@ -257,11 +244,11 @@ const PhotoscanEditPrice = () => {
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
-        <h1 className="text-center">Сканування фото</h1>
+        <h1 className="text-center">Кольоровий друк</h1>
         <h4 className="text-center text-danger">Редагування цін</h4>
-        <Table listphotoscans={listphotoscans} />
+        <Table listcolorprints={listcolorprints} />
       </div>
     </div>
   );
 };
-export default PhotoscanEditPrice;
+export default ColorPrintEditPrice;
