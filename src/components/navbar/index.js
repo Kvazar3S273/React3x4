@@ -410,9 +410,9 @@ const Header = () => {
                 <Link className="nav-link" to="/login">
                   Вхід
                 </Link>
-                <Link className="nav-link" to="/register">
+                {/* <Link className="nav-link" to="/register">
                   Реєстрація
-                </Link>
+                </Link> */}
               </Nav>
             ) : (
               <Nav onClick={() => setNavExpanded(false)}>

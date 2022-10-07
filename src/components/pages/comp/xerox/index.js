@@ -107,6 +107,7 @@ const Xerox = () => {
                     </tr>
                   </thead>
                   <tbody>
+
                   {listxeroxes &&
                   listxeroxes.map((item) => (
                     <tr key={item.id}>
@@ -114,6 +115,8 @@ const Xerox = () => {
                       <td> {item.price} </td>
                     </tr>
                   ))}
+
+                                  
                   </tbody>
                 </table>
               </div>
