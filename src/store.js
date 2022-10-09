@@ -16,6 +16,7 @@ import visitcardReducer from "./reducers/editPoligraphReducers/visitcardReducer"
 import xeroxReducer from "./reducers/editCompReducers/xeroxReducer";
 import blackprintReducer from "./reducers/editCompReducers/blackPrintReducer";
 import colorprintReducer from "./reducers/editCompReducers/colorPrintReducer";
+import scanReducer from "./reducers/editCompReducers/scanReducer";
 
 const middleware = [
     thunk
@@ -37,7 +38,8 @@ const rootReducer = combineReducers({
     visitcard: visitcardReducer,
     xerox: xeroxReducer,
     blackprint: blackprintReducer,
-    colorprint: colorprintReducer
+    colorprint: colorprintReducer,
+    scan: scanReducer
 });
 
 const enhancers = [];

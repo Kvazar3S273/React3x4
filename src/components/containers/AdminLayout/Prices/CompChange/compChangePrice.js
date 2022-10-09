@@ -15,11 +15,13 @@ import {
 import XeroxEditPrice from "./xeroxEditPrice";
 import BlackPrintEditPrice from "./blackPrintEditPrice";
 import ColorPrintEditPrice from "./colorPrintEditPrice";
+import ScanEditPrice from "./scanEditPrice";
 
 const CompChangePrice = () => {
   const [xeroxEdit, setXeroxEdit] = useState(false);
   const [blackPrintEdit, setBlackPrintEdit] = useState(false);
   const [colorPrintEdit, setColorPrintEdit] = useState(false);
+  const [scanEdit, setScanEdit] = useState(false);
 
   const handleClickXeroxEdit = (event) => {
     // 👇️ щоб по кліку відкривалось і по наступному закривалось
@@ -28,16 +30,25 @@ const CompChangePrice = () => {
     setXeroxEdit(true);
     setBlackPrintEdit(false);
     setColorPrintEdit(false);
+    setScanEdit(false);
   };
   const handleClickBlackPrintEdit = (event) => {
     setXeroxEdit(false);
     setBlackPrintEdit(true);
     setColorPrintEdit(false);
+    setScanEdit(false);
   };
   const handleClickColorPrintEdit = (event) => {
     setXeroxEdit(false);
     setBlackPrintEdit(false);
     setColorPrintEdit(true);
+    setScanEdit(false);
+  };
+  const handleClickScanEdit = (event) => {
+    setXeroxEdit(false);
+    setBlackPrintEdit(false);
+    setColorPrintEdit(false);
+    setScanEdit(true);
   };
 
   return (
@@ -114,22 +125,28 @@ const CompChangePrice = () => {
             </div>
 
             {/* Картка 4 */}
-            <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded">
-              <div className="row">
-                <div className="col-md-3">
-                  <i
-                    className="d-flex justify-content-center align-middle  mt-1"
-                    style={{ fontSize: "2.5em", color: "#000" }}
-                  >
-                    <FontAwesomeIcon icon={faFileExport} />
-                  </i>
+            
+            <div
+              className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
+              onClick={handleClickScanEdit}
+            >
+              <HashLink smooth to={"#more"}>
+                <div className="row">
+                  <div className="col-md-3">
+                    <i
+                      className="d-flex justify-content-center align-middle mt-1"
+                      style={{ fontSize: "2.5em", color: "#000" }}
+                    >
+                      <FontAwesomeIcon icon={faFileExport} />
+                    </i>
+                  </div>
+                  <div className="col-md-9">
+                    <h5 className="text-center text-dark">Сканування</h5>
+                  </div>
                 </div>
-                <div className="col-md-9">
-                  <h5 className=" text-center">Сканування</h5>
-                </div>
-              </div>
+              </HashLink>
             </div>
-
+            
             {/* Картка 5 */}
             <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded">
               <div className="row">
@@ -220,6 +237,8 @@ const CompChangePrice = () => {
           {xeroxEdit && <XeroxEditPrice />}
           {blackPrintEdit && <BlackPrintEditPrice />}
           {colorPrintEdit && <ColorPrintEditPrice />}
+          {scanEdit && <ScanEditPrice />}
+          
         </div>
       </div>
     </>

@@ -1,6 +1,16 @@
 import React from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from "react";
+import { GetScans } from "../../../../constants/actions/compActions/scan";
 
 const Scaner = () => {
+
+  const dispatch = useDispatch();
+  const { listscans } = useSelector(state => state.scan);
+  useEffect(() => {
+          dispatch(GetScans());           
+      }, []);
+
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
@@ -32,18 +42,13 @@ const Scaner = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">Кольорове сканування</th>
-                  <td>5</td>
-                </tr>
-                <tr>
-                  <th scope="row">Відправка 1 листа на e-mail</th>
-                  <td>10</td>
-                </tr>
-                <tr>
-                  <th scope="row">Відправка документа на Viber</th>
-                  <td>5</td>
-                </tr>
+              {listscans &&
+                  listscans.map((item) => (
+                    <tr key={item.id}>
+                      <td>{item.service}</td>
+                      <td> {item.price} </td>
+                    </tr>
+                  ))}
               </tbody>
             </table>
           </div>
