@@ -16,12 +16,14 @@ import XeroxEditPrice from "./xeroxEditPrice";
 import BlackPrintEditPrice from "./blackPrintEditPrice";
 import ColorPrintEditPrice from "./colorPrintEditPrice";
 import ScanEditPrice from "./scanEditPrice";
+import LaminateEditPrice from "./laminateEditPrice";
 
 const CompChangePrice = () => {
   const [xeroxEdit, setXeroxEdit] = useState(false);
   const [blackPrintEdit, setBlackPrintEdit] = useState(false);
   const [colorPrintEdit, setColorPrintEdit] = useState(false);
   const [scanEdit, setScanEdit] = useState(false);
+  const [laminateEdit, setLaminateEdit] = useState(false);
 
   const handleClickXeroxEdit = (event) => {
     // 👇️ щоб по кліку відкривалось і по наступному закривалось
@@ -31,26 +33,37 @@ const CompChangePrice = () => {
     setBlackPrintEdit(false);
     setColorPrintEdit(false);
     setScanEdit(false);
+    setLaminateEdit(false);
   };
   const handleClickBlackPrintEdit = (event) => {
     setXeroxEdit(false);
     setBlackPrintEdit(true);
     setColorPrintEdit(false);
     setScanEdit(false);
+    setLaminateEdit(false);
   };
   const handleClickColorPrintEdit = (event) => {
     setXeroxEdit(false);
     setBlackPrintEdit(false);
     setColorPrintEdit(true);
     setScanEdit(false);
+    setLaminateEdit(false);
   };
   const handleClickScanEdit = (event) => {
     setXeroxEdit(false);
     setBlackPrintEdit(false);
     setColorPrintEdit(false);
     setScanEdit(true);
+    setLaminateEdit(false);
   };
-
+  const handleClickLaminateEdit = (event) => {
+    setXeroxEdit(false);
+    setBlackPrintEdit(false);
+    setColorPrintEdit(false);
+    setScanEdit(false);
+    setLaminateEdit(true);
+  };
+  
   return (
     <>
       <div>
@@ -148,22 +161,27 @@ const CompChangePrice = () => {
             </div>
             
             {/* Картка 5 */}
-            <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded">
-              <div className="row">
-                <div className="col-md-3">
-                  <i
-                    className="d-flex justify-content-center align-middle mt-1"
-                    style={{ fontSize: "2.5em", color: "#000" }}
-                  >
-                    <FontAwesomeIcon icon={faTape} />
-                  </i>
+            <div
+              className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
+              onClick={handleClickLaminateEdit}
+            >
+              <HashLink smooth to={"#more"}>
+                <div className="row">
+                  <div className="col-md-3">
+                    <i
+                      className="d-flex justify-content-center align-middle mt-1"
+                      style={{ fontSize: "2.5em", color: "#000" }}
+                    >
+                      <FontAwesomeIcon icon={faTape} />
+                    </i>
+                  </div>
+                  <div className="col-md-9">
+                    <h5 className="text-center text-dark">Ламінування</h5>
+                  </div>
                 </div>
-                <div className="col-md-9">
-                  <h5 className=" text-center">Ламінування</h5>
-                </div>
-              </div>
+              </HashLink>
             </div>
-
+            
             {/* Картка 6 */}
             <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded">
               <div className="row">
@@ -238,6 +256,7 @@ const CompChangePrice = () => {
           {blackPrintEdit && <BlackPrintEditPrice />}
           {colorPrintEdit && <ColorPrintEditPrice />}
           {scanEdit && <ScanEditPrice />}
+          {laminateEdit && <LaminateEditPrice />}
           
         </div>
       </div>

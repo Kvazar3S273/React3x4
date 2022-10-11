@@ -1,6 +1,15 @@
 import React from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from "react";
+import { GetLaminates } from "../../../../constants/actions/compActions/laminate";
 
 const Laminate = () => {
+
+  const dispatch = useDispatch();
+  const { listlaminates } = useSelector(state => state.laminate);
+  useEffect(() => {
+          dispatch(GetLaminates());           
+      }, []);
 
   return (
     <div className="row mt-3 mb-3">
@@ -31,26 +40,13 @@ const Laminate = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">А4, 20х30, свідоцтва</th>
-                  <td>20</td>
-                </tr>
-                <tr>
-                  <th scope="row">А4, 125 мкм</th>
-                  <td>30</td>
-                </tr>
-                <tr>
-                  <th scope="row">А5, 15х21</th>
-                  <td>17</td>
-                </tr>
-                <tr>
-                  <th scope="row">А6, 10х15</th>
-                  <td>15</td>
-                </tr>
-                <tr>
-                  <th scope="row">менше за А6</th>
-                  <td>12</td>
-                </tr>
+              {listlaminates &&
+                  listlaminates.map((item) => (
+                    <tr key={item.id}>
+                      <td> {item.format} </td>
+                      <td> {item.price} </td>
+                    </tr>
+                  ))}
               </tbody>
             </table>
             
