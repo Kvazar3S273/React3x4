@@ -50,7 +50,6 @@ const XeroxEditPrice = () => {
     e.preventDefault();
 
     console.log("Row", row);
-    //console.log("e.currentTarget.id",e.currentTarget.id)
     const item = listxeroxes.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
@@ -66,10 +65,7 @@ const XeroxEditPrice = () => {
   };
 
   const handleInputChange = (dataType, values, index) => {
-    //console.log("Datatype",dataType);
-    //console.log("datas:",values);
     setEditXerox({ ...editXerox, [dataType]: values });
-    //console.log("Final:",editFnd);
   };
 
   const handleToggle = () => {
@@ -77,7 +73,6 @@ const XeroxEditPrice = () => {
   };
 
   const updateXeroxItem = () => {
-    //console.log("FND:",editFnd);
     const idItem = editXerox.id;
 
     const upd = {

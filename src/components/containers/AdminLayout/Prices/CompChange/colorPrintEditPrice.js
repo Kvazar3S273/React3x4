@@ -61,7 +61,6 @@ const ColorPrintEditPrice = () => {
     e.preventDefault();
 
     console.log("Row", row);
-    //console.log("e.currentTarget.id",e.currentTarget.id)
     const item = listcolorprints.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
@@ -97,7 +96,6 @@ const ColorPrintEditPrice = () => {
     console.log("INDEX:", index.id);
     setEditColorPrint({ ...editColorPrint, [dataType]: values });
     console.log("edit", editColorPrint);
-    //console.log("Final:",editFnd);
   };
 
   const handleToggle = () => {
@@ -110,7 +108,6 @@ const ColorPrintEditPrice = () => {
   };
 
   const updateColorPrintItem = () => {
-    //console.log("FND:",editFnd);
     const idItem = editColorPrint.id;
 
     const upd = {

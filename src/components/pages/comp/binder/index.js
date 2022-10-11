@@ -1,6 +1,16 @@
 import React from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from "react";
+import { GetBinders } from "../../../../constants/actions/compActions/binder";
 
 const Binder = () => {
+
+  const dispatch = useDispatch();
+  const { listbinders } = useSelector(state => state.binder);
+  useEffect(() => {
+          dispatch(GetBinders());           
+      }, []);
+
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
@@ -29,30 +39,13 @@ const Binder = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">до 20</th>
-                  <td>30</td>
-                </tr>
-                <tr>
-                  <th scope="row">21-40</th>
-                  <td>35</td>
-                </tr>
-                <tr>
-                  <th scope="row">41-60</th>
-                  <td>40</td>
-                </tr>
-                <tr>
-                  <th scope="row">61-80</th>
-                  <td>45</td>
-                </tr>
-                <tr>
-                  <th scope="row">кожних +20 сторінок</th>
-                  <td>+5</td>
-                </tr>
-                <tr>
-                  <th scope="row">додавання сторінок</th>
-                  <td>від 8 грн (10 шт)</td>
-                </tr>
+              {listbinders &&
+                  listbinders.map((item) => (
+                    <tr key={item.id}>
+                      <td> {item.pagesQty} </td>
+                      <td> {item.price} </td>
+                    </tr>
+                  ))}
               </tbody>
             </table>
             <p>

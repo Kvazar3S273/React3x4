@@ -2,29 +2,29 @@ import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { GetLaminates, UpdateLaminateTable } from "../../../../../constants/actions/compActions/laminate";
+import { GetBinders, UpdateBinderTable } from "../../../../../constants/actions/compActions/binder";
 
-const LaminateEditPrice = () => {
+const BinderEditPrice = () => {
   const input = useRef();
 
-  const initialLaminateState = {
+  const initialBinderState = {
     id: null,
     price: null
   };
 
   const navigator = useNavigate();
   const dispatch = useDispatch();
-  const { listlaminates } = useSelector((state) => state.laminate);
-  const [editLaminate, setEditLaminate] = useState(initialLaminateState);
+  const { listbinders } = useSelector((state) => state.binder);
+  const [editBinder, setEditBinder] = useState(initialBinderState);
   const [isOpen, setIsOpen] = useState(null);
   const [foc, setFoc] = useState(false);
   const [complete, setComplete] = useState(false);
 
   useEffect(() => {
-    dispatch(GetLaminates());
+    dispatch(GetBinders());
   }, []);
 
-  const Table = ({ listlaminates }) => (
+  const Table = ({ listbinders }) => (
     <div className="row">
       <div className="col-md-1"></div>
       <div className="col-md-10">
@@ -36,8 +36,8 @@ const LaminateEditPrice = () => {
             </tr>
           </thead>
           <tbody>
-            {listlaminates.map((row, index) => (
-              <TableRow key={row.id} row={row} index={listlaminates[index]} />
+            {listbinders.map((row, index) => (
+              <TableRow key={row.id} row={row} index={listbinders[index]} />
             ))}
           </tbody>
         </table>
@@ -50,7 +50,7 @@ const LaminateEditPrice = () => {
     e.preventDefault();
 
     console.log("Row", row);
-    const item = listlaminates.find((row) => row.id == e.currentTarget.id);
+    const item = listbinders.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
     setComplete(true);
@@ -60,31 +60,31 @@ const LaminateEditPrice = () => {
     };
 
     if (!foc) {
-      setEditLaminate(data);
+      setEditBinder(data);
     }
   };
 
   const handleInputChange = (dataType, values, index) => {
-    setEditLaminate({ ...editLaminate, [dataType]: values });
+    setEditBinder({ ...editBinder, [dataType]: values });
   };
 
   const handleToggle = () => {
     setFoc((preState) => !preState);
   };
 
-  const updateLaminateItem = () => {
-    const idItem = editLaminate.id;
+  const updateBinderItem = () => {
+    const idItem = editBinder.id;
 
     const upd = {
-      price: editLaminate.price,
+      price: editBinder.price,
     };
 
-    dispatch(UpdateLaminateTable(idItem, upd))
+    dispatch(UpdateBinderTable(idItem, upd))
       .then((res) => {
         console.log("Result:", res);
         setComplete(false);
         navigator("/admin");
-        dispatch(GetLaminates());
+        dispatch(GetBinders());
       })
       .catch((ex) => {
         console.log("Errorr", ex);
@@ -97,7 +97,7 @@ const LaminateEditPrice = () => {
       id={row.id}
       onClick={(e) => RowHandleClick(e, row)}
     >
-      <th scope="row">{row.format}</th>
+      <th scope="row">{row.pagesQty}</th>
       {isOpen == row.id && complete ? (
           <td >
             <div
@@ -114,7 +114,7 @@ const LaminateEditPrice = () => {
                       : input
                   }
                   id="price"
-                  value={editLaminate.price}
+                  value={editBinder.price}
                   name="price"
                   onChange={(e) =>
                     handleInputChange("price", e.currentTarget.value, index)
@@ -136,7 +136,7 @@ const LaminateEditPrice = () => {
                     width: "60px",
                     height: "35px",
                   }}
-                  onClick={updateLaminateItem}
+                  onClick={updateBinderItem}
                   type="submit"
                 >
                   Save
@@ -153,11 +153,11 @@ const LaminateEditPrice = () => {
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
-        <h1 className="text-center">Ламінування</h1>
+        <h1 className="text-center">Брошурування</h1>
         <h4 className="text-center text-danger">Редагування цін</h4>
-        <Table listlaminates={listlaminates} />
+        <Table listbinders={listbinders} />
       </div>
     </div>
   );
 };
-export default LaminateEditPrice;
+export default BinderEditPrice;

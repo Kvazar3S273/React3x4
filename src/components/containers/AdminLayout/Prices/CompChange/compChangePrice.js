@@ -17,6 +17,7 @@ import BlackPrintEditPrice from "./blackPrintEditPrice";
 import ColorPrintEditPrice from "./colorPrintEditPrice";
 import ScanEditPrice from "./scanEditPrice";
 import LaminateEditPrice from "./laminateEditPrice";
+import BinderEditPrice from "./binderEditPrice";
 
 const CompChangePrice = () => {
   const [xeroxEdit, setXeroxEdit] = useState(false);
@@ -24,6 +25,7 @@ const CompChangePrice = () => {
   const [colorPrintEdit, setColorPrintEdit] = useState(false);
   const [scanEdit, setScanEdit] = useState(false);
   const [laminateEdit, setLaminateEdit] = useState(false);
+  const [binderEdit, setBinderEdit] = useState(false);
 
   const handleClickXeroxEdit = (event) => {
     // 👇️ щоб по кліку відкривалось і по наступному закривалось
@@ -34,6 +36,7 @@ const CompChangePrice = () => {
     setColorPrintEdit(false);
     setScanEdit(false);
     setLaminateEdit(false);
+    setBinderEdit(false);
   };
   const handleClickBlackPrintEdit = (event) => {
     setXeroxEdit(false);
@@ -41,6 +44,7 @@ const CompChangePrice = () => {
     setColorPrintEdit(false);
     setScanEdit(false);
     setLaminateEdit(false);
+    setBinderEdit(false);
   };
   const handleClickColorPrintEdit = (event) => {
     setXeroxEdit(false);
@@ -48,6 +52,7 @@ const CompChangePrice = () => {
     setColorPrintEdit(true);
     setScanEdit(false);
     setLaminateEdit(false);
+    setBinderEdit(false);
   };
   const handleClickScanEdit = (event) => {
     setXeroxEdit(false);
@@ -55,6 +60,7 @@ const CompChangePrice = () => {
     setColorPrintEdit(false);
     setScanEdit(true);
     setLaminateEdit(false);
+    setBinderEdit(false);
   };
   const handleClickLaminateEdit = (event) => {
     setXeroxEdit(false);
@@ -62,6 +68,15 @@ const CompChangePrice = () => {
     setColorPrintEdit(false);
     setScanEdit(false);
     setLaminateEdit(true);
+    setBinderEdit(false);
+  };
+  const handleClickBinderEdit = (event) => {
+    setXeroxEdit(false);
+    setBlackPrintEdit(false);
+    setColorPrintEdit(false);
+    setScanEdit(false);
+    setLaminateEdit(false);
+    setBinderEdit(true);
   };
   
   return (
@@ -183,22 +198,27 @@ const CompChangePrice = () => {
             </div>
             
             {/* Картка 6 */}
-            <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded">
-              <div className="row">
-                <div className="col-md-3">
-                  <i
-                    className="d-flex justify-content-center align-middle mt-1"
-                    style={{ fontSize: "2.5em", color: "#000" }}
-                  >
-                    <FontAwesomeIcon icon={faBook} />
-                  </i>
+            <div
+              className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
+              onClick={handleClickBinderEdit}
+            >
+              <HashLink smooth to={"#more"}>
+                <div className="row">
+                  <div className="col-md-3">
+                    <i
+                      className="d-flex justify-content-center align-middle mt-1"
+                      style={{ fontSize: "2.5em", color: "#000" }}
+                    >
+                      <FontAwesomeIcon icon={faBook} />
+                    </i>
+                  </div>
+                  <div className="col-md-9">
+                    <h5 className="text-center text-dark">Брошурування</h5>
+                  </div>
                 </div>
-                <div className="col-md-9">
-                  <h5 className="text-center">Брошурування</h5>
-                </div>
-              </div>
+              </HashLink>
             </div>
-
+            
             {/* Картка 7 */}
             <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded">
               <div className="row">
@@ -257,6 +277,7 @@ const CompChangePrice = () => {
           {colorPrintEdit && <ColorPrintEditPrice />}
           {scanEdit && <ScanEditPrice />}
           {laminateEdit && <LaminateEditPrice />}
+          {binderEdit && <BinderEditPrice />}
           
         </div>
       </div>

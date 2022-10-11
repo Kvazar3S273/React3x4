@@ -77,10 +77,7 @@ const BlackPrintEditPrice = () => {
   };
 
   const handleInputChange = (dataType, values, index) => {
-    //console.log("Datatype",dataType);
-    //console.log("datas:",values);
     setEditBlackPrint({ ...editBlackPrint, [dataType]: values });
-    //console.log("Final:",editFnd);
   };
 
   const handleToggle = () => {
@@ -88,7 +85,6 @@ const BlackPrintEditPrice = () => {
   };
 
   const updateBlackPrintItem = () => {
-    //console.log("FND:",editFnd);
     const idItem = editBlackPrint.id;
 
     const upd = {

@@ -18,6 +18,7 @@ import blackprintReducer from "./reducers/editCompReducers/blackPrintReducer";
 import colorprintReducer from "./reducers/editCompReducers/colorPrintReducer";
 import scanReducer from "./reducers/editCompReducers/scanReducer";
 import laminateReducer from "./reducers/editCompReducers/laminateReducer";
+import binderReducer from "./reducers/editCompReducers/binderReducer";
 
 const middleware = [
     thunk
@@ -41,7 +42,8 @@ const rootReducer = combineReducers({
     blackprint: blackprintReducer,
     colorprint: colorprintReducer,
     scan: scanReducer,
-    laminate: laminateReducer
+    laminate: laminateReducer,
+    binder: binderReducer
 });
 
 const enhancers = [];

@@ -50,7 +50,6 @@ const ScanEditPrice = () => {
     e.preventDefault();
 
     console.log("Row", row);
-    //console.log("e.currentTarget.id",e.currentTarget.id)
     const item = listscans.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
