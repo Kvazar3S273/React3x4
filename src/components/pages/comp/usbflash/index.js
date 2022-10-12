@@ -1,6 +1,16 @@
 import React from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from "react";
+import { GetUsbFlashes } from "../../../../constants/actions/compActions/usbflash";
 
 const Usbflash = () => {
+  
+  const dispatch = useDispatch();
+  const { listusbflashes } = useSelector(state => state.usbflash);
+  useEffect(() => {
+          dispatch(GetUsbFlashes());           
+      }, []);
+  
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
@@ -30,26 +40,13 @@ const Usbflash = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">Запис CD дисків 700 Mb</th>
-                  <td>20</td>
-                </tr>
-                <tr>
-                  <th scope="row">Запис DVD дисків 4,7 Gb</th>
-                  <td>25</td>
-                </tr>
-                <tr>
-                  <th scope="row">Запис DVD-DL дисків 8,5 Gb</th>
-                  <td>30</td>
-                </tr>
-                <tr>
-                  <th scope="row">Запис флеш-носіїв до 8 Gb</th>
-                  <td>30</td>
-                </tr>
-                <tr>
-                  <th scope="row">Запис флеш-носіїв більше 8 Gb</th>
-                  <td>40</td>
-                </tr>
+              {listusbflashes &&
+                  listusbflashes.map((item) => (
+                    <tr key={item.id}>
+                      <td> {item.service} </td>
+                      <td> {item.price} </td>
+                    </tr>
+                  ))}
               </tbody>
             </table>
           </div>

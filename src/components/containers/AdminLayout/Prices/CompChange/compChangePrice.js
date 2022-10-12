@@ -18,6 +18,7 @@ import ColorPrintEditPrice from "./colorPrintEditPrice";
 import ScanEditPrice from "./scanEditPrice";
 import LaminateEditPrice from "./laminateEditPrice";
 import BinderEditPrice from "./binderEditPrice";
+import UsbFlashEditPrice from "./usbFlashEditPrice";
 
 const CompChangePrice = () => {
   const [xeroxEdit, setXeroxEdit] = useState(false);
@@ -26,6 +27,7 @@ const CompChangePrice = () => {
   const [scanEdit, setScanEdit] = useState(false);
   const [laminateEdit, setLaminateEdit] = useState(false);
   const [binderEdit, setBinderEdit] = useState(false);
+  const [usbFlashEdit, setUsbFlashEdit] = useState(false);
 
   const handleClickXeroxEdit = (event) => {
     // 👇️ щоб по кліку відкривалось і по наступному закривалось
@@ -37,6 +39,7 @@ const CompChangePrice = () => {
     setScanEdit(false);
     setLaminateEdit(false);
     setBinderEdit(false);
+    setUsbFlashEdit(false);
   };
   const handleClickBlackPrintEdit = (event) => {
     setXeroxEdit(false);
@@ -45,6 +48,7 @@ const CompChangePrice = () => {
     setScanEdit(false);
     setLaminateEdit(false);
     setBinderEdit(false);
+    setUsbFlashEdit(false);
   };
   const handleClickColorPrintEdit = (event) => {
     setXeroxEdit(false);
@@ -53,6 +57,7 @@ const CompChangePrice = () => {
     setScanEdit(false);
     setLaminateEdit(false);
     setBinderEdit(false);
+    setUsbFlashEdit(false);
   };
   const handleClickScanEdit = (event) => {
     setXeroxEdit(false);
@@ -61,6 +66,7 @@ const CompChangePrice = () => {
     setScanEdit(true);
     setLaminateEdit(false);
     setBinderEdit(false);
+    setUsbFlashEdit(false);
   };
   const handleClickLaminateEdit = (event) => {
     setXeroxEdit(false);
@@ -69,6 +75,7 @@ const CompChangePrice = () => {
     setScanEdit(false);
     setLaminateEdit(true);
     setBinderEdit(false);
+    setUsbFlashEdit(false);
   };
   const handleClickBinderEdit = (event) => {
     setXeroxEdit(false);
@@ -77,6 +84,16 @@ const CompChangePrice = () => {
     setScanEdit(false);
     setLaminateEdit(false);
     setBinderEdit(true);
+    setUsbFlashEdit(false);
+  };
+  const handleClickUsbFlashEdit = (event) => {
+    setXeroxEdit(false);
+    setBlackPrintEdit(false);
+    setColorPrintEdit(false);
+    setScanEdit(false);
+    setLaminateEdit(false);
+    setBinderEdit(false);
+    setUsbFlashEdit(true);
   };
   
   return (
@@ -220,22 +237,27 @@ const CompChangePrice = () => {
             </div>
             
             {/* Картка 7 */}
-            <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded">
-              <div className="row">
-                <div className="col-md-3">
-                  <i
-                    className="d-flex justify-content-center align-middle  mt-1"
-                    style={{ fontSize: "2.5em", color: "#000" }}
-                  >
-                    <FontAwesomeIcon icon={faFire} />
-                  </i>
+            <div
+              className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
+              onClick={handleClickUsbFlashEdit}
+            >
+              <HashLink smooth to={"#more"}>
+                <div className="row">
+                  <div className="col-md-3">
+                    <i
+                      className="d-flex justify-content-center align-middle mt-1"
+                      style={{ fontSize: "2.5em", color: "#000" }}
+                    >
+                      <FontAwesomeIcon icon={faFire} />
+                    </i>
+                  </div>
+                  <div className="col-md-9">
+                    <h5 className="text-center text-dark">Запис CD/DVD</h5>
+                  </div>
                 </div>
-                <div className="col-md-9">
-                  <h5 className=" text-center">Запис CD/DVD</h5>
-                </div>
-              </div>
+              </HashLink>
             </div>
-
+            
             {/* Картка 8 */}
             <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded">
               <div className="row">
@@ -278,6 +300,7 @@ const CompChangePrice = () => {
           {scanEdit && <ScanEditPrice />}
           {laminateEdit && <LaminateEditPrice />}
           {binderEdit && <BinderEditPrice />}
+          {usbFlashEdit && <UsbFlashEditPrice />}
           
         </div>
       </div>

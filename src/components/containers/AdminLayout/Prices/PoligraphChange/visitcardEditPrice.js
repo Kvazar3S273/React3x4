@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { GetVisitcards, UpdateVisitcardTable } from "../../../../../constants/actions/poligraphActions/visitcard";
+import {ChangeVisitCardByPercent} from "../../../../../constants/actions/poligraphActions/visitcard";
 import ModalPercent from "../ModalPercent";
 
 const VisitcardEditPrice = () => {
@@ -69,10 +70,7 @@ const VisitcardEditPrice = () => {
   };
 
   const handleInputChange = (dataType, values, index) => {
-    //console.log("Datatype",dataType);
-    //console.log("datas:",values);
     setEditVisitcard({ ...editVisitcard, [dataType]: values });
-    //console.log("Final:",editFnd);
   };
 
   const handleInputPercentChange=(value)=>{
@@ -84,7 +82,6 @@ const VisitcardEditPrice = () => {
   };
 
   const updateVisitcardItem = () => {
-    //console.log("FND:",editFnd);
     const idItem = editVisitcard.id;
 
     const upd = {
@@ -217,8 +214,7 @@ const VisitcardEditPrice = () => {
             </div>
           </div>
 
-          <ModalPercent active={modalActive} onClose={()=>setModalActive(false)} children={percent}/> 
-
+          <ModalPercent active={modalActive} onClose={()=>setModalActive(false)} children={percent} actiontype={ChangeVisitCardByPercent}/>           
           
         </div>
       </div>

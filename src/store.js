@@ -19,6 +19,7 @@ import colorprintReducer from "./reducers/editCompReducers/colorPrintReducer";
 import scanReducer from "./reducers/editCompReducers/scanReducer";
 import laminateReducer from "./reducers/editCompReducers/laminateReducer";
 import binderReducer from "./reducers/editCompReducers/binderReducer";
+import usbflashReducer from "./reducers/editCompReducers/usbFlashReducer";
 
 const middleware = [
     thunk
@@ -43,7 +44,8 @@ const rootReducer = combineReducers({
     colorprint: colorprintReducer,
     scan: scanReducer,
     laminate: laminateReducer,
-    binder: binderReducer
+    binder: binderReducer,
+    usbflash: usbflashReducer
 });
 
 const enhancers = [];

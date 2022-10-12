@@ -12,6 +12,15 @@ class VisitcardDataService {
       },
     });
   }
+
+  changePriceVisitCardByPercent(valuePercentData) {
+    return http.put(`api/visitcard/visitcardeditbypercent/${valuePercentData}`, valuePercentData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+  }
+
 }
 
 export default new VisitcardDataService();

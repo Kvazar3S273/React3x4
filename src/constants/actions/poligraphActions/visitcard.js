@@ -13,12 +13,27 @@ export const GetVisitcards = () => async (dispatch) => {
 
 export const UpdateVisitcardTable = (id, dataVisitcard) => async () => {
   try {
-    const resultdata = await get_visitcard.updateVisitcardData(id, dataVisitcard);
+    const resultdata = await get_visitcard.updateVisitcardData(
+      id,
+      dataVisitcard
+    );
     console.log("Result update :", resultdata.data);
     return Promise.resolve(resultdata);
   } catch (error) {
     const errorres = error.response;
     console.log("Error from update:", error.response);
     return Promise.reject(errorres.data);
+  }
+};
+
+export const ChangeVisitCardByPercent = (percentvalue) => async () => {
+  try {
+    const result = await get_visitcard.changePriceVisitCardByPercent(percentvalue);
+    console.log("Percent value for visitcard:", percentvalue);
+    console.log("Result status:", result.status);
+    return Promise.resolve(result.status);
+  } catch (error) {
+    const errorsdata = error.response;
+    return Promise.reject(errorsdata.data);
   }
 };

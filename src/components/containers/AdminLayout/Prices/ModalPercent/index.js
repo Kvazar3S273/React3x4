@@ -10,7 +10,7 @@ const ModalPercent = (props) => {
 
   const update = () => {
     const percentValue=props.children;
-    dispatch(ChangePriceByPercent(percentValue))
+    dispatch(props.actiontype(percentValue))
     .then((result) => {
       if(result==200) {
         navigator("/");
@@ -39,7 +39,7 @@ const ModalPercent = (props) => {
           ></button>
         </div>
         <div className="modal-body">
-          Ви справді плануєте збільшити ціну на {props.children} %
+          Ви справді плануєте збільшити ціну на {props.children} % ?
         </div>
         <div className="modal-footer">
           <button
