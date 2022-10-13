@@ -2,14 +2,17 @@ import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { GetBinders, UpdateBinderTable } from "../../../../../constants/actions/compActions/binder";
+import {
+  GetBinders,
+  UpdateBinderTable,
+} from "../../../../../constants/actions/compActions/binder";
 
 const BinderEditPrice = () => {
   const input = useRef();
 
   const initialBinderState = {
     id: null,
-    price: null
+    price: null,
   };
 
   const navigator = useNavigate();
@@ -32,7 +35,9 @@ const BinderEditPrice = () => {
           <thead>
             <tr className="table-primary">
               <th scope="col">Послуга</th>
-              <th scope="col" className="text-center">Ціна</th>
+              <th scope="col" className="text-center">
+                Ціна
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -99,51 +104,48 @@ const BinderEditPrice = () => {
     >
       <th scope="row">{row.pagesQty}</th>
       {isOpen == row.id && complete ? (
-          <td >
-            <div
-              className="d-flex justify-content-end"
-              style={{ left: "3em" }}
-            >
-              <td>
-                <input
-                  ref={
-                    foc
-                      ? (input) => {
-                          input && input.focus();
-                        }
-                      : input
-                  }
-                  id="price"
-                  value={editBinder.price}
-                  name="price"
-                  onChange={(e) =>
-                    handleInputChange("price", e.currentTarget.value, index)
-                  }
-                  onClick={handleToggle}
-                  style={{
-                    width: "100px",
-                    height: "35px",
-                    textAlign: "center",
-                    borderRadius: "7px",
-                    marginRight: "2em",
-                  }}
-                />
-              </td>
-              <td>
-                <button
-                  className="btn btn-primary "
-                  style={{
-                    width: "60px",
-                    height: "35px",
-                  }}
-                  onClick={updateBinderItem}
-                  type="submit"
-                >
-                  Save
-                </button>
-              </td>
-            </div>
-          </td>
+        <td>
+          <div className="d-flex justify-content-end" style={{ left: "3em" }}>
+            <td>
+              <input
+                ref={
+                  foc
+                    ? (input) => {
+                        input && input.focus();
+                      }
+                    : input
+                }
+                id="price"
+                value={editBinder.price}
+                name="price"
+                onChange={(e) =>
+                  handleInputChange("price", e.currentTarget.value, index)
+                }
+                onClick={handleToggle}
+                style={{
+                  width: "100px",
+                  height: "35px",
+                  textAlign: "center",
+                  borderRadius: "7px",
+                  marginRight: "2em",
+                }}
+              />
+            </td>
+            <td>
+              <button
+                className="btn btn-primary "
+                style={{
+                  width: "60px",
+                  height: "35px",
+                }}
+                onClick={updateBinderItem}
+                type="submit"
+              >
+                Save
+              </button>
+            </td>
+          </div>
+        </td>
       ) : (
         <td className="text-center">{row.price}</td>
       )}

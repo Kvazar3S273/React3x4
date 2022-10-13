@@ -19,6 +19,8 @@ import ScanEditPrice from "./scanEditPrice";
 import LaminateEditPrice from "./laminateEditPrice";
 import BinderEditPrice from "./binderEditPrice";
 import UsbFlashEditPrice from "./usbFlashEditPrice";
+import DiscprintEditPrice from "./discprintEditPrice";
+import EmailEditPrice from "./emailEditPrice";
 
 const CompChangePrice = () => {
   const [xeroxEdit, setXeroxEdit] = useState(false);
@@ -28,6 +30,8 @@ const CompChangePrice = () => {
   const [laminateEdit, setLaminateEdit] = useState(false);
   const [binderEdit, setBinderEdit] = useState(false);
   const [usbFlashEdit, setUsbFlashEdit] = useState(false);
+  const [discprintEdit, setDiscprintEdit] = useState(false);
+  const [emailEdit, setEmailEdit] = useState(false);
 
   const handleClickXeroxEdit = (event) => {
     // 👇️ щоб по кліку відкривалось і по наступному закривалось
@@ -40,6 +44,8 @@ const CompChangePrice = () => {
     setLaminateEdit(false);
     setBinderEdit(false);
     setUsbFlashEdit(false);
+    setDiscprintEdit(false);
+    setEmailEdit(false);
   };
   const handleClickBlackPrintEdit = (event) => {
     setXeroxEdit(false);
@@ -49,6 +55,8 @@ const CompChangePrice = () => {
     setLaminateEdit(false);
     setBinderEdit(false);
     setUsbFlashEdit(false);
+    setDiscprintEdit(false);
+    setEmailEdit(false);
   };
   const handleClickColorPrintEdit = (event) => {
     setXeroxEdit(false);
@@ -58,6 +66,8 @@ const CompChangePrice = () => {
     setLaminateEdit(false);
     setBinderEdit(false);
     setUsbFlashEdit(false);
+    setDiscprintEdit(false);
+    setEmailEdit(false);
   };
   const handleClickScanEdit = (event) => {
     setXeroxEdit(false);
@@ -67,6 +77,8 @@ const CompChangePrice = () => {
     setLaminateEdit(false);
     setBinderEdit(false);
     setUsbFlashEdit(false);
+    setDiscprintEdit(false);
+    setEmailEdit(false);
   };
   const handleClickLaminateEdit = (event) => {
     setXeroxEdit(false);
@@ -76,6 +88,8 @@ const CompChangePrice = () => {
     setLaminateEdit(true);
     setBinderEdit(false);
     setUsbFlashEdit(false);
+    setDiscprintEdit(false);
+    setEmailEdit(false);
   };
   const handleClickBinderEdit = (event) => {
     setXeroxEdit(false);
@@ -85,6 +99,8 @@ const CompChangePrice = () => {
     setLaminateEdit(false);
     setBinderEdit(true);
     setUsbFlashEdit(false);
+    setDiscprintEdit(false);
+    setEmailEdit(false);
   };
   const handleClickUsbFlashEdit = (event) => {
     setXeroxEdit(false);
@@ -94,6 +110,30 @@ const CompChangePrice = () => {
     setLaminateEdit(false);
     setBinderEdit(false);
     setUsbFlashEdit(true);
+    setDiscprintEdit(false);
+    setEmailEdit(false);
+  };
+  const handleClickDiscprintEdit = (event) => {
+    setXeroxEdit(false);
+    setBlackPrintEdit(false);
+    setColorPrintEdit(false);
+    setScanEdit(false);
+    setLaminateEdit(false);
+    setBinderEdit(false);
+    setUsbFlashEdit(false);
+    setDiscprintEdit(true);
+    setEmailEdit(false);
+  };
+  const handleClickEmailEdit = (event) => {
+    setXeroxEdit(false);
+    setBlackPrintEdit(false);
+    setColorPrintEdit(false);
+    setScanEdit(false);
+    setLaminateEdit(false);
+    setBinderEdit(false);
+    setUsbFlashEdit(false);
+    setDiscprintEdit(false);
+    setEmailEdit(true);
   };
   
   return (
@@ -259,40 +299,50 @@ const CompChangePrice = () => {
             </div>
             
             {/* Картка 8 */}
-            <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded">
-              <div className="row">
-                <div className="col-md-3">
-                  <i
-                    className="d-flex justify-content-center align-middle mt-1"
-                    style={{ fontSize: "2.5em", color: "#000" }}
-                  >
-                    <FontAwesomeIcon icon={faCompactDisc} />
-                  </i>
+            <div
+              className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
+              onClick={handleClickDiscprintEdit}
+            >
+              <HashLink smooth to={"#more"}>
+                <div className="row">
+                  <div className="col-md-3">
+                    <i
+                      className="d-flex justify-content-center align-middle mt-1"
+                      style={{ fontSize: "2.5em", color: "#000" }}
+                    >
+                      <FontAwesomeIcon icon={faCompactDisc} />
+                    </i>
+                  </div>
+                  <div className="col-md-9">
+                    <h5 className="text-center text-dark">Друк на CD/DVD</h5>
+                  </div>
                 </div>
-                <div className="col-md-9">
-                  <h5 className=" text-center">Друк на CD/DVD</h5>
-                </div>
-              </div>
+              </HashLink>
             </div>
-
+            
             {/* Картка 9 */}
-            <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded">
-              <div className="row">
-                <div className="col-md-3">
-                  <i
-                    className="d-flex justify-content-center align-middle mt-1"
-                    style={{ fontSize: "2.5em", color: "#000" }}
-                  >
-                    <FontAwesomeIcon icon={faEnvelopeOpenText} />
-                  </i>
+            <div
+              className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
+              onClick={handleClickEmailEdit}
+            >
+              <HashLink smooth to={"#more"}>
+                <div className="row">
+                  <div className="col-md-3">
+                    <i
+                      className="d-flex justify-content-center align-middle mt-1"
+                      style={{ fontSize: "2.5em", color: "#000" }}
+                    >
+                      <FontAwesomeIcon icon={faEnvelopeOpenText} />
+                    </i>
+                  </div>
+                  <div className="col-md-9">
+                    <h5 className="text-center text-dark">Послуги Email</h5>
+                  </div>
                 </div>
-                <div className="col-md-9">
-                  <h5 className=" text-center">Послуги Email</h5>
-                </div>
-              </div>
+              </HashLink>
             </div>
           </div>
-
+          
           <section id="more"></section>
           {xeroxEdit && <XeroxEditPrice />}
           {blackPrintEdit && <BlackPrintEditPrice />}
@@ -301,6 +351,8 @@ const CompChangePrice = () => {
           {laminateEdit && <LaminateEditPrice />}
           {binderEdit && <BinderEditPrice />}
           {usbFlashEdit && <UsbFlashEditPrice />}
+          {discprintEdit && <DiscprintEditPrice />}
+          {emailEdit && <EmailEditPrice />}
           
         </div>
       </div>

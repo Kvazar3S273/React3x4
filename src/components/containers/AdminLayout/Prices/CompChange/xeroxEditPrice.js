@@ -2,14 +2,17 @@ import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { GetXeroxes, UpdateXeroxTable } from "../../../../../constants/actions/compActions/xerox";
+import {
+  GetXeroxes,
+  UpdateXeroxTable,
+} from "../../../../../constants/actions/compActions/xerox";
 
 const XeroxEditPrice = () => {
   const input = useRef();
 
   const initialXeroxState = {
     id: null,
-    price: null
+    price: null,
   };
 
   const navigator = useNavigate();
@@ -32,7 +35,9 @@ const XeroxEditPrice = () => {
           <thead>
             <tr className="table-primary">
               <th scope="col">Вид документа</th>
-              <th scope="col" className="text-center">Ціна</th>
+              <th scope="col" className="text-center">
+                Ціна
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -99,51 +104,48 @@ const XeroxEditPrice = () => {
     >
       <th scope="row">{row.name}</th>
       {isOpen == row.id && complete ? (
-          <td >
-            <div
-              className="d-flex justify-content-end"
-              style={{ left: "3em" }}
-            >
-              <td>
-                <input
-                  ref={
-                    foc
-                      ? (input) => {
-                          input && input.focus();
-                        }
-                      : input
-                  }
-                  id="price"
-                  value={editXerox.price}
-                  name="price"
-                  onChange={(e) =>
-                    handleInputChange("price", e.currentTarget.value, index)
-                  }
-                  onClick={handleToggle}
-                  style={{
-                    width: "100px",
-                    height: "35px",
-                    textAlign: "center",
-                    borderRadius: "7px",
-                    marginRight: "2em",
-                  }}
-                />
-              </td>
-              <td>
-                <button
-                  className="btn btn-primary "
-                  style={{
-                    width: "60px",
-                    height: "35px",
-                  }}
-                  onClick={updateXeroxItem}
-                  type="submit"
-                >
-                  Save
-                </button>
-              </td>
-            </div>
-          </td>
+        <td>
+          <div className="d-flex justify-content-end" style={{ left: "3em" }}>
+            <td>
+              <input
+                ref={
+                  foc
+                    ? (input) => {
+                        input && input.focus();
+                      }
+                    : input
+                }
+                id="price"
+                value={editXerox.price}
+                name="price"
+                onChange={(e) =>
+                  handleInputChange("price", e.currentTarget.value, index)
+                }
+                onClick={handleToggle}
+                style={{
+                  width: "100px",
+                  height: "35px",
+                  textAlign: "center",
+                  borderRadius: "7px",
+                  marginRight: "2em",
+                }}
+              />
+            </td>
+            <td>
+              <button
+                className="btn btn-primary "
+                style={{
+                  width: "60px",
+                  height: "35px",
+                }}
+                onClick={updateXeroxItem}
+                type="submit"
+              >
+                Save
+              </button>
+            </td>
+          </div>
+        </td>
       ) : (
         <td className="text-center">{row.price}</td>
       )}

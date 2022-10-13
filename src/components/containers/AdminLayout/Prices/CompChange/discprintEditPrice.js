@@ -3,31 +3,31 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import {
-  GetScans,
-  UpdateScanTable,
-} from "../../../../../constants/actions/compActions/scan";
+  GetDiscprints,
+  UpdateDiscprintTable,
+} from "../../../../../constants/actions/compActions/discprint";
 
-const ScanEditPrice = () => {
+const DiscprintEditPrice = () => {
   const input = useRef();
 
-  const initialScanState = {
+  const initialDiscprintState = {
     id: null,
     price: null,
   };
 
   const navigator = useNavigate();
   const dispatch = useDispatch();
-  const { listscans } = useSelector((state) => state.scan);
-  const [editScan, setEditScan] = useState(initialScanState);
+  const { listdiscprints } = useSelector((state) => state.discprint);
+  const [editDiscprint, setEditDiscprint] = useState(initialDiscprintState);
   const [isOpen, setIsOpen] = useState(null);
   const [foc, setFoc] = useState(false);
   const [complete, setComplete] = useState(false);
 
   useEffect(() => {
-    dispatch(GetScans());
+    dispatch(GetDiscprints());
   }, []);
 
-  const Table = ({ listscans }) => (
+  const Table = ({ listdiscprints }) => (
     <div className="row">
       <div className="col-md-1"></div>
       <div className="col-md-10">
@@ -41,8 +41,8 @@ const ScanEditPrice = () => {
             </tr>
           </thead>
           <tbody>
-            {listscans.map((row, index) => (
-              <TableRow key={row.id} row={row} index={listscans[index]} />
+            {listdiscprints.map((row, index) => (
+              <TableRow key={row.id} row={row} index={listdiscprints[index]} />
             ))}
           </tbody>
         </table>
@@ -55,7 +55,7 @@ const ScanEditPrice = () => {
     e.preventDefault();
 
     console.log("Row", row);
-    const item = listscans.find((row) => row.id == e.currentTarget.id);
+    const item = listdiscprints.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
     setComplete(true);
@@ -65,31 +65,31 @@ const ScanEditPrice = () => {
     };
 
     if (!foc) {
-      setEditScan(data);
+      setEditDiscprint(data);
     }
   };
 
   const handleInputChange = (dataType, values, index) => {
-    setEditScan({ ...editScan, [dataType]: values });
+    setEditDiscprint({ ...editDiscprint, [dataType]: values });
   };
 
   const handleToggle = () => {
     setFoc((preState) => !preState);
   };
 
-  const updateScanItem = () => {
-    const idItem = editScan.id;
+  const updateDiscprintItem = () => {
+    const idItem = editDiscprint.id;
 
     const upd = {
-      price: editScan.price,
+      price: editDiscprint.price,
     };
 
-    dispatch(UpdateScanTable(idItem, upd))
+    dispatch(UpdateDiscprintTable(idItem, upd))
       .then((res) => {
         console.log("Result:", res);
         setComplete(false);
         navigator("/admin");
-        dispatch(GetScans());
+        dispatch(GetDiscprints());
       })
       .catch((ex) => {
         console.log("Errorr", ex);
@@ -116,7 +116,7 @@ const ScanEditPrice = () => {
                     : input
                 }
                 id="price"
-                value={editScan.price}
+                value={editDiscprint.price}
                 name="price"
                 onChange={(e) =>
                   handleInputChange("price", e.currentTarget.value, index)
@@ -138,7 +138,7 @@ const ScanEditPrice = () => {
                   width: "60px",
                   height: "35px",
                 }}
-                onClick={updateScanItem}
+                onClick={updateDiscprintItem}
                 type="submit"
               >
                 Save
@@ -155,11 +155,11 @@ const ScanEditPrice = () => {
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
-        <h1 className="text-center">Сканування</h1>
+        <h1 className="text-center">Друк на дисках</h1>
         <h4 className="text-center text-danger">Редагування цін</h4>
-        <Table listscans={listscans} />
+        <Table listdiscprints={listdiscprints} />
       </div>
     </div>
   );
 };
-export default ScanEditPrice;
+export default DiscprintEditPrice;

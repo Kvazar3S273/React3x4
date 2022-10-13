@@ -2,7 +2,10 @@ import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { GetPhotopictures, UpdatePhotopictureTable } from "../../../../../constants/actions/photoActions/photopicture";
+import {
+  GetPhotopictures,
+  UpdatePhotopictureTable,
+} from "../../../../../constants/actions/photoActions/photopicture";
 import { ChangePriceByPercent } from "../../../../../constants/actions/actionPercent";
 import ModalPercent from "../ModalPercent";
 
@@ -11,13 +14,15 @@ const PhotopictureEditPrice = () => {
 
   const initialPhotopictureState = {
     id: null,
-    price: null
+    price: null,
   };
 
   const navigator = useNavigate();
   const dispatch = useDispatch();
   const { listphotopictures } = useSelector((state) => state.photopicture);
-  const [editPhotopicture, setEditPhotopicture] = useState(initialPhotopictureState);
+  const [editPhotopicture, setEditPhotopicture] = useState(
+    initialPhotopictureState
+  );
   const [isOpen, setIsOpen] = useState(null);
   const [foc, setFoc] = useState(false);
   const [complete, setComplete] = useState(false);
@@ -35,12 +40,18 @@ const PhotopictureEditPrice = () => {
           <thead>
             <tr className="table-primary">
               <th scope="col">Формат</th>
-              <th scope="col" className="text-center">Ціна</th>
+              <th scope="col" className="text-center">
+                Ціна
+              </th>
             </tr>
           </thead>
           <tbody>
             {listphotopictures.map((row, index) => (
-              <TableRow key={row.id} row={row} index={listphotopictures[index]} />
+              <TableRow
+                key={row.id}
+                row={row}
+                index={listphotopictures[index]}
+              />
             ))}
           </tbody>
         </table>
@@ -72,9 +83,9 @@ const PhotopictureEditPrice = () => {
     setEditPhotopicture({ ...editPhotopicture, [dataType]: values });
   };
 
-  const handleInputPercentChange=(value)=>{
+  const handleInputPercentChange = (value) => {
     setPersent(value);
-  }
+  };
 
   const handleToggle = () => {
     setFoc((preState) => !preState);
@@ -107,51 +118,48 @@ const PhotopictureEditPrice = () => {
     >
       <th scope="row">{row.format}</th>
       {isOpen == row.id && complete ? (
-          <td >
-            <div
-              className="d-flex justify-content-end"
-              style={{ left: "3em" }}
-            >
-              <td>
-                <input
-                  ref={
-                    foc
-                      ? (input) => {
-                          input && input.focus();
-                        }
-                      : input
-                  }
-                  id="price"
-                  value={editPhotopicture.price}
-                  name="price"
-                  onChange={(e) =>
-                    handleInputChange("price", e.currentTarget.value, index)
-                  }
-                  onClick={handleToggle}
-                  style={{
-                    width: "100px",
-                    height: "35px",
-                    textAlign: "center",
-                    borderRadius: "7px",
-                    marginRight: "2em",
-                  }}
-                />
-              </td>
-              <td>
-                <button
-                  className="btn btn-primary "
-                  style={{
-                    width: "60px",
-                    height: "35px",
-                  }}
-                  onClick={updatePhotopictureItem}
-                  type="submit"
-                >
-                  Save
-                </button>
-              </td>
-            </div>
-          </td>
+        <td>
+          <div className="d-flex justify-content-end" style={{ left: "3em" }}>
+            <td>
+              <input
+                ref={
+                  foc
+                    ? (input) => {
+                        input && input.focus();
+                      }
+                    : input
+                }
+                id="price"
+                value={editPhotopicture.price}
+                name="price"
+                onChange={(e) =>
+                  handleInputChange("price", e.currentTarget.value, index)
+                }
+                onClick={handleToggle}
+                style={{
+                  width: "100px",
+                  height: "35px",
+                  textAlign: "center",
+                  borderRadius: "7px",
+                  marginRight: "2em",
+                }}
+              />
+            </td>
+            <td>
+              <button
+                className="btn btn-primary "
+                style={{
+                  width: "60px",
+                  height: "35px",
+                }}
+                onClick={updatePhotopictureItem}
+                type="submit"
+              >
+                Save
+              </button>
+            </td>
+          </div>
+        </td>
       ) : (
         <td className="text-center">{row.price}</td>
       )}
@@ -160,7 +168,7 @@ const PhotopictureEditPrice = () => {
 
   const [modalActive, setModalActive] = useState(false);
   //console.log("Input value",document.getElementById('percentValue').value);
- 
+
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
@@ -179,12 +187,12 @@ const PhotopictureEditPrice = () => {
               <h5 className="text-end">Збільшити всі ціни на</h5>
             </div>
             <div className="col">
-            <input
+              <input
                 id="percentValue"
                 name="percent"
-                  onChange={(e) =>
-                    handleInputPercentChange( e.currentTarget.value)
-                  }
+                onChange={(e) =>
+                  handleInputPercentChange(e.currentTarget.value)
+                }
                 style={{
                   width: "180px",
                   height: "35px",
@@ -212,13 +220,15 @@ const PhotopictureEditPrice = () => {
             </div>
           </div>
 
-          <ModalPercent active={modalActive} onClose={()=>setModalActive(false)} children={percent} actiontype={ChangePriceByPercent}/> 
-
-          
+          <ModalPercent
+            active={modalActive}
+            onClose={() => setModalActive(false)}
+            children={percent}
+            actiontype={ChangePriceByPercent}
+          />
         </div>
       </div>
     </div>
   );
 };
 export default PhotopictureEditPrice;
-

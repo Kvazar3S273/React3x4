@@ -2,14 +2,17 @@ import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { GetLaminates, UpdateLaminateTable } from "../../../../../constants/actions/compActions/laminate";
+import {
+  GetLaminates,
+  UpdateLaminateTable,
+} from "../../../../../constants/actions/compActions/laminate";
 
 const LaminateEditPrice = () => {
   const input = useRef();
 
   const initialLaminateState = {
     id: null,
-    price: null
+    price: null,
   };
 
   const navigator = useNavigate();
@@ -32,7 +35,9 @@ const LaminateEditPrice = () => {
           <thead>
             <tr className="table-primary">
               <th scope="col">Послуга</th>
-              <th scope="col" className="text-center">Ціна</th>
+              <th scope="col" className="text-center">
+                Ціна
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -99,51 +104,48 @@ const LaminateEditPrice = () => {
     >
       <th scope="row">{row.format}</th>
       {isOpen == row.id && complete ? (
-          <td >
-            <div
-              className="d-flex justify-content-end"
-              style={{ left: "3em" }}
-            >
-              <td>
-                <input
-                  ref={
-                    foc
-                      ? (input) => {
-                          input && input.focus();
-                        }
-                      : input
-                  }
-                  id="price"
-                  value={editLaminate.price}
-                  name="price"
-                  onChange={(e) =>
-                    handleInputChange("price", e.currentTarget.value, index)
-                  }
-                  onClick={handleToggle}
-                  style={{
-                    width: "100px",
-                    height: "35px",
-                    textAlign: "center",
-                    borderRadius: "7px",
-                    marginRight: "2em",
-                  }}
-                />
-              </td>
-              <td>
-                <button
-                  className="btn btn-primary "
-                  style={{
-                    width: "60px",
-                    height: "35px",
-                  }}
-                  onClick={updateLaminateItem}
-                  type="submit"
-                >
-                  Save
-                </button>
-              </td>
-            </div>
-          </td>
+        <td>
+          <div className="d-flex justify-content-end" style={{ left: "3em" }}>
+            <td>
+              <input
+                ref={
+                  foc
+                    ? (input) => {
+                        input && input.focus();
+                      }
+                    : input
+                }
+                id="price"
+                value={editLaminate.price}
+                name="price"
+                onChange={(e) =>
+                  handleInputChange("price", e.currentTarget.value, index)
+                }
+                onClick={handleToggle}
+                style={{
+                  width: "100px",
+                  height: "35px",
+                  textAlign: "center",
+                  borderRadius: "7px",
+                  marginRight: "2em",
+                }}
+              />
+            </td>
+            <td>
+              <button
+                className="btn btn-primary "
+                style={{
+                  width: "60px",
+                  height: "35px",
+                }}
+                onClick={updateLaminateItem}
+                type="submit"
+              >
+                Save
+              </button>
+            </td>
+          </div>
+        </td>
       ) : (
         <td className="text-center">{row.price}</td>
       )}

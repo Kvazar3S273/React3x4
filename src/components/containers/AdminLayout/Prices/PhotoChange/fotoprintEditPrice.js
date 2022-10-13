@@ -12,7 +12,7 @@ const FotoprintEditPrice = () => {
 
   const initialFotoprintState = {
     id: null,
-    price: null
+    price: null,
   };
 
   const navigator = useNavigate();
@@ -35,8 +35,12 @@ const FotoprintEditPrice = () => {
           <thead>
             <tr className="table-primary">
               <th scope="col">Формат</th>
-              <th scope="col" className="text-center">Точні розміри, мм</th>
-              <th scope="col" className="text-center">Ціна</th>
+              <th scope="col" className="text-center">
+                Точні розміри, мм
+              </th>
+              <th scope="col" className="text-center">
+                Ціна
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -109,51 +113,48 @@ const FotoprintEditPrice = () => {
       <th scope="row">{row.format}</th>
       <td className="text-center">{row.exactSizes}</td>
       {isOpen == row.id && complete ? (
-          <td >
-            <div
-              className="d-flex justify-content-end"
-              style={{ left: "3em" }}
-            >
-              <td>
-                <input
-                  ref={
-                    foc
-                      ? (input) => {
-                          input && input.focus();
-                        }
-                      : input
-                  }
-                  id="price"
-                  value={editFotoprint.price}
-                  name="price"
-                  onChange={(e) =>
-                    handleInputChange("price", e.currentTarget.value, index)
-                  }
-                  onClick={handleToggle}
-                  style={{
-                    width: "100px",
-                    height: "35px",
-                    textAlign: "center",
-                    borderRadius: "7px",
-                    marginRight: "2em",
-                  }}
-                />
-              </td>
-              <td>
-                <button
-                  className="btn btn-primary "
-                  style={{
-                    width: "60px",
-                    height: "35px",
-                  }}
-                  onClick={updateFotoprintItem}
-                  type="submit"
-                >
-                  Save
-                </button>
-              </td>
-            </div>
-          </td>
+        <td>
+          <div className="d-flex justify-content-end" style={{ left: "3em" }}>
+            <td>
+              <input
+                ref={
+                  foc
+                    ? (input) => {
+                        input && input.focus();
+                      }
+                    : input
+                }
+                id="price"
+                value={editFotoprint.price}
+                name="price"
+                onChange={(e) =>
+                  handleInputChange("price", e.currentTarget.value, index)
+                }
+                onClick={handleToggle}
+                style={{
+                  width: "100px",
+                  height: "35px",
+                  textAlign: "center",
+                  borderRadius: "7px",
+                  marginRight: "2em",
+                }}
+              />
+            </td>
+            <td>
+              <button
+                className="btn btn-primary "
+                style={{
+                  width: "60px",
+                  height: "35px",
+                }}
+                onClick={updateFotoprintItem}
+                type="submit"
+              >
+                Save
+              </button>
+            </td>
+          </div>
+        </td>
       ) : (
         <td className="text-center">{row.price}</td>
       )}

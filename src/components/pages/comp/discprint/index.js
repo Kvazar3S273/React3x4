@@ -1,6 +1,15 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { GetDiscprints } from "../../../../constants/actions/compActions/discprint";
 
 const Discprint = () => {
+  const dispatch = useDispatch();
+  const { listdiscprints } = useSelector((state) => state.discprint);
+  useEffect(() => {
+    dispatch(GetDiscprints());
+  }, []);
+
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
@@ -15,10 +24,10 @@ const Discprint = () => {
           </div>
           <div className="col-md-8 px-3">
             <p>
-              Ми здійснюємо друк на дисках струменевими принтерами. 
-              Для друку підходять виключно спеціальні диски з білою 
-              поверхнею (Printable). Друк не включає в себе розробку 
-              макета, проте за додаткову плату ця послуга також може бути надана.  
+              Ми здійснюємо друк на дисках струменевими принтерами. Для друку
+              підходять виключно спеціальні диски з білою поверхнею (Printable).
+              Друк не включає в себе розробку макета, проте за додаткову плату
+              ця послуга також може бути надана.
             </p>
             <h3 className="text-center text-danger">Вартість послуги</h3>
             <table className="table table-striped text-center">
@@ -29,15 +38,13 @@ const Discprint = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">Друк на диску</th>
-                  <td>40</td>
-                </tr>
-                <tr>
-                  <th scope="row">Розробка макету</th>
-                  <td>від 50 грн</td>
-                </tr>
-                
+                {listdiscprints &&
+                  listdiscprints.map((item) => (
+                    <tr key={item.id}>
+                      <td> {item.service} </td>
+                      <td> {item.price} </td>
+                    </tr>
+                  ))}
               </tbody>
             </table>
           </div>

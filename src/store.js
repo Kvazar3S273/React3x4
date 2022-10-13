@@ -20,6 +20,8 @@ import scanReducer from "./reducers/editCompReducers/scanReducer";
 import laminateReducer from "./reducers/editCompReducers/laminateReducer";
 import binderReducer from "./reducers/editCompReducers/binderReducer";
 import usbflashReducer from "./reducers/editCompReducers/usbFlashReducer";
+import discprintReducer from "./reducers/editCompReducers/discprintReducer";
+import emailReducer from "./reducers/editCompReducers/emailReducer";
 
 const middleware = [
     thunk
@@ -45,7 +47,9 @@ const rootReducer = combineReducers({
     scan: scanReducer,
     laminate: laminateReducer,
     binder: binderReducer,
-    usbflash: usbflashReducer
+    usbflash: usbflashReducer,
+    discprint: discprintReducer,
+    email: emailReducer
 });
 
 const enhancers = [];

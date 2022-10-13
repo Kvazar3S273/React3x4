@@ -71,7 +71,7 @@ const PhotoscanEditPrice = () => {
       id: item.id,
       price300dpi: item.price300dpi,
       price600dpi: item.price600dpi,
-      price1200dpi: item.price1200dpi
+      price1200dpi: item.price1200dpi,
     };
 
     if (item.id != changeItem) {

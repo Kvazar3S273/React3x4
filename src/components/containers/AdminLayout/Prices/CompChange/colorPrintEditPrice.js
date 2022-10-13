@@ -16,18 +16,18 @@ const ColorPrintEditPrice = () => {
     id: null,
     price25: null,
     price50: null,
-    price100: null
+    price100: null,
   };
 
   const navigator = useNavigate();
   const dispatch = useDispatch();
   const { listcolorprints } = useSelector((state) => state.colorprint);
-  const [ editColorPrint, setEditColorPrint ] = useState(initialColorPrintState);
-  const [ isOpen, setIsOpen ] = useState(null);
-  const [ foc, setFoc ] = useState(false);
-  const [ complete, setComplete ] = useState(false);
-  const [ three, setThree ] = useState(false);// it's hook for change focus into third input.
-  const [ changeItem, setChangeItem ] = useState(null);//for click item when click to other row.
+  const [editColorPrint, setEditColorPrint] = useState(initialColorPrintState);
+  const [isOpen, setIsOpen] = useState(null);
+  const [foc, setFoc] = useState(false);
+  const [complete, setComplete] = useState(false);
+  const [three, setThree] = useState(false); // it's hook for change focus into third input.
+  const [changeItem, setChangeItem] = useState(null); //for click item when click to other row.
 
   useEffect(() => {
     dispatch(GetColorPrints());
@@ -69,7 +69,7 @@ const ColorPrintEditPrice = () => {
       id: item.id,
       price25: item.price25,
       price50: item.price50,
-      price100: item.price100
+      price100: item.price100,
     };
 
     if (item.id != changeItem) {
@@ -85,7 +85,6 @@ const ColorPrintEditPrice = () => {
     if (data.price25 != edit) {
       console.log("////", editColorPrint.price25);
     }
-
   };
 
   const handleInputChange = (dataType, values, index) => {
@@ -113,7 +112,7 @@ const ColorPrintEditPrice = () => {
     const upd = {
       price25: editColorPrint.price25,
       price50: editColorPrint.price50,
-      price100: editColorPrint.price100
+      price100: editColorPrint.price100,
     };
 
     dispatch(UpdateColorPrintTable(idItem, upd))
@@ -141,7 +140,7 @@ const ColorPrintEditPrice = () => {
         <td colSpan={3}>
           <div
             className="d-flex justify-content-between"
-            style={{ left: "3em" }} 
+            style={{ left: "3em" }}
           >
             <td></td>
             <td>

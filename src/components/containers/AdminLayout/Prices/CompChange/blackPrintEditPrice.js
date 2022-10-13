@@ -20,10 +20,10 @@ const BlackPrintEditPrice = () => {
   const navigator = useNavigate();
   const dispatch = useDispatch();
   const { listblackprints } = useSelector((state) => state.blackprint);
-  const [ editBlackPrint, setEditBlackPrint ] = useState(initialBlackPrintState);
-  const [ isOpen, setIsOpen ] = useState(null);
-  const [ foc, setFoc ] = useState(false);
-  const [ complete, setComplete ] = useState(false);
+  const [editBlackPrint, setEditBlackPrint] = useState(initialBlackPrintState);
+  const [isOpen, setIsOpen] = useState(null);
+  const [foc, setFoc] = useState(false);
+  const [complete, setComplete] = useState(false);
 
   useEffect(() => {
     dispatch(GetBlackPrints());
