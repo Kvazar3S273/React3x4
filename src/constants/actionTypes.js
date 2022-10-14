@@ -82,3 +82,4 @@ export const GET_DISCPRINT = "GET_DISCPRINT";
 export const GET_EMAIL = "GET_EMAIL";
 
 export const GET_VISITCARD = "GET_VISITCARD";
+export const GET_FLYER = "GET_FLYER";

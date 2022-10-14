@@ -12,65 +12,25 @@ import {
   faRectangleAd
 } from "@fortawesome/free-solid-svg-icons";
 import VisitcardEditPrice from "./visitcardEditPrice";
+import FlyerEditPrice from "./flyerEditPrice";
 
 const PoligraphChangePrice = () => {
+
   const [visitcardEdit, setVisitcardEdit] = useState(false);
-  // const [fotoprintEdit, setfotoprintEdit] = useState(false);
-  // const [photoscanEdit, setPhotoscanEdit] = useState(false);
-  // const [duplicateEdit, setDuplicateEdit] = useState(false);
-  // const [photopictureEdit, setPhotopictureEdit] = useState(false);
-  // const [bottleEdit, setBottleEdit] = useState(false);
+  const [flyerEdit, setFlyerEdit] = useState(false);
+
   const handleClickVisitcardEdit = (event) => {
     // 👇️ щоб по кліку відкривалось і по наступному закривалось
     // setfndEdit((current) => !current);
     // 👇️ щоб по кліку тільки відкривалось
     setVisitcardEdit(true);
-    // setfotoprintEdit(false);
-    // setPhotoscanEdit(false);
-    // setDuplicateEdit(false);
-    // setPhotopictureEdit(false);
-    // setBottleEdit(false);
+    setFlyerEdit(false);
   };
-  // const handleClickFotoprintEdit = (event) => {
-  //   setfndEdit(false);
-  //   setfotoprintEdit(true);
-  //   setPhotoscanEdit(false);
-  //   setDuplicateEdit(false);
-  //   setPhotopictureEdit(false);
-  //   setBottleEdit(false);
-  // };
-  // const handleClickPhotoscanEdit = (event) => {
-  //   setfndEdit(false);
-  //   setfotoprintEdit(false);
-  //   setPhotoscanEdit(true);
-  //   setDuplicateEdit(false);
-  //   setPhotopictureEdit(false);
-  //   setBottleEdit(false);
-  // };
-  // const handleClickDuplicateEdit = (event) => {
-  //   setfndEdit(false);
-  //   setfotoprintEdit(false);
-  //   setPhotoscanEdit(false);
-  //   setDuplicateEdit(true);
-  //   setPhotopictureEdit(false);
-  //   setBottleEdit(false);
-  // };
-  // const handleClickPhotopictureEdit  = (event) => {
-  //   setfndEdit(false);
-  //   setfotoprintEdit(false);
-  //   setPhotoscanEdit(false);
-  //   setDuplicateEdit(false);
-  //   setPhotopictureEdit(true);
-  //   setBottleEdit(false);
-  // };
-  // const handleClickBottleEdit  = (event) => {
-  //   setfndEdit(false);
-  //   setfotoprintEdit(false);
-  //   setPhotoscanEdit(false);
-  //   setDuplicateEdit(false);
-  //   setPhotopictureEdit(false);
-  //   setBottleEdit(true);
-  // };
+  const handleClickFlyerEdit = (event) => {
+    setVisitcardEdit(false);
+    setFlyerEdit(true);
+  };
+  
   return (
     <>
       <div>
@@ -98,20 +58,23 @@ const PoligraphChangePrice = () => {
       </div>
 
       {/* Картка 2 */}
-      <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded" >
+      <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded" 
+      onClick={handleClickFlyerEdit}>
+        <HashLink smooth to={"#more"}>
         <div className="row">
           <div className="col-md-3">
-          <i className="d-flex justify-content-center align-middle  mt-1"
-              style={{fontSize: "2.5em", color: "#000"}}>
+          <i className="d-flex justify-content-center align-middle mt-1"
+              style={{ fontSize: "2.5em", color: "#000" }}>
               <FontAwesomeIcon icon={faLayerGroup} />
             </i>
           </div>
           <div className="col-md-9">
-          <h5 className=" text-center">Флаєри</h5>
+          <h5 className="text-center text-dark">Флаєри</h5>
           </div>
         </div>
+        </HashLink>
       </div>
-
+      
       {/* Картка 3 */}
       <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded" >
         <div className="row">
@@ -206,11 +169,7 @@ const PoligraphChangePrice = () => {
 
     <section id="more"></section>
           {visitcardEdit && <VisitcardEditPrice />}
-          {/* {fotoprintEdit && <FotoprintEditPrice />}
-          {photoscanEdit && <PhotoscanEditPrice />}
-          {duplicateEdit && <DuplicateEditPrice />}
-          {photopictureEdit && <PhotopictureEditPrice />}
-          {bottleEdit && <BottleEditPrice />} */}
+          {flyerEdit && <FlyerEditPrice />}
 
         </div>
       </div>

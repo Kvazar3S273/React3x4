@@ -22,6 +22,7 @@ import binderReducer from "./reducers/editCompReducers/binderReducer";
 import usbflashReducer from "./reducers/editCompReducers/usbFlashReducer";
 import discprintReducer from "./reducers/editCompReducers/discprintReducer";
 import emailReducer from "./reducers/editCompReducers/emailReducer";
+import flyerReducer from "./reducers/editPoligraphReducers/flyerReducer";
 
 const middleware = [
     thunk
@@ -40,7 +41,6 @@ const rootReducer = combineReducers({
     duplicate: duplicateReducer,
     photopicture: photopictureReducer,
     bottle: bottleReducer,
-    visitcard: visitcardReducer,
     xerox: xeroxReducer,
     blackprint: blackprintReducer,
     colorprint: colorprintReducer,
@@ -49,7 +49,9 @@ const rootReducer = combineReducers({
     binder: binderReducer,
     usbflash: usbflashReducer,
     discprint: discprintReducer,
-    email: emailReducer
+    email: emailReducer,
+    visitcard: visitcardReducer,
+    flyer: flyerReducer
 });
 
 const enhancers = [];

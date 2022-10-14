@@ -3,49 +3,49 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { 
-  GetVisitcards, 
-  UpdateVisitcardTable, 
-  ChangeVisitCardByPercent 
-} from "../../../../../constants/actions/poligraphActions/visitcard";
+  GetFlyers, 
+  UpdateFlyerTable, 
+  ChangeFlyerByPercent 
+} from "../../../../../constants/actions/poligraphActions/flyer";
 import ModalPercent from "../ModalPercent";
 
-const VisitcardEditPrice = () => {
+const FlyerEditPrice = () => {
   const input = useRef();
 
-  const initialVisitcardState = {
+  const initialFlyerState = {
     id: null,
     price: null
   };
 
   const navigator = useNavigate();
   const dispatch = useDispatch();
-  const { listvisitcards } = useSelector((state) => state.visitcard);
-  const [editVisitcard, setEditVisitcard] = useState(initialVisitcardState);
+  const { listflyers } = useSelector((state) => state.flyer);
+  const [editFlyer, setEditFlyer] = useState(initialFlyerState);
   const [isOpen, setIsOpen] = useState(null);
   const [foc, setFoc] = useState(false);
   const [complete, setComplete] = useState(false);
   const [percent, setPersent] = useState(1);
-  const [errorInput,setErrorInput]=useState(false);
+  const [errorInput, setErrorInput] = useState(false);
 
   useEffect(() => {
-    dispatch(GetVisitcards());
+    dispatch(GetFlyers());
   }, []);
 
-  const Table = ({ listvisitcards }) => (
+  const Table = ({ listflyers }) => (
     <div className="row">
       <div className="col-md-1"></div>
       <div className="col-md-10">
         <table className="table table-striped text-center">
           <thead>
             <tr className="table-primary">
-              <th scope="col">Щільність паперу, г/м.кв.</th>
-              <th scope="col">Покриття</th>
+              <th scope="col">Формат</th>
+              <th scope="col">Кількість</th>
               <th scope="col" className="text-center">Ціна</th>
             </tr>
           </thead>
           <tbody>
-            {listvisitcards.map((row, index) => (
-              <TableRow key={row.id} row={row} index={listvisitcards[index]} />
+            {listflyers.map((row, index) => (
+              <TableRow key={row.id} row={row} index={listflyers[index]} />
             ))}
           </tbody>
         </table>
@@ -59,7 +59,7 @@ const VisitcardEditPrice = () => {
 
     console.log("Row", row);
     //console.log("e.currentTarget.id",e.currentTarget.id)
-    const item = listvisitcards.find((row) => row.id == e.currentTarget.id);
+    const item = listflyers.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
     setComplete(true);
@@ -69,12 +69,12 @@ const VisitcardEditPrice = () => {
     };
 
     if (!foc) {
-      setEditVisitcard(data);
+      setEditFlyer(data);
     }
   };
 
   const handleInputChange = (dataType, values, index) => {
-    setEditVisitcard({ ...editVisitcard, [dataType]: values });
+    setEditFlyer({ ...editFlyer, [dataType]: values });
   };
 
   const handleInputPercentChange=(value)=>{
@@ -90,19 +90,19 @@ const VisitcardEditPrice = () => {
     setFoc((preState) => !preState);
   };
 
-  const updateVisitcardItem = () => {
-    const idItem = editVisitcard.id;
+  const updateFlyerItem = () => {
+    const idItem = editFlyer.id;
 
     const upd = {
-      price: editVisitcard.price,
+      price: editFlyer.price,
     };
 
-    dispatch(UpdateVisitcardTable(idItem, upd))
+    dispatch(UpdateFlyerTable(idItem, upd))
       .then((res) => {
         console.log("Result:", res);
         setComplete(false);
         navigator("/admin");
-        dispatch(GetVisitcards());
+        dispatch(GetFlyers());
       })
       .catch((ex) => {
         console.log("Errorr", ex);
@@ -115,8 +115,8 @@ const VisitcardEditPrice = () => {
       id={row.id}
       onClick={(e) => RowHandleClick(e, row)}
     >
-      <th scope="row">{row.density}</th>
-      <th scope="row">{row.laminating}</th>
+      <th scope="row">{row.format}</th>
+      <th scope="row">{row.qty}</th>
       {isOpen == row.id && complete ? (
           <td >
             <div
@@ -133,7 +133,7 @@ const VisitcardEditPrice = () => {
                       : input
                   }
                   id="price"
-                  value={editVisitcard.price}
+                  value={editFlyer.price}
                   name="price"
                   onChange={(e) =>
                     handleInputChange("price", e.currentTarget.value, index)
@@ -155,7 +155,7 @@ const VisitcardEditPrice = () => {
                     width: "60px",
                     height: "35px",
                   }}
-                  onClick={updateVisitcardItem}
+                  onClick={updateFlyerItem}
                   type="submit"
                 >
                   Save
@@ -175,10 +175,10 @@ const VisitcardEditPrice = () => {
   return (
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
-        <h1 className="text-center">Візитки</h1>
+        <h1 className="text-center">Флаєри</h1>
         <h4 className="text-center text-danger">Редагування цін</h4>
 
-        <Table listvisitcards={listvisitcards} />
+        <Table listflyers={listflyers} />
 
         <div className="row mt-3 mb-3">
           <h4 className="text-center text-danger mb-4">
@@ -211,7 +211,6 @@ const VisitcardEditPrice = () => {
                   type="button"
                   className="open-btn btn btn-danger"
                   onClick={() => setModalActive(false)}
-                  
                 >
                   Збільшити
                 </button>
@@ -231,12 +230,12 @@ const VisitcardEditPrice = () => {
             active={modalActive} 
             onClose={()=>setModalActive(false)} 
             children={percent} 
-            actiontype={ChangeVisitCardByPercent}/>           
+            actiontype={ChangeFlyerByPercent}/>           
           
         </div>
       </div>
     </div>
   );
 };
-export default VisitcardEditPrice;
+export default FlyerEditPrice;
 
