@@ -6,7 +6,7 @@ const Buklet = () => {
     <div className="row mb-3">
       <div className="col py-3">
         <h1 className="text-center">Буклети</h1>
-        
+
         {/* Таблиця Варіанти складання */}
         <div className="row">
           <h3 className="text-center text-danger my-4">
@@ -16,63 +16,94 @@ const Buklet = () => {
             <div className="row">
               <div className="col-md-1"></div>
               <div className="col-md-10">
-                
                 <table className="table text-center">
                   <tbody>
                     <tr>
                       <td>
-                        <img className="tabsimg" src="/images/services/poligraph/buklet/falz_1.png" />
+                        <img
+                          className="tabsimg"
+                          src="/images/services/poligraph/buklet/falz_1.png"
+                        />
                         <p>Книжка 1 складання</p>
                       </td>
                       <td>
-                        <img className="tabsimg" src="/images/services/poligraph/buklet/falz_8.png" />
+                        <img
+                          className="tabsimg"
+                          src="/images/services/poligraph/buklet/falz_8.png"
+                        />
                         <p>Асиметричний 1 складання</p>
                       </td>
                       <td>
-                        <img className="tabsimg" src="/images/services/poligraph/buklet/falz_2.png" />
+                        <img
+                          className="tabsimg"
+                          src="/images/services/poligraph/buklet/falz_2.png"
+                        />
                         <p>Намотка 2 складання</p>
                       </td>
                       <td>
-                        <img className="tabsimg" src="/images/services/poligraph/buklet/falz_5.png" />
+                        <img
+                          className="tabsimg"
+                          src="/images/services/poligraph/buklet/falz_5.png"
+                        />
                         <p>Намотка 4 складання</p>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <img className="tabsimg" src="/images/services/poligraph/buklet/falz_4.png" />
+                        <img
+                          className="tabsimg"
+                          src="/images/services/poligraph/buklet/falz_4.png"
+                        />
                         <p>Гармошка 2 складання</p>
                       </td>
                       <td>
-                        <img className="tabsimg" src="/images/services/poligraph/buklet/falz_6.png" />
+                        <img
+                          className="tabsimg"
+                          src="/images/services/poligraph/buklet/falz_6.png"
+                        />
                         <p>Гармошка 3 складання</p>
                       </td>
                       <td>
-                        <img className="tabsimg" src="/images/services/poligraph/buklet/falz_10.png" />
+                        <img
+                          className="tabsimg"
+                          src="/images/services/poligraph/buklet/falz_10.png"
+                        />
                         <p>Гармошка 4 складання</p>
                       </td>
                       <td>
-                        <img className="tabsimg" src="/images/services/poligraph/buklet/falz_11.png" />
+                        <img
+                          className="tabsimg"
+                          src="/images/services/poligraph/buklet/falz_11.png"
+                        />
                         <p>Гармошка 5 складань</p>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <img className="tabsimg" src="/images/services/poligraph/buklet/falz_3.png" />
+                        <img
+                          className="tabsimg"
+                          src="/images/services/poligraph/buklet/falz_3.png"
+                        />
                         <p>Вікно 2 складання</p>
                       </td>
                       <td>
-                        <img className="tabsimg" src="/images/services/poligraph/buklet/falz_7.png" />
+                        <img
+                          className="tabsimg"
+                          src="/images/services/poligraph/buklet/falz_7.png"
+                        />
                         <p>Вікно 3 складання</p>
                       </td>
                       <td>
-                        <img className="tabsimg" src="/images/services/poligraph/buklet/falz_9.png" />
+                        <img
+                          className="tabsimg"
+                          src="/images/services/poligraph/buklet/falz_9.png"
+                        />
                         <p>Комбінований 2 складання</p>
                       </td>
                       <td></td>
                     </tr>
                   </tbody>
                 </table>
-
               </div>
               <div className="col-md-1"></div>
             </div>
@@ -81,9 +112,7 @@ const Buklet = () => {
 
         {/* Таблиця Доступні формати */}
         <div className="row">
-          <h3 className="text-center text-danger my-4">
-          Доступні формати:
-          </h3>
+          <h3 className="text-center text-danger my-4">Доступні формати:</h3>
           <div className="col">
             <div className="row">
               <div className="col-md-1"></div>
@@ -126,17 +155,20 @@ const Buklet = () => {
           </div>
         </div>
 
-        
-
-        <p className="mx-5 mt-4">
-          Мінімальний тираж - <b>25 шт</b>
-        </p>
-        <p className="mx-5">
-          Розрахунок ціни на друк буклетів проводиться після запиту. Вкажіть 
-          варіант складання, вид матеріалу, формат і необхідність покриття і 
-          ми розрахуємо для Вас вартість виготовлення даної продукції.
-        </p>
-
+        <div className="row">
+          <div className="col-md-1"></div>
+          <div className="col-md-10">
+            <p className="mx-5 mt-4">
+              Мінімальний тираж - <b>25 шт</b>
+            </p>
+            <p className="mx-5">
+              Розрахунок ціни на друк буклетів проводиться після запиту. Вкажіть
+              варіант складання, вид матеріалу, формат і необхідність покриття і
+              ми розрахуємо для Вас вартість виготовлення даної продукції.
+            </p>
+          </div>
+          <div className="col-md-1"></div>
+        </div>
       </div>
     </div>
   );

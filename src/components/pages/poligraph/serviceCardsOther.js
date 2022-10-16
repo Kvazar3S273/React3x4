@@ -6,7 +6,7 @@ import {
     PoligraphBuklet,
     PoligraphPlakat,
     PoligraphBroshura,
-    Poligraph3dcalendar,
+    PoligraphCalendar3d,
     PoligraphBlank,
     PoligraphMenu,
     PoligraphBloknot,
@@ -23,7 +23,7 @@ const ServiceCardsOther = () => {
   const handleClickBuklet = () => { dispatch(PoligraphBuklet()); }
   const handleClickPlakat = () => { dispatch(PoligraphPlakat()); }
   const handleClickBroshura = () => { dispatch(PoligraphBroshura()); }
-  const handleClick3dcalendar = () => { dispatch(Poligraph3dcalendar()); }
+  const handleClickCalendar3d = () => { dispatch(PoligraphCalendar3d()); }
   const handleClickBlank = () => { dispatch(PoligraphBlank()); }
   const handleClickMenu = () => { dispatch(PoligraphMenu()); }
   const handleClickBloknot = () => { dispatch(PoligraphBloknot()); }
@@ -95,7 +95,7 @@ const ServiceCardsOther = () => {
       {/* Картка 4 */}
       <div
         className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
-        onClick={handleClick3dcalendar}
+        onClick={handleClickCalendar3d}
       >
         <HashLink smooth to={"/poligraph#other"} style={{ color: "#000" }}>
           <div className="card">

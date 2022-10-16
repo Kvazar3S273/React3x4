@@ -12,7 +12,7 @@ import {
   POLIGRAPH_BUKLET,
   POLIGRAPH_PLAKAT,
   POLIGRAPH_BROSHURA,
-  POLIGRAPH_3DCALENDAR,
+  POLIGRAPH_CALENDAR3D,
   POLIGRAPH_BLANK,
   POLIGRAPH_MENU,
   POLIGRAPH_BLOKNOT,
@@ -61,8 +61,8 @@ export const PoligraphPlakat = () => (dispatch) => {
 export const PoligraphBroshura = () => (dispatch) => {
   dispatch({ type: POLIGRAPH_BROSHURA });
 };
-export const Poligraph3dcalendar = () => (dispatch) => {
-  dispatch({ type: POLIGRAPH_3DCALENDAR });
+export const PoligraphCalendar3d = () => (dispatch) => {
+  dispatch({ type: POLIGRAPH_CALENDAR3D });
 };
 export const PoligraphBlank = () => (dispatch) => {
   dispatch({ type: POLIGRAPH_BLANK });

@@ -5,7 +5,7 @@ class FlyerDataService {
     return http.get("api/flyer");
   }
 
-  updateVisitcardData(id, data) {
+  updateFlyerData(id, data) {
     return http.put(`api/flyer/flyeredit/${id}`, data, {
       headers: {
         "Content-Type": "multipart/form-data",

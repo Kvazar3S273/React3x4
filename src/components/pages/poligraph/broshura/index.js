@@ -9,9 +9,7 @@ const Broshura = () => {
 
         {/* Таблиця Доступні формати */}
         <div className="row">
-          <h3 className="text-center text-danger my-4">
-          Доступні формати:
-          </h3>
+          <h3 className="text-center text-danger my-4">Доступні формати:</h3>
           <div className="col">
             <div className="row">
               <div className="col-md-1"></div>
@@ -61,14 +59,13 @@ const Broshura = () => {
         {/* Таблиця Можливі варіанти зшивання */}
         <div className="row">
           <h3 className="text-center text-danger my-4">
-          Можливі варіанти зшивання:
+            Можливі варіанти зшивання:
           </h3>
           <div className="col">
             <div className="row">
               <div className="col-md-1"></div>
               <div className="col-md-10">
-                
-              <table className="table text-center">
+                <table className="table text-center">
                   <tbody>
                     <tr>
                       <th>Скоба</th>
@@ -77,13 +74,22 @@ const Broshura = () => {
                     </tr>
                     <tr>
                       <td>
-                        <img className="tabsimgkatalog" src="/images/services/poligraph/katalog/skoba.png" />
+                        <img
+                          className="tabsimgkatalog"
+                          src="/images/services/poligraph/katalog/skoba.png"
+                        />
                       </td>
                       <td>
-                        <img className="tabsimgkatalog" src="/images/services/poligraph/katalog/prujina.png" />
+                        <img
+                          className="tabsimgkatalog"
+                          src="/images/services/poligraph/katalog/prujina.png"
+                        />
                       </td>
                       <td>
-                        <img className="tabsimgkatalog" src="/images/services/poligraph/katalog/glue.png" />
+                        <img
+                          className="tabsimgkatalog"
+                          src="/images/services/poligraph/katalog/glue.png"
+                        />
                       </td>
                     </tr>
                     <tr>
@@ -91,27 +97,30 @@ const Broshura = () => {
                       <td>4-524 стор.</td>
                       <td>30-608 стор.</td>
                     </tr>
-                    
                   </tbody>
                 </table>
-              
-
               </div>
               <div className="col-md-1"></div>
             </div>
           </div>
         </div>
 
-
-        <p className="mx-5 mt-4">
-          Мінімальний тираж - <b>1 шт</b>
-        </p>
-        <p className="mx-5">
-          Розрахунок ціни на друк брошур і каталогів проводиться після запиту. 
-          Для узгодження ціни потрібно обговорити параметри брошури і тоді 
-          ми розрахуємо для Вас вартість виготовлення даної продукції.
-        </p>
-
+        <div className="row">
+          <div className="col-md-1"></div>
+          <div className="col-md-10">
+            <p className="mx-5 mt-4">
+              Мінімальний тираж - <b>1 шт</b>
+            </p>
+            <p className="mx-5">
+              Розрахунок ціни на друк брошур і каталогів проводиться після
+              запиту. Для узгодження ціни потрібно обговорити параметри брошури
+              і тоді ми розрахуємо для Вас вартість виготовлення даної
+              продукції.
+            </p>
+          </div>
+          <div className="col-md-1"></div>
+        </div>
+        
       </div>
     </div>
   );

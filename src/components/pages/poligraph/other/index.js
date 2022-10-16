@@ -9,7 +9,7 @@ import {
     PoligraphBuklet,
     PoligraphPlakat,
     PoligraphBroshura,
-    Poligraph3dcalendar,
+    PoligraphCalendar3d,
     PoligraphBlank,
     PoligraphMenu,
     PoligraphBloknot,
@@ -35,7 +35,7 @@ const Other = () => {
   const handleClickBuklet = () => { dispatch(PoligraphBuklet()); }
   const handleClickPlakat = () => { dispatch(PoligraphPlakat()); }
   const handleClickBroshura = () => { dispatch(PoligraphBroshura()); }
-  const handleClick3dcalendar = () => { dispatch(Poligraph3dcalendar()); }
+  const handleClickCalendar3d = () => { dispatch(PoligraphCalendar3d()); }
   const handleClickBlank = () => { dispatch(PoligraphBlank()); }
   const handleClickMenu = () => { dispatch(PoligraphMenu()); }
   const handleClickBloknot = () => { dispatch(PoligraphBloknot()); }
@@ -48,7 +48,7 @@ const Other = () => {
     isPoligraphBuklet,
     isPoligraphPlakat,
     isPoligraphBroshura,
-    isPoligraph3dcalendar,
+    isPoligraphCalendar3d,
     isPoligraphBlank,
     isPoligraphMenu,
     isPoligraphBloknot,
@@ -72,8 +72,8 @@ const Other = () => {
                     onClick={handleClickPlakat}> Плакати </button>
             <button className={classNames("tablinks", isPoligraphBroshura ? "active" : "")} 
                     onClick={handleClickBroshura}> Брошури </button>
-            <button className={classNames("tablinks", isPoligraph3dcalendar ? "active" : "")} 
-                    onClick={handleClick3dcalendar}> Об'ємні календарі </button>
+            <button className={classNames("tablinks", isPoligraphCalendar3d ? "active" : "")} 
+                    onClick={handleClickCalendar3d}> Об'ємні календарі </button>
             <button className={classNames("tablinks", isPoligraphMenu ? "active" : "")} 
                     onClick={handleClickMenu}> Меню </button>
             <button className={classNames("tablinks", isPoligraphBloknot ? "active" : "")} 
@@ -90,13 +90,13 @@ const Other = () => {
 
           <div className="tabcontent mb-4 overflow-auto">
             {!isPoligraphBuklet && !isPoligraphPlakat && !isPoligraphBroshura &&
-              !isPoligraph3dcalendar && !isPoligraphBlank && !isPoligraphMenu &&
+              !isPoligraphCalendar3d && !isPoligraphBlank && !isPoligraphMenu &&
               !isPoligraphBloknot && !isPoligraphCards && !isPoligraphLeaf &&
               !isPoligraphKonvert && !isPoligraphFolder ? <Buklet/>:""}
             {isPoligraphBuklet ? <Buklet /> : ""}
             {isPoligraphPlakat ? <Plakat /> : ""}
             {isPoligraphBroshura ? <Broshura /> : ""}
-            {isPoligraph3dcalendar ? <Calendar3d /> : ""}
+            {isPoligraphCalendar3d ? <Calendar3d /> : ""}
             {isPoligraphMenu ? <Menu /> : ""}
             {isPoligraphBloknot ? <Bloknot />  : ""}
             {isPoligraphCards ? <Cards /> : ""}

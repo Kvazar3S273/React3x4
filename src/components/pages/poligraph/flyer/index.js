@@ -1,8 +1,17 @@
 import React from "react";
 import "react-slideshow-image/dist/styles.css";
 // import "../style.css"
+import { useSelector, useDispatch } from 'react-redux';
+import { GetFlyers } from "../../../../constants/actions/poligraphActions/flyer";
+import { useEffect } from "react";
 
 const Flyer = () => {
+
+  const dispatch = useDispatch();
+  const { listflyers } = useSelector(state => state.flyer);
+  useEffect(() => {
+          dispatch(GetFlyers());           
+      }, []);
 
   return (
     <div className="row mt-3 mb-3">
@@ -147,7 +156,7 @@ const Flyer = () => {
             <div className="row">
               <div className="col-md-3"></div>
               <div className="col-md-6">
-              <table className="table table-primary  table-striped text-center">
+              <table className="table table-striped text-center">
                   <thead>
                     <tr>
                       <th scope="col">Щільність паперу</th>
@@ -155,22 +164,14 @@ const Flyer = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">250</th>
-                      <td>2000</td>
+                  {listflyers &&
+                  listflyers.map((item) => (
+                    <tr key={item.id}>
+                      <td>{item.format}</td>
+                      <td>{item.qty}</td>
+                      <td style={{ background: "#E1A3B3" }}> {item.price} </td>
                     </tr>
-                    <tr>
-                      <th scope="row">300</th>
-                      <td>3000</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">350</th>
-                      <td>4000</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">450</th>
-                      <td>5000</td>
-                    </tr>
+                  ))}
                   </tbody>
                 </table>
               </div>
@@ -178,10 +179,6 @@ const Flyer = () => {
             </div>
           </div>
         </div>
-
-        
-
-    
       </div>
     </div>
   );

@@ -5,12 +5,10 @@ const Leaf = () => {
     <div className="row mt-3 mb-3">
       <div className="col py-3">
         <h1 className="text-center">Блоки для запису</h1>
-        
+
         {/* Таблиця Доступні формати */}
         <div className="row">
-          <h3 className="text-center text-danger my-4">
-          Доступні формати:
-          </h3>
+          <h3 className="text-center text-danger my-4">Доступні формати:</h3>
           <div className="col">
             <div className="row">
               <div className="col-md-1"></div>
@@ -59,9 +57,7 @@ const Leaf = () => {
 
         {/* Таблиця Доступні матеріали */}
         <div className="row">
-          <h3 className="text-center text-danger my-4">
-          Доступні матеріали:
-          </h3>
+          <h3 className="text-center text-danger my-4">Доступні матеріали:</h3>
           <div className="col">
             <div className="row">
               <div className="col-md-1"></div>
@@ -69,7 +65,9 @@ const Leaf = () => {
                 <table className="table text-center">
                   <tbody>
                     <tr>
-                      <th rowSpan={2} style={{ verticalAlign: "middle" }}>Крейда, г/м.кв.	</th>
+                      <th rowSpan={2} style={{ verticalAlign: "middle" }}>
+                        Крейда, г/м.кв.{" "}
+                      </th>
                       <td>90</td>
                       <td>115</td>
                       <td>130</td>
@@ -84,7 +82,9 @@ const Leaf = () => {
                       <td>450</td>
                     </tr>
                     <tr>
-                      <th rowSpan={2} style={{ verticalAlign: "middle" }}>Покриття</th>
+                      <th rowSpan={2} style={{ verticalAlign: "middle" }}>
+                        Покриття
+                      </th>
                       <td>відсутнє</td>
                       <td>Гл лам 1+0</td>
                       <td>Гл лам 1+1</td>
@@ -93,7 +93,7 @@ const Leaf = () => {
                     </tr>
                     <tr>
                       <td>Soft лам 1+0</td>
-                      <td>Soft лам 1+1	</td>
+                      <td>Soft лам 1+1 </td>
                       <td>УФ лак 1+0</td>
                       <td>Гібрид 1+0</td>
                       <td></td>
@@ -106,15 +106,21 @@ const Leaf = () => {
           </div>
         </div>
 
-        <p className="mx-5 mt-4">
-          Мінімальний тираж - <b>100 шт</b>
-        </p>
-        <p className="mx-5">
-          Розрахунок ціни на друк листівок для запису проводиться після запиту. 
-          Вкажіть щільність паперу, формат і необхідність покриття і ми 
-          розрахуємо для Вас вартість виготовлення даної продукції.
-        </p>
-
+        <div className="row">
+          <div className="col-md-1"></div>
+          <div className="col-md-10">
+            <p className="mx-5 mt-4">
+              Мінімальний тираж - <b>100 шт</b>
+            </p>
+            <p className="mx-5">
+              Розрахунок ціни на друк листівок для запису проводиться після
+              запиту. Вкажіть щільність паперу, формат і необхідність покриття і
+              ми розрахуємо для Вас вартість виготовлення даної продукції.
+            </p>
+          </div>
+          <div className="col-md-1"></div>
+        </div>
+        
       </div>
     </div>
   );

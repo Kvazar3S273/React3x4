@@ -14,7 +14,7 @@ const Cards = () => {
               <div className="col-md-2"></div>
               <div className="col-md-8">
                 <table className="table text-center table-striped">
-                <tbody>
+                  <tbody>
                     <tr>
                       <th>Матеріал</th>
                       <td>білий</td>
@@ -36,7 +36,6 @@ const Cards = () => {
                       <td></td>
                       <td></td>
                     </tr>
-                    
                   </tbody>
                 </table>
               </div>
@@ -53,7 +52,7 @@ const Cards = () => {
               <div className="col-md-1"></div>
               <div className="col-md-10">
                 <table className="table text-center">
-                <tbody>
+                  <tbody>
                     <tr>
                       <td>Персоніфікація</td>
                       <td>Ембосування</td>
@@ -76,18 +75,25 @@ const Cards = () => {
           </div>
         </div>
 
-        <p className="mx-5 mt-4">
-          Мінімальний тираж - <b>10 шт</b>
-        </p>
-        <p className="mx-5 mt-4">
-          Термін виготовлення - <b>7 днів</b>
-        </p>
-        <p className="mx-5">
-          Розрахунок ціни на виготовлення пластикових карток проводиться 
-          після запиту. Вкажіть необхідний вид пластику, всі необхідні 
-          Вам опції і ми розрахуємо для Вас вартість виготовлення даної продукції.
-        </p>
-
+        <div className="row">
+          <div className="col-md-1"></div>
+          <div className="col-md-10">
+            <p className="mx-5 mt-4">
+              Мінімальний тираж - <b>10 шт</b>
+            </p>
+            <p className="mx-5 mt-4">
+              Термін виготовлення - <b>7 днів</b>
+            </p>
+            <p className="mx-5">
+              Розрахунок ціни на виготовлення пластикових карток проводиться
+              після запиту. Вкажіть необхідний вид пластику, всі необхідні Вам
+              опції і ми розрахуємо для Вас вартість виготовлення даної
+              продукції.
+            </p>
+          </div>
+          <div className="col-md-1"></div>
+        </div>
+        
       </div>
     </div>
   );

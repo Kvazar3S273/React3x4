@@ -23,15 +23,16 @@ const ServicePoligraphCards = () => {
             {isPoligraphOther ? 
             <>
               <ServiceCardsOther />
-              <Other/>
+              {/* <Other/> */}
             </> : ""}
           </div>
         </div>
       </div>
 
-      <section id="other"></section>
-      <Other/>
       <section id="component"></section>
+      
+      {/* <section id="other"></section> */}
+      {/* <Other/> */}
 
     </>
   );
