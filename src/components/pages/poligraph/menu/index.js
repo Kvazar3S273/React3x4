@@ -7,7 +7,7 @@ const Menu = () => {
         <h1 className="text-center">Меню</h1>
 
         {/* Таблиця Доступні види */}
-        <div className="row">
+        <div className="row" style={{overflowX:"auto"}}>
           <h3 className="text-center text-danger my-4">Доступні види:</h3>
           <div className="col">
             <div className="row">
@@ -116,7 +116,7 @@ const Menu = () => {
         </div>
 
         {/* Таблиця Доступні формати */}
-        <div className="row">
+        <div className="row" style={{overflowX:"auto"}}>
           <h3 className="text-center text-danger my-4">Доступні формати:</h3>
           <div className="col">
             <div className="row">
@@ -174,7 +174,7 @@ const Menu = () => {
           </div>
           <div className="col-md-1"></div>
         </div>
-        
+
       </div>
     </div>
   );

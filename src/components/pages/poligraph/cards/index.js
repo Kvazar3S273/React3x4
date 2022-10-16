@@ -7,7 +7,7 @@ const Cards = () => {
         <h1 className="text-center">Пластикові картки</h1>
 
         {/* Таблиця Доступні матеріали */}
-        <div className="row">
+        <div className="row" style={{overflowX:"auto"}}>
           <h3 className="text-center text-danger my-4">Доступні матеріали:</h3>
           <div className="col">
             <div className="row">
@@ -45,7 +45,7 @@ const Cards = () => {
         </div>
 
         {/* Таблиця Доступні опції */}
-        <div className="row">
+        <div className="row" style={{overflowX:"auto"}}>
           <h3 className="text-center text-danger my-4">Доступні опції:</h3>
           <div className="col">
             <div className="row">
@@ -93,7 +93,7 @@ const Cards = () => {
           </div>
           <div className="col-md-1"></div>
         </div>
-        
+
       </div>
     </div>
   );

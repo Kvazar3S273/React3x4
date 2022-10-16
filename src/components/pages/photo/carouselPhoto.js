@@ -75,7 +75,7 @@ const CarouselPhoto = () => {
               </div>
               {/*Лише заголовок тільки на xs */}
               <div className="d-block d-sm-none">
-                <h2>Фото на документи</h2>
+                <h4>Фото на документи</h4>
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@ const CarouselPhoto = () => {
               </div>
               {/*Лише заголовок тільки на xs */}
               <div className="d-block d-sm-none">
-                <h2>Друк фотографій</h2>
+                <h4>Друк фотографій</h4>
               </div>
             </div>
           </div>
@@ -154,7 +154,7 @@ const CarouselPhoto = () => {
               </div>
               {/*Лише заголовок тільки на xs */}
               <div className="d-block d-sm-none">
-                <h2>Фотокниги</h2>
+                <h4>Фотокниги</h4>
               </div>
             </div>
           </div>
@@ -196,7 +196,7 @@ const CarouselPhoto = () => {
               </div>
               {/*Лише заголовок тільки на xs */}
               <div className="d-block d-sm-none">
-                <h2>Фотокартини</h2>
+                <h4>Фотокартини</h4>
               </div>
             </div>
           </div>

@@ -64,29 +64,31 @@ const Fnd = () => {
             <h3 className="text-center text-danger">
               Вартість виготовлення фотографій на документи
             </h3>
-            <table className="table table-striped text-center">
-              <thead>
-                <tr>
-                  <th scope="col">Документ</th>
-                  <th scope="col">К-сть</th>
-                  <th scope="col" style={{ background: "#E1A3B3" }}>
-                    Ціна, грн
-                  </th>
-                  <th scope="col">Архів, грн</th>
-                </tr>
-              </thead>
-              <tbody>
-                {listfnds &&
-                  listfnds.map((item) => (
-                    <tr key={item.id}>
-                      <td>{item.title}</td>
-                      <td>{item.qty}</td>
-                      <td style={{ background: "#E1A3B3" }}> {item.price} </td>
-                      <td> {item.archivePice} </td>
-                    </tr>
-                  ))}
-              </tbody>
-            </table>
+            <div className="row" style={{overflowX:"auto"}}>
+              <table className="table table-striped text-center">
+                <thead>
+                  <tr>
+                    <th scope="col">Документ</th>
+                    <th scope="col">К-сть</th>
+                    <th scope="col" style={{ background: "#E1A3B3" }}>
+                      Ціна, грн
+                    </th>
+                    <th scope="col">Архів, грн</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {listfnds &&
+                    listfnds.map((item) => (
+                      <tr key={item.id}>
+                        <td>{item.title}</td>
+                        <td>{item.qty}</td>
+                        <td style={{ background: "#E1A3B3" }}> {item.price} </td>
+                        <td> {item.archivePice} </td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
           </div>
           <div className="col-md-2"></div>
         </div>

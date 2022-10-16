@@ -7,7 +7,7 @@ const Plakat = () => {
         <h1 className="text-center">Плакати</h1>
 
         {/* Таблиця Доступні формати */}
-        <div className="row">
+        <div className="row" style={{overflowX:"auto"}}>
           <h3 className="text-center text-danger my-4">Доступні формати:</h3>
           <div className="col">
             <div className="row">
@@ -53,7 +53,7 @@ const Plakat = () => {
           </div>
           <div className="col-md-1"></div>
         </div>
-        
+
       </div>
     </div>
   );

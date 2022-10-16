@@ -7,7 +7,7 @@ const Blank = () => {
         <h1 className="text-center">Бланки</h1>
 
         {/* Таблиця Доступні формати */}
-        <div className="row">
+        <div className="row" style={{overflowX:"auto"}}>
           <h3 className="text-center text-danger my-4">Доступні формати:</h3>
           <div className="col">
             <div className="row">
@@ -32,7 +32,7 @@ const Blank = () => {
         </div>
 
         {/* Таблиця Доступні матеріали */}
-        <div className="row">
+        <div className="row" style={{overflowX:"auto"}}>
           <h3 className="text-center text-danger my-4">Доступні матеріали:</h3>
           <div className="col">
             <div className="row">
@@ -96,7 +96,7 @@ const Blank = () => {
           </div>
           <div className="col-md-1"></div>
         </div>
-        
+
       </div>
     </div>
   );

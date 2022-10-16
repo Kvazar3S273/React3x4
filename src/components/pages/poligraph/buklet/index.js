@@ -8,7 +8,7 @@ const Buklet = () => {
         <h1 className="text-center">Буклети</h1>
 
         {/* Таблиця Варіанти складання */}
-        <div className="row">
+        <div className="row" style={{overflowX:"auto"}}>
           <h3 className="text-center text-danger my-4">
             Можливі варіанти складання:
           </h3>
@@ -111,7 +111,7 @@ const Buklet = () => {
         </div>
 
         {/* Таблиця Доступні формати */}
-        <div className="row">
+        <div className="row" style={{overflowX:"auto"}}>
           <h3 className="text-center text-danger my-4">Доступні формати:</h3>
           <div className="col">
             <div className="row">

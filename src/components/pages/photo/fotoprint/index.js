@@ -235,27 +235,29 @@ const Fotoprint = () => {
             <h3 className="text-center text-danger">
               Вартість друку фотографій
             </h3>
-            <table className="table table-striped text-center">
-              <thead>
-                <tr>
-                  <th scope="col">Формат</th>
-                  <th scope="col">Точні розміри, мм</th>
-                  <th scope="col" style={{ background: "#E1A3B3" }}>Ціна, грн</th>
-                </tr>
-              </thead>
-              <tbody>
+            <div className="row" style={{overflowX:"auto"}}>
+              <table className="table table-striped text-center">
+                <thead>
+                  <tr>
+                    <th scope="col">Формат</th>
+                    <th scope="col">Точні розміри, мм</th>
+                    <th scope="col" style={{ background: "#E1A3B3" }}>Ціна, грн</th>
+                  </tr>
+                </thead>
+                <tbody>
 
-              {listfotoprints &&
-                  listfotoprints.map((item) => (
-                    <tr key={item.id}>
-                      <td>{item.format}</td>
-                      <td>{item.exactSizes}</td>
-                      <td style={{ background: "#E1A3B3" }}> {item.price} </td>
-                    </tr>
-                  ))}
+                {listfotoprints &&
+                    listfotoprints.map((item) => (
+                      <tr key={item.id}>
+                        <td>{item.format}</td>
+                        <td>{item.exactSizes}</td>
+                        <td style={{ background: "#E1A3B3" }}> {item.price} </td>
+                      </tr>
+                    ))}
 
-              </tbody>
-            </table>
+                </tbody>
+              </table>
+            </div>
           </div>
           <div className="col-md-2"></div>
         </div>

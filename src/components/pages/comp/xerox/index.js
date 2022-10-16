@@ -133,36 +133,38 @@ const Xerox = () => {
               <h5 className="text-center my-4">
                 Для чорно-білого друку на різних видах паперу
               </h5>
-              <table className="table table-primary table-striped text-center">
-                <thead>
-                  <tr>
-                    <th
-                      scope="col"
-                      rowSpan={2}
-                      style={{ verticalAlign: "middle" }}
-                    >
-                      Матеріал для друку
-                    </th>
-                    <th scope="col" colSpan={2}>
-                      Ціна, грн
-                    </th>
-                  </tr>
-                  <tr>
-                    <th scope="col">Текст</th>
-                    <th scope="col">Заливка 100%</th>
-                  </tr>
-                </thead>
-                <tbody>
-                {listblackprints &&
-                  listblackprints.map((item) => (
-                    <tr key={item.id}>
-                      <td> {item.material}</td>
-                      <td> {item.priceText} </td>
-                      <td> {item.price100} </td>
+              <div className="row" style={{overflowX:"auto"}}>
+                <table className="table table-primary table-striped text-center">
+                  <thead>
+                    <tr>
+                      <th
+                        scope="col"
+                        rowSpan={2}
+                        style={{ verticalAlign: "middle" }}
+                      >
+                        Матеріал для друку
+                      </th>
+                      <th scope="col" colSpan={2}>
+                        Ціна, грн
+                      </th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                    <tr>
+                      <th scope="col">Текст</th>
+                      <th scope="col">Заливка 100%</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {listblackprints &&
+                    listblackprints.map((item) => (
+                      <tr key={item.id}>
+                        <td> {item.material}</td>
+                        <td> {item.priceText} </td>
+                        <td> {item.price100} </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div className="col-md-2"></div>
           </div>
@@ -177,38 +179,40 @@ const Xerox = () => {
                 Для кольорового друку на різних видах паперу та при різній
                 заливці*
               </h5>
-              <table className="table table-primary table-striped text-center">
-                <thead>
-                  <tr>
-                    <th
-                      scope="col"
-                      rowSpan={2}
-                      style={{ verticalAlign: "middle" }}
-                    >
-                      Матеріал для друку 
-                    </th>
-                    <th scope="col" colSpan={3}>
-                      Ціна при різній заливці, грн
-                    </th>
-                  </tr>
-                  <tr>
-                    <th scope="col">25%</th>
-                    <th scope="col">50%</th>
-                    <th scope="col">100%</th>
-                  </tr>
-                </thead>
-                <tbody>
-                {listcolorprints &&
-                  listcolorprints.map((item) => (
-                    <tr key={item.id}>
-                      <td> {item.material}</td>
-                      <td> {item.price25} </td>
-                      <td> {item.price50} </td>
-                      <td> {item.price100} </td>
+              <div className="row" style={{overflowX:"auto"}}>
+                <table className="table table-primary table-striped text-center">
+                  <thead>
+                    <tr>
+                      <th
+                        scope="col"
+                        rowSpan={2}
+                        style={{ verticalAlign: "middle" }}
+                      >
+                        Матеріал для друку 
+                      </th>
+                      <th scope="col" colSpan={3}>
+                        Ціна при різній заливці, грн
+                      </th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                    <tr>
+                      <th scope="col">25%</th>
+                      <th scope="col">50%</th>
+                      <th scope="col">100%</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {listcolorprints &&
+                    listcolorprints.map((item) => (
+                      <tr key={item.id}>
+                        <td> {item.material}</td>
+                        <td> {item.price25} </td>
+                        <td> {item.price50} </td>
+                        <td> {item.price100} </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div className="col-md-1"></div>
           </div>

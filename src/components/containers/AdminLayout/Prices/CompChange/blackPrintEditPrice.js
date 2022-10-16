@@ -192,7 +192,7 @@ const BlackPrintEditPrice = () => {
   );
 
   return (
-    <div className="row mt-3 mb-3">
+    <div className="row mt-3 mb-3" style={{overflowX:"auto"}}>
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
         <h1 className="text-center">Чорно-білий друк</h1>
         <h4 className="text-center text-danger">Редагування цін</h4>

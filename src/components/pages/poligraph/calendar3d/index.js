@@ -7,7 +7,7 @@ const Calendar3d = () => {
         <h1 className="text-center">Об'ємні календарі</h1>
 
         {/* Таблиця Варіанти календарів */}
-        <div className="row">
+        <div className="row" style={{overflowX:"auto"}}>
           <h3 className="text-center text-danger my-4">Варіанти календарів:</h3>
           <div className="col">
             <div className="row">
@@ -82,7 +82,7 @@ const Calendar3d = () => {
           </div>
           <div className="col-md-1"></div>
         </div>
-        
+
       </div>
     </div>
   );

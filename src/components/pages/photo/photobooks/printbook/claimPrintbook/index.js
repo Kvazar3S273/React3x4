@@ -144,7 +144,7 @@ const ClaimPrintbook = () => {
                 </button> */}
               </div>
             </div>
-            <div className="col-9 col-sm-10 col-md-11 col-lg-11">
+            <div className="col-9 col-sm-10 col-md-11 col-lg-11" style={{overflowX:"auto"}}>
               <div className="books-tabcontent-claim-6 mb-4 overflow-auto">
                 {!show23x23 &&
                   !show24x32 &&

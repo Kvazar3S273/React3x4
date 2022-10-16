@@ -6,8 +6,6 @@ import {
   GetPhotopictures,
   UpdatePhotopictureTable,
 } from "../../../../../constants/actions/photoActions/photopicture";
-import { ChangePriceByPercent } from "../../../../../constants/actions/actionPercent";
-import ModalPercent from "../ModalPercent";
 
 const PhotopictureEditPrice = () => {
   const input = useRef();
@@ -26,7 +24,6 @@ const PhotopictureEditPrice = () => {
   const [isOpen, setIsOpen] = useState(null);
   const [foc, setFoc] = useState(false);
   const [complete, setComplete] = useState(false);
-  const [percent, setPersent] = useState(1);
 
   useEffect(() => {
     dispatch(GetPhotopictures());
@@ -64,7 +61,6 @@ const PhotopictureEditPrice = () => {
     e.preventDefault();
 
     console.log("Row", row);
-    //console.log("e.currentTarget.id",e.currentTarget.id)
     const item = listphotopictures.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
@@ -81,10 +77,6 @@ const PhotopictureEditPrice = () => {
 
   const handleInputChange = (dataType, values, index) => {
     setEditPhotopicture({ ...editPhotopicture, [dataType]: values });
-  };
-
-  const handleInputPercentChange = (value) => {
-    setPersent(value);
   };
 
   const handleToggle = () => {
@@ -166,67 +158,14 @@ const PhotopictureEditPrice = () => {
     </tr>
   );
 
-  const [modalActive, setModalActive] = useState(false);
-  //console.log("Input value",document.getElementById('percentValue').value);
-
   return (
-    <div className="row mt-3 mb-3">
+    <div className="row mt-3 mb-3" style={{overflowX:"auto"}}>
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
         <h1 className="text-center">Фотокартини</h1>
         <h4 className="text-center text-danger">Редагування цін</h4>
 
         <Table listphotopictures={listphotopictures} />
-
-        <div className="row mt-3 mb-3">
-          <h4 className="text-center text-danger mb-4">
-            Збільшити ціни на певний %
-          </h4>
-
-          <div className="row text-center">
-            <div className="col">
-              <h5 className="text-end">Збільшити всі ціни на</h5>
-            </div>
-            <div className="col">
-              <input
-                id="percentValue"
-                name="percent"
-                onChange={(e) =>
-                  handleInputPercentChange(e.currentTarget.value)
-                }
-                style={{
-                  width: "180px",
-                  height: "35px",
-                  textAlign: "center",
-                }}
-              />
-              %
-            </div>
-            <div className="col text-start">
-              {/* <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                Збільшити
-              </button> */}
-              <button
-                type="button"
-                className="open-btn btn btn-primary"
-                onClick={() => setModalActive(true)}
-              >
-                Збільшити
-              </button>
-            </div>
-          </div>
-
-          <ModalPercent
-            active={modalActive}
-            onClose={() => setModalActive(false)}
-            children={percent}
-            actiontype={ChangePriceByPercent}
-          />
-        </div>
+        
       </div>
     </div>
   );

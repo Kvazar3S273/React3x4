@@ -68,7 +68,7 @@ const CarouselComp = () => {
               </div>
               {/*Лише заголовок тільки на xs */}
               <div className="d-block d-sm-none">
-                <h2>Ксерокопії та друк</h2>
+                <h4>Ксерокопії та друк</h4>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@ const CarouselComp = () => {
               </div>
               {/*Лише заголовок тільки на xs */}
               <div className="d-block d-sm-none">
-                <h2>Ламінування</h2>
+                <h4>Ламінування</h4>
               </div>
             </div>
           </div>
@@ -151,7 +151,7 @@ const CarouselComp = () => {
               </div>
               {/*Лише заголовок тільки на xs */}
               <div className="d-block d-sm-none">
-                <h2>Брошурування</h2>
+                <h4>Брошурування</h4>
               </div>
             </div>
           </div>

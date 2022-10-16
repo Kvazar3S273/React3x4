@@ -7,7 +7,7 @@ const Leaf = () => {
         <h1 className="text-center">Блоки для запису</h1>
 
         {/* Таблиця Доступні формати */}
-        <div className="row">
+        <div className="row" style={{overflowX:"auto"}}>
           <h3 className="text-center text-danger my-4">Доступні формати:</h3>
           <div className="col">
             <div className="row">
@@ -56,7 +56,7 @@ const Leaf = () => {
         </div>
 
         {/* Таблиця Доступні матеріали */}
-        <div className="row">
+        <div className="row" style={{overflowX:"auto"}}>
           <h3 className="text-center text-danger my-4">Доступні матеріали:</h3>
           <div className="col">
             <div className="row">
@@ -120,7 +120,7 @@ const Leaf = () => {
           </div>
           <div className="col-md-1"></div>
         </div>
-        
+
       </div>
     </div>
   );

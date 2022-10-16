@@ -32,23 +32,25 @@ const Email = () => {
               пошту, додаткові послуги за використання пошти не сплачуються.
             </p>
             <h3 className="text-center text-danger">Вартість послуги</h3>
-            <table className="table table-striped text-center">
-              <thead>
-                <tr>
-                  <th scope="col">Послуга</th>
-                  <th scope="col">Ціна</th>
-                </tr>
-              </thead>
-              <tbody>
-                {listemails &&
-                  listemails.map((item) => (
-                    <tr key={item.id}>
-                      <td> {item.service} </td>
-                      <td> {item.price} </td>
-                    </tr>
-                  ))}
-              </tbody>
-            </table>
+            <div className="row" style={{overflowX:"auto"}}>
+              <table className="table table-striped text-center">
+                <thead>
+                  <tr>
+                    <th scope="col">Послуга</th>
+                    <th scope="col">Ціна</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {listemails &&
+                    listemails.map((item) => (
+                      <tr key={item.id}>
+                        <td> {item.service} </td>
+                        <td> {item.price} </td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ const Broshura = () => {
         <h1 className="text-center">Брошури і каталоги</h1>
 
         {/* Таблиця Доступні формати */}
-        <div className="row">
+        <div className="row" style={{overflowX:"auto"}}>
           <h3 className="text-center text-danger my-4">Доступні формати:</h3>
           <div className="col">
             <div className="row">
@@ -57,7 +57,7 @@ const Broshura = () => {
         </div>
 
         {/* Таблиця Можливі варіанти зшивання */}
-        <div className="row">
+        <div className="row" style={{overflowX:"auto"}}>
           <h3 className="text-center text-danger my-4">
             Можливі варіанти зшивання:
           </h3>
@@ -120,7 +120,7 @@ const Broshura = () => {
           </div>
           <div className="col-md-1"></div>
         </div>
-        
+
       </div>
     </div>
   );

@@ -111,6 +111,7 @@ const BamBook = () => {
               <img
                 src="images/services/photo/photobooks/BamBook/5.jpg"
                 alt="Папір"
+                style={{width:"100%"}}
               />
             </div>
             <div className="col-sm-12 col-md-5 px-3">

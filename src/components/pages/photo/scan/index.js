@@ -32,28 +32,29 @@ const ScanPage = () => {
               чому б не записати їх на цифрові носії та зберегти якнайдовше?
             </p>
             <h3 className="text-center text-danger">Ціни на сканування</h3>
-            <table className="table table-striped text-center">
-              <thead>
-                <tr>
-                  <th scope="col">Формат</th>
-                  <th scope="col">300 dpi</th>
-                  <th scope="col">600 dpi</th>
-                  <th scope="col">1200 dpi</th>
-                </tr>
-              </thead>
-              <tbody>
-              {listphotoscans &&
-                  listphotoscans.map((item) => (
-                    <tr key={item.id}>
-                      <td>{item.format}</td>
-                      <td>{item.price300dpi === 0 ? "" :item.price300dpi}</td>
-                      <td>{item.price600dpi === 0 ? "" :item.price600dpi}</td>
-                      <td>{item.price1200dpi === 0 ? "" :item.price1200dpi}</td>
-                    </tr>
-                  ))}
-                
-              </tbody>
-            </table>
+            <div className="row" style={{overflowX:"auto"}}>
+              <table className="table table-striped text-center">
+                <thead>
+                  <tr>
+                    <th scope="col">Формат</th>
+                    <th scope="col">300 dpi</th>
+                    <th scope="col">600 dpi</th>
+                    <th scope="col">1200 dpi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {listphotoscans &&
+                    listphotoscans.map((item) => (
+                      <tr key={item.id}>
+                        <td>{item.format}</td>
+                        <td>{item.price300dpi === 0 ? "" :item.price300dpi}</td>
+                        <td>{item.price600dpi === 0 ? "" :item.price600dpi}</td>
+                        <td>{item.price1200dpi === 0 ? "" :item.price1200dpi}</td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

@@ -34,25 +34,27 @@ const Duplicate = () => {
               корекції кольору та чіткості.
             </p>
             <h3 className="text-center text-danger">Ціни на дублікати</h3>
-            <table className="table table-striped text-center">
-              <thead>
-                <tr>
-                  <th scope="col">Формат</th>
-                  <th scope="col">Ціна за перший</th>
-                  <th scope="col">Кожен наступний</th>
-                </tr>
-              </thead>
-              <tbody>
-              {listduplicates &&
-                  listduplicates.map((item) => (
-                    <tr key={item.id}>
-                      <td>{item.format}</td>
-                      <td>{item.priceFirst}</td>
-                      <td>{item.priceEachOther}</td>
-                    </tr>
-                  ))}
-              </tbody>
-            </table>
+            <div className="row" style={{overflowX:"auto"}}>
+              <table className="table table-striped text-center">
+                <thead>
+                  <tr>
+                    <th scope="col">Формат</th>
+                    <th scope="col">Ціна за перший</th>
+                    <th scope="col">Кожен наступний</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {listduplicates &&
+                    listduplicates.map((item) => (
+                      <tr key={item.id}>
+                        <td>{item.format}</td>
+                        <td>{item.priceFirst}</td>
+                        <td>{item.priceEachOther}</td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

@@ -122,7 +122,7 @@ const ClaimSlimbook = () => {
                 </button>
               </div>
             </div>
-            <div className="col-9 col-sm-10 col-md-11 col-lg-11">
+            <div className="col-9 col-sm-10 col-md-11 col-lg-11" style={{overflowX:"auto"}}>
               <div className="books-tabcontent-claim-7 mb-4 overflow-auto">
                 {!show30x30 &&
                   !show20x30 &&
