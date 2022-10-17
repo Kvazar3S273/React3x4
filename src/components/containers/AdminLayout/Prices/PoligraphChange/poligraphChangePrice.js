@@ -13,11 +13,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import VisitcardEditPrice from "./visitcardEditPrice";
 import FlyerEditPrice from "./flyerEditPrice";
+import CalendarEditPrice from "./calendarEditPrice";
 
 const PoligraphChangePrice = () => {
 
   const [visitcardEdit, setVisitcardEdit] = useState(false);
   const [flyerEdit, setFlyerEdit] = useState(false);
+  const [calendarEdit, setCalendarEdit] = useState(false);
 
   const handleClickVisitcardEdit = (event) => {
     // 👇️ щоб по кліку відкривалось і по наступному закривалось
@@ -25,10 +27,17 @@ const PoligraphChangePrice = () => {
     // 👇️ щоб по кліку тільки відкривалось
     setVisitcardEdit(true);
     setFlyerEdit(false);
+    setCalendarEdit(false);
   };
   const handleClickFlyerEdit = (event) => {
     setVisitcardEdit(false);
     setFlyerEdit(true);
+    setCalendarEdit(false);
+  };
+  const handleClickCalendarEdit = (event) => {
+    setVisitcardEdit(false);
+    setFlyerEdit(false);
+	  setCalendarEdit(true);
   };
   
   return (
@@ -76,18 +85,21 @@ const PoligraphChangePrice = () => {
       </div>
       
       {/* Картка 3 */}
-      <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded" >
+      <div className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded" 
+      onClick={handleClickCalendarEdit}>
+        <HashLink smooth to={"#more"}>
         <div className="row">
           <div className="col-md-3">
           <i className="d-flex justify-content-center align-middle mt-1"
-              style={{fontSize: "2.5em", color: "#000"}}>
+              style={{ fontSize: "2.5em", color: "#000" }}>
               <FontAwesomeIcon icon={faCalendarDays} />
             </i>
           </div>
           <div className="col-md-9">
-          <h5 className=" text-center">Календарі</h5>
+          <h5 className="text-center text-dark">Календарі</h5>
           </div>
         </div>
+        </HashLink>
       </div>
       
       {/* Картка 4 */}
@@ -170,6 +182,7 @@ const PoligraphChangePrice = () => {
     <section id="more"></section>
           {visitcardEdit && <VisitcardEditPrice />}
           {flyerEdit && <FlyerEditPrice />}
+          {calendarEdit && <CalendarEditPrice />}
 
         </div>
       </div>

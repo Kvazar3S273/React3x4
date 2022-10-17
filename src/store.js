@@ -23,6 +23,7 @@ import usbflashReducer from "./reducers/editCompReducers/usbFlashReducer";
 import discprintReducer from "./reducers/editCompReducers/discprintReducer";
 import emailReducer from "./reducers/editCompReducers/emailReducer";
 import flyerReducer from "./reducers/editPoligraphReducers/flyerReducer";
+import calendarReducer from "./reducers/editPoligraphReducers/calendarReducer";
 
 const middleware = [
     thunk
@@ -51,7 +52,8 @@ const rootReducer = combineReducers({
     discprint: discprintReducer,
     email: emailReducer,
     visitcard: visitcardReducer,
-    flyer: flyerReducer
+    flyer: flyerReducer,
+    calendar: calendarReducer
 });
 
 const enhancers = [];
