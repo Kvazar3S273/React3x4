@@ -1,11 +1,11 @@
 import get_pvc from "../../../services/get_pvc";
-import { GET_FLYER } from "../../actionTypes";
+import { GET_PVC } from "../../actionTypes";
 
 export const GetPvcs = () => async (dispatch) => {
   try {
     const respvc = await get_pvc.getdatapvc();
     console.log("Result pvc list:", respvc.data);
-    dispatch({ type: GET_FLYER, data: respvc.data });
+    dispatch({ type: GET_PVC, data: respvc.data });
   } catch (error) {
     console.log("Problem get pvc", error);
   }

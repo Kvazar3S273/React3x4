@@ -3,24 +3,24 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { 
-  GetFlyers, 
-  UpdateFlyerTable, 
-  ChangeFlyerByPercent 
-} from "../../../../../constants/actions/poligraphActions/flyer";
+  GetStickers, 
+  UpdateStickerTable, 
+  ChangeStickerByPercent 
+} from "../../../../../constants/actions/poligraphActions/sticker";
 import ModalPercent from "../ModalPercent";
 
-const FlyerEditPrice = () => {
+const StickerEditPrice = () => {
   const input = useRef();
 
-  const initialFlyerState = {
+  const initialStickerState = {
     id: null,
     price: null
   };
 
   const navigator = useNavigate();
   const dispatch = useDispatch();
-  const { listflyers } = useSelector((state) => state.flyer);
-  const [editFlyer, setEditFlyer] = useState(initialFlyerState);
+  const { liststickers } = useSelector((state) => state.sticker);
+  const [editSticker, setEditSticker] = useState(initialStickerState);
   const [isOpen, setIsOpen] = useState(null);
   const [foc, setFoc] = useState(false);
   const [complete, setComplete] = useState(false);
@@ -28,10 +28,10 @@ const FlyerEditPrice = () => {
   const [errorInput, setErrorInput] = useState(false);
 
   useEffect(() => {
-    dispatch(GetFlyers());
+    dispatch(GetStickers());
   }, []);
 
-  const Table = ({ listflyers }) => (
+  const Table = ({ liststickers }) => (
     <div className="row">
       <div className="col-md-1"></div>
       <div className="col-md-10">
@@ -44,8 +44,8 @@ const FlyerEditPrice = () => {
             </tr>
           </thead>
           <tbody>
-            {listflyers.map((row, index) => (
-              <TableRow key={row.id} row={row} index={listflyers[index]} />
+            {liststickers.map((row, index) => (
+              <TableRow key={row.id} row={row} index={liststickers[index]} />
             ))}
           </tbody>
         </table>
@@ -59,7 +59,7 @@ const FlyerEditPrice = () => {
 
     console.log("Row", row);
     //console.log("e.currentTarget.id",e.currentTarget.id)
-    const item = listflyers.find((row) => row.id == e.currentTarget.id);
+    const item = liststickers.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
     setComplete(true);
@@ -69,12 +69,12 @@ const FlyerEditPrice = () => {
     };
 
     if (!foc) {
-      setEditFlyer(data);
+      setEditSticker(data);
     }
   };
 
   const handleInputChange = (dataType, values, index) => {
-    setEditFlyer({ ...editFlyer, [dataType]: values });
+    setEditSticker({ ...editSticker, [dataType]: values });
   };
 
   const handleInputPercentChange=(value)=>{
@@ -90,19 +90,19 @@ const FlyerEditPrice = () => {
     setFoc((preState) => !preState);
   };
 
-  const updateFlyerItem = () => {
-    const idItem = editFlyer.id;
+  const updateStickerItem = () => {
+    const idItem = editSticker.id;
 
     const upd = {
-      price: editFlyer.price,
+      price: editSticker.price,
     };
 
-    dispatch(UpdateFlyerTable(idItem, upd))
+    dispatch(UpdateStickerTable(idItem, upd))
       .then((res) => {
         console.log("Result:", res);
         setComplete(false);
         navigator("/admin");
-        dispatch(GetFlyers());
+        dispatch(GetStickers());
       })
       .catch((ex) => {
         console.log("Errorr", ex);
@@ -133,7 +133,7 @@ const FlyerEditPrice = () => {
                       : input
                   }
                   id="price"
-                  value={editFlyer.price}
+                  value={editSticker.price}
                   name="price"
                   onChange={(e) =>
                     handleInputChange("price", e.currentTarget.value, index)
@@ -155,7 +155,7 @@ const FlyerEditPrice = () => {
                     width: "60px",
                     height: "35px",
                   }}
-                  onClick={updateFlyerItem}
+                  onClick={updateStickerItem}
                   type="submit"
                 >
                   Save
@@ -178,7 +178,7 @@ const FlyerEditPrice = () => {
         <h1 className="text-center">Наклейки</h1>
         <h4 className="text-center text-danger">Редагування цін</h4>
 
-        <Table listflyers={listflyers} />
+        <Table liststickers={liststickers} />
 
         <div className="row mt-3 mb-3">
           <h4 className="text-center text-danger mb-4">
@@ -230,12 +230,12 @@ const FlyerEditPrice = () => {
             active={modalActive} 
             onClose={()=>setModalActive(false)} 
             children={percent} 
-            actiontype={ChangeFlyerByPercent}/>           
+            actiontype={ChangeStickerByPercent}/>           
           
         </div>
       </div>
     </div>
   );
 };
-export default FlyerEditPrice;
+export default StickerEditPrice;
 

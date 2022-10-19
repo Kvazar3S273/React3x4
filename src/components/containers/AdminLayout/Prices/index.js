@@ -58,7 +58,13 @@ const Prices = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                  <h5 className="text-center">Фотопослуги</h5>
+                    <div className="d-none d-sm-block text-center">
+                      <h5>Фотопослуги</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center">
+                      <h6>Фотопослуги</h6>
+                    </div>
+                  {/* <h5 className="text-center">Фотопослуги</h5> */}
                   </div>
                 </div>
               </div>
@@ -75,7 +81,13 @@ const Prices = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                  <h5 className=" text-center">Комп'ютерні послуги</h5>
+                  {/* <h5 className=" text-center">Комп'ютерні послуги</h5> */}
+                    <div className="d-none d-sm-block text-center">
+                      <h5>Комп'ютерні послуги</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center">
+                      <h6>Комп'ютерні послуги</h6>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -92,7 +104,13 @@ const Prices = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                  <h5 className=" text-center">Поліграфія</h5>
+                  {/* <h5 className=" text-center">Поліграфія</h5> */}
+                    <div className="d-none d-sm-block text-center">
+                      <h5>Поліграфія</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center">
+                      <h6>Поліграфія</h6>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -159,7 +159,13 @@ const CompChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">Ксерокопії</h5>
+                    
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Ксерокопії</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Ксерокопії</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>
@@ -181,7 +187,13 @@ const CompChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">Чорно-білий друк</h5>
+                    
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Чорно-білий друк</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Чорно-білий друк</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>
@@ -203,14 +215,20 @@ const CompChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">Кольоровий друк</h5>
+                    
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Кольоровий друк</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Кольоровий друк</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>
             </div>
 
             {/* Картка 4 */}
-            
+
             <div
               className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
               onClick={handleClickScanEdit}
@@ -226,12 +244,18 @@ const CompChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">Сканування</h5>
+                    
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Сканування</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Сканування</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>
             </div>
-            
+
             {/* Картка 5 */}
             <div
               className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
@@ -248,12 +272,18 @@ const CompChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">Ламінування</h5>
+                    
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Ламінування</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Ламінування</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>
             </div>
-            
+
             {/* Картка 6 */}
             <div
               className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
@@ -270,12 +300,18 @@ const CompChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">Брошурування</h5>
+                    
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Брошурування</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Брошурування</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>
             </div>
-            
+
             {/* Картка 7 */}
             <div
               className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
@@ -292,12 +328,18 @@ const CompChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">Запис CD/DVD</h5>
+                    
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Запис CD/DVD</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Запис CD/DVD</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>
             </div>
-            
+
             {/* Картка 8 */}
             <div
               className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
@@ -314,12 +356,18 @@ const CompChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">Друк на CD/DVD</h5>
+                    
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Друк на CD/DVD</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Друк на CD/DVD</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>
             </div>
-            
+
             {/* Картка 9 */}
             <div
               className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
@@ -336,13 +384,19 @@ const CompChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">Послуги Email</h5>
+                    
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Послуги Email</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Послуги Email</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>
             </div>
           </div>
-          
+
           <section id="more"></section>
           {xeroxEdit && <XeroxEditPrice />}
           {blackPrintEdit && <BlackPrintEditPrice />}
@@ -353,7 +407,6 @@ const CompChangePrice = () => {
           {usbFlashEdit && <UsbFlashEditPrice />}
           {discprintEdit && <DiscprintEditPrice />}
           {emailEdit && <EmailEditPrice />}
-          
         </div>
       </div>
     </>

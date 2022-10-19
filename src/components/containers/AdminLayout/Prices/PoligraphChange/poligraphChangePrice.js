@@ -159,7 +159,12 @@ const PoligraphChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">Візитки</h5>
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Візитки</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Візитки</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>
@@ -181,7 +186,12 @@ const PoligraphChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">Флаєри</h5>
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Флаєри</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Флаєри</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>
@@ -203,7 +213,12 @@ const PoligraphChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">Календарі</h5>
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Календарі</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Календарі</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>
@@ -225,7 +240,12 @@ const PoligraphChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">Бірки</h5>
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Бірки</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Бірки</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>
@@ -247,7 +267,12 @@ const PoligraphChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">Наклейки</h5>
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Наклейки</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Наклейки</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>
@@ -269,7 +294,12 @@ const PoligraphChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">Хенгери</h5>
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Хенгери</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Хенгери</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>
@@ -291,7 +321,12 @@ const PoligraphChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">Самоклейка</h5>
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Самоклейка</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Самоклейка</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>
@@ -313,7 +348,12 @@ const PoligraphChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">Банер</h5>
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Банер</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Банер</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>
@@ -335,7 +375,12 @@ const PoligraphChangePrice = () => {
                     </i>
                   </div>
                   <div className="col-md-9">
-                    <h5 className="text-center text-dark">ПВХ</h5>
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>ПВХ</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>ПВХ</h6>
+                    </div>
                   </div>
                 </div>
               </HashLink>

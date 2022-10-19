@@ -95,7 +95,12 @@ const PhotoChangePrice = () => {
                   </i>
                 </div>
                 <div className="col-md-9">
-                  <h5 className="text-center text-dark">ФНД</h5>
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>ФНД</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>ФНД</h6>
+                    </div>
                 </div>
               </div>
             </HashLink>
@@ -115,7 +120,12 @@ const PhotoChangePrice = () => {
                   </i>
                 </div>
                 <div className="col-md-9">
-                  <h5 className="text-center text-dark">Фотодрук</h5>
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Фотодрук</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Фотодрук</h6>
+                    </div>
                 </div>
               </div>
             </HashLink>
@@ -134,7 +144,12 @@ const PhotoChangePrice = () => {
                   </i>
                 </div>
                 <div className="col-md-9">
-                  <h5 className=" text-center">Сканування</h5>
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Сканування</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Сканування</h6>
+                    </div>
                 </div>
               </div>
             </div>
@@ -152,7 +167,12 @@ const PhotoChangePrice = () => {
                   </i>
                 </div>
                 <div className="col-md-9">
-                  <h5 className="text-center">Дублікати</h5>
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Дублікати</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Дублікати</h6>
+                    </div>
                 </div>
               </div>
             </div>
@@ -170,7 +190,12 @@ const PhotoChangePrice = () => {
                   </i>
                 </div>
                 <div className="col-md-9">
-                  <h5 className=" text-center">Фотокартини</h5>
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Фотокартини</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Фотокартини</h6>
+                    </div>
                 </div>
               </div>
             </div>
@@ -188,7 +213,12 @@ const PhotoChangePrice = () => {
                   </i>
                 </div>
                 <div className="col-md-9">
-                  <h5 className=" text-center">Етикетки</h5>
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Етикетки</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Етикетки</h6>
+                    </div>
                 </div>
               </div>
             </div>

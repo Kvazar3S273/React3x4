@@ -27,8 +27,8 @@ import calendarReducer from "./reducers/editPoligraphReducers/calendarReducer";
 import birkaReducer from "./reducers/editPoligraphReducers/birkaReducer";
 import stickerReducer from "./reducers/editPoligraphReducers/stickerReducer";
 import hangerReducer from "./reducers/editPoligraphReducers/hangerReducer";
-import oracalReducer from "./reducers/editPoligraphReducers/oracalReducer";
 import banerReducer from "./reducers/editPoligraphReducers/banerReducer";
+import oracalReducer from "./reducers/editPoligraphReducers/oracalReducer";
 import pvcReducer from "./reducers/editPoligraphReducers/pvcReducer";
 
 const middleware = [
@@ -63,8 +63,8 @@ const rootReducer = combineReducers({
     birka: birkaReducer,
     sticker: stickerReducer,
     hanger: hangerReducer,
-    oracal: oracalReducer,
     baner: banerReducer,
+    oracal: oracalReducer,
     pvc: pvcReducer
 
 });
