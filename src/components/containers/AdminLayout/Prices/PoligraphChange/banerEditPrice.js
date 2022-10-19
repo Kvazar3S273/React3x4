@@ -3,24 +3,24 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { 
-  GetCalendars, 
-  UpdateCalendarTable, 
-  ChangeCalendarByPercent 
-} from "../../../../../constants/actions/poligraphActions/calendar";
+  GetBaners, 
+  UpdateBanerTable, 
+  ChangeBanerByPercent 
+} from "../../../../../constants/actions/poligraphActions/baner";
 import ModalPercent from "../ModalPercent";
 
-const CalendarEditPrice = () => {
+const BanerEditPrice = () => {
   const input = useRef();
 
-  const initialCalendarState = {
+  const initialBanerState = {
     id: null,
     price: null
   };
 
   const navigator = useNavigate();
   const dispatch = useDispatch();
-  const { listcalendars } = useSelector((state) => state.calendar);
-  const [editCalendar, setEditCalendar] = useState(initialCalendarState);
+  const { listbaners } = useSelector((state) => state.baner);
+  const [editBaner, setEditBaner] = useState(initialBanerState);
   const [isOpen, setIsOpen] = useState(null);
   const [foc, setFoc] = useState(false);
   const [complete, setComplete] = useState(false);
@@ -28,24 +28,24 @@ const CalendarEditPrice = () => {
   const [errorInput, setErrorInput] = useState(false);
 
   useEffect(() => {
-    dispatch(GetCalendars());
+    dispatch(GetBaners());
   }, []);
 
-  const Table = ({ listcalendars }) => (
+  const Table = ({ listbaners }) => (
     <div className="row">
       <div className="col-md-1"></div>
       <div className="col-md-10">
         <table className="table table-striped text-center">
           <thead>
             <tr className="table-primary">
-              <th scope="col">Щільність паперу</th>
-              <th scope="col">Покриття</th>
+              <th scope="col">Якість друку</th>
+              <th scope="col">Послуга</th>
               <th scope="col" className="text-center">Ціна</th>
             </tr>
           </thead>
           <tbody>
-            {listcalendars.map((row, index) => (
-              <TableRow key={row.id} row={row} index={listcalendars[index]} />
+            {listbaners.map((row, index) => (
+              <TableRow key={row.id} row={row} index={listbaners[index]} />
             ))}
           </tbody>
         </table>
@@ -59,7 +59,7 @@ const CalendarEditPrice = () => {
 
     console.log("Row", row);
     //console.log("e.currentTarget.id",e.currentTarget.id)
-    const item = listcalendars.find((row) => row.id == e.currentTarget.id);
+    const item = listbaners.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
     setComplete(true);
@@ -69,12 +69,12 @@ const CalendarEditPrice = () => {
     };
 
     if (!foc) {
-      setEditCalendar(data);
+      setEditBaner(data);
     }
   };
 
   const handleInputChange = (dataType, values, index) => {
-    setEditCalendar({ ...editCalendar, [dataType]: values });
+    setEditBaner({ ...editBaner, [dataType]: values });
   };
 
   const handleInputPercentChange=(value)=>{
@@ -90,19 +90,19 @@ const CalendarEditPrice = () => {
     setFoc((preState) => !preState);
   };
 
-  const updateCalendarItem = () => {
-    const idItem = editCalendar.id;
+  const updateBanerItem = () => {
+    const idItem = editBaner.id;
 
     const upd = {
-      price: editCalendar.price,
+      price: editBaner.price,
     };
 
-    dispatch(UpdateCalendarTable(idItem, upd))
+    dispatch(UpdateBanerTable(idItem, upd))
       .then((res) => {
         console.log("Result:", res);
         setComplete(false);
         navigator("/admin");
-        dispatch(GetCalendars());
+        dispatch(GetBaners());
       })
       .catch((ex) => {
         console.log("Errorr", ex);
@@ -115,8 +115,8 @@ const CalendarEditPrice = () => {
       id={row.id}
       onClick={(e) => RowHandleClick(e, row)}
     >
-      <th scope="row">{row.density}</th>
-      <th scope="row">{row.laminating}</th>
+      <th scope="row">{row.dpi}</th>
+      <th scope="row">{row.service}</th>
       {isOpen == row.id && complete ? (
           <td >
             <div
@@ -133,7 +133,7 @@ const CalendarEditPrice = () => {
                       : input
                   }
                   id="price"
-                  value={editCalendar.price}
+                  value={editBaner.price}
                   name="price"
                   onChange={(e) =>
                     handleInputChange("price", e.currentTarget.value, index)
@@ -155,7 +155,7 @@ const CalendarEditPrice = () => {
                     width: "60px",
                     height: "35px",
                   }}
-                  onClick={updateCalendarItem}
+                  onClick={updateBanerItem}
                   type="submit"
                 >
                   Save
@@ -175,10 +175,10 @@ const CalendarEditPrice = () => {
   return (
     <div className="row mt-3 mb-3" style={{overflowX:"auto"}}>
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
-        <h1 className="text-center">Календарі</h1>
+        <h1 className="text-center">Банери</h1>
         <h4 className="text-center text-danger">Редагування цін</h4>
 
-        <Table listcalendars={listcalendars} />
+        <Table listbaners={listbaners} />
 
         <div className="row mt-3 mb-3">
           <h4 className="text-center text-danger mb-4">
@@ -230,12 +230,12 @@ const CalendarEditPrice = () => {
             active={modalActive} 
             onClose={()=>setModalActive(false)} 
             children={percent} 
-            actiontype={ChangeCalendarByPercent}/>           
+            actiontype={ChangeBanerByPercent}/>           
           
         </div>
       </div>
     </div>
   );
 };
-export default CalendarEditPrice;
+export default BanerEditPrice;
 

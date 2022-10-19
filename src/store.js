@@ -24,6 +24,12 @@ import discprintReducer from "./reducers/editCompReducers/discprintReducer";
 import emailReducer from "./reducers/editCompReducers/emailReducer";
 import flyerReducer from "./reducers/editPoligraphReducers/flyerReducer";
 import calendarReducer from "./reducers/editPoligraphReducers/calendarReducer";
+import birkaReducer from "./reducers/editPoligraphReducers/birkaReducer";
+import stickerReducer from "./reducers/editPoligraphReducers/stickerReducer";
+import hangerReducer from "./reducers/editPoligraphReducers/hangerReducer";
+import oracalReducer from "./reducers/editPoligraphReducers/oracalReducer";
+import banerReducer from "./reducers/editPoligraphReducers/banerReducer";
+import pvcReducer from "./reducers/editPoligraphReducers/pvcReducer";
 
 const middleware = [
     thunk
@@ -53,7 +59,14 @@ const rootReducer = combineReducers({
     email: emailReducer,
     visitcard: visitcardReducer,
     flyer: flyerReducer,
-    calendar: calendarReducer
+    calendar: calendarReducer,
+    birka: birkaReducer,
+    sticker: stickerReducer,
+    hanger: hangerReducer,
+    oracal: oracalReducer,
+    baner: banerReducer,
+    pvc: pvcReducer
+
 });
 
 const enhancers = [];

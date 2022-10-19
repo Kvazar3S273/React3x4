@@ -3,24 +3,24 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { 
-  GetCalendars, 
-  UpdateCalendarTable, 
-  ChangeCalendarByPercent 
-} from "../../../../../constants/actions/poligraphActions/calendar";
+  GetHangers, 
+  UpdateHangerTable, 
+  ChangeHangerByPercent 
+} from "../../../../../constants/actions/poligraphActions/hanger";
 import ModalPercent from "../ModalPercent";
 
-const CalendarEditPrice = () => {
+const HangerEditPrice = () => {
   const input = useRef();
 
-  const initialCalendarState = {
+  const initialHangerState = {
     id: null,
     price: null
   };
 
   const navigator = useNavigate();
   const dispatch = useDispatch();
-  const { listcalendars } = useSelector((state) => state.calendar);
-  const [editCalendar, setEditCalendar] = useState(initialCalendarState);
+  const { listhangers } = useSelector((state) => state.hanger);
+  const [editHanger, setEditHanger] = useState(initialHangerState);
   const [isOpen, setIsOpen] = useState(null);
   const [foc, setFoc] = useState(false);
   const [complete, setComplete] = useState(false);
@@ -28,24 +28,23 @@ const CalendarEditPrice = () => {
   const [errorInput, setErrorInput] = useState(false);
 
   useEffect(() => {
-    dispatch(GetCalendars());
+    dispatch(GetHangers());
   }, []);
 
-  const Table = ({ listcalendars }) => (
+  const Table = ({ listhangers }) => (
     <div className="row">
       <div className="col-md-1"></div>
       <div className="col-md-10">
         <table className="table table-striped text-center">
           <thead>
             <tr className="table-primary">
-              <th scope="col">Щільність паперу</th>
-              <th scope="col">Покриття</th>
+              <th scope="col">Кількість</th>
               <th scope="col" className="text-center">Ціна</th>
             </tr>
           </thead>
           <tbody>
-            {listcalendars.map((row, index) => (
-              <TableRow key={row.id} row={row} index={listcalendars[index]} />
+            {listhangers.map((row, index) => (
+              <TableRow key={row.id} row={row} index={listhangers[index]} />
             ))}
           </tbody>
         </table>
@@ -59,7 +58,7 @@ const CalendarEditPrice = () => {
 
     console.log("Row", row);
     //console.log("e.currentTarget.id",e.currentTarget.id)
-    const item = listcalendars.find((row) => row.id == e.currentTarget.id);
+    const item = listhangers.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
     setComplete(true);
@@ -69,12 +68,12 @@ const CalendarEditPrice = () => {
     };
 
     if (!foc) {
-      setEditCalendar(data);
+      setEditHanger(data);
     }
   };
 
   const handleInputChange = (dataType, values, index) => {
-    setEditCalendar({ ...editCalendar, [dataType]: values });
+    setEditHanger({ ...editHanger, [dataType]: values });
   };
 
   const handleInputPercentChange=(value)=>{
@@ -90,19 +89,19 @@ const CalendarEditPrice = () => {
     setFoc((preState) => !preState);
   };
 
-  const updateCalendarItem = () => {
-    const idItem = editCalendar.id;
+  const updateHangerItem = () => {
+    const idItem = editHanger.id;
 
     const upd = {
-      price: editCalendar.price,
+      price: editHanger.price,
     };
 
-    dispatch(UpdateCalendarTable(idItem, upd))
+    dispatch(UpdateHangerTable(idItem, upd))
       .then((res) => {
         console.log("Result:", res);
         setComplete(false);
         navigator("/admin");
-        dispatch(GetCalendars());
+        dispatch(GetHangers());
       })
       .catch((ex) => {
         console.log("Errorr", ex);
@@ -115,8 +114,7 @@ const CalendarEditPrice = () => {
       id={row.id}
       onClick={(e) => RowHandleClick(e, row)}
     >
-      <th scope="row">{row.density}</th>
-      <th scope="row">{row.laminating}</th>
+      <th scope="row">{row.qty}</th>
       {isOpen == row.id && complete ? (
           <td >
             <div
@@ -133,7 +131,7 @@ const CalendarEditPrice = () => {
                       : input
                   }
                   id="price"
-                  value={editCalendar.price}
+                  value={editHanger.price}
                   name="price"
                   onChange={(e) =>
                     handleInputChange("price", e.currentTarget.value, index)
@@ -155,7 +153,7 @@ const CalendarEditPrice = () => {
                     width: "60px",
                     height: "35px",
                   }}
-                  onClick={updateCalendarItem}
+                  onClick={updateHangerItem}
                   type="submit"
                 >
                   Save
@@ -175,10 +173,10 @@ const CalendarEditPrice = () => {
   return (
     <div className="row mt-3 mb-3" style={{overflowX:"auto"}}>
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
-        <h1 className="text-center">Календарі</h1>
+        <h1 className="text-center">Хенгери</h1>
         <h4 className="text-center text-danger">Редагування цін</h4>
 
-        <Table listcalendars={listcalendars} />
+        <Table listhangers={listhangers} />
 
         <div className="row mt-3 mb-3">
           <h4 className="text-center text-danger mb-4">
@@ -230,12 +228,12 @@ const CalendarEditPrice = () => {
             active={modalActive} 
             onClose={()=>setModalActive(false)} 
             children={percent} 
-            actiontype={ChangeCalendarByPercent}/>           
+            actiontype={ChangeHangerByPercent}/>           
           
         </div>
       </div>
     </div>
   );
 };
-export default CalendarEditPrice;
+export default HangerEditPrice;
 
