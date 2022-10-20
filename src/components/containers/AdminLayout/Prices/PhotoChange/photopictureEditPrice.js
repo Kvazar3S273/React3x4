@@ -64,15 +64,13 @@ const PhotopictureEditPrice = () => {
     const item = listphotopictures.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
+    setEditPhotopicture(item);
     setComplete(true);
     const data = {
       id: item.id,
       price: item.price,
     };
 
-    if (!foc) {
-      setEditPhotopicture(data);
-    }
   };
 
   const handleInputChange = (dataType, values, index) => {

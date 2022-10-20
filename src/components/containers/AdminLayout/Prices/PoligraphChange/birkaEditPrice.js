@@ -62,15 +62,13 @@ const BirkaEditPrice = () => {
     const item = listbirkas.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
+    setEditBirka(item);
     setComplete(true);
     const data = {
       id: item.id,
       price: item.price,
     };
 
-    if (!foc) {
-      setEditBirka(data);
-    }
   };
 
   const handleInputChange = (dataType, values, index) => {

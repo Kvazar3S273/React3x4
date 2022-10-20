@@ -58,15 +58,13 @@ const LaminateEditPrice = () => {
     const item = listlaminates.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
+    setEditLaminate(item);
     setComplete(true);
     const data = {
       id: item.id,
       price: item.price,
     };
 
-    if (!foc) {
-      setEditLaminate(data);
-    }
   };
 
   const handleInputChange = (dataType, values, index) => {

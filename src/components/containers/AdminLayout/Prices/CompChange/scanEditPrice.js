@@ -58,15 +58,13 @@ const ScanEditPrice = () => {
     const item = listscans.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
+    setEditScan(item);
     setComplete(true);
     const data = {
       id: item.id,
       price: item.price,
     };
 
-    if (!foc) {
-      setEditScan(data);
-    }
   };
 
   const handleInputChange = (dataType, values, index) => {

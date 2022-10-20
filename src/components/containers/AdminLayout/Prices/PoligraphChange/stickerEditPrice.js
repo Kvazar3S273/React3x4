@@ -62,15 +62,13 @@ const StickerEditPrice = () => {
     const item = liststickers.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
+    setEditSticker(item);
     setComplete(true);
     const data = {
       id: item.id,
       price: item.price,
     };
 
-    if (!foc) {
-      setEditSticker(data);
-    }
   };
 
   const handleInputChange = (dataType, values, index) => {

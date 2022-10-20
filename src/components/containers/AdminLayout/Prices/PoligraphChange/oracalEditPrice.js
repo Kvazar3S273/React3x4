@@ -62,15 +62,13 @@ const OracalEditPrice = () => {
     const item = listoracals.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
+    setEditOracal(item);
     setComplete(true);
     const data = {
       id: item.id,
       price: item.price,
     };
 
-    if (!foc) {
-      setEditOracal(data);
-    }
   };
 
   const handleInputChange = (dataType, values, index) => {

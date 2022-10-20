@@ -58,15 +58,13 @@ const XeroxEditPrice = () => {
     const item = listxeroxes.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
+    setEditXerox(item);
     setComplete(true);
     const data = {
       id: item.id,
       price: item.price,
     };
 
-    if (!foc) {
-      setEditXerox(data);
-    }
   };
 
   const handleInputChange = (dataType, values, index) => {

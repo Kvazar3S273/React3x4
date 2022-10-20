@@ -58,15 +58,13 @@ const DiscprintEditPrice = () => {
     const item = listdiscprints.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
+    setEditDiscprint(item);
     setComplete(true);
     const data = {
       id: item.id,
       price: item.price,
     };
 
-    if (!foc) {
-      setEditDiscprint(data);
-    }
   };
 
   const handleInputChange = (dataType, values, index) => {

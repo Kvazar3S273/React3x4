@@ -62,15 +62,13 @@ const FotoprintEditPrice = () => {
     const item = listfotoprints.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
+    setEditFotoprint(item);
     setComplete(true);
     const data = {
       id: item.id,
       price: item.price,
     };
 
-    if (!foc) {
-      setEditFotoprint(data);
-    }
   };
 
   const handleInputChange = (dataType, values, index) => {

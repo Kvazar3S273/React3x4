@@ -62,15 +62,13 @@ const VisitcardEditPrice = () => {
     const item = listvisitcards.find((row) => row.id == e.currentTarget.id);
 
     setIsOpen(item.id);
+    setEditVisitcard(item);
     setComplete(true);
     const data = {
       id: item.id,
       price: item.price,
     };
 
-    if (!foc) {
-      setEditVisitcard(data);
-    }
   };
 
   const handleInputChange = (dataType, values, index) => {
