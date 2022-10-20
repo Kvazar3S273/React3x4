@@ -108,7 +108,7 @@ const Hanger = () => {
             <div className="row">
               <div className="col-md-3"></div>
               <div className="col-md-6">
-                <table className="table table-primary  table-striped text-center">
+                <table className="table table-striped text-center">
                   <thead>
                     <tr>
                       <th scope="col">Кількість</th>

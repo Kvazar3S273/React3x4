@@ -127,9 +127,10 @@ const Tag = () => {
             <div className="row">
               <div className="col-md-3"></div>
               <div className="col-md-6">
-              <table className="table table-primary  table-striped text-center">
+              <table className="table table-striped text-center">
                   <thead>
                     <tr>
+                      <th scope="col">Формат</th>
                       <th scope="col">Щільність паперу</th>
                       <th scope="col">Ціна, грн</th>
                     </tr>

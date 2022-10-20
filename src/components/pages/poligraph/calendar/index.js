@@ -77,6 +77,7 @@ const Calendar = () => {
                   <thead>
                     <tr>
                       <th scope="col">Щільність паперу</th>
+                      <th scope="col">Покриття</th>
                       <th scope="col">Ціна, грн</th>
                     </tr>
                   </thead>

@@ -62,7 +62,7 @@ const Leaf = () => {
             <div className="row">
               <div className="col-md-1"></div>
               <div className="col-md-10">
-                <table className="table text-center">
+                <table className="table text-center table-striped">
                   <tbody>
                     <tr>
                       <th rowSpan={2} style={{ verticalAlign: "middle" }}>
