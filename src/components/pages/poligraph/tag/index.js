@@ -1,8 +1,17 @@
 import React from "react";
 import "react-slideshow-image/dist/styles.css";
 // import "../style.css"
+import { useSelector, useDispatch } from "react-redux";
+import { GetBirkas } from "../../../../constants/actions/poligraphActions/birka";
+import { useEffect } from "react";
 
 const Tag = () => {
+
+  const dispatch = useDispatch();
+  const { listbirkas } = useSelector((state) => state.birka);
+  useEffect(() => {
+    dispatch(GetBirkas());
+  }, []);
 
   return (
     <div className="row mt-3 mb-3">
@@ -126,22 +135,17 @@ const Tag = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">250</th>
-                      <td>2000</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">300</th>
-                      <td>3000</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">350</th>
-                      <td>4000</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">450</th>
-                      <td>5000</td>
-                    </tr>
+                    {listbirkas &&
+                      listbirkas.map((item) => (
+                        <tr key={item.id}>
+                          <td>{item.format}</td>
+                          <td>{item.density}</td>
+                          <td style={{ background: "#E1A3B3" }}>
+                            {" "}
+                            {item.price}{" "}
+                          </td>
+                        </tr>
+                      ))}
                   </tbody>
                 </table>
               </div>
@@ -150,9 +154,6 @@ const Tag = () => {
           </div>
         </div>
 
-        
-
-    
       </div>
     </div>
   );

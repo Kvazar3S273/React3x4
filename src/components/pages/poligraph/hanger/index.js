@@ -1,8 +1,17 @@
 import React from "react";
 import "react-slideshow-image/dist/styles.css";
 // import "../style.css"
+import { useSelector, useDispatch } from "react-redux";
+import { GetHangers } from "../../../../constants/actions/poligraphActions/hanger";
+import { useEffect } from "react";
 
 const Hanger = () => {
+
+  const dispatch = useDispatch();
+  const { listhangers } = useSelector((state) => state.hanger);
+  useEffect(() => {
+    dispatch(GetHangers());
+  }, []);
 
   return (
     <div className="row mt-3 mb-3">
@@ -102,27 +111,21 @@ const Hanger = () => {
                 <table className="table table-primary  table-striped text-center">
                   <thead>
                     <tr>
-                      <th scope="col">Щільність паперу</th>
+                      <th scope="col">Кількість</th>
                       <th scope="col">Ціна, грн</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">250</th>
-                      <td>2000</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">300</th>
-                      <td>3000</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">350</th>
-                      <td>4000</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">450</th>
-                      <td>5000</td>
-                    </tr>
+                    {listhangers &&
+                      listhangers.map((item) => (
+                        <tr key={item.id}>
+                          <td>{item.qty}</td>
+                          <td style={{ background: "#E1A3B3" }}>
+                            {" "}
+                            {item.price}{" "}
+                          </td>
+                        </tr>
+                      ))}
                   </tbody>
                 </table>
               </div>

@@ -1,8 +1,17 @@
 import React from "react";
 import "react-slideshow-image/dist/styles.css";
 // import "../style.css"
+import { useSelector, useDispatch } from "react-redux";
+import { GetStickers } from "../../../../constants/actions/poligraphActions/sticker";
+import { useEffect } from "react";
 
 const Sticker = () => {
+
+  const dispatch = useDispatch();
+  const { liststickers } = useSelector((state) => state.sticker);
+  useEffect(() => {
+    dispatch(GetStickers());
+  }, []);
 
   return (
     <div className="row mt-3 mb-3">
@@ -68,27 +77,23 @@ const Sticker = () => {
                 <table className="table table-primary  table-striped text-center">
                   <thead>
                     <tr>
-                      <th scope="col">Щільність паперу</th>
+                      <th scope="col">Формат</th>
+                      <th scope="col">Кількість</th>
                       <th scope="col">Ціна, грн</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">250</th>
-                      <td>2000</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">300</th>
-                      <td>3000</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">350</th>
-                      <td>4000</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">450</th>
-                      <td>5000</td>
-                    </tr>
+                    {liststickers &&
+                      liststickers.map((item) => (
+                        <tr key={item.id}>
+                          <td>{item.format}</td>
+                          <td>{item.qty}</td>
+                          <td style={{ background: "#E1A3B3" }}>
+                            {" "}
+                            {item.price}{" "}
+                          </td>
+                        </tr>
+                      ))}
                   </tbody>
                 </table>
               </div>
