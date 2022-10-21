@@ -148,8 +148,8 @@ const Flyer = () => {
             Ціни на флаєри:
           </h3>
           <p className="text-center">
-          Прайс на найпоширеніші варіанти замовлення (формат - 
-          Єврофлаєр 99х210 мм, без покриття, термін - 7 роб. днів)
+          Прайс на найпоширеніші варіанти замовлення (щільність - 115 г/м.кв.,
+           без покриття, термін - 7 роб. днів)
           </p>
           {/* Таблиця 1 */}
           <div className="col">
@@ -159,7 +159,8 @@ const Flyer = () => {
               <table className="table table-striped text-center">
                   <thead>
                     <tr>
-                      <th scope="col">Щільність паперу</th>
+                      <th scope="col">Формат</th>
+                      <th scope="col">Кількість</th>
                       <th scope="col">Ціна, грн</th>
                     </tr>
                   </thead>
