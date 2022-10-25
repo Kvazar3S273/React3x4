@@ -35,7 +35,7 @@ const ServicePhotoCards = () => {
       {/* Рядок для темно-сірого блока */}
       <div className="row">
         {/* Темно-сірий блок для карток */}
-        <div className="col py-4" style={{background:"#4D4D4D"}}>
+        <div className="col py-4" style={{background:"#2F302F"}}>
           {/* Рядок для карток */}
 
           <div className="row gx-5 justify-content-center">

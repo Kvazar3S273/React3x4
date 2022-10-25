@@ -29,7 +29,7 @@ const ServiceCompCards = () => {
       {/* Рядок для темно-сірого блока */}
       <div className="row">
         {/* Темно-сірий блок для карток */}
-        <div className="col py-4" style={{background:"#4D4D4D"}}>
+        <div className="col py-4" style={{ background: "#2F302F" }}>
           {/* Рядок для карток */}
 
           <div className="row gx-5 justify-content-center">
@@ -37,7 +37,7 @@ const ServiceCompCards = () => {
             <p className="text-light text-center">Пропонуємо Вам наступні комп'ютерні послуги:</p>
             
             {/* Картка 1 */}
-            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
+            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded"
             onClick={handleClickXerox}>
               <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
               <div className="card" >

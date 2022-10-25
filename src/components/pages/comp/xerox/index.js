@@ -3,6 +3,8 @@ import "react-slideshow-image/dist/styles.css";
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from "react";
 import { GetXeroxes } from "../../../../constants/actions/compActions/xerox";
+import { GetBlackPrints } from "../../../../constants/actions/compActions/blackprint";
+import { GetColorPrints } from "../../../../constants/actions/compActions/colorprint";
 import "../style.css"
 
 const Xerox = () => {
@@ -11,9 +13,9 @@ const Xerox = () => {
   const { listxeroxes } = useSelector(state => state.xerox);
   const { listblackprints } = useSelector(state => state.blackprint);
   const { listcolorprints } = useSelector(state => state.colorprint);
-  useEffect(() => {
-          dispatch(GetXeroxes());           
-      }, []);
+  useEffect(() => {dispatch(GetXeroxes());}, []);
+  useEffect(() => {dispatch(GetBlackPrints());}, []);
+  useEffect(() => {dispatch(GetColorPrints());}, []);
 
   return (
     <div className="row mt-3 mb-3">
@@ -51,7 +53,7 @@ const Xerox = () => {
           <div className="row ">
             <div className="col-md-3 col-sm-6 text-center">
               <h3>
-                <span className="badge bg-warning m-3 p-5">
+                <span className="badge m-3 p-5" style={{ background: "#5586B0" }}>
                   ВСІХ <br />
                   КОМПАКТ
                   <br /> ДИСКІВ
@@ -60,7 +62,7 @@ const Xerox = () => {
             </div>
             <div className="col-md-3 col-sm-6 text-center">
               <h3>
-                <span className="badge  bg-success m-3 p-5">
+                <span className="badge m-3 p-5" style={{ background: "#6B95BA " }}>
                   ВСІХ <br />
                   USB-ФЛЕШ
                   <br />
@@ -70,7 +72,7 @@ const Xerox = () => {
             </div>
             <div className="col-md-3 col-sm-6 text-center">
               <h3>
-                <span className="badge bg-danger m-3 p-5">
+                <span className="badge m-3 p-5" style={{ background: "#80A4C4 " }}>
                   БУДЬ-ЯКИХ <br /> КАРТ
                   <br /> ПАМ'ЯТІ
                 </span>
@@ -78,7 +80,7 @@ const Xerox = () => {
             </div>
             <div className="col-md-3 col-sm-6 text-center">
               <h3>
-                <span className="badge  bg-primary m-3 p-5">
+                <span className="badge m-3 p-5" style={{ background: "#95B4CE " }}>
                   TELEGRAM
                   <br /> VIBER <br />
                   E-MAIL

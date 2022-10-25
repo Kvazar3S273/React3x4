@@ -266,7 +266,7 @@ const Fotoprint = () => {
         <div className="row">
           <div className="col-md-1"></div>
           <div className="col-md-10">
-            <div class="m-4 p-5 bg-success text-white rounded">
+            <div class="m-4 p-5 text-white rounded" style={{ background: "#116C6E " }}>
               <h1 className="text-center">Обладнання</h1>
               <p className="text-center">
                 Фотографії друкуються на цифрових мінілабах Noritsu QSS 3202
@@ -278,8 +278,8 @@ const Fotoprint = () => {
                 <a href="http://minilab.com.ua/description/noritsu/qss32series/">
                   <button
                     type="button"
-                    class="btn btn-light"
-                    style={{ background: "#006D57" }}
+                    class="btn btn-light mt-3"
+                    style={{ background: "#0E5658", padding:"15px" }}
                   >
                     Детальніше про обладнання...
                   </button>

@@ -4,7 +4,7 @@ import "./footer.css";
 
 const Footer = () => {
   return (
-    <div className="row bg-dark mt-3">
+    <div className="row mt-3" style={{background:"#1B1C1B"}}>
       <div className="col-md-4 text-secondary text-md-start p-2">
         <div className="p-3">
           ©

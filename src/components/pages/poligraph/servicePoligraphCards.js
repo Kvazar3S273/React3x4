@@ -11,8 +11,8 @@ const ServicePoligraphCards = () => {
   return (
     <>
       <div className="row">
-        {/* Бордовий блок для карток */}
-        <div className="col py-4" style={{ background: "#883A3A" }}>
+        {/* Темно-сірий блок для карток */}
+        <div className="col py-4" style={{ background: "#2F302F" }}>
           {/* Рядок для карток */}
           <div className="row gx-5 justify-content-center">
             <h1 className="text-light text-center">Поліграфічні послуги</h1>
@@ -20,19 +20,18 @@ const ServicePoligraphCards = () => {
               Ми друкуємо різну поліграфічну продукцію, зокрема:
             </p>
             <ServiceCardsMain />
-            {isPoligraphOther ? 
-            <>
-              <ServiceCardsOther />
-              {/* <Other/> */}
-            </> : ""}
+            {isPoligraphOther ? (
+              <>
+                <ServiceCardsOther />
+              </>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>
 
       <section id="component"></section>
-      
-      {/* <section id="other"></section> */}
-      {/* <Other/> */}
 
     </>
   );

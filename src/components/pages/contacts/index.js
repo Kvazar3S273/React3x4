@@ -70,16 +70,16 @@ const ContactsPage = () => {
               <div className="row ">
                 <div className="col-md-3 col-sm-6 text-center">
                   <h3>
-                    <span className="badge rounded-pill bg-success m-3 p-5">
+                    <span className="badge rounded-pill m-3 p-5" style={{ background: "#626262" }}>
                       Понеділок -<br />
                       П'ятниця <br />
-                      10:00 - 18:00*
+                      10:00 - 19:00
                     </span>
                   </h3>
                 </div>
                 <div className="col-md-3 col-sm-6 text-center">
                   <h3>
-                    <span className="badge rounded-pill bg-primary  m-3 p-5">
+                    <span className="badge rounded-pill m-3 p-5" style={{ background: "#116C6E " }}>
                       Технічна
                       <br />
                       перерва <br />
@@ -89,7 +89,7 @@ const ContactsPage = () => {
                 </div>
                 <div className="col-md-3 col-sm-6 text-center">
                   <h3>
-                    <span className="badge rounded-pill bg-warning m-3 p-5">
+                    <span className="badge rounded-pill m-3 p-5" style={{ background: "#A15260 " }}>
                       Субота
                       <br />
                       -<br />
@@ -99,7 +99,7 @@ const ContactsPage = () => {
                 </div>
                 <div className="col-md-3 col-sm-6 text-center">
                   <h3>
-                    <span className="badge rounded-pill bg-danger m-3 p-5">
+                    <span className="badge rounded-pill m-3 p-5" style={{ background: "#B31942 " }}>
                       Неділя
                       <br />
                       -<br />
@@ -107,7 +107,7 @@ const ContactsPage = () => {
                     </span>
                   </h3>
                 </div>
-                <p>*графік тимчасовий, на період війни</p>
+                {/* <p>*графік тимчасовий, на період війни</p> */}
               </div>
             </div>
           </div>
