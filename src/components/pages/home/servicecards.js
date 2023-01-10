@@ -18,7 +18,7 @@ const ServiceCards = () => {
             {new Date().getFullYear()-2009} років досвіду щоб запропонувати Вам:
           </p>
           {/* Картка 1 */}
-          <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
+          <div className="col-9 col-sm-5 col-md-3 m-2 p-2 border bg-light rounded ">
             <div className="card">
               <img
                 src="/images/slider/img1.png"
@@ -43,7 +43,7 @@ const ServiceCards = () => {
           </div>
 
           {/* Картка 2 */}
-          <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
+          <div className="col-9 col-sm-5 col-md-3 m-2 p-2 border bg-light rounded ">
             <div className="card">
               <img
                 src="/images/slider/img2.png"
@@ -66,7 +66,7 @@ const ServiceCards = () => {
             </div>
           </div>
           {/* Картка 3 */}
-          <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
+          <div className="col-9 col-sm-5 col-md-3 m-2 p-2 border bg-light rounded ">
             <div className="card">
               <img
                 src="/images/slider/img3.png"
@@ -89,7 +89,7 @@ const ServiceCards = () => {
             </div>
           </div>
           {/* Картка 4 */}
-          <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
+          <div className="col-9 col-sm-5 col-md-3 m-2 p-2 border bg-light rounded ">
             <div className="card">
               <img
                 src="/images/slider/img4.png"
@@ -112,7 +112,7 @@ const ServiceCards = () => {
             </div>
           </div>
           {/* Картка 5 */}
-          <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
+          <div className="col-9 col-sm-5 col-md-3 m-2 p-2 border bg-light rounded ">
             <div className="card">
               <img
                 src="/images/slider/img5.png"

@@ -6,7 +6,7 @@ const Producers = () => {
     <div className="row">
       <div
         className="col rounded  mt-3"
-        style={{ backgroundColor: "#37271C" }}
+        style={{ backgroundColor: "#203754" }}
       >
         <div className="row justify-content-center">
           <div className="container">

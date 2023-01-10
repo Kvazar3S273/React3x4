@@ -105,6 +105,7 @@ const Header = () => {
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
       var currentScrollPos = window.pageYOffset;
+      // console.log("prevScrollpos = ", prevScrollpos);
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
       } else {
