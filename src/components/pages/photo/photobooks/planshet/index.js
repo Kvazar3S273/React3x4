@@ -12,6 +12,7 @@ import { MoreServices } from "../moreServices";
 import ClaimUnibook from "../unibook/claimUnibook";
 import { AvailablePlanshets } from "../availableBooks";
 import ClaimPlanshet from "./claimPlanshet";
+import CalculatingPole from "../calculatingPole";
 
 const Planshet = () => {
   //see more here:
@@ -177,41 +178,7 @@ const Planshet = () => {
 
         </div>
 
-        <div className="row">
-          <div
-            className="col py-3 mt-3 mb-3"
-            style={{ backgroundColor: "#CDE8F2" }} >
-            <div className="row">
-              <div className="col-8 col-sm-8 col-md-8 col-lg-8 p-5">
-                <div className="row">
-                  <div className="col-2 col-sm-2 col-md-2">
-                    <i
-                      className="d-flex justify-content-center text-danger"
-                      style={{ fontSize: "4.5em" }}
-                    >
-                      <FontAwesomeIcon icon={faCalculator} />
-                    </i>
-                  </div>
-                  <div className="col-10 col-sm-10 col-md-10">
-                    <h4 className="text-danger">
-                      Розрахунок вартості друку фотокниги
-                    </h4>
-                    <p>
-                      *Окремо розраховується вартість розробки дизайну (див.
-                      Додаткові послуги)
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-4 col-sm-4 col-md-4 col-lg-4">
-                <img
-                  src="images/services/photo/photobooks/calc.png"
-                  alt="Розрахунок"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        <CalculatingPole/>
 
         <div className="row">
           <div className="col-md-1"></div>

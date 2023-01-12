@@ -11,6 +11,7 @@ import { AvailableUniBooks } from "../availableBooks";
 import { UpToBooksList } from "../upToBooksList";
 import { MoreServices } from "../moreServices";
 import ClaimUnibook from "./claimUnibook";
+import CalculatingPole from "../calculatingPole";
 
 const UniBook = () => {
   //see more here:
@@ -34,8 +35,8 @@ const UniBook = () => {
       <div className="row mt-3 mb-3">
         <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
           <h1 className="text-center">Фотокниги UniBook</h1>
-
-          {/* HD цифровий друк з імітацією фотопаперу FUJI Lustre */}
+          
+          {/* HD цифровий друк з імітацією фотопаперу FUJI Lustre для широкого екрану*/}
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-7">
               <img
@@ -57,8 +58,11 @@ const UniBook = () => {
               </p>
             </div>
           </div>
+          
 
           {/* Товсті сторінки, що збільшують цінність, але не вартість */}
+          {/* Для широких екранів */}
+          <div className="d-none d-md-block">
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">
@@ -79,6 +83,32 @@ const UniBook = () => {
                 style={{ width: "100%" }}
               />
             </div>
+          </div>
+          </div>
+
+          {/* Для мобільних екранів */}
+          <div className="d-block d-md-none">
+          <div className="row m-3 p-2">
+            <div className="col-sm-12 col-md-7">
+              <img
+                src="images/services/photo/photobooks/UniBook/2.jpg"
+                alt="Товсті сторінки"
+                style={{ width: "100%" }}
+              />
+            </div>
+            <div className="col-sm-12 col-md-5 px-3">
+              <h3 className="text-center">
+                Товсті сторінки, що збільшують цінність, але не вартість
+              </h3>
+              <p>
+                Хтось пропонує фотокниги з прошарком, щоб зменшити кількість
+                сторінок і не втратити загальне враження, а хтось підкреслює цим
+                солідність та вартість альбому. UniBook стандартно виготовляють
+                з картонним прошарком, тому він задовольняє потреби обох
+                категорій.
+              </p>
+            </div>
+          </div>
           </div>
 
           {/* Новинка - UniBook Light! Сторінки без прошарку роблять його ще цікавішим. */}
@@ -105,6 +135,9 @@ const UniBook = () => {
           </div>
 
           {/* Звісно, це Lay Flat з розворотом на 180° */}
+          {/* Для широких екранів */}
+
+          <div className="d-none d-md-block">
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">
@@ -122,9 +155,35 @@ const UniBook = () => {
                 src="images/services/photo/photobooks/UniBook/4.jpg"
                 alt="Flat"
                 style={{ width: "100%" }}
-              />
+                />
             </div>
           </div>
+          </div>
+                
+          {/* Для мобільних екранів */}     
+          <div className="d-block d-md-none">
+          <div className="row m-3 p-2">
+            <div className="col-sm-12 col-md-7">
+              <img
+                src="images/services/photo/photobooks/UniBook/4.jpg"
+                alt="Flat"
+                style={{ width: "100%" }}
+                />
+            </div>
+            <div className="col-sm-12 col-md-5 px-3">
+              <h3 className="text-center">
+                Звісно, це Lay Flat з розворотом на 180°
+              </h3>
+              <p>
+                Ну, а як інакше? Фотокниги з панорамними знімками та знімками на
+                весь розворот просто зобов'язані розкриватись на 180°. Це
+                безкомпромісне рішення, тому так, UniBook — це фотокнига саме з
+                такою будовою блоку.
+              </p>
+            </div>
+          </div>
+          </div>
+
 
           {/* Обкладинка */}
           <div className="row m-3 p-2">
@@ -155,39 +214,7 @@ const UniBook = () => {
           </div>
         </div>
 
-        <div
-          className="col py-3 mt-3 mb-3"
-          style={{ backgroundColor: "#CDE8F2" }} >
-          <div className="row">
-            <div className="col-8 col-sm-8 col-md-8 col-lg-8 p-5">
-              <div className="row">
-                <div className="col-2 col-sm-2 col-md-2">
-                  <i
-                    className="d-flex justify-content-center text-danger"
-                    style={{ fontSize: "4.5em" }}
-                  >
-                    <FontAwesomeIcon icon={faCalculator} />
-                  </i>
-                </div>
-                <div className="col-10 col-sm-10 col-md-10">
-                  <h4 className="text-danger">
-                    Розрахунок вартості друку фотокниги
-                  </h4>
-                  <p>
-                    *Окремо розраховується вартість розробки дизайну (див.
-                    Додаткові послуги)
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-4 col-sm-4 col-md-4 col-lg-4">
-              <img
-                src="images/services/photo/photobooks/calc.png"
-                alt="Розрахунок"
-              />
-            </div>
-          </div>
-        </div>
+        <CalculatingPole/>
 
         <div className="row">
           <div className="col-md-1"></div>

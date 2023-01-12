@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const urlBackend = 'http://3x4.com.ua/';
+export const urlBackend = 'https://3x4.com.ua/';
 export default axios.create({
     baseURL: `${urlBackend}`,
 

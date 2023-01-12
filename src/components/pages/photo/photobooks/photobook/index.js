@@ -11,6 +11,7 @@ import { AvailablePhotoBooks } from "../availableBooks";
 import { UpToBooksList } from "../upToBooksList";
 import { MoreServices } from "../moreServices";
 import ClaimPhotobook from "./claimPhotobook";
+import CalculatingPole from "../calculatingPole";
 
 const PhotoBook = () => {
   //see more here:
@@ -89,6 +90,8 @@ const PhotoBook = () => {
           </div>
 
           {/* Папір Fujicolor Crystal Archive LUSTRE */}
+          {/* Для широких екранів */}
+          <div className="d-none d-md-block">
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">Папір Fujicolor Crystal Archive LUSTRE</h3>
@@ -114,6 +117,37 @@ const PhotoBook = () => {
                 ))}
               </Zoom>
             </div>
+          </div>
+          </div>
+
+          {/* Для мобільних екранів */}     
+          <div className="d-block d-md-none">
+          <div className="row m-3 p-2">
+            <div className="col-sm-12 col-md-7">
+              <Zoom {...zoomInProperties}>
+                {img_slider2.map((each, index) => (
+                  <div key={index} style={{ width: "100%" }}>
+                    <img
+                      style={{ objectFit: "cover", width: "100%" }}
+                      src={each}
+                    />
+                  </div>
+                ))}
+              </Zoom>
+            </div>
+            <div className="col-sm-12 col-md-5 px-3">
+              <h3 className="text-center">Папір Fujicolor Crystal Archive LUSTRE</h3>
+              <p>
+                Для друку ваших книг ми використовуємо фотопапір Fujicolor Crystal Archive 
+                і лабораторії Noritsu 34 PRO. Папір LUSTRE використовується за замовчуванням 
+                при друці всіх наших фотокниг. Фотографам старої школи добре відома так
+                звана «тисненка». Фотопапір Lustre (називають «ластер» або «люстра»), 
+                максимально на неї схожий. Папір має специфічний рельєф і характерну 
+                кольоропередачу. В нас на сайті при оформленні замовлення цей папір 
+                називається матовим. 
+              </p>
+            </div>
+          </div>
           </div>
 
           {/* Папір Fujicolor Crystal Archive SILK */}
@@ -143,6 +177,8 @@ const PhotoBook = () => {
           </div>
 
           {/* Основа */}
+          {/* Для широких екранів */}
+          <div className="d-none d-md-block">
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">Основа</h3>
@@ -169,6 +205,37 @@ const PhotoBook = () => {
               </Zoom>
             </div>
           </div>
+          </div>
+
+          {/* Для мобільних екранів */}     
+          <div className="d-block d-md-none">
+          <div className="row m-3 p-2">
+            <div className="col-sm-12 col-md-7">
+              <Zoom {...zoomInProperties}>
+                {img_slider4.map((each, index) => (
+                  <div key={index} style={{ width: "100%" }}>
+                    <img
+                      style={{ objectFit: "cover", width: "100%" }}
+                      src={each}
+                    />
+                  </div>
+                ))}
+              </Zoom>
+            </div>
+            <div className="col-sm-12 col-md-5 px-3">
+              <h3 className="text-center">Основа</h3>
+              <p>
+                Пластик передбачуваний у виробництві, не деформується в експлуатації 
+                або при зміні температурних режимів. Його товщина і вага додають книзі 
+                «фоліантності» та солідності. Дорожчий, але водночас гарантований по 
+                якості результат.<br/>
+                Також у виробництві ми використовуємо спеціальний термокартон з максимально 
+                покращеними показниками гідрофобності та стійкості до зовнішніх факторів впливу. 
+                Це доступний по ціні наповнювач, який зовнішньо мало чим відрізняється від пластику. 
+              </p>
+            </div>
+          </div>
+          </div>
 
           {/* Фотообкладинка */}
           <div className="row m-3 p-2">
@@ -189,6 +256,8 @@ const PhotoBook = () => {
           </div>
 
           {/* Шкірозамінник */}
+          {/* Для широких екранів */}
+          <div className="d-none d-md-block">
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">Шкірозамінник</h3>
@@ -212,6 +281,34 @@ const PhotoBook = () => {
               </Zoom>
             </div>
           </div>
+          </div>
+
+          {/* Для мобільних екранів */}     
+          <div className="d-block d-md-none">
+          <div className="row m-3 p-2">
+            <div className="col-sm-12 col-md-7">
+              <Zoom {...zoomInProperties}>
+                {img_slider6.map((each, index) => (
+                  <div key={index} style={{ width: "100%" }}>
+                    <img
+                      style={{ objectFit: "cover", width: "100%" }}
+                      src={each}
+                    />
+                  </div>
+                ))}
+              </Zoom>
+            </div>
+            <div className="col-sm-12 col-md-5 px-3">
+              <h3 className="text-center">Шкірозамінник</h3>
+              <p>
+                Більше життя, більше кольору! Вибирайте ту, яка підходить під 
+                тональність і настрій Вашої фотокниги. Італійський високоякісний 
+                шкірзам залишить приємні тактильні відчуття, а совість не буде 
+                гризти за невинно вбитих звіряток. 
+              </p>
+            </div>
+          </div>
+          </div>
 
           {/* Шкірзам з фотовставкою */}
           <div className="row m-3 p-2">
@@ -233,6 +330,8 @@ const PhotoBook = () => {
           </div>
 
           {/* Тканина */}
+          {/* Для широких екранів */}
+          <div className="d-none d-md-block">
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">Тканина</h3>
@@ -257,45 +356,40 @@ const PhotoBook = () => {
               </Zoom>
             </div>
           </div>
+          </div>
 
-        </div>
-        
-        <div
-          className="col py-3 mt-3 mb-3"
-          style={{ backgroundColor: "#CDE8F2" }}
-        >
-          <div className="row">
-            <div className="col-8 col-sm-8 col-md-8 col-lg-8 p-5">
-              <div className="row">
-                <div className="col-2 col-sm-2 col-md-2">
-                <i
-                    className="d-flex justify-content-center text-danger"
-                    style={{ fontSize: "4.5em" }}
-                  >
-                    <FontAwesomeIcon icon={faCalculator} />
-                  </i>
-                </div>
-                <div className="col-10 col-sm-10 col-md-10">
-                  <h4 className="text-danger">
-                    Розрахунок вартості друку фотокниги
-                  </h4>
-                  <p>
-                    *Окремо розраховується вартість розробки дизайну (див. Додаткові
-                    послуги)
-                  </p>
-                </div>
-              </div>
-              
+          {/* Для мобільних екранів */}     
+          <div className="d-block d-md-none">
+          <div className="row m-3 p-2">
+            <div className="col-sm-12 col-md-7">
+              <Zoom {...zoomInProperties}>
+                {img_slider7.map((each, index) => (
+                  <div key={index} style={{ width: "100%" }}>
+                    <img
+                      style={{ objectFit: "cover", width: "100%" }}
+                      src={each}
+                    />
+                  </div>
+                ))}
+              </Zoom>
             </div>
-            <div className="col-4 col-sm-4 col-md-4 col-lg-4">
-              <img
-                src="images/services/photo/photobooks/calc.png"
-                alt="Розрахунок"
-              />
+            <div className="col-sm-12 col-md-5 px-3">
+              <h3 className="text-center">Тканина</h3>
+              <p>
+                Обкладинка зі спеціальної тканини від відомого голландського 
+                виробника палітурних матеріалів. Фотокнига в такій обкладинці
+                виглядає більш «книжно» і злегка нагадує традиційну палітурку,
+                як в старих книгах. Обирайте, яка саме вам до душі: фактурна 
+                серія «Льон», чи яскраві та блискучі кольори обкладинок «Люкс».
+              </p>
             </div>
           </div>
+          </div>
+
         </div>
 
+        <CalculatingPole/>
+        
         <div className="row">
           <div className="col-md-1"></div>
           <div className="col-md-10">

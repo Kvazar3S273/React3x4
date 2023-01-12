@@ -26,10 +26,10 @@ const Fotoprint = () => {
       }, []);
 
   const images = [
-    "images/services/photo/fotoprint1.jpg",
+    // "images/services/photo/fotoprint1.jpg",
     "images/services/photo/fotoprint2.jpg",
     "images/services/photo/fotoprint3.jpg",
-    "images/services/photo/fotoprint4.jpg",
+    "images/services/photo/fotoprint4.jpg"
   ];
 
   const zoomInProperties = {
@@ -300,7 +300,7 @@ const Fotoprint = () => {
                 обрізані під час друку...
               </p>
               {/* Картка 1 */}
-              <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
+              <div className="col-9 col-sm-5 col-md-3 m-2 p-2 border bg-light rounded ">
                 <div className="card">
                   <img
                     src="/images/services/photo/kadr1.png"
@@ -319,7 +319,7 @@ const Fotoprint = () => {
               </div>
 
               {/* Картка 2 */}
-              <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
+              <div className="col-9 col-sm-5 col-md-3 m-2 p-2 border bg-light rounded ">
                 <div className="card">
                   <img
                     src="/images/services/photo/kadr2.png"
@@ -335,7 +335,7 @@ const Fotoprint = () => {
                 </div>
               </div>
               {/* Картка 3 */}
-              <div className="col-9 col-sm-5 col-md-3 m-2 p-3 border bg-light rounded ">
+              <div className="col-9 col-sm-5 col-md-3 m-2 p-2 border bg-light rounded ">
                 <div className="card">
                   <img
                     src="/images/services/photo/kadr3.png"
