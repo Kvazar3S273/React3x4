@@ -92,6 +92,8 @@ const Planshet = () => {
           </div>
 
           {/* Класичний планшет (цифровий друк) */}
+          {/* Для широких екранів */}
+          <div className="d-none d-md-block">
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">
@@ -117,6 +119,37 @@ const Planshet = () => {
                 ))}
               </Zoom>
             </div>
+          </div>
+          </div>
+
+          {/* Для мобільних екранів */}     
+          <div className="d-block d-md-none">
+          <div className="row m-3 p-2">
+            <div className="col-sm-12 col-md-7">
+              <Zoom {...zoomInProperties}>
+                {img_slider2.map((each, index) => (
+                  <div key={index} style={{ width: "100%" }}>
+                    <img
+                      style={{ objectFit: "cover", width: "100%" }}
+                      src={each}
+                    />
+                  </div>
+                ))}
+              </Zoom>
+            </div>
+            <div className="col-sm-12 col-md-5 px-3">
+              <h3 className="text-center">
+              Класичний планшет (цифровий друк)
+              </h3>
+              <p>
+                Як і попередній, цей планшет може бути виконано в 1 або 2-х розворотах,
+                але його середину надруковано цифровим способом на крейдованому папері 
+                граматурою 200 г/м² і вкрито глянцевою ламінацією. Обкладинка тверда
+                ламінована. Для друку використовуються поліграфічні машини XEROX . <br/>
+                Можливий формат — 20х30.
+              </p>
+            </div>
+          </div>
           </div>
 
           {/* Трюмо */}
@@ -149,6 +182,8 @@ const Planshet = () => {
           </div>
 
           {/* Тріо */}
+          {/* Для широких екранів */}
+          <div className="d-none d-md-block">
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">
@@ -174,6 +209,37 @@ const Planshet = () => {
                 ))}
               </Zoom>
             </div>
+          </div>
+          </div>
+
+          {/* Для мобільних екранів */}     
+          <div className="d-block d-md-none">
+          <div className="row m-3 p-2">
+            <div className="col-sm-12 col-md-7">
+              <Zoom {...zoomInProperties}>
+                {img_slider4.map((each, index) => (
+                  <div key={index} style={{ width: "100%" }}>
+                    <img
+                      style={{ objectFit: "cover", width: "100%" }}
+                      src={each}
+                    />
+                  </div>
+                ))}
+              </Zoom>
+            </div>
+            <div className="col-sm-12 col-md-5 px-3">
+              <h3 className="text-center">
+                Тріо
+              </h3>
+              <p>
+                Планшет Тріо ми представили ще у 2018 році і за цей час він отримав 
+                неабияку популярність. Зумовлено це тим, що класична планшет-папка 
+                в згорнутому вигляді має стандартний формат 20х30, проте у розгорнутому,
+                 її формат стає 60х30, що дозволяє розмістити багато фото. Планшет 
+                 надруковано цифровим поліграфічним способом з глянцевою ламінацією.
+              </p>
+            </div>
+          </div>
           </div>
 
         </div>

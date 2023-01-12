@@ -3,10 +3,11 @@ import "./style.css";
 const CarouselPhoto = () => {
   return (
     <div
-      id="carouselBasicExample"
-      className="carousel slide mb-3"
-      data-bs-ride="carousel"
+    id="carouselBasicExample"
+    className="carousel slide mb-3"
+    data-bs-ride="carousel"
     >
+      {/* <div style={{height:"73px", backgroundColor:"#212529"}}></div> */}
       {/*<!-- Carousel wrapper -->*/}
       {/*<!-- Indicators -->*/}
       <div className="carousel-indicators">

@@ -93,6 +93,8 @@ const PrintBook = () => {
           </div>
 
           {/* Папір */}
+          {/* Для широких екранів */}
+          <div className="d-none d-md-block">
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">Папір</h3>
@@ -114,6 +116,33 @@ const PrintBook = () => {
                 ))}
               </Zoom>
             </div>
+          </div>
+          </div>
+
+          {/* Для мобільних екранів */}     
+          <div className="d-block d-md-none">
+          <div className="row m-3 p-2">
+            <div className="col-sm-12 col-md-7">
+              <Zoom {...zoomInProperties}>
+                {img_slider2.map((each, index) => (
+                  <div key={index} style={{ width: "100%" }}>
+                    <img
+                      style={{ objectFit: "cover", width: "100%" }}
+                      src={each}
+                    />
+                  </div>
+                ))}
+              </Zoom>
+            </div>
+            <div className="col-sm-12 col-md-5 px-3">
+              <h3 className="text-center">Папір</h3>
+              <p>
+                Для друку фотокниг ми використовуємо крейдований папір щільністю 170 г/м 
+                (до прикладу журнали друкують на папері 80 г/м). Також, Ви можете замовити
+                 фотокнигу на premium папері, який більш яскравий і біліший.
+              </p>
+            </div>
+          </div>
           </div>
 
           {/* Ламінування книжкового блоку */}
@@ -145,6 +174,8 @@ const PrintBook = () => {
           </div>
 
           {/* Форзац */}
+          {/* Для широких екранів */}
+          <div className="d-none d-md-block">
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">Форзац</h3>
@@ -168,7 +199,35 @@ const PrintBook = () => {
               </Zoom>
             </div>
           </div>
+          </div>
 
+          {/* Для мобільних екранів */}     
+          <div className="d-block d-md-none">
+          <div className="row m-3 p-2">
+            <div className="col-sm-12 col-md-7">
+              <Zoom {...zoomInProperties}>
+                {img_slider4.map((each, index) => (
+                  <div key={index} style={{ width: "100%" }}>
+                    <img
+                      style={{ objectFit: "cover", width: "100%" }}
+                      src={each}
+                    />
+                  </div>
+                ))}
+              </Zoom>
+            </div>
+            <div className="col-sm-12 col-md-5 px-3">
+              <h3 className="text-center">Форзац</h3>
+              <p>
+                Це аркуш паперу призначений для фіксації блоку в корінці. Форзац 
+                складається з 2 окремих паперових заготовок на початку та в кінці 
+                книги, які одночасно з'єднуються в корінцевій частині та приклеюються 
+                до зворотньої сторони обкладинки. На форзаци також можна нанести зображення. 
+              </p>
+            </div>
+          </div>
+          </div>
+          
           {/* Фотообкладинка */}
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-7">
@@ -193,6 +252,8 @@ const PrintBook = () => {
           </div>
 
           {/* Обкладинка з шкірозамінника */}
+          {/* Для широких екранів */}
+          <div className="d-none d-md-block">
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">Обкладинка з шкірозамінника</h3>
@@ -215,6 +276,34 @@ const PrintBook = () => {
                 ))}
               </Zoom>
             </div>
+          </div>
+          </div>
+
+          {/* Для мобільних екранів */}     
+          <div className="d-block d-md-none">
+          <div className="row m-3 p-2">
+            <div className="col-sm-12 col-md-7">
+              <Zoom {...zoomInProperties}>
+                {img_slider6.map((each, index) => (
+                  <div key={index} style={{ width: "100%" }}>
+                    <img
+                      style={{ objectFit: "cover", width: "100%" }}
+                      src={each}
+                    />
+                  </div>
+                ))}
+              </Zoom>
+            </div>
+            <div className="col-sm-12 col-md-5 px-3">
+              <h3 className="text-center">Обкладинка з шкірозамінника</h3>
+              <p>
+                Більше життя, більше кольору! Обирайте ту обкладинку, яка підходить 
+                під тональність та настрій Вашої фотокниги. Високоякісний італійський 
+                шкірозамінник залишить приємні тактильні відчуття, а Ваша совість 
+                залишиться спокійною, бо жодне звірятко не було вбите.
+              </p>
+            </div>
+          </div>
           </div>
 
           {/* Тканина */}
