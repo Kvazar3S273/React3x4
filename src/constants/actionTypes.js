@@ -39,6 +39,7 @@ export const COMP_SCAN = "COMP_SCAN";
 export const COMP_LAMINATE = "COMP_LAMINATE";
 export const COMP_BINDER = "COMP_BINDER";
 export const COMP_USBFLASH = "COMP_USBFLASH";
+export const COMP_VHS = "COMP_VHS";
 export const COMP_DISCPRINT = "COMP_DISCPRINT";
 export const COMP_EMAIL = "COMP_EMAIL";
 
@@ -78,6 +79,7 @@ export const GET_SCAN = "GET_SCAN";
 export const GET_LAMINATE = "GET_LAMINATE";
 export const GET_BINDER = "GET_BINDER";
 export const GET_USBFLASH = "GET_USBFLASH";
+export const GET_VHS = "GET_VHS";
 export const GET_DISCPRINT = "GET_DISCPRINT";
 export const GET_EMAIL = "GET_EMAIL";
 

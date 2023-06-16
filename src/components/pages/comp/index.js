@@ -10,6 +10,7 @@ import Binder from "./binder";
 import Usbflash from "./usbflash";
 import Discprint from "./discprint";
 import Email from "./email";
+import Vhs from "./vhs";
 
 const CompPage = () => {
   const {
@@ -18,6 +19,7 @@ const CompPage = () => {
     isCompLaminate,
     isCompBinder,
     isCompUsbflash,
+    isCompVhs,
     isCompDiscprint,
     isCompEmail,
   } = useSelector((state) => state.comp);
@@ -32,6 +34,7 @@ const CompPage = () => {
       {isCompLaminate ? <Laminate /> : ""}
       {isCompBinder ? <Binder /> : ""}
       {isCompUsbflash ? <Usbflash /> : ""}
+      {isCompVhs ? <Vhs /> : ""}
       {isCompDiscprint ? <Discprint /> : ""}
       {isCompEmail ? <Email /> : ""}
       

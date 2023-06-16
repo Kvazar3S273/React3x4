@@ -1,5 +1,4 @@
 import React from "react";
-// import "./style.css";
 import { useDispatch } from "react-redux";
 import { 
   CompXerox,
@@ -7,6 +6,7 @@ import {
   CompLaminate,
   CompBinder,
   CompUsbflash,
+  CompVhs,
   CompDiscprint,
   CompEmail
 } from "../../../constants/actions/comp";
@@ -21,6 +21,7 @@ const ServiceCompCards = () => {
   const handleClickLaminate = () => { dispatch(CompLaminate()); }
   const handleClickBinder = () => { dispatch(CompBinder()); }
   const handleClickUsbflash = () => { dispatch(CompUsbflash()); }
+  const handleClickVhs = () => { dispatch(CompVhs()); }
   const handleClickDiscprint = () => { dispatch(CompDiscprint()); }
   const handleClickEmail = () => { dispatch(CompEmail()); }
     
@@ -123,6 +124,23 @@ const ServiceCompCards = () => {
 
             {/* Картка 6 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
+            onClick={handleClickVhs}>
+            <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
+              <div className="card" >
+                <img
+                  src="/images/services/comp/comp5.png"
+                  className="card-img-top"
+                  alt="Оцифровка відеокасет"
+                />
+                <div className="card-body-photo">
+                  <h6 className="card-title text-center">Оцифровка відеокасет</h6>
+                </div>
+              </div>
+            </HashLink>
+            </div>
+
+            {/* Картка 7 */}
+            <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
             onClick={handleClickDiscprint}>
               <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
               <div className="card" >
@@ -138,7 +156,7 @@ const ServiceCompCards = () => {
               </HashLink>
             </div>
 
-            {/* Картка 7 */}
+            {/* Картка 8 */}
             <div className="col-6 col-sm-4 col-md-2 m-2 p-1 border bg-light rounded "
             onClick={handleClickEmail}>
               <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>

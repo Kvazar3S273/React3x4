@@ -20,6 +20,7 @@ import scanReducer from "./reducers/editCompReducers/scanReducer";
 import laminateReducer from "./reducers/editCompReducers/laminateReducer";
 import binderReducer from "./reducers/editCompReducers/binderReducer";
 import usbflashReducer from "./reducers/editCompReducers/usbFlashReducer";
+import vhsReducer from "./reducers/editCompReducers/vhsReducer";
 import discprintReducer from "./reducers/editCompReducers/discprintReducer";
 import emailReducer from "./reducers/editCompReducers/emailReducer";
 import flyerReducer from "./reducers/editPoligraphReducers/flyerReducer";
@@ -55,6 +56,7 @@ const rootReducer = combineReducers({
     laminate: laminateReducer,
     binder: binderReducer,
     usbflash: usbflashReducer,
+    vhs: vhsReducer,
     discprint: discprintReducer,
     email: emailReducer,
     visitcard: visitcardReducer,

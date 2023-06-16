@@ -4,6 +4,7 @@ import {
   COMP_LAMINATE,
   COMP_BINDER,
   COMP_USBFLASH,
+  COMP_VHS,
   COMP_DISCPRINT,
   COMP_EMAIL
 } from "../actionTypes";
@@ -22,6 +23,9 @@ export const CompBinder = () => (dispatch) => {
 };
 export const CompUsbflash = () => (dispatch) => {
   dispatch({ type: COMP_USBFLASH });
+};
+export const CompVhs = () => (dispatch) => {
+  dispatch({ type: COMP_VHS });
 };
 export const CompDiscprint = () => (dispatch) => {
   dispatch({ type: COMP_DISCPRINT });

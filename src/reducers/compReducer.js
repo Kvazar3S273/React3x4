@@ -4,6 +4,7 @@ import {
     COMP_LAMINATE,
     COMP_BINDER,
     COMP_USBFLASH,
+    COMP_VHS,
     COMP_DISCPRINT,
     COMP_EMAIL
   } from "../constants/actionTypes";
@@ -14,6 +15,7 @@ import {
     isCompLaminate: false,
     isCompBinder: false,
     isCompUsbflash: false,
+    isCompVhs: false,
     isCompDiscprint: false,
     isCompEmail: false
   };
@@ -29,6 +31,7 @@ import {
           isCompLaminate: false,
           isCompBinder: false,
           isCompUsbflash: false,
+          isCompVhs: false,
           isCompDiscprint: false,
           isCompEmail: false
         };
@@ -40,6 +43,7 @@ import {
           isCompLaminate: false,
           isCompBinder: false,
           isCompUsbflash: false,
+          isCompVhs: false,
           isCompDiscprint: false,
           isCompEmail: false
         };
@@ -51,6 +55,7 @@ import {
           isCompLaminate: true,
           isCompBinder: false,
           isCompUsbflash: false,
+          isCompVhs: false,
           isCompDiscprint: false,
           isCompEmail: false
         };
@@ -62,6 +67,7 @@ import {
           isCompLaminate: false,
           isCompBinder: true,
           isCompUsbflash: false,
+          isCompVhs: false,
           isCompDiscprint: false,
           isCompEmail: false
         };
@@ -73,6 +79,19 @@ import {
           isCompLaminate: false,
           isCompBinder: false,
           isCompUsbflash: true,
+          isCompVhs: false,
+          isCompDiscprint: false,
+          isCompEmail: false
+        };
+      }
+      case COMP_VHS: {
+        return {
+          isCompXerox: false,
+          isCompScan: false,
+          isCompLaminate: false,
+          isCompBinder: false,
+          isCompUsbflash: false,
+          isCompVhs: true,
           isCompDiscprint: false,
           isCompEmail: false
         };
@@ -84,6 +103,7 @@ import {
           isCompLaminate: false,
           isCompBinder: false,
           isCompUsbflash: false,
+          isCompVhs: false,
           isCompDiscprint: true,
           isCompEmail: false
         };
@@ -95,6 +115,7 @@ import {
           isCompLaminate: false,
           isCompBinder: false,
           isCompUsbflash: false,
+          isCompVhs: false,
           isCompDiscprint: false,
           isCompEmail: true
         };

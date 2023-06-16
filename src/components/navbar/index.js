@@ -29,6 +29,7 @@ import {
   CompLaminate,
   CompBinder,
   CompUsbflash,
+  CompVhs,
   CompDiscprint,
   CompEmail
 } from "../../constants/actions/comp";
@@ -72,6 +73,7 @@ const Header = () => {
     const handleClickLaminate = () => { dispatch(CompLaminate()); }
     const handleClickBinder = () => { dispatch(CompBinder()); }
     const handleClickUsbflash = () => { dispatch(CompUsbflash()); }
+    const handleClickVhs = () => { dispatch(CompVhs()); }
     const handleClickDiscprint = () => { dispatch(CompDiscprint()); }
     const handleClickEmail = () => { dispatch(CompEmail()); }
 
@@ -282,6 +284,11 @@ const Header = () => {
               <NavDropdown.Item onClick={() => setNavExpanded(false)}>
                 <HashLink smooth to="/comp#component" style={{ color: "#000" }}>
                   <h6 onClick={handleClickUsbflash}>Запис цифрових носіїв</h6>
+                </HashLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink smooth to="/comp#component" style={{ color: "#000" }}>
+                  <h6 onClick={handleClickVhs}>Оцифровка відеокасет</h6>
                 </HashLink>
               </NavDropdown.Item>
               <NavDropdown.Item onClick={() => setNavExpanded(false)}>
