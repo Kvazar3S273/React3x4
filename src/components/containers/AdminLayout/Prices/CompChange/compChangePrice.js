@@ -11,6 +11,7 @@ import {
   faEnvelopeOpenText,
   faCopy,
   faPalette,
+  faVideoCamera
 } from "@fortawesome/free-solid-svg-icons";
 import XeroxEditPrice from "./xeroxEditPrice";
 import BlackPrintEditPrice from "./blackPrintEditPrice";
@@ -21,6 +22,7 @@ import BinderEditPrice from "./binderEditPrice";
 import UsbFlashEditPrice from "./usbFlashEditPrice";
 import DiscprintEditPrice from "./discprintEditPrice";
 import EmailEditPrice from "./emailEditPrice";
+import VhsEditPrice from "./vhsEditPrice";
 
 const CompChangePrice = () => {
   const [xeroxEdit, setXeroxEdit] = useState(false);
@@ -30,6 +32,7 @@ const CompChangePrice = () => {
   const [laminateEdit, setLaminateEdit] = useState(false);
   const [binderEdit, setBinderEdit] = useState(false);
   const [usbFlashEdit, setUsbFlashEdit] = useState(false);
+  const [usbVhsEdit, setVhsEdit] = useState(false);
   const [discprintEdit, setDiscprintEdit] = useState(false);
   const [emailEdit, setEmailEdit] = useState(false);
 
@@ -44,6 +47,7 @@ const CompChangePrice = () => {
     setLaminateEdit(false);
     setBinderEdit(false);
     setUsbFlashEdit(false);
+    setVhsEdit(false);
     setDiscprintEdit(false);
     setEmailEdit(false);
   };
@@ -55,6 +59,7 @@ const CompChangePrice = () => {
     setLaminateEdit(false);
     setBinderEdit(false);
     setUsbFlashEdit(false);
+    setVhsEdit(false);
     setDiscprintEdit(false);
     setEmailEdit(false);
   };
@@ -66,6 +71,7 @@ const CompChangePrice = () => {
     setLaminateEdit(false);
     setBinderEdit(false);
     setUsbFlashEdit(false);
+    setVhsEdit(false);
     setDiscprintEdit(false);
     setEmailEdit(false);
   };
@@ -77,6 +83,7 @@ const CompChangePrice = () => {
     setLaminateEdit(false);
     setBinderEdit(false);
     setUsbFlashEdit(false);
+    setVhsEdit(false);
     setDiscprintEdit(false);
     setEmailEdit(false);
   };
@@ -88,6 +95,7 @@ const CompChangePrice = () => {
     setLaminateEdit(true);
     setBinderEdit(false);
     setUsbFlashEdit(false);
+    setVhsEdit(false);
     setDiscprintEdit(false);
     setEmailEdit(false);
   };
@@ -99,6 +107,7 @@ const CompChangePrice = () => {
     setLaminateEdit(false);
     setBinderEdit(true);
     setUsbFlashEdit(false);
+    setVhsEdit(false);
     setDiscprintEdit(false);
     setEmailEdit(false);
   };
@@ -110,6 +119,19 @@ const CompChangePrice = () => {
     setLaminateEdit(false);
     setBinderEdit(false);
     setUsbFlashEdit(true);
+    setVhsEdit(false);
+    setDiscprintEdit(false);
+    setEmailEdit(false);
+  };
+  const handleClickVhsEdit = (event) => {
+    setXeroxEdit(false);
+    setBlackPrintEdit(false);
+    setColorPrintEdit(false);
+    setScanEdit(false);
+    setLaminateEdit(false);
+    setBinderEdit(false);
+    setUsbFlashEdit(false);
+    setVhsEdit(true);
     setDiscprintEdit(false);
     setEmailEdit(false);
   };
@@ -121,6 +143,7 @@ const CompChangePrice = () => {
     setLaminateEdit(false);
     setBinderEdit(false);
     setUsbFlashEdit(false);
+    setVhsEdit(false);
     setDiscprintEdit(true);
     setEmailEdit(false);
   };
@@ -132,6 +155,7 @@ const CompChangePrice = () => {
     setLaminateEdit(false);
     setBinderEdit(false);
     setUsbFlashEdit(false);
+    setVhsEdit(false);
     setDiscprintEdit(false);
     setEmailEdit(true);
   };
@@ -343,6 +367,34 @@ const CompChangePrice = () => {
             {/* Картка 8 */}
             <div
               className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
+              onClick={handleClickVhsEdit}
+            >
+              <HashLink smooth to={"#more"}>
+                <div className="row">
+                  <div className="col-md-3">
+                    <i
+                      className="d-flex justify-content-center align-middle mt-1"
+                      style={{ fontSize: "2.5em", color: "#000" }}
+                    >
+                      <FontAwesomeIcon icon={faVideoCamera} />
+                    </i>
+                  </div>
+                  <div className="col-md-9">
+                    
+                    <div className="d-none d-sm-block text-center text-dark">
+                      <h5>Оцифровка VHS</h5>
+                    </div>
+                    <div className="d-block d-sm-none text-center text-dark">
+                      <h6>Оцифровка VHS</h6>
+                    </div>
+                  </div>
+                </div>
+              </HashLink>
+            </div>
+
+            {/* Картка 9 */}
+            <div
+              className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
               onClick={handleClickDiscprintEdit}
             >
               <HashLink smooth to={"#more"}>
@@ -368,7 +420,7 @@ const CompChangePrice = () => {
               </HashLink>
             </div>
 
-            {/* Картка 9 */}
+            {/* Картка 10 */}
             <div
               className="card-price col-md-3 col-sm-5 m-3 p-2 border bg-info rounded"
               onClick={handleClickEmailEdit}
@@ -405,6 +457,7 @@ const CompChangePrice = () => {
           {laminateEdit && <LaminateEditPrice />}
           {binderEdit && <BinderEditPrice />}
           {usbFlashEdit && <UsbFlashEditPrice />}
+          {usbVhsEdit && <VhsEditPrice />}
           {discprintEdit && <DiscprintEditPrice />}
           {emailEdit && <EmailEditPrice />}
         </div>

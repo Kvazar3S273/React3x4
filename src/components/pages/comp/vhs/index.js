@@ -44,13 +44,14 @@ const Vhs = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {/* {listvhses &&
+                  
+                  {listvhses &&
                     listvhses.map((item) => (
                       <tr key={item.id}>
                         <td> {item.service} </td>
                         <td> {item.price} </td>
                       </tr>
-                    ))} */}
+                    ))}
                 </tbody>
               </table>
             </div>

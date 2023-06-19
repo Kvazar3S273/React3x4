@@ -128,7 +128,7 @@ const ServiceCompCards = () => {
             <HashLink smooth to={'/comp#component'} style={{color:"#000"}}>
               <div className="card" >
                 <img
-                  src="/images/services/comp/comp5.png"
+                  src="/images/services/comp/comp8.png"
                   className="card-img-top"
                   alt="Оцифровка відеокасет"
                 />
