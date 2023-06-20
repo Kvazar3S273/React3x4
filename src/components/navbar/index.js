@@ -9,6 +9,10 @@ import { HashLink } from 'react-router-hash-link';
 import { LOG_OUT } from '../../constants/actionTypes';
 import { useNavigate } from "react-router-dom";
 import { logoutservice } from '../../services/logout.service';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLock
+} from "@fortawesome/free-solid-svg-icons";
 
 import { 
   PhotoFnd, 
@@ -416,7 +420,8 @@ const Header = () => {
             {!isAuth ? (
               <Nav onClick={() => setNavExpanded(false)}>
                 <Link className="nav-link" to="/login">
-                  Вхід
+                  {/* Вхід */}
+                  <i> <FontAwesomeIcon icon={faLock} /></i>
                 </Link>
                 {/* <Link className="nav-link" to="/register">
                   Реєстрація

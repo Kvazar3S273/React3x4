@@ -52,6 +52,7 @@ const LoginPage = () => {
     <div className="row">
       <div className="offset-md-4 col-md-4">
         <h2 className="text-center mt-3">Вхід на сайт</h2>
+        <p className="text-center">(для адміністратора)</p>
 
         <Formik
           initialValues={initState}
@@ -60,13 +61,13 @@ const LoginPage = () => {
         >
           <Form>
             <MyTextInput 
-              label="Електронна пошта" 
+              label="Login" 
               id="email" 
               name="email" 
               type="email" />
 
             <MyTextInput
-              label="Пароль"
+              label="Password"
               id="password"
               name="password"
               type="password" />
@@ -74,7 +75,7 @@ const LoginPage = () => {
             <input
               type="submit"
               className="btn btn-primary mt-4"
-              value="Вхід"
+              value="          Enter          "
             ></input>
           </Form>
         </Formik>

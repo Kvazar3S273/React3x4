@@ -92,6 +92,29 @@ const ServiceCards = () => {
           <div className="col-9 col-sm-5 col-md-3 m-2 p-2 border bg-light rounded ">
             <div className="card">
               <img
+                src="/images/slider/img6.png"
+                className="card-img-top"
+                alt="Нанесення фото"
+              />
+              <div className="card-body">
+                <h5 className="card-title text-center">Оцифровка касет</h5>
+                <p className="card-text">
+                  Перезапис <br />
+                  відеокасет <br />
+                  VHS <br />
+                  miniDV <br />
+                  на флешку
+                </p>
+                <Link aria-current="page" to="/comp">
+                  <button type="button" class="btn btn-primary">Детальніше...</button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          {/* Картка 5 */}
+          <div className="col-9 col-sm-5 col-md-3 m-2 p-2 border bg-light rounded ">
+            <div className="card">
+              <img
                 src="/images/slider/img4.png"
                 className="card-img-top"
                 alt="Нанесення фото"
@@ -111,7 +134,7 @@ const ServiceCards = () => {
               </div>
             </div>
           </div>
-          {/* Картка 5 */}
+          {/* Картка 6 */}
           <div className="col-9 col-sm-5 col-md-3 m-2 p-2 border bg-light rounded ">
             <div className="card">
               <img
@@ -122,9 +145,7 @@ const ServiceCards = () => {
               <div className="card-body">
                 <h5 className="card-title text-center">Продаж</h5>
                 <p className="card-text">
-                  Фоторамки
-                  <br />
-                  Фотоальбоми <br />
+                  Фоторамки, альбоми <br />
                   Батарейки <br />
                   Диски <br />
                   Канцтовари <br />

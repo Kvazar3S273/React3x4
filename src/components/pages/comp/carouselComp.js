@@ -30,6 +30,12 @@ const CarouselComp = () => {
           data-bs-slide-to="2"
           aria-label="Slide 3"
         ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselBasicExample"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
       </div>
 
       <div className="carousel-inner">
@@ -88,11 +94,11 @@ const CarouselComp = () => {
             <div className="row">
               {/* Є картинка на великих, прихована тільки на sm */}
               <div className="d-sm-none d-none d-md-block">
-                <img src="/images/slider/cimg2.png" style={{ width: "60%" }} />
+                <img src="/images/slider/cimg2.png" style={{ width: "50%" }} />
               </div>
               {/* Є картинка тільки на sm */}
               <div className="d-none d-sm-block d-md-none">
-                <img src="/images/slider/cimg2.png" style={{ width: "50%" }} />
+                <img src="/images/slider/cimg2.png" style={{ width: "45%" }} />
               </div>
               {/* Є картинка тільки на xs */}
               <div className="d-block d-sm-none">
@@ -130,11 +136,11 @@ const CarouselComp = () => {
             <div className="row">
               {/* Є картинка на великих, прихована тільки на sm */}
               <div className="d-sm-none d-none d-md-block">
-                <img src="/images/slider/cimg3.png" style={{ width: "60%" }} />
+                <img src="/images/slider/cimg3.png" style={{ width: "50%" }} />
               </div>
               {/* Є картинка тільки на sm */}
               <div className="d-none d-sm-block d-md-none">
-                <img src="/images/slider/cimg3.png" style={{ width: "50%" }} />
+                <img src="/images/slider/cimg3.png" style={{ width: "45%" }} />
               </div>
               {/* Є картинка тільки на xs */}
               <div className="d-block d-sm-none">
@@ -156,6 +162,48 @@ const CarouselComp = () => {
             </div>
           </div>
         </div>
+
+        {/* Слайд 4 */}
+        <div className="carousel-item">
+          <img
+            src="/images/slider/bg6.jpg"
+            className="d-block w-100"
+            alt="Backgroung slide 3"
+          />
+          <div
+            className="carousel-caption"
+            style={{ textShadow: "4px 4px 10px #000" }}
+          >
+            <div className="row">
+              {/* Є картинка на великих, прихована тільки на sm */}
+              <div className="d-sm-none d-none d-md-block">
+                <img src="/images/slider/img7.png" style={{ width: "50%" }} />
+              </div>
+              {/* Є картинка тільки на sm */}
+              <div className="d-none d-sm-block d-md-none">
+                <img src="/images/slider/img7.png" style={{ width: "45%" }} />
+              </div>
+              {/* Є картинка тільки на xs */}
+              <div className="d-block d-sm-none">
+                <img src="/images/slider/img7.png" style={{ width: "40%" }} />
+              </div>
+
+              {/*Заголовок і опис на всіх, крім xs */}
+              <div className="d-none d-sm-block">
+                <h2>Оцифровка</h2>
+                <p>Перезапис відеокасет VHS, miniDV <br />
+                    на комп'ютер, збереження на флешку...</p>
+              </div>
+              {/*Лише заголовок тільки на xs */}
+              <div className="d-block d-sm-none">
+                <h4>Оцифровка</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
       </div>
       {/*<!-- Inner -->*/}
 
