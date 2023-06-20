@@ -133,7 +133,7 @@ const Visitcard = () => {
               <div className="col-8 col-sm-8 col-md-8 col-lg-8 p-5">
                 <a
                   // href="http://localhost:5000/api/files/getfile/prices.xlsx"
-                  href="https://hologram-it.tk/api/files/getfile/prices.xlsx"
+                  href="https://3x4.com.ua/api/files/getfile/prices.xlsx"
                   target="_blank"
                 >
                   <div className="row">
