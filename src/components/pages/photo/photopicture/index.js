@@ -37,6 +37,27 @@ const Photopicture = () => {
 
   }
 
+  const openFileSelector = () => {
+    const input = document.createElement("input");
+    input.type = "file";
+    // input.accept = "image/*";
+    input.onchange = handleFileSelect();
+    input.click();
+  }
+
+  const handleFileSelect = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const img = document.getElementById("selectedImage");
+        img.src = e.target.result;
+        img.style.display = "block";
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
   const zoomInProperties = {
     indicators: true,
     scale: 1.4,
@@ -107,24 +128,84 @@ const Photopicture = () => {
               <div className="col-md-1"></div>
               <div className="col-md-10">
                 <h3 className="text-center">
-                  Як буде виглядати картина в інтер'єрі
+                  Цікаво як буде виглядати картина в інтер'єрі?
                 </h3>
-                <div className="container-fluid bg-1">
-                  <img
-                    id="mainImage"
-                    className="photo-service mb-2"
-                    src={interior2}
-                    alt="Інтер'єр2"
-                  />
-                  <img className="img-2" src={pictureUser} alt="Картина" />
 
-                  <div className="row">
+                {/* Вибір зображення */}
+                <div className="row">
+                  <div className="col-md-1"></div>
+                  <div className="col-md-10">
+                    <div id="imageField" onclick={openFileSelector}>
+                      <img id="selectedImage" src="#" alt="Selected Image" />
+                      <h2 className="text-center">
+                        Крок 1: Завантажте зображення
+                      </h2>
+                    </div>
+                  </div>
+                  <div className="col-md-1"></div>
+                </div>
+
+                {/* Вибір розміру картини */}
+                <div className="row">
+                  <div className="col-md-1"></div>
+                  <div className="col-md-10">
+                    <div
+                      class="m-4 p-5 text-white rounded"
+                      style={{ background: "#66A586 " }}
+                    >
+                      <h2 className="text-center mb-3">
+                        Крок 2: Виберіть розмір картини
+                      </h2>
+
+  
+                      <div className="row mt-3 me-auto">
+                        <div className="col-md-2 col-2">
+                          <button type="button" class="btn btn-lg btn-outline-success">
+                            20x30
+                          </button>
+                        </div>
+
+                        <div className="col-md-2 col-2">
+                          <button type="button" class="btn btn-lg btn-outline-success">
+                            30x40
+                          </button>
+                        </div>
+
+                        <div className="col-md-2 col-2">
+                          <button type="button" class="btn btn-lg btn-outline-success">
+                            40x60
+                          </button>
+                        </div>
+                        <div className="col-md-2 col-2">
+                          <button type="button" class="btn btn-lg btn-outline-success">
+                            50x70
+                          </button>
+                        </div>
+                        <div className="col-md-2 col-2">
+                          <button type="button" class="btn btn-lg btn-outline-success">
+                            60x90
+                          </button>
+                        </div>
+                        <div className="col-md-2 col-2">
+                          <button type="button" class="btn btn-lg btn-outline-success">
+                            90x120
+                          </button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div className="col-md-1"></div>
+                </div>
+
+                <h2 className="text-center">Крок 3: Виберіть інтер'єр</h2>
+
+                <div className="row">
                     <div className="col-md-2 col-2">
                       <img
                         className="thumbnail"
                         src={interior1}
                         alt="Інтер'єр1"
-                        style={{ cursor: "pointer" }}
                         // onClick={changeMainImage(this)}
                       />
                     </div>
@@ -133,7 +214,6 @@ const Photopicture = () => {
                         className="thumbnail"
                         src={interior2}
                         alt="Інтер'єр2"
-                        style={{ cursor: "pointer" }}
                       />
                     </div>
                     <div className="col-md-2  col-2">
@@ -141,7 +221,6 @@ const Photopicture = () => {
                         className="thumbnail"
                         src={interior3}
                         alt="Інтер'єр3"
-                        style={{ cursor: "pointer" }}
                       />
                     </div>
                     <div className="col-md-2  col-2">
@@ -149,7 +228,6 @@ const Photopicture = () => {
                         className="thumbnail"
                         src={interior4}
                         alt="Інтер'єр4"
-                        style={{ cursor: "pointer" }}
                       />
                     </div>
                     <div className="col-md-2  col-2">
@@ -157,7 +235,6 @@ const Photopicture = () => {
                         className="thumbnail"
                         src={interior5}
                         alt="Інтер'єр5"
-                        style={{ cursor: "pointer" }}
                       />
                     </div>
                     <div className="col-md-2  col-2">
@@ -165,10 +242,22 @@ const Photopicture = () => {
                         className="thumbnail"
                         src={interior6}
                         alt="Інтер'єр6"
-                        style={{ cursor: "pointer" }}
                       />
                     </div>
                   </div>
+
+                <div className="container-fluid bg-1">
+                  <img
+                    id="mainImage"
+                    className="photo-service mt-2"
+                    src={interior2}
+                    alt="Інтер'єр2"
+                  />
+                  <img className="img-2" src={pictureUser} alt="Картина" />
+
+                  
+
+
                 </div>
               </div>
               <div className="col-md-1"></div>

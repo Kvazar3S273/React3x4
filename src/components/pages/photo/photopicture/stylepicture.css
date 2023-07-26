@@ -7,7 +7,7 @@
   
   .img-2 {
     position: absolute;
-    width: 35%;
+    width: 15%;
     top: 20%;
     left: 40%;
     transform: translate(-50%, -50%);
@@ -18,4 +18,27 @@
     width: 100%;
     padding-right: 10px;
     cursor: pointer;
+  }
+
+  #imageField {
+    width: 100%;
+    height: 10vw;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #selectedImage {
+    height: 80%;
+    max-width: 100%;
+    display: none;
+  }
+
+  .btn {
+    background: #52846B;
+    margin: 1vw;
+    width: 7vw;
+    height: 7vh;
   }
