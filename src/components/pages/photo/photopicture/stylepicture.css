@@ -20,9 +20,10 @@
     cursor: pointer;
   }
 
+  
   #imageField {
-    width: 100%;
-    height: 10vw;
+    /* width: 100%; */
+    /* height: 10vw; */
     border: 1px solid #ccc;
     cursor: pointer;
     display: flex;
@@ -37,8 +38,8 @@
   }
 
   .btn {
-    background: #52846B;
-    margin: 1vw;
-    width: 7vw;
-    height: 7vh;
+    background: #C2DBCF;
+    /* margin: 1vw; */
+    /* width: 7vw; */
+    /* height: 7vh; */
   }

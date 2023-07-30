@@ -127,19 +127,24 @@ const Photopicture = () => {
             <div className="row">
               <div className="col-md-1"></div>
               <div className="col-md-10">
-                <h3 className="text-center">
-                  Цікаво як буде виглядати картина в інтер'єрі?
+                <h3 className="text-center ">
+                  Цікаво як виглядатиме картина в інтер'єрі?
                 </h3>
 
                 {/* Вибір зображення */}
-                <div className="row">
+                <div className="row mt-3">
                   <div className="col-md-1"></div>
-                  <div className="col-md-10">
-                    <div id="imageField" onclick={openFileSelector}>
+                  <div className="col-md-10 ">
+                    <div
+                      class="m-4 p-5 rounded"
+                      style={{ background: "#C2DBCF " }}
+                      id="imageField"
+                      onclick={openFileSelector}
+                    >
                       <img id="selectedImage" src="#" alt="Selected Image" />
-                      <h2 className="text-center">
+                      <h3 className="text-center mt-5 mb-5">
                         Крок 1: Завантажте зображення
-                      </h2>
+                      </h3>
                     </div>
                   </div>
                   <div className="col-md-1"></div>
@@ -153,98 +158,124 @@ const Photopicture = () => {
                       class="m-4 p-5 text-white rounded"
                       style={{ background: "#66A586 " }}
                     >
-                      <h2 className="text-center mb-3">
+                      <h3 className="text-center mb-3">
                         Крок 2: Виберіть розмір картини
-                      </h2>
+                      </h3>
 
-  
-                      <div className="row mt-3 me-auto">
-                        <div className="col-md-2 col-2">
-                          <button type="button" class="btn btn-lg btn-outline-success">
-                            20x30
-                          </button>
+                      <div className="row justify-content-center mt-3">
+                        <div className="col-lg-2 col-md-3 col-sm-4 col-4 m-2">
+                          <div className="row justify-content-center">
+                            <button
+                              type="button"
+                              class="btn btn-lg btn-outline-success text-dark"
+                            >
+                              20x30
+                            </button>
+                          </div>
                         </div>
-
-                        <div className="col-md-2 col-2">
-                          <button type="button" class="btn btn-lg btn-outline-success">
-                            30x40
-                          </button>
+                        <div className="col-lg-2 col-md-3 col-sm-4 col-4 m-2">
+                          <div className="row justify-content-center">
+                            <button
+                              type="button"
+                              class="btn btn-lg btn-outline-success text-dark"
+                            >
+                              30x40
+                            </button>
+                          </div>
                         </div>
-
-                        <div className="col-md-2 col-2">
-                          <button type="button" class="btn btn-lg btn-outline-success">
-                            40x60
-                          </button>
+                        <div className="col-lg-2 col-md-3 col-sm-4 col-4 m-2">
+                          <div className="row justify-content-center">
+                            <button
+                              type="button"
+                              class="btn btn-lg btn-outline-success text-dark"
+                            >
+                              40x60
+                            </button>
+                          </div>
                         </div>
-                        <div className="col-md-2 col-2">
-                          <button type="button" class="btn btn-lg btn-outline-success">
-                            50x70
-                          </button>
+                        <div className="col-lg-2 col-md-3 col-sm-4 col-4 m-2">
+                          <div className="row justify-content-center">
+                            <button
+                              type="button"
+                              class="btn btn-lg btn-outline-success text-dark"
+                            >
+                              50x70
+                            </button>
+                          </div>
                         </div>
-                        <div className="col-md-2 col-2">
-                          <button type="button" class="btn btn-lg btn-outline-success">
-                            60x90
-                          </button>
+                        <div className="col-lg-2 col-md-3 col-sm-4 col-4 m-2">
+                          <div className="row justify-content-center">
+                            <button
+                              type="button"
+                              class="btn btn-lg btn-outline-success text-dark"
+                            >
+                              60x90
+                            </button>
+                          </div>
                         </div>
-                        <div className="col-md-2 col-2">
-                          <button type="button" class="btn btn-lg btn-outline-success">
-                            90x120
-                          </button>
-                        </div>
+                        {/* <div className="col-lg-2 col-md-3 col-sm-4 col-4 m-2">
+                          <div className="row justify-content-center">
+                            <button
+                              type="button"
+                              class="btn btn-lg btn-outline-success text-dark"
+                            >
+                              90x120
+                            </button>
+                          </div>
+                        </div> */}
                       </div>
-
                     </div>
                   </div>
                   <div className="col-md-1"></div>
                 </div>
 
-                <h2 className="text-center">Крок 3: Виберіть інтер'єр</h2>
+                <h3 className="text-center mb-3">Крок 3: Виберіть інтер'єр</h3>
 
                 <div className="row">
-                    <div className="col-md-2 col-2">
-                      <img
-                        className="thumbnail"
-                        src={interior1}
-                        alt="Інтер'єр1"
-                        // onClick={changeMainImage(this)}
-                      />
-                    </div>
-                    <div className="col-md-2  col-2">
-                      <img
-                        className="thumbnail"
-                        src={interior2}
-                        alt="Інтер'єр2"
-                      />
-                    </div>
-                    <div className="col-md-2  col-2">
-                      <img
-                        className="thumbnail"
-                        src={interior3}
-                        alt="Інтер'єр3"
-                      />
-                    </div>
-                    <div className="col-md-2  col-2">
-                      <img
-                        className="thumbnail"
-                        src={interior4}
-                        alt="Інтер'єр4"
-                      />
-                    </div>
-                    <div className="col-md-2  col-2">
-                      <img
-                        className="thumbnail"
-                        src={interior5}
-                        alt="Інтер'єр5"
-                      />
-                    </div>
-                    <div className="col-md-2  col-2">
-                      <img
-                        className="thumbnail"
-                        src={interior6}
-                        alt="Інтер'єр6"
-                      />
-                    </div>
+                  <div className="col-md-2 col-2">
+                    <img
+                      className="thumbnail"
+                      src={interior1}
+                      alt="Інтер'єр1"
+                      // onClick={changeMainImage(this)}
+                    />
                   </div>
+                  <div className="col-md-2  col-2">
+                    <img
+                      className="thumbnail"
+                      src={interior2}
+                      alt="Інтер'єр2"
+                    />
+                  </div>
+                  <div className="col-md-2  col-2">
+                    <img
+                      className="thumbnail"
+                      src={interior3}
+                      alt="Інтер'єр3"
+                    />
+                  </div>
+                  <div className="col-md-2  col-2">
+                    <img
+                      className="thumbnail"
+                      src={interior4}
+                      alt="Інтер'єр4"
+                    />
+                  </div>
+                  <div className="col-md-2  col-2">
+                    <img
+                      className="thumbnail"
+                      src={interior5}
+                      alt="Інтер'єр5"
+                    />
+                  </div>
+                  <div className="col-md-2  col-2">
+                    <img
+                      className="thumbnail"
+                      src={interior6}
+                      alt="Інтер'єр6"
+                    />
+                  </div>
+                </div>
 
                 <div className="container-fluid bg-1">
                   <img
@@ -254,10 +285,6 @@ const Photopicture = () => {
                     alt="Інтер'єр2"
                   />
                   <img className="img-2" src={pictureUser} alt="Картина" />
-
-                  
-
-
                 </div>
               </div>
               <div className="col-md-1"></div>
