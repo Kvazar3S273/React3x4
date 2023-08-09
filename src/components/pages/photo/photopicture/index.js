@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import "react-slideshow-image/dist/styles.css";
 import { Slide, Zoom } from "react-slideshow-image";
 import "../style.css";
@@ -10,10 +10,47 @@ import { GetPhotopictures } from "../../../../constants/actions/photoActions/pho
 //https://www.npmjs.com/package/react-slideshow-image
 
 const Photopicture = () => {
+  const initCurrentPicture = {
+    nameImage: "images/services/photo/interiors/1.jpg",
+    locationTop: "25%",
+    locationLeft: "60%",
+    boxShadow: "-3px 1px 7px 1px rgba(17, 24, 16, 0.5)"
+  };
+
   const dispatch = useDispatch();
+  const [currentPicture, SetCurrentPicture] = useState(initCurrentPicture);
+  const [selectImage, setSelectImage] = useState(null);
+  const hiddenFileInput = useRef(null);
+
   const { listphotopictures } = useSelector((state) => state.photopicture);
+  const handleClick = event => {
+    hiddenFileInput.current.click();
+  };
+  const handleChange = event => {
+    const fileUploaded = event.target.files[0];
+    console.log("select", fileUploaded);
+    const objectURL = URL.createObjectURL(fileUploaded);
+    setSelectImage(objectURL);
+  };
+
   useEffect(() => {
     dispatch(GetPhotopictures());
+    // window.addEventListener('error', e => {
+    //   if (e.message === 'ResizeObserver loop completed with undelivered notifications.' || e.message === 'Script error.') {
+    //     const resizeObserverErrDiv = document.getElementById(
+    //       'webpack-dev-server-client-overlay-div'
+    //     )
+    //     const resizeObserverErr = document.getElementById(
+    //       'webpack-dev-server-client-overlay'
+    //     )
+    //     if (resizeObserverErr) {
+    //       resizeObserverErr.setAttribute('style', 'display: none');
+    //     }
+    //     if (resizeObserverErrDiv) {
+    //       resizeObserverErrDiv.setAttribute('style', 'display: none');
+    //     }
+    //   }
+    // })
   }, []);
 
   const images = [
@@ -22,46 +59,95 @@ const Photopicture = () => {
     "images/services/photo/photopicture3.jpg",
   ];
 
-  const interior1 = "images/services/photo/interiors/1.jpg";
-  const interior2 = "images/services/photo/interiors/2.jpg";
-  const interior3 = "images/services/photo/interiors/3.jpg";
-  const interior4 = "images/services/photo/interiors/4.jpg";
-  const interior5 = "images/services/photo/interiors/5.jpg";
-  const interior6 = "images/services/photo/interiors/6.jpg";
-  const pictureUser = "images/services/photo/interiors/picture.jpg";
+  const imagess = [
+    {
+      nameImage: "images/services/photo/interiors/1.jpg",
+      locationTop: "25%",
+      locationLeft: "60%",
+      boxShadow: "-3px 1px 7px 1px rgba(17, 24, 16, 0.5)"
+    },
+    {
+      nameImage: "images/services/photo/interiors/2.jpg",
+      locationTop: "25%",
+      locationLeft: "40%",
+      boxShadow: "-3px 1px 7px 1px rgba(17, 24, 16, 0.5)"
+    },
+    {
+      nameImage: "images/services/photo/interiors/3.jpg",
+      locationTop: "30%",
+      locationLeft: "52%",
+      boxShadow: "0px 3px 7px 1px rgba(17, 24, 16, 0.5)"
+    },
+    {
+      nameImage: "images/services/photo/interiors/4.jpg",
+      locationTop: "32%",
+      locationLeft: "52%",
+      boxShadow: "3px 1px 7px 1px rgba(17, 24, 16, 0.5)"
+    },
+    {
+      nameImage: "images/services/photo/interiors/5.jpg",
+      locationTop: "35%",
+      locationLeft: "36%",
+      boxShadow: "0px 3px 7px 1px rgba(17, 24, 16, 0.5)"
+    },
+    {
+      nameImage: "images/services/photo/interiors/6.jpg",
+      locationTop: "40%",
+      locationLeft: "46%",
+      boxShadow: "3px 1px 7px 1px rgba(17, 24, 16, 0.5)"
+    },
+  ];
+  //const interior2 = "images/services/photo/interiors/2.jpg";
+  //const pictureUser = "images/services/photo/interiors/picture.jpg";
 
-  const changeMainImage = (thumbnail) => {
-    var mainImage = document.getElementById('mainImage');
-    mainImage.src = thumbnail.src;
-    mainImage.alt = thumbnail.alt;
+  const buttonsItems = [
+    { title: "20x30" },
+    { title: "30x40" },
+    { title: "40x60" },
+    { title: "50x70" },
+    { title: "60x90" }
+  ];
 
-  }
+  // const interior1 = "images/services/photo/interiors/1.jpg";
+  // const interior2 = "images/services/photo/interiors/2.jpg";
+  // const interior3 = "images/services/photo/interiors/3.jpg";
+  // const interior4 = "images/services/photo/interiors/4.jpg";
+  // const interior5 = "images/services/photo/interiors/5.jpg";
+  // const interior6 = "images/services/photo/interiors/6.jpg";
+  // const pictureUser = "images/services/photo/interiors/picture.jpg";
 
-  const openFileSelector = () => {
-    const input = document.createElement("input");
-    input.type = "file";
-    // input.accept = "image/*";
-    input.onchange = handleFileSelect();
-    input.click();
-  }
+  // const changeMainImage = (thumbnail) => {
+  //   var mainImage = document.getElementById('mainImage');
+  //   mainImage.src = thumbnail.src;
+  //   mainImage.alt = thumbnail.alt;
 
-  const handleFileSelect = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        const img = document.getElementById("selectedImage");
-        img.src = e.target.result;
-        img.style.display = "block";
-      };
-      reader.readAsDataURL(file);
-    }
-  }
+  // }
+
+  // const openFileSelector = () => {
+  //   const input = document.createElement("input");
+  //   input.type = "file";
+  //   // input.accept = "image/*";
+  //   input.onchange = handleFileSelect();
+  //   input.click();
+  // }
+
+  // const handleFileSelect = (e) => {
+  //   const file = e.target.files[0];
+  //   if (file) {
+  //     const reader = new FileReader();
+  //     reader.onload = function (e) {
+  //       const img = document.getElementById("selectedImage");
+  //       img.src = e.target.result;
+  //       img.style.display = "block";
+  //     };
+  //     reader.readAsDataURL(file);
+  //   }
+  // }
 
   const zoomInProperties = {
     indicators: true,
     scale: 1.4,
-    duration: 3000,
+    duration: 3000
   };
   return (
     <div className="row mt-3 mb-3">
@@ -136,15 +222,31 @@ const Photopicture = () => {
                   <div className="col-md-1"></div>
                   <div className="col-md-10 ">
                     <div
-                      class="m-4 p-5 rounded"
-                      style={{ background: "#C2DBCF " }}
+                      class="m-4 p-0 rounded"
+                      style={{ background: "#59BAC7 " }}
+                      // style={{ background: "#C2DBCF " }}
                       id="imageField"
-                      onclick={openFileSelector}
+                      onClick={handleClick}
                     >
-                      <img id="selectedImage" src="#" alt="Selected Image" />
-                      <h3 className="text-center mt-5 mb-5">
-                        Крок 1: Завантажте зображення
-                      </h3>
+                      {/* <img id="selectedImage" src="#" alt="Selected Image" /> */}
+
+                      {selectImage ? (
+                        <img
+                          src={selectImage}
+                          className="img-fluid w-100 "
+                          alt="uploadimage"
+                        ></img>
+                      ) : (
+                        <h3 className="text-center mt-5 mb-5">
+                          Крок 1: Завантажте зображення
+                        </h3>
+                      )}
+                      <input
+                        type="file"
+                        ref={hiddenFileInput}
+                        onChange={handleChange}
+                        style={{ display: "none" }}
+                      />
                     </div>
                   </div>
                   <div className="col-md-1"></div>
@@ -155,74 +257,28 @@ const Photopicture = () => {
                   <div className="col-md-1"></div>
                   <div className="col-md-10">
                     <div
-                      class="m-4 p-5 text-white rounded"
+                      class="m-1 p-5 text-white rounded"
                       style={{ background: "#66A586 " }}
                     >
-                      <h3 className="text-center mb-3">
+                      <h3 className="text-center">
                         Крок 2: Виберіть розмір картини
                       </h3>
 
+                      {/*Buttons for select size*/}
+
                       <div className="row justify-content-center mt-3">
-                        <div className="col-lg-2 col-md-3 col-sm-4 col-4 m-2">
-                          <div className="row justify-content-center">
-                            <button
-                              type="button"
-                              class="btn btn-lg btn-outline-success text-dark"
-                            >
-                              20x30
-                            </button>
+                        {buttonsItems.map((item) => (
+                          <div className="col-lg-2 col-md-3 col-sm-4 col-4 m-2">
+                            <div className="row justify-content-center">
+                              <button
+                                type="button"
+                                class="btn btn-lg btn-outline-success text-dark"
+                              >
+                                {item.title}
+                              </button>
+                            </div>
                           </div>
-                        </div>
-                        <div className="col-lg-2 col-md-3 col-sm-4 col-4 m-2">
-                          <div className="row justify-content-center">
-                            <button
-                              type="button"
-                              class="btn btn-lg btn-outline-success text-dark"
-                            >
-                              30x40
-                            </button>
-                          </div>
-                        </div>
-                        <div className="col-lg-2 col-md-3 col-sm-4 col-4 m-2">
-                          <div className="row justify-content-center">
-                            <button
-                              type="button"
-                              class="btn btn-lg btn-outline-success text-dark"
-                            >
-                              40x60
-                            </button>
-                          </div>
-                        </div>
-                        <div className="col-lg-2 col-md-3 col-sm-4 col-4 m-2">
-                          <div className="row justify-content-center">
-                            <button
-                              type="button"
-                              class="btn btn-lg btn-outline-success text-dark"
-                            >
-                              50x70
-                            </button>
-                          </div>
-                        </div>
-                        <div className="col-lg-2 col-md-3 col-sm-4 col-4 m-2">
-                          <div className="row justify-content-center">
-                            <button
-                              type="button"
-                              class="btn btn-lg btn-outline-success text-dark"
-                            >
-                              60x90
-                            </button>
-                          </div>
-                        </div>
-                        {/* <div className="col-lg-2 col-md-3 col-sm-4 col-4 m-2">
-                          <div className="row justify-content-center">
-                            <button
-                              type="button"
-                              class="btn btn-lg btn-outline-success text-dark"
-                            >
-                              90x120
-                            </button>
-                          </div>
-                        </div> */}
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -232,59 +288,38 @@ const Photopicture = () => {
                 <h3 className="text-center mb-3">Крок 3: Виберіть інтер'єр</h3>
 
                 <div className="row">
-                  <div className="col-md-2 col-2">
-                    <img
-                      className="thumbnail"
-                      src={interior1}
-                      alt="Інтер'єр1"
-                      // onClick={changeMainImage(this)}
-                    />
-                  </div>
-                  <div className="col-md-2  col-2">
-                    <img
-                      className="thumbnail"
-                      src={interior2}
-                      alt="Інтер'єр2"
-                    />
-                  </div>
-                  <div className="col-md-2  col-2">
-                    <img
-                      className="thumbnail"
-                      src={interior3}
-                      alt="Інтер'єр3"
-                    />
-                  </div>
-                  <div className="col-md-2  col-2">
-                    <img
-                      className="thumbnail"
-                      src={interior4}
-                      alt="Інтер'єр4"
-                    />
-                  </div>
-                  <div className="col-md-2  col-2">
-                    <img
-                      className="thumbnail"
-                      src={interior5}
-                      alt="Інтер'єр5"
-                    />
-                  </div>
-                  <div className="col-md-2  col-2">
-                    <img
-                      className="thumbnail"
-                      src={interior6}
-                      alt="Інтер'єр6"
-                    />
-                  </div>
+                  {imagess.map((imageItem, index) => (
+                    <div className="col-md-2 col-2">
+                      <img
+                        className="thumbnail"
+                        src={imageItem.nameImage}
+                        alt={imageItem.nameImage}
+                        key={index}
+                        onClick={() => SetCurrentPicture(imageItem)}
+                      />
+                    </div>
+                  ))}
                 </div>
 
                 <div className="container-fluid bg-1">
                   <img
                     id="mainImage"
                     className="photo-service mt-2"
-                    src={interior2}
-                    alt="Інтер'єр2"
+                    src={currentPicture.nameImage}
+                    alt="Інтер'єр"
                   />
-                  <img className="img-2" src={pictureUser} alt="Картина" />
+                  {selectImage ? (
+                    <img
+                      className="img-2"
+                      src={selectImage}
+                      style={{
+                        top: currentPicture.locationTop,
+                        left: currentPicture.locationLeft,
+                        boxShadow: currentPicture.boxShadow
+                      }}
+                      alt="Картина"
+                    />
+                  ) : null}
                 </div>
               </div>
               <div className="col-md-1"></div>
