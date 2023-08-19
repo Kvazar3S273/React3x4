@@ -17,8 +17,13 @@ const Photopicture = () => {
     boxShadow: "-3px 1px 7px 1px rgba(17, 24, 16, 0.5)"
   };
 
+  const initDefaultImageSize={
+    widthSize:"15%"
+  }
+
   const dispatch = useDispatch();
   const [currentPicture, SetCurrentPicture] = useState(initCurrentPicture);
+  const [imageSize,SetImageSize]=useState(initDefaultImageSize);
   const [selectImage, setSelectImage] = useState(null);
   const hiddenFileInput = useRef(null);
 
@@ -74,8 +79,8 @@ const Photopicture = () => {
     },
     {
       nameImage: "images/services/photo/interiors/3.jpg",
-      locationTop: "30%",
-      locationLeft: "52%",
+      locationTop: "32%",
+      locationLeft: "48%",
       boxShadow: "0px 3px 7px 1px rgba(17, 24, 16, 0.5)"
     },
     {
@@ -101,48 +106,12 @@ const Photopicture = () => {
   //const pictureUser = "images/services/photo/interiors/picture.jpg";
 
   const buttonsItems = [
-    { title: "20x30" },
-    { title: "30x40" },
-    { title: "40x60" },
-    { title: "50x70" },
-    { title: "60x90" }
+    { title: "20x30", size: "4.5%" },
+    { title: "30x40", size: "8%" },
+    { title: "40x60", size: "10.5%" },
+    { title: "50x70", size: "13%" },
+    { title: "60x90", size: "15%" }
   ];
-
-  // const interior1 = "images/services/photo/interiors/1.jpg";
-  // const interior2 = "images/services/photo/interiors/2.jpg";
-  // const interior3 = "images/services/photo/interiors/3.jpg";
-  // const interior4 = "images/services/photo/interiors/4.jpg";
-  // const interior5 = "images/services/photo/interiors/5.jpg";
-  // const interior6 = "images/services/photo/interiors/6.jpg";
-  // const pictureUser = "images/services/photo/interiors/picture.jpg";
-
-  // const changeMainImage = (thumbnail) => {
-  //   var mainImage = document.getElementById('mainImage');
-  //   mainImage.src = thumbnail.src;
-  //   mainImage.alt = thumbnail.alt;
-
-  // }
-
-  // const openFileSelector = () => {
-  //   const input = document.createElement("input");
-  //   input.type = "file";
-  //   // input.accept = "image/*";
-  //   input.onchange = handleFileSelect();
-  //   input.click();
-  // }
-
-  // const handleFileSelect = (e) => {
-  //   const file = e.target.files[0];
-  //   if (file) {
-  //     const reader = new FileReader();
-  //     reader.onload = function (e) {
-  //       const img = document.getElementById("selectedImage");
-  //       img.src = e.target.result;
-  //       img.style.display = "block";
-  //     };
-  //     reader.readAsDataURL(file);
-  //   }
-  // }
 
   const zoomInProperties = {
     indicators: true,
@@ -273,6 +242,7 @@ const Photopicture = () => {
                               <button
                                 type="button"
                                 class="btn btn-lg btn-outline-success text-dark"
+                                onClick={() => SetImageSize(item.size)}
                               >
                                 {item.title}
                               </button>
@@ -315,6 +285,7 @@ const Photopicture = () => {
                       style={{
                         top: currentPicture.locationTop,
                         left: currentPicture.locationLeft,
+                        width: imageSize,
                         boxShadow: currentPicture.boxShadow
                       }}
                       alt="Картина"
