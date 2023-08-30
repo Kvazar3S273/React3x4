@@ -18,24 +18,47 @@ const Photopicture = () => {
   };
 
   const initDefaultImageSize={
-    widthSize:"15%"
+    widthSize:"15%"    
   }
 
   const dispatch = useDispatch();
   const [currentPicture, SetCurrentPicture] = useState(initCurrentPicture);
-  const [imageSize,SetImageSize]=useState(initDefaultImageSize);
+  const [imageSize, SetImageSize]=useState(initDefaultImageSize);
   const [selectImage, setSelectImage] = useState(null);
+  const [vertical, setVertical]=useState(false);
   const hiddenFileInput = useRef(null);
 
   const { listphotopictures } = useSelector((state) => state.photopicture);
   const handleClick = event => {
     hiddenFileInput.current.click();
   };
+
   const handleChange = event => {
+    const img = document.createElement('img');
     const fileUploaded = event.target.files[0];
     console.log("select", fileUploaded);
     const objectURL = URL.createObjectURL(fileUploaded);
     setSelectImage(objectURL);
+    
+
+    img.onload = ()=> {
+      console.log(`Width: ${img.width}, Height: ${img.height}`);
+
+      if (img.width < img.height) {
+        console.log(
+          `Ширина фото менша за висоту.Ваше фото вертикальне.`,
+          
+        );
+        setVertical(true);
+        console.log(`Vertical:`,vertical);
+      }
+      else  {
+        console.log(
+          `Ширина фото більша за висоту.Ваше фото горизонтальне.`,
+        );     
+      }
+      URL.revokeObjectURL(objectURL);}
+      img.src = objectURL; 
   };
 
   useEffect(() => {
@@ -282,12 +305,16 @@ const Photopicture = () => {
                     <img
                       className="img-2"
                       src={selectImage}
-                      style={{
-                        top: currentPicture.locationTop,
-                        left: currentPicture.locationLeft,
-                        width: imageSize,
-                        boxShadow: currentPicture.boxShadow
-                      }}
+                      style={vertical ?{top: currentPicture.locationTop,
+                                       left: currentPicture.locationLeft,
+                                       height:imageSize,
+                                       width:'auto'
+                                       }:
+                                       {top: currentPicture.locationTop,
+                                        left: currentPicture.locationLeft,  
+                                        width:imageSize,
+                                        height:'auto'                                      
+                                        }}
                       alt="Картина"
                     />
                   ) : null}
