@@ -6,6 +6,7 @@ import "../../photo/photopicture/stylepicture.css";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { GetPhotopictures } from "../../../../constants/actions/photoActions/photopicture";
+import { calculateNewValue } from "@testing-library/user-event/dist/utils";
 //see more here:
 //https://www.npmjs.com/package/react-slideshow-image
 
@@ -18,7 +19,7 @@ const Photopicture = () => {
   };
 
   const initDefaultImageSize={
-    widthSize:"15%"    
+    widthSize:"0%"    
   }
 
   const dispatch = useDispatch();
@@ -34,52 +35,79 @@ const Photopicture = () => {
   };
 
   const handleChange = event => {
-    const img = document.createElement('img');
+    // const img = document.createElement('img');
     const fileUploaded = event.target.files[0];
     console.log("select", fileUploaded);
     const objectURL = URL.createObjectURL(fileUploaded);
     setSelectImage(objectURL);
-    
+  };
 
+  //   img.onload = ()=> {
+  //     console.log(`Width: ${img.width}, Height: ${img.height}`);
+
+  //     if (img.width < img.height) {
+  //       console.log(
+  //         `Ширина фото менша за висоту.Ваше фото вертикальне.`,
+          
+  //       );
+  //       setVertical(true);
+  //       console.log(`Vertical:`,vertical);
+  //     }
+  //     else  {
+  //       console.log(
+  //         `Ширина фото більша за висоту.Ваше фото горизонтальне.`,
+  //       );     
+  //     }
+  //     URL.revokeObjectURL(objectURL);}
+  //     img.src = objectURL; 
+  // };
+
+  useEffect(() => {
+    dispatch(GetPhotopictures());
+
+    const img = document.createElement('img'); 
     img.onload = ()=> {
       console.log(`Width: ${img.width}, Height: ${img.height}`);
 
-      if (img.width < img.height) {
+      if (img.width < img.height ) {
         console.log(
           `Ширина фото менша за висоту.Ваше фото вертикальне.`,
           
         );
-        setVertical(true);
-        console.log(`Vertical:`,vertical);
+        setVertical(true);  
+           
       }
       else  {
         console.log(
           `Ширина фото більша за висоту.Ваше фото горизонтальне.`,
-        );     
+          
+        );  
+        setVertical(false)     
       }
-      URL.revokeObjectURL(objectURL);}
-      img.src = objectURL; 
-  };
+      console.log(`Vertical useeffect final:`,vertical);   
+      URL.revokeObjectURL(selectImage);}
+      img.src = selectImage;
 
-  useEffect(() => {
-    dispatch(GetPhotopictures());
-    // window.addEventListener('error', e => {
-    //   if (e.message === 'ResizeObserver loop completed with undelivered notifications.' || e.message === 'Script error.') {
-    //     const resizeObserverErrDiv = document.getElementById(
-    //       'webpack-dev-server-client-overlay-div'
-    //     )
-    //     const resizeObserverErr = document.getElementById(
-    //       'webpack-dev-server-client-overlay'
-    //     )
-    //     if (resizeObserverErr) {
-    //       resizeObserverErr.setAttribute('style', 'display: none');
-    //     }
-    //     if (resizeObserverErrDiv) {
-    //       resizeObserverErrDiv.setAttribute('style', 'display: none');
-    //     }
-    //   }
-    // })
-  }, []);
+
+
+
+    window.addEventListener('error', e => {
+      if (e.message === 'ResizeObserver loop completed with undelivered notifications.' || e.message === 'Script error.') {
+        const resizeObserverErrDiv = document.getElementById(
+          'webpack-dev-server-client-overlay-div'
+        )
+        const resizeObserverErr = document.getElementById(
+          'webpack-dev-server-client-overlay'
+        )
+        if (resizeObserverErr) {
+          resizeObserverErr.setAttribute('style', 'display: none');
+        }
+        if (resizeObserverErrDiv) {
+          resizeObserverErrDiv.setAttribute('style', 'display: none');
+        }
+      }
+    })
+  }, [selectImage]);
 
   const images = [
     "images/services/photo/photopicture1.jpg",
@@ -265,7 +293,7 @@ const Photopicture = () => {
                               <button
                                 type="button"
                                 class="btn btn-lg btn-outline-success text-dark"
-                                onClick={() => SetImageSize(item.size)}
+                                onClick={() => SetImageSize({widthSize:item.size})}
                               >
                                 {item.title}
                               </button>
@@ -307,13 +335,14 @@ const Photopicture = () => {
                       src={selectImage}
                       style={vertical ?{top: currentPicture.locationTop,
                                        left: currentPicture.locationLeft,
-                                       height:imageSize,
-                                       width:'auto'
+                                       height: imageSize.widthSize,
+                                       border: "2px solid #291995"
                                        }:
                                        {top: currentPicture.locationTop,
                                         left: currentPicture.locationLeft,  
-                                        width:imageSize,
-                                        height:'auto'                                      
+                                        width: imageSize.widthSize,
+                                        
+                                    
                                         }}
                       alt="Картина"
                     />

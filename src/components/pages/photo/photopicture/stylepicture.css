@@ -7,7 +7,7 @@
   
   .img-2 {
     position: absolute;
-    width: 17%;
+    /* width: 17%; */
     /* top: 20%;
     left: 40%; */
     transform: translate(-50%, -50%);
