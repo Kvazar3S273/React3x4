@@ -26,6 +26,7 @@ const Photopicture = () => {
   const [currentPicture, SetCurrentPicture] = useState(initCurrentPicture);
   const [imageSize, SetImageSize]=useState(initDefaultImageSize);
   const [selectImage, setSelectImage] = useState(null);
+  const [decrese,setDecrese]=useState("");
   const [vertical, setVertical]=useState(false);
   const hiddenFileInput = useRef(null);
 
@@ -87,27 +88,27 @@ const Photopicture = () => {
       console.log(`Vertical useeffect final:`,vertical);   
       URL.revokeObjectURL(selectImage);}
       img.src = selectImage;
+      var res = imageSize.widthSize;
+      const res2 = res.replace(/%/g, '');
+      setDecrese(res2);
 
-
-
-
-    window.addEventListener('error', e => {
-      if (e.message === 'ResizeObserver loop completed with undelivered notifications.' || e.message === 'Script error.') {
-        const resizeObserverErrDiv = document.getElementById(
-          'webpack-dev-server-client-overlay-div'
-        )
-        const resizeObserverErr = document.getElementById(
-          'webpack-dev-server-client-overlay'
-        )
-        if (resizeObserverErr) {
-          resizeObserverErr.setAttribute('style', 'display: none');
-        }
-        if (resizeObserverErrDiv) {
-          resizeObserverErrDiv.setAttribute('style', 'display: none');
-        }
-      }
-    })
-  }, [selectImage]);
+    // window.addEventListener('error', e => {
+    //   if (e.message === 'ResizeObserver loop completed with undelivered notifications.' || e.message === 'Script error.') {
+    //     const resizeObserverErrDiv = document.getElementById(
+    //       'webpack-dev-server-client-overlay-div'
+    //     )
+    //     const resizeObserverErr = document.getElementById(
+    //       'webpack-dev-server-client-overlay'
+    //     )
+    //     if (resizeObserverErr) {
+    //       resizeObserverErr.setAttribute('style', 'display: none');
+    //     }
+    //     if (resizeObserverErrDiv) {
+    //       resizeObserverErrDiv.setAttribute('style', 'display: none');
+    //     }
+    //   }
+    // })
+  }, [selectImage, imageSize]);
 
   const images = [
     "images/services/photo/photopicture1.jpg",
@@ -335,14 +336,13 @@ const Photopicture = () => {
                       src={selectImage}
                       style={vertical ?{top: currentPicture.locationTop,
                                        left: currentPicture.locationLeft,
-                                       height: imageSize.widthSize,
-                                       border: "2px solid #291995"
-                                       }:
-                                       {top: currentPicture.locationTop,
+                                       height: `${decrese*1.5}%`,
+                                       boxShadow: currentPicture.boxShadow
+                                      }:
+                                      {top: currentPicture.locationTop,
                                         left: currentPicture.locationLeft,  
                                         width: imageSize.widthSize,
-                                        
-                                    
+                                        boxShadow: currentPicture.boxShadow
                                         }}
                       alt="Картина"
                     />
