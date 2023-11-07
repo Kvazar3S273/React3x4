@@ -227,6 +227,9 @@ const Photopicture = () => {
                       ))}
                   </tbody>
                 </table>
+                <h2 className="text-center text-danger">АКЦІЯ!</h2>
+                <h5 className="text-center ">При замовленні більше однієї картини, кожна наступна буде зі знижкою <b>25%</b></h5>
+                <h5 className="text-center mb-4">від вартості, яка вказана в прейскуранті</h5>
               </div>
               <div className="col-md-2"></div>
             </div>
@@ -234,7 +237,7 @@ const Photopicture = () => {
             <div className="row">
               <div className="col-md-1"></div>
               <div className="col-md-10">
-                <h3 className="text-center ">
+                <h3 className="text-center mt-4">
                   Цікаво як виглядатиме картина в інтер'єрі?
                 </h3>
 

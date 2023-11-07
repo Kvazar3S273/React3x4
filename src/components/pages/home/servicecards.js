@@ -3,7 +3,20 @@ import "./index.css";
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
+import { 
+  PhotoPhotopicture
+} from "../../../constants/actions/foto";
+import { 
+  CompVhs
+} from "../../../constants/actions/comp";
+import { useDispatch } from "react-redux";
+
 const ServiceCards = () => {
+
+  const handleClickPhotopicture = () => { dispatch(PhotoPhotopicture()); }
+  const handleClickVhs = () => { dispatch(CompVhs()); }
+  const dispatch = useDispatch();
+
   return (
     //  <div classNameName="container ">
     //   {/* Рядок для темно-сірого блока */}
@@ -105,9 +118,13 @@ const ServiceCards = () => {
                   miniDV <br />
                   на флешку
                 </p>
-                <Link aria-current="page" to="/comp">
-                  <button type="button" class="btn btn-primary">Детальніше...</button>
-                </Link>
+                <HashLink 
+                // aria-current="page" to="/comp"\
+                smooth
+                to="/comp#component"
+                >
+                  <button type="button" class="btn btn-primary" onClick={handleClickVhs}>Детальніше...</button>
+                </HashLink>
               </div>
             </div>
           </div>
@@ -128,9 +145,13 @@ const ServiceCards = () => {
                   Чашки <br />
                   Фотопазли
                 </p>
-                <Link aria-current="page" to="/photo">
-                  <button type="button" class="btn btn-primary">Детальніше...</button>
-                </Link>
+                <HashLink 
+                // aria-current="page" to="/photo"
+                smooth
+                  to="/photo#component"
+                >
+                  <button type="button" class="btn btn-primary" onClick={handleClickPhotopicture}>Детальніше...</button>
+                </HashLink>
               </div>
             </div>
           </div>

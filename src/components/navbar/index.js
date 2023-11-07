@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef  } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from "react-redux";
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Container, Nav, NavDropdown, Dropdown, DropdownButton, ButtonGroup, SplitButton } from 'react-bootstrap';
 import logo from "../../../src/3x4logo.png";
 import "./index.css";
 import { useDispatch } from "react-redux";
@@ -177,6 +177,27 @@ const Header = () => {
                   <h6 onClick={handleClickFotoprint}>Друк фотографій</h6>
                 </HashLink>
               </NavDropdown.Item>
+              
+              {/* {['end'].map(
+          (direction) => (
+            <SplitButton
+              key={direction}
+              id={`dropdown-button-drop-end`}
+              drop={direction}
+              variant="secondary"
+              title={`Фотокниги`}
+            >
+              <Dropdown.Item eventKey="1">BamBook</Dropdown.Item>
+              <Dropdown.Item eventKey="2">SlimBook</Dropdown.Item>
+              <Dropdown.Item eventKey="3">UniBook</Dropdown.Item>
+              <Dropdown.Item eventKey="4">PhotoBook</Dropdown.Item>
+              <Dropdown.Item eventKey="5">PrintBook</Dropdown.Item>
+              <Dropdown.Item eventKey="6">Планшет</Dropdown.Item>
+            </SplitButton>
+          ),
+        )} */}
+
+
               <NavDropdown.Item onClick={() => setNavExpanded(false)}>
                 {/* <Link className="nav-link" aria-current="page" to="/page404" >
                         <h6 style={{color:"#000"}}>Фотокниги</h6>
@@ -189,6 +210,9 @@ const Header = () => {
                   <h6 onClick={handleClickPhotobooks}>Фотокниги</h6>
                 </HashLink>
               </NavDropdown.Item>
+
+
+
               <NavDropdown.Item onClick={() => setNavExpanded(false)}>
                 <HashLink
                   smooth
