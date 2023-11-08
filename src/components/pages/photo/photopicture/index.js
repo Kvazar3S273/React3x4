@@ -296,7 +296,7 @@ const Photopicture = () => {
                             <div className="row justify-content-center">
                               <button
                                 type="button"
-                                class="btn btn-lg btn-outline-success text-dark"
+                                class="btn-pict btn-lg btn-outline-success text-dark"
                                 onClick={() => SetImageSize({widthSize:item.size})}
                               >
                                 {item.title}
