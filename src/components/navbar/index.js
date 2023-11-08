@@ -151,7 +151,7 @@ const Header = () => {
             {/* Фотопослуги */}
 
             <Dropdown as={ButtonGroup}>
-              <Button variant="dark">
+              <Button variant="dark" className="nav-button">
                 <NavDropdown.Item onClick={() => setNavExpanded(false)}>
                   <Link className="nav-link" aria-current="page" to="/photo">
                     <h6>Фотопослуги</h6>
@@ -159,7 +159,7 @@ const Header = () => {
                 </NavDropdown.Item>
               </Button>
 
-              <Dropdown.Toggle split variant="dark" id="dropdown-split-basic" />
+              <Dropdown.Toggle split variant="dark" className="nav-button" id="dropdown-split-basic" />
 
               <Dropdown.Menu>
                 <Dropdown.Item href="#/action-1">
@@ -182,7 +182,53 @@ const Header = () => {
                   </HashLink>
                 </Dropdown.Item>
 
-                <Dropdown.Item href="#/action-3">
+
+                <Dropdown as={ButtonGroup}>
+                <Button variant="dark" className="nav-button">
+                <NavDropdown.Item onClick={() => setNavExpanded(false)}>
+                <HashLink
+                    smooth
+                    to="/photo#component"
+                    style={{ color: "#000" }}
+                  >
+                    <h6 onClick={handleClickPhotobooks}>Фотокниги</h6>
+                  </HashLink>
+                </NavDropdown.Item>
+              </Button>
+
+              <Dropdown.Toggle split variant="dark" className="nav-button" id="dropdown-split-basic" />
+
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">
+                  <HashLink
+                    smooth
+                    to="/photo#component"
+                    style={{ color: "#000" }}
+                  >
+                    <h6 onClick={handleClickFnd}>BamBook</h6>
+                  </HashLink>
+                </Dropdown.Item>
+                <Dropdown.Item href="#/action-2">
+                  <HashLink
+                    smooth
+                    to="/photo#component"
+                    style={{ color: "#000" }}
+                  >
+                    <h6 onClick={handleClickFnd}>SlimBook</h6>
+                  </HashLink>
+                </Dropdown.Item>
+
+                </Dropdown.Menu>
+
+
+
+
+                </Dropdown>
+
+
+
+
+                {/* <Dropdown.Item href="#/action-3">
                   <HashLink
                     smooth
                     to="/photo#component"
@@ -190,7 +236,7 @@ const Header = () => {
                   >
                     <h6 onClick={handleClickPhotobooks}>Фотокниги</h6>
                   </HashLink>
-                </Dropdown.Item>
+                </Dropdown.Item> */}
 
                 <Dropdown.Item href="#/action-4">
                   <HashLink

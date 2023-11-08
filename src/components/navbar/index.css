@@ -8,13 +8,9 @@
 .nav-link:hover, .nav-link:focus {
     color: #dfdfdf;
     background-color: #212529;
-  }
-  .navbar-dark .navbar-nav .nav-link {
+}
+.navbar-dark .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.55);
-    background-color: #212529;
-
-
-
 }
 .dropdown-item {
     display: block;
@@ -28,6 +24,9 @@
     white-space: nowrap;
     background-color: transparent;
     border: 0;
+}
+.dropdown-item:hover {
+  background-color: #212529;
 }
 #navbar {
     position: fixed;
