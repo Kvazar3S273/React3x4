@@ -7,10 +7,13 @@
 }
 .nav-link:hover, .nav-link:focus {
     color: #dfdfdf;
-    background-color: #212529;
+    background-color: #2F353A;
 }
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.55);
+}
+h6:hover {
+  color:#FFFFFF;
 }
 .dropdown-item {
     display: block;
@@ -26,7 +29,7 @@
     border: 0;
 }
 .dropdown-item:hover {
-  background-color: #212529;
+  background-color: #2F353A;
 }
 #navbar {
     position: fixed;
