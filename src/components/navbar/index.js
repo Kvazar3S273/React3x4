@@ -26,6 +26,12 @@ import {
   PhotoFnd,
   PhotoFotoprint,
   PhotoPhotobooks,
+  PhotoPhotobooksUniBook,
+  PhotoPhotobooksSlimBook,
+  PhotoPhotobooksPhotoBook,
+  PhotoPhotobooksPrintBook,
+  PhotoPhotobooksBamBook,
+  PhotoPhotobooksPlanshet,
   PhotoScan,
   PhotoDuplicate,
   PhotoRestoration,
@@ -57,6 +63,16 @@ import {
   PoligraphBaner,
   PoligraphPvc,
   PoligraphOther,
+  PoligraphBuklet,
+  PoligraphPlakat,
+  PoligraphBroshura,
+  PoligraphCalendar3d,
+  PoligraphMenu,
+  PoligraphBloknot,
+  PoligraphCards,
+  PoligraphLeaf,
+  PoligraphKonvert,
+  PoligraphBlank
 } from "../../constants/actions/poligraph";
 
 const Header = () => {
@@ -76,6 +92,24 @@ const Header = () => {
   };
   const handleClickPhotobooks = () => {
     dispatch(PhotoPhotobooks());
+  };
+  const handleClickPhotobookBamBook = () => {
+    dispatch(PhotoPhotobooksBamBook());
+  };
+  const handleClickPhotobookSlimBook = () => {
+    dispatch(PhotoPhotobooksSlimBook());
+  };
+  const handleClickPhotobookUniBook = () => {
+    dispatch(PhotoPhotobooksUniBook());
+  };
+  const handleClickPhotobookPhotoBook = () => {
+    dispatch(PhotoPhotobooksPhotoBook());
+  };
+  const handleClickPhotobookPrintBook = () => {
+    dispatch(PhotoPhotobooksPrintBook());
+  };
+  const handleClickPhotobookPlanshet = () => {
+    dispatch(PhotoPhotobooksPlanshet());
   };
   const handleClickScan = () => {
     dispatch(PhotoScan());
@@ -153,6 +187,36 @@ const Header = () => {
   };
   const handleClickOther = () => {
     dispatch(PoligraphOther());
+  };
+  const handleClickBuklet = () => {
+    dispatch(PoligraphBuklet());
+  };
+  const handleClickPlakat = () => {
+    dispatch(PoligraphPlakat());
+  };
+  const handleClickBroshura = () => {
+    dispatch(PoligraphBroshura());
+  };
+  const handleClickCalendar3d = () => {
+    dispatch(PoligraphCalendar3d());
+  };
+  const handleClickMenu = () => {
+    dispatch(PoligraphMenu());
+  };
+  const handleClickBloknot = () => {
+    dispatch(PoligraphBloknot());
+  };
+  const handleClickCards = () => {
+    dispatch(PoligraphCards());
+  };
+  const handleClickLeaf = () => {
+    dispatch(PoligraphLeaf());
+  };
+  const handleClickKonvert = () => {
+    dispatch(PoligraphKonvert());
+  };
+  const handleClickBlank = () => {
+    dispatch(PoligraphBlank());
   };
 
   const { isAuth, user } = useSelector((redux) => redux.auth);
@@ -243,7 +307,6 @@ const Header = () => {
 
             <Dropdown.Toggle
               split
-              // variant="secondary"
               style={{
                 background: "#2F353A",
                 borderColor: "#494E53",
@@ -392,7 +455,7 @@ const Header = () => {
                       to="/photo#component"
                       style={{ color: "#000" }}
                     >
-                      <h6 onClick={handleClickFnd}>BamBook</h6>
+                      <h6 onClick={handleClickPhotobookBamBook}>BamBook</h6>
                     </HashLink>
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-2">
@@ -401,7 +464,7 @@ const Header = () => {
                       to="/photo#component"
                       style={{ color: "#000" }}
                     >
-                      <h6 onClick={handleClickFnd}>SlimBook</h6>
+                      <h6 onClick={handleClickPhotobookSlimBook}>SlimBook</h6>
                     </HashLink>
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-3">
@@ -410,7 +473,7 @@ const Header = () => {
                       to="/photo#component"
                       style={{ color: "#000" }}
                     >
-                      <h6 onClick={handleClickFnd}>UniBook</h6>
+                      <h6 onClick={handleClickPhotobookUniBook}>UniBook</h6>
                     </HashLink>
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-4">
@@ -419,7 +482,7 @@ const Header = () => {
                       to="/photo#component"
                       style={{ color: "#000" }}
                     >
-                      <h6 onClick={handleClickFnd}>PhotoBook</h6>
+                      <h6 onClick={handleClickPhotobookPhotoBook}>PhotoBook</h6>
                     </HashLink>
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-5">
@@ -428,7 +491,7 @@ const Header = () => {
                       to="/photo#component"
                       style={{ color: "#000" }}
                     >
-                      <h6 onClick={handleClickFnd}>PrintBook</h6>
+                      <h6 onClick={handleClickPhotobookPrintBook}>PrintBook</h6>
                     </HashLink>
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-6">
@@ -437,7 +500,7 @@ const Header = () => {
                       to="/photo#component"
                       style={{ color: "#000" }}
                     >
-                      <h6 onClick={handleClickFnd}>Планшет</h6>
+                      <h6 onClick={handleClickPhotobookPlanshet}>Планшет</h6>
                     </HashLink>
                   </Dropdown.Item>
                 </Dropdown.Menu>
@@ -697,7 +760,7 @@ const Header = () => {
                       to="/poligraph#component"
                       style={{ color: "#000" }}
                     >
-                      <h6 onClick={handleClickOther}>Буклети</h6>
+                      <h6 onClick={handleClickBuklet}>Буклети</h6>
                     </HashLink>
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-2">
@@ -706,7 +769,7 @@ const Header = () => {
                       to="/poligraph#component"
                       style={{ color: "#000" }}
                     >
-                      <h6 onClick={handleClickOther}>Плакати</h6>
+                      <h6 onClick={handleClickPlakat}>Плакати</h6>
                     </HashLink>
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-3">
@@ -715,7 +778,7 @@ const Header = () => {
                       to="/poligraph#component"
                       style={{ color: "#000" }}
                     >
-                      <h6 onClick={handleClickOther}>Брошури</h6>
+                      <h6 onClick={handleClickBroshura}>Брошури</h6>
                     </HashLink>
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-4">
@@ -724,7 +787,7 @@ const Header = () => {
                       to="/poligraph#component"
                       style={{ color: "#000" }}
                     >
-                      <h6 onClick={handleClickOther}>Об'ємні календарі</h6>
+                      <h6 onClick={handleClickCalendar3d}>Об'ємні календарі</h6>
                     </HashLink>
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-5">
@@ -733,7 +796,7 @@ const Header = () => {
                       to="/poligraph#component"
                       style={{ color: "#000" }}
                     >
-                      <h6 onClick={handleClickOther}>Меню</h6>
+                      <h6 onClick={handleClickMenu}>Меню</h6>
                     </HashLink>
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-6">
@@ -742,7 +805,7 @@ const Header = () => {
                       to="/poligraph#component"
                       style={{ color: "#000" }}
                     >
-                      <h6 onClick={handleClickOther}>Блокноти</h6>
+                      <h6 onClick={handleClickBloknot}>Блокноти</h6>
                     </HashLink>
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-7">
@@ -751,7 +814,7 @@ const Header = () => {
                       to="/poligraph#component"
                       style={{ color: "#000" }}
                     >
-                      <h6 onClick={handleClickOther}>Пластикові картки</h6>
+                      <h6 onClick={handleClickCards}>Пластикові картки</h6>
                     </HashLink>
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-8">
@@ -760,7 +823,7 @@ const Header = () => {
                       to="/poligraph#component"
                       style={{ color: "#000" }}
                     >
-                      <h6 onClick={handleClickOther}>Блоки для запису</h6>
+                      <h6 onClick={handleClickLeaf}>Блоки для запису</h6>
                     </HashLink>
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-9">
@@ -769,7 +832,7 @@ const Header = () => {
                       to="/poligraph#component"
                       style={{ color: "#000" }}
                     >
-                      <h6 onClick={handleClickOther}>Конверти</h6>
+                      <h6 onClick={handleClickKonvert}>Конверти</h6>
                     </HashLink>
                   </Dropdown.Item>
                   <Dropdown.Item href="#/action-10">
@@ -778,7 +841,7 @@ const Header = () => {
                       to="/poligraph#component"
                       style={{ color: "#000" }}
                     >
-                      <h6 onClick={handleClickOther}>Бланки</h6>
+                      <h6 onClick={handleClickBlank}>Бланки</h6>
                     </HashLink>
                   </Dropdown.Item>
                 </Dropdown.Menu>

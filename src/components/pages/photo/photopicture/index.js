@@ -228,8 +228,8 @@ const Photopicture = () => {
                   </tbody>
                 </table>
                 <h2 className="text-center text-danger">АКЦІЯ!</h2>
-                <h5 className="text-center ">При замовленні більше однієї картини, кожна наступна буде зі знижкою <b>25%</b></h5>
-                <h5 className="text-center mb-4">від вартості, яка вказана в прейскуранті</h5>
+                <h5 className="text-center ">При замовленні більше однієї картини, кожна наступна картина такого ж або меншого розміру</h5>
+                <h5 className="text-center mb-4"> буде зі знижкою <b>25%</b> від вартості, яка вказана в прейскуранті</h5>
               </div>
               <div className="col-md-2"></div>
             </div>

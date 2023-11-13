@@ -38,7 +38,6 @@ const PhotoPage = () => {
       {isPhotoFnd ? <Fnd /> : ""}
       {isPhotoFotoprint ? <Fotoprint /> : ""}
       {isPhotoPhotobooks ? <Photobooks /> : ""}
-      
       {isPhotoScan ? <ScanPage /> : ""}
       {isPhotoDuplicate ? <Duplicate /> : ""}
       {isPhotoRestoration ? <Restoration /> : ""}

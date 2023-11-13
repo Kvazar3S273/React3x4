@@ -48,7 +48,7 @@ const ServiceCards = () => {
                   Реставрація
                 </p>
                 <Link aria-current="page" to="/photo">
-                  <button type="button" class="btn btn-primary">Детальніше...</button>
+                  <button type="button" class="btn btn-secondary">Детальніше...</button>
                 </Link>
                 
               </div>
@@ -73,7 +73,7 @@ const ServiceCards = () => {
                   Брошурування
                 </p>
                 <Link aria-current="page" to="/comp">
-                  <button type="button" class="btn btn-primary">Детальніше...</button>
+                  <button type="button" class="btn btn-secondary">Детальніше...</button>
                 </Link>
               </div>
             </div>
@@ -96,7 +96,7 @@ const ServiceCards = () => {
                   Широкоформатний друк
                 </p>
                 <Link aria-current="page" to="/poligraph">
-                  <button type="button" class="btn btn-primary">Детальніше...</button>
+                  <button type="button" class="btn btn-secondary">Детальніше...</button>
                 </Link>
               </div>
             </div>
@@ -123,7 +123,7 @@ const ServiceCards = () => {
                 smooth
                 to="/comp#component"
                 >
-                  <button type="button" class="btn btn-primary" onClick={handleClickVhs}>Детальніше...</button>
+                  <button type="button" class="btn btn-secondary" onClick={handleClickVhs}>Детальніше...</button>
                 </HashLink>
               </div>
             </div>
@@ -150,7 +150,7 @@ const ServiceCards = () => {
                 smooth
                   to="/photo#component"
                 >
-                  <button type="button" class="btn btn-primary" onClick={handleClickPhotopicture}>Детальніше...</button>
+                  <button type="button" class="btn btn-secondary" onClick={handleClickPhotopicture}>Детальніше...</button>
                 </HashLink>
               </div>
             </div>
@@ -173,7 +173,7 @@ const ServiceCards = () => {
                   LED-лампи
                 </p>
                 <HashLink smooth to={'/#products'} style={{color:"#000"}}>
-                  <button type="button" class="btn btn-primary">Детальніше...</button>
+                  <button type="button" class="btn btn-secondary">Детальніше...</button>
                 </HashLink>
               </div>
             </div>
