@@ -12,6 +12,8 @@ const Usbflash = () => {
       }, []);
   
   return (
+    <section id="usbflash">
+
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
         <h1 className="text-center">Запис цифрових носіїв</h1>
@@ -53,6 +55,7 @@ const Usbflash = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 export default Usbflash;

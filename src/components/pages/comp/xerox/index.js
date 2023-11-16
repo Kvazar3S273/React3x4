@@ -18,6 +18,8 @@ const Xerox = () => {
   useEffect(() => {dispatch(GetColorPrints());}, []);
 
   return (
+    <section id="xerox">
+
     <div className="row mt-3 mb-3">
       <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
         <h1 className="text-center">Ксерокопії та друк</h1>
@@ -300,6 +302,7 @@ const Xerox = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 export default Xerox;

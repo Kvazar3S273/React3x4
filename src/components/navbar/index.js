@@ -541,49 +541,49 @@ const Header = () => {
 
             <Dropdown.Menu>
               <Dropdown.Item href="#/action-1">
-                <HashLink smooth to="/comp#component" style={{ color: "#000" }}>
+                <HashLink smooth to="/comp#xerox" style={{ color: "#000" }}>
                   <h6 onClick={handleClickXerox}>Ксерокопії</h6>
                 </HashLink>
               </Dropdown.Item>
 
               <Dropdown.Item href="#/action-2">
-                <HashLink smooth to="/comp#component" style={{ color: "#000" }}>
+                <HashLink smooth to="/comp#scaner" style={{ color: "#000" }}>
                   <h6 onClick={handleClickScaner}>Сканування</h6>
                 </HashLink>
               </Dropdown.Item>
 
               <Dropdown.Item href="#/action-4">
-                <HashLink smooth to="/comp#component" style={{ color: "#000" }}>
+                <HashLink smooth to="/comp#laminate" style={{ color: "#000" }}>
                   <h6 onClick={handleClickLaminate}>Ламінування</h6>
                 </HashLink>
               </Dropdown.Item>
 
               <Dropdown.Item href="#/action-5">
-                <HashLink smooth to="/comp#component" style={{ color: "#000" }}>
+                <HashLink smooth to="/comp#binder" style={{ color: "#000" }}>
                   <h6 onClick={handleClickBinder}>Брошурування</h6>
                 </HashLink>
               </Dropdown.Item>
 
               <Dropdown.Item href="#/action-6">
-                <HashLink smooth to="/comp#component" style={{ color: "#000" }}>
+                <HashLink smooth to="/comp#usbflash" style={{ color: "#000" }}>
                   <h6 onClick={handleClickUsbflash}>Запис цифрових носіїв</h6>
                 </HashLink>
               </Dropdown.Item>
 
               <Dropdown.Item href="#/action-7">
-                <HashLink smooth to="/comp#component" style={{ color: "#000" }}>
+                <HashLink smooth to="/comp#vhs" style={{ color: "#000" }}>
                   <h6 onClick={handleClickVhs}>Оцифровка відеокасет</h6>
                 </HashLink>
               </Dropdown.Item>
 
               <Dropdown.Item href="#/action-8">
-                <HashLink smooth to="/comp#component" style={{ color: "#000" }}>
+                <HashLink smooth to="/comp#discprint" style={{ color: "#000" }}>
                   <h6 onClick={handleClickDiscprint}>Друк на дисках</h6>
                 </HashLink>
               </Dropdown.Item>
 
               <Dropdown.Item href="#/action-9">
-                <HashLink smooth to="/comp#component" style={{ color: "#000" }}>
+                <HashLink smooth to="/comp#email" style={{ color: "#000" }}>
                   <h6 onClick={handleClickEmail}>Послуги E-mail</h6>
                 </HashLink>
               </Dropdown.Item>
