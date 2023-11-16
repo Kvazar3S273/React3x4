@@ -1,12 +1,10 @@
 import React from "react";
 import { Zoom } from "react-slideshow-image";
-import { HashLink } from 'react-router-hash-link';
-import { ShowCalculator } from '../calculator';
+import { HashLink } from "react-router-hash-link";
+import { ShowCalculator } from "../calculator";
 import "../../style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCalculator
-} from "@fortawesome/free-solid-svg-icons";
+import { faCalculator } from "@fortawesome/free-solid-svg-icons";
 import { AvailablePhotoBooks } from "../availableBooks";
 import { UpToBooksList } from "../upToBooksList";
 import { MoreServices } from "../moreServices";
@@ -21,19 +19,19 @@ const PhotoBook = () => {
     "images/services/photo/photobooks/PhotoBook/1.jpg",
     "images/services/photo/photobooks/PhotoBook/2.jpg",
     "images/services/photo/photobooks/PhotoBook/3.jpg",
-    "images/services/photo/photobooks/PhotoBook/4.jpg"
+    "images/services/photo/photobooks/PhotoBook/4.jpg",
   ];
   const img_slider2 = [
     "images/services/photo/photobooks/PhotoBook/5.jpg",
-    "images/services/photo/photobooks/PhotoBook/6.jpg"
+    "images/services/photo/photobooks/PhotoBook/6.jpg",
   ];
   const img_slider3 = [
     "images/services/photo/photobooks/PhotoBook/7.jpg",
-    "images/services/photo/photobooks/PhotoBook/8.jpg"
+    "images/services/photo/photobooks/PhotoBook/8.jpg",
   ];
   const img_slider4 = [
     "images/services/photo/photobooks/PhotoBook/9.jpg",
-    "images/services/photo/photobooks/PhotoBook/10.jpg"
+    "images/services/photo/photobooks/PhotoBook/10.jpg",
   ];
   const img_slider6 = [
     "images/services/photo/photobooks/PhotoBook/12.jpg",
@@ -42,13 +40,13 @@ const PhotoBook = () => {
     "images/services/photo/photobooks/PhotoBook/15.jpg",
     "images/services/photo/photobooks/PhotoBook/16.jpg",
     "images/services/photo/photobooks/PhotoBook/17.jpg",
-    "images/services/photo/photobooks/PhotoBook/18.jpg"
+    "images/services/photo/photobooks/PhotoBook/18.jpg",
   ];
   const img_slider7 = [
     "images/services/photo/photobooks/PhotoBook/20.jpg",
     "images/services/photo/photobooks/PhotoBook/21.jpg",
     "images/services/photo/photobooks/PhotoBook/22.jpg",
-    "images/services/photo/photobooks/PhotoBook/23.jpg"
+    "images/services/photo/photobooks/PhotoBook/23.jpg",
   ];
 
   const zoomInProperties = {
@@ -58,7 +56,7 @@ const PhotoBook = () => {
   };
 
   return (
-    <>
+    <section id="photobooks-photobook">
       <div className="row mt-3 mb-3">
         <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
           <h1 className="text-center">Фотокниги PhotoBook</h1>
@@ -80,11 +78,12 @@ const PhotoBook = () => {
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">Про PhotoBook</h3>
               <p>
-                Серія класичних фотокниг photobook з листами, надрукованими фотохімічним 
-                способом на фотопапері Fuji. Добротний і перевірений пластик або ж термокартон, 
-                що використовуються у прошарку між розворотами, додають фотокнизі вагу та 
-                солідність, а демократична ціна та якість — роблять цю класику доступною 
-                для будь-якого фотографа.
+                Серія класичних фотокниг photobook з листами, надрукованими
+                фотохімічним способом на фотопапері Fuji. Добротний і
+                перевірений пластик або ж термокартон, що використовуються у
+                прошарку між розворотами, додають фотокнизі вагу та солідність,
+                а демократична ціна та якість — роблять цю класику доступною для
+                будь-якого фотографа.
               </p>
             </div>
           </div>
@@ -92,68 +91,74 @@ const PhotoBook = () => {
           {/* Папір Fujicolor Crystal Archive LUSTRE */}
           {/* Для широких екранів */}
           <div className="d-none d-md-block">
-          <div className="row m-3 p-2">
-            <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">Папір Fujicolor Crystal Archive LUSTRE</h3>
-              <p>
-                Для друку ваших книг ми використовуємо фотопапір Fujicolor Crystal Archive 
-                і лабораторії Noritsu 34 PRO. Папір LUSTRE використовується за замовчуванням 
-                при друці всіх наших фотокниг. Фотографам старої школи добре відома так
-                звана «тисненка». Фотопапір Lustre (називають «ластер» або «люстра»), 
-                максимально на неї схожий. Папір має специфічний рельєф і характерну 
-                кольоропередачу. В нас на сайті при оформленні замовлення цей папір 
-                називається матовим. 
-              </p>
+            <div className="row m-3 p-2">
+              <div className="col-sm-12 col-md-5 px-3">
+                <h3 className="text-center">
+                  Папір Fujicolor Crystal Archive LUSTRE
+                </h3>
+                <p>
+                  Для друку ваших книг ми використовуємо фотопапір Fujicolor
+                  Crystal Archive і лабораторії Noritsu 34 PRO. Папір LUSTRE
+                  використовується за замовчуванням при друці всіх наших
+                  фотокниг. Фотографам старої школи добре відома так звана
+                  «тисненка». Фотопапір Lustre (називають «ластер» або
+                  «люстра»), максимально на неї схожий. Папір має специфічний
+                  рельєф і характерну кольоропередачу. В нас на сайті при
+                  оформленні замовлення цей папір називається матовим.
+                </p>
+              </div>
+              <div className="col-sm-12 col-md-7">
+                <Zoom {...zoomInProperties}>
+                  {img_slider2.map((each, index) => (
+                    <div key={index} style={{ width: "100%" }}>
+                      <img
+                        style={{ objectFit: "cover", width: "100%" }}
+                        src={each}
+                      />
+                    </div>
+                  ))}
+                </Zoom>
+              </div>
             </div>
-            <div className="col-sm-12 col-md-7">
-              <Zoom {...zoomInProperties}>
-                {img_slider2.map((each, index) => (
-                  <div key={index} style={{ width: "100%" }}>
-                    <img
-                      style={{ objectFit: "cover", width: "100%" }}
-                      src={each}
-                    />
-                  </div>
-                ))}
-              </Zoom>
-            </div>
-          </div>
           </div>
 
-          {/* Для мобільних екранів */}     
+          {/* Для мобільних екранів */}
           <div className="d-block d-md-none">
-          <div className="row m-3 p-2">
-            <div className="col-sm-12 col-md-7">
-              <Zoom {...zoomInProperties}>
-                {img_slider2.map((each, index) => (
-                  <div key={index} style={{ width: "100%" }}>
-                    <img
-                      style={{ objectFit: "cover", width: "100%" }}
-                      src={each}
-                    />
-                  </div>
-                ))}
-              </Zoom>
+            <div className="row m-3 p-2">
+              <div className="col-sm-12 col-md-7">
+                <Zoom {...zoomInProperties}>
+                  {img_slider2.map((each, index) => (
+                    <div key={index} style={{ width: "100%" }}>
+                      <img
+                        style={{ objectFit: "cover", width: "100%" }}
+                        src={each}
+                      />
+                    </div>
+                  ))}
+                </Zoom>
+              </div>
+              <div className="col-sm-12 col-md-5 px-3">
+                <h3 className="text-center">
+                  Папір Fujicolor Crystal Archive LUSTRE
+                </h3>
+                <p>
+                  Для друку ваших книг ми використовуємо фотопапір Fujicolor
+                  Crystal Archive і лабораторії Noritsu 34 PRO. Папір LUSTRE
+                  використовується за замовчуванням при друці всіх наших
+                  фотокниг. Фотографам старої школи добре відома так звана
+                  «тисненка». Фотопапір Lustre (називають «ластер» або
+                  «люстра»), максимально на неї схожий. Папір має специфічний
+                  рельєф і характерну кольоропередачу. В нас на сайті при
+                  оформленні замовлення цей папір називається матовим.
+                </p>
+              </div>
             </div>
-            <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">Папір Fujicolor Crystal Archive LUSTRE</h3>
-              <p>
-                Для друку ваших книг ми використовуємо фотопапір Fujicolor Crystal Archive 
-                і лабораторії Noritsu 34 PRO. Папір LUSTRE використовується за замовчуванням 
-                при друці всіх наших фотокниг. Фотографам старої школи добре відома так
-                звана «тисненка». Фотопапір Lustre (називають «ластер» або «люстра»), 
-                максимально на неї схожий. Папір має специфічний рельєф і характерну 
-                кольоропередачу. В нас на сайті при оформленні замовлення цей папір 
-                називається матовим. 
-              </p>
-            </div>
-          </div>
           </div>
 
           {/* Папір Fujicolor Crystal Archive SILK */}
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-7">
-            <Zoom {...zoomInProperties}>
+              <Zoom {...zoomInProperties}>
                 {img_slider3.map((each, index) => (
                   <div key={index} style={{ width: "100%" }}>
                     <img
@@ -165,13 +170,15 @@ const PhotoBook = () => {
               </Zoom>
             </div>
             <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">Папір Fujicolor Crystal Archive SILK</h3>
+              <h3 className="text-center">
+                Папір Fujicolor Crystal Archive SILK
+              </h3>
               <p>
-                Якщо Вам необхідно ще більше «преміальності» — цей папір по Вашу душу. 
-                Текстурована фактура схожа на шовкову тканину з винятковою, характерною 
-                лише для неї, глибокою передачею кольору. Як і для всього виняткового,
-                в «шовку» є свої обмеження — папір доступний лише для форматів фотокниг
-                23х23 та 30х30. 
+                Якщо Вам необхідно ще більше «преміальності» — цей папір по Вашу
+                душу. Текстурована фактура схожа на шовкову тканину з
+                винятковою, характерною лише для неї, глибокою передачею
+                кольору. Як і для всього виняткового, в «шовку» є свої обмеження
+                — папір доступний лише для форматів фотокниг 23х23 та 30х30.
               </p>
             </div>
           </div>
@@ -179,78 +186,85 @@ const PhotoBook = () => {
           {/* Основа */}
           {/* Для широких екранів */}
           <div className="d-none d-md-block">
-          <div className="row m-3 p-2">
-            <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">Основа</h3>
-              <p>
-                Пластик передбачуваний у виробництві, не деформується в експлуатації 
-                або при зміні температурних режимів. Його товщина і вага додають книзі 
-                «фоліантності» та солідності. Дорожчий, але водночас гарантований по 
-                якості результат.<br/>
-                Також у виробництві ми використовуємо спеціальний термокартон з максимально 
-                покращеними показниками гідрофобності та стійкості до зовнішніх факторів впливу. 
-                Це доступний по ціні наповнювач, який зовнішньо мало чим відрізняється від пластику. 
-              </p>
+            <div className="row m-3 p-2">
+              <div className="col-sm-12 col-md-5 px-3">
+                <h3 className="text-center">Основа</h3>
+                <p>
+                  Пластик передбачуваний у виробництві, не деформується в
+                  експлуатації або при зміні температурних режимів. Його товщина
+                  і вага додають книзі «фоліантності» та солідності. Дорожчий,
+                  але водночас гарантований по якості результат.
+                  <br />
+                  Також у виробництві ми використовуємо спеціальний термокартон
+                  з максимально покращеними показниками гідрофобності та
+                  стійкості до зовнішніх факторів впливу. Це доступний по ціні
+                  наповнювач, який зовнішньо мало чим відрізняється від
+                  пластику.
+                </p>
+              </div>
+              <div className="col-sm-12 col-md-7">
+                <Zoom {...zoomInProperties}>
+                  {img_slider4.map((each, index) => (
+                    <div key={index} style={{ width: "100%" }}>
+                      <img
+                        style={{ objectFit: "cover", width: "100%" }}
+                        src={each}
+                      />
+                    </div>
+                  ))}
+                </Zoom>
+              </div>
             </div>
-            <div className="col-sm-12 col-md-7">
-              <Zoom {...zoomInProperties}>
-                {img_slider4.map((each, index) => (
-                  <div key={index} style={{ width: "100%" }}>
-                    <img
-                      style={{ objectFit: "cover", width: "100%" }}
-                      src={each}
-                    />
-                  </div>
-                ))}
-              </Zoom>
-            </div>
-          </div>
           </div>
 
-          {/* Для мобільних екранів */}     
+          {/* Для мобільних екранів */}
           <div className="d-block d-md-none">
-          <div className="row m-3 p-2">
-            <div className="col-sm-12 col-md-7">
-              <Zoom {...zoomInProperties}>
-                {img_slider4.map((each, index) => (
-                  <div key={index} style={{ width: "100%" }}>
-                    <img
-                      style={{ objectFit: "cover", width: "100%" }}
-                      src={each}
-                    />
-                  </div>
-                ))}
-              </Zoom>
+            <div className="row m-3 p-2">
+              <div className="col-sm-12 col-md-7">
+                <Zoom {...zoomInProperties}>
+                  {img_slider4.map((each, index) => (
+                    <div key={index} style={{ width: "100%" }}>
+                      <img
+                        style={{ objectFit: "cover", width: "100%" }}
+                        src={each}
+                      />
+                    </div>
+                  ))}
+                </Zoom>
+              </div>
+              <div className="col-sm-12 col-md-5 px-3">
+                <h3 className="text-center">Основа</h3>
+                <p>
+                  Пластик передбачуваний у виробництві, не деформується в
+                  експлуатації або при зміні температурних режимів. Його товщина
+                  і вага додають книзі «фоліантності» та солідності. Дорожчий,
+                  але водночас гарантований по якості результат.
+                  <br />
+                  Також у виробництві ми використовуємо спеціальний термокартон
+                  з максимально покращеними показниками гідрофобності та
+                  стійкості до зовнішніх факторів впливу. Це доступний по ціні
+                  наповнювач, який зовнішньо мало чим відрізняється від
+                  пластику.
+                </p>
+              </div>
             </div>
-            <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">Основа</h3>
-              <p>
-                Пластик передбачуваний у виробництві, не деформується в експлуатації 
-                або при зміні температурних режимів. Його товщина і вага додають книзі 
-                «фоліантності» та солідності. Дорожчий, але водночас гарантований по 
-                якості результат.<br/>
-                Також у виробництві ми використовуємо спеціальний термокартон з максимально 
-                покращеними показниками гідрофобності та стійкості до зовнішніх факторів впливу. 
-                Це доступний по ціні наповнювач, який зовнішньо мало чим відрізняється від пластику. 
-              </p>
-            </div>
-          </div>
           </div>
 
           {/* Фотообкладинка */}
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-7">
-            <img
+              <img
                 src="images/services/photo/photobooks/PhotoBook/11.jpg"
                 alt="Фотообкладинка"
-                style={{width:"100%"}}
+                style={{ width: "100%" }}
               />
             </div>
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">Фотообкладинка</h3>
               <p>
-                Базова обкладинка всіх наших фотокниг. Як і в Printbook, 
-                вона тверда, надрукувана цифровим способом і покрита глянцевою ламінацією.
+                Базова обкладинка всіх наших фотокниг. Як і в Printbook, вона
+                тверда, надрукувана цифровим способом і покрита глянцевою
+                ламінацією.
               </p>
             </div>
           </div>
@@ -258,72 +272,72 @@ const PhotoBook = () => {
           {/* Шкірозамінник */}
           {/* Для широких екранів */}
           <div className="d-none d-md-block">
-          <div className="row m-3 p-2">
-            <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">Шкірозамінник</h3>
-              <p>
-                Більше життя, більше кольору! Вибирайте ту, яка підходить під 
-                тональність і настрій Вашої фотокниги. Італійський високоякісний 
-                шкірзам залишить приємні тактильні відчуття, а совість не буде 
-                гризти за невинно вбитих звіряток. 
-              </p>
+            <div className="row m-3 p-2">
+              <div className="col-sm-12 col-md-5 px-3">
+                <h3 className="text-center">Шкірозамінник</h3>
+                <p>
+                  Більше життя, більше кольору! Вибирайте ту, яка підходить під
+                  тональність і настрій Вашої фотокниги. Італійський
+                  високоякісний шкірзам залишить приємні тактильні відчуття, а
+                  совість не буде гризти за невинно вбитих звіряток.
+                </p>
+              </div>
+              <div className="col-sm-12 col-md-7">
+                <Zoom {...zoomInProperties}>
+                  {img_slider6.map((each, index) => (
+                    <div key={index} style={{ width: "100%" }}>
+                      <img
+                        style={{ objectFit: "cover", width: "100%" }}
+                        src={each}
+                      />
+                    </div>
+                  ))}
+                </Zoom>
+              </div>
             </div>
-            <div className="col-sm-12 col-md-7">
-              <Zoom {...zoomInProperties}>
-                {img_slider6.map((each, index) => (
-                  <div key={index} style={{ width: "100%" }}>
-                    <img
-                      style={{ objectFit: "cover", width: "100%" }}
-                      src={each}
-                    />
-                  </div>
-                ))}
-              </Zoom>
-            </div>
-          </div>
           </div>
 
-          {/* Для мобільних екранів */}     
+          {/* Для мобільних екранів */}
           <div className="d-block d-md-none">
-          <div className="row m-3 p-2">
-            <div className="col-sm-12 col-md-7">
-              <Zoom {...zoomInProperties}>
-                {img_slider6.map((each, index) => (
-                  <div key={index} style={{ width: "100%" }}>
-                    <img
-                      style={{ objectFit: "cover", width: "100%" }}
-                      src={each}
-                    />
-                  </div>
-                ))}
-              </Zoom>
+            <div className="row m-3 p-2">
+              <div className="col-sm-12 col-md-7">
+                <Zoom {...zoomInProperties}>
+                  {img_slider6.map((each, index) => (
+                    <div key={index} style={{ width: "100%" }}>
+                      <img
+                        style={{ objectFit: "cover", width: "100%" }}
+                        src={each}
+                      />
+                    </div>
+                  ))}
+                </Zoom>
+              </div>
+              <div className="col-sm-12 col-md-5 px-3">
+                <h3 className="text-center">Шкірозамінник</h3>
+                <p>
+                  Більше життя, більше кольору! Вибирайте ту, яка підходить під
+                  тональність і настрій Вашої фотокниги. Італійський
+                  високоякісний шкірзам залишить приємні тактильні відчуття, а
+                  совість не буде гризти за невинно вбитих звіряток.
+                </p>
+              </div>
             </div>
-            <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">Шкірозамінник</h3>
-              <p>
-                Більше життя, більше кольору! Вибирайте ту, яка підходить під 
-                тональність і настрій Вашої фотокниги. Італійський високоякісний 
-                шкірзам залишить приємні тактильні відчуття, а совість не буде 
-                гризти за невинно вбитих звіряток. 
-              </p>
-            </div>
-          </div>
           </div>
 
           {/* Шкірзам з фотовставкою */}
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-7">
-            <img
+              <img
                 src="images/services/photo/photobooks/PhotoBook/19.jpg"
                 alt="Шкірзам з фотовставкою"
-                style={{width:"100%"}}
+                style={{ width: "100%" }}
               />
             </div>
             <div className="col-sm-12 col-md-5 px-3">
               <h3 className="text-center">Шкірзам з фотовставкою</h3>
               <p>
-                Чудове рішення для того, щоб прикрасити Вашу книгу. Замовляйте 
-                шкірзамобкладинку з фотовставкою із акрилового скла, і Ваша 
+                Чудове рішення для того, щоб прикрасити Вашу книгу. Замовляйте
+                шкірзамобкладинку з фотовставкою із акрилового скла, і Ваша
                 фотокнига стане унікальною та неповторною.
               </p>
             </div>
@@ -332,64 +346,65 @@ const PhotoBook = () => {
           {/* Тканина */}
           {/* Для широких екранів */}
           <div className="d-none d-md-block">
-          <div className="row m-3 p-2">
-            <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">Тканина</h3>
-              <p>
-                Обкладинка зі спеціальної тканини від відомого голландського 
-                виробника палітурних матеріалів. Фотокнига в такій обкладинці
-                виглядає більш «книжно» і злегка нагадує традиційну палітурку,
-                як в старих книгах. Обирайте, яка саме вам до душі: фактурна 
-                серія «Льон», чи яскраві та блискучі кольори обкладинок «Люкс».
-              </p>
+            <div className="row m-3 p-2">
+              <div className="col-sm-12 col-md-5 px-3">
+                <h3 className="text-center">Тканина</h3>
+                <p>
+                  Обкладинка зі спеціальної тканини від відомого голландського
+                  виробника палітурних матеріалів. Фотокнига в такій обкладинці
+                  виглядає більш «книжно» і злегка нагадує традиційну палітурку,
+                  як в старих книгах. Обирайте, яка саме вам до душі: фактурна
+                  серія «Льон», чи яскраві та блискучі кольори обкладинок
+                  «Люкс».
+                </p>
+              </div>
+              <div className="col-sm-12 col-md-7">
+                <Zoom {...zoomInProperties}>
+                  {img_slider7.map((each, index) => (
+                    <div key={index} style={{ width: "100%" }}>
+                      <img
+                        style={{ objectFit: "cover", width: "100%" }}
+                        src={each}
+                      />
+                    </div>
+                  ))}
+                </Zoom>
+              </div>
             </div>
-            <div className="col-sm-12 col-md-7">
-              <Zoom {...zoomInProperties}>
-                {img_slider7.map((each, index) => (
-                  <div key={index} style={{ width: "100%" }}>
-                    <img
-                      style={{ objectFit: "cover", width: "100%" }}
-                      src={each}
-                    />
-                  </div>
-                ))}
-              </Zoom>
-            </div>
-          </div>
           </div>
 
-          {/* Для мобільних екранів */}     
+          {/* Для мобільних екранів */}
           <div className="d-block d-md-none">
-          <div className="row m-3 p-2">
-            <div className="col-sm-12 col-md-7">
-              <Zoom {...zoomInProperties}>
-                {img_slider7.map((each, index) => (
-                  <div key={index} style={{ width: "100%" }}>
-                    <img
-                      style={{ objectFit: "cover", width: "100%" }}
-                      src={each}
-                    />
-                  </div>
-                ))}
-              </Zoom>
-            </div>
-            <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">Тканина</h3>
-              <p>
-                Обкладинка зі спеціальної тканини від відомого голландського 
-                виробника палітурних матеріалів. Фотокнига в такій обкладинці
-                виглядає більш «книжно» і злегка нагадує традиційну палітурку,
-                як в старих книгах. Обирайте, яка саме вам до душі: фактурна 
-                серія «Льон», чи яскраві та блискучі кольори обкладинок «Люкс».
-              </p>
+            <div className="row m-3 p-2">
+              <div className="col-sm-12 col-md-7">
+                <Zoom {...zoomInProperties}>
+                  {img_slider7.map((each, index) => (
+                    <div key={index} style={{ width: "100%" }}>
+                      <img
+                        style={{ objectFit: "cover", width: "100%" }}
+                        src={each}
+                      />
+                    </div>
+                  ))}
+                </Zoom>
+              </div>
+              <div className="col-sm-12 col-md-5 px-3">
+                <h3 className="text-center">Тканина</h3>
+                <p>
+                  Обкладинка зі спеціальної тканини від відомого голландського
+                  виробника палітурних матеріалів. Фотокнига в такій обкладинці
+                  виглядає більш «книжно» і злегка нагадує традиційну палітурку,
+                  як в старих книгах. Обирайте, яка саме вам до душі: фактурна
+                  серія «Льон», чи яскраві та блискучі кольори обкладинок
+                  «Люкс».
+                </p>
+              </div>
             </div>
           </div>
-          </div>
-
         </div>
 
-        <CalculatingPole/>
-        
+        <CalculatingPole />
+
         <div className="row">
           <div className="col-md-1"></div>
           <div className="col-md-10">
@@ -424,9 +439,8 @@ const PhotoBook = () => {
         {MoreServices()}
 
         {UpToBooksList()}
-
       </div>
-    </>
+    </section>
   );
 };
 export default PhotoBook;

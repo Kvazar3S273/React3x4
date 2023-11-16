@@ -320,7 +320,7 @@ const Header = () => {
               <Dropdown.Item href="#/action-1">
                 <HashLink
                   smooth
-                  to="/photo#component"
+                  to="/photo#fnd"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickFnd}>Фото на документи</h6>
@@ -330,7 +330,7 @@ const Header = () => {
               <Dropdown.Item href="#/action-2">
                 <HashLink
                   smooth
-                  to="/photo#component"
+                  to="/photo#printfoto"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickFotoprint}>Друк фотографій</h6>
@@ -340,7 +340,7 @@ const Header = () => {
               <Dropdown.Item href="#/action-4">
                 <HashLink
                   smooth
-                  to="/photo#component"
+                  to="/photo#scan"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickScan}>Сканування фотографій</h6>
@@ -350,7 +350,7 @@ const Header = () => {
               <Dropdown.Item href="#/action-5">
                 <HashLink
                   smooth
-                  to="/photo#component"
+                  to="/photo#duplicate"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickDuplicate}>Дублікати фотографій</h6>
@@ -360,7 +360,7 @@ const Header = () => {
               <Dropdown.Item href="#/action-6">
                 <HashLink
                   smooth
-                  to="/photo#component"
+                  to="/photo#restoration"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickRestoration}>Реставрація</h6>
@@ -370,7 +370,7 @@ const Header = () => {
               <Dropdown.Item href="#/action-7">
                 <HashLink
                   smooth
-                  to="/photo#component"
+                  to="/photo#background"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickBackground}>Заміна фону</h6>
@@ -380,7 +380,7 @@ const Header = () => {
               <Dropdown.Item href="#/action-8">
                 <HashLink
                   smooth
-                  to="/photo#component"
+                  to="/photo#addition"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickAddition}>Об'єднання фотографій</h6>
@@ -390,7 +390,7 @@ const Header = () => {
               <Dropdown.Item href="#/action-9">
                 <HashLink
                   smooth
-                  to="/photo#component"
+                  to="/photo#bottle"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickBottle}>Етикетки на пляшку</h6>
@@ -400,7 +400,7 @@ const Header = () => {
               <Dropdown.Item href="#/action-10">
                 <HashLink
                   smooth
-                  to="/photo#component"
+                  to="/photo#photopicture"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickPhotopicture}>Фотокартини</h6>
@@ -422,7 +422,7 @@ const Header = () => {
                   <NavDropdown.Item onClick={() => setNavExpanded(false)}>
                     <HashLink
                       smooth
-                      to="/photo#component"
+                      to="/photo#photobooks"
                       // style={{ color: "#fff" }}
                     >
                       <h6
@@ -452,7 +452,7 @@ const Header = () => {
                   <Dropdown.Item href="#/action-1">
                     <HashLink
                       smooth
-                      to="/photo#component"
+                      to="/photo#photobooks-bambook"
                       style={{ color: "#000" }}
                     >
                       <h6 onClick={handleClickPhotobookBamBook}>BamBook</h6>
@@ -461,7 +461,7 @@ const Header = () => {
                   <Dropdown.Item href="#/action-2">
                     <HashLink
                       smooth
-                      to="/photo#component"
+                      to="/photo#photobooks-slimbook"
                       style={{ color: "#000" }}
                     >
                       <h6 onClick={handleClickPhotobookSlimBook}>SlimBook</h6>
@@ -470,7 +470,7 @@ const Header = () => {
                   <Dropdown.Item href="#/action-3">
                     <HashLink
                       smooth
-                      to="/photo#component"
+                      to="/photo#photobooks-unibook"
                       style={{ color: "#000" }}
                     >
                       <h6 onClick={handleClickPhotobookUniBook}>UniBook</h6>
@@ -479,7 +479,7 @@ const Header = () => {
                   <Dropdown.Item href="#/action-4">
                     <HashLink
                       smooth
-                      to="/photo#component"
+                      to="/photo#photobooks-photobook"
                       style={{ color: "#000" }}
                     >
                       <h6 onClick={handleClickPhotobookPhotoBook}>PhotoBook</h6>
@@ -488,7 +488,7 @@ const Header = () => {
                   <Dropdown.Item href="#/action-5">
                     <HashLink
                       smooth
-                      to="/photo#component"
+                      to="/photo#photobooks-printbook"
                       style={{ color: "#000" }}
                     >
                       <h6 onClick={handleClickPhotobookPrintBook}>PrintBook</h6>
@@ -497,7 +497,7 @@ const Header = () => {
                   <Dropdown.Item href="#/action-6">
                     <HashLink
                       smooth
-                      to="/photo#component"
+                      to="/photo#photobooks-planshet"
                       style={{ color: "#000" }}
                     >
                       <h6 onClick={handleClickPhotobookPlanshet}>Планшет</h6>

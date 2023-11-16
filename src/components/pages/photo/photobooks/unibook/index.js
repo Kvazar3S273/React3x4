@@ -1,12 +1,10 @@
 import React from "react";
 import { Zoom } from "react-slideshow-image";
-import { HashLink } from 'react-router-hash-link';
-import { ShowCalculator } from '../calculator';
+import { HashLink } from "react-router-hash-link";
+import { ShowCalculator } from "../calculator";
 import "../../style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCalculator
-} from "@fortawesome/free-solid-svg-icons";
+import { faCalculator } from "@fortawesome/free-solid-svg-icons";
 import { AvailableUniBooks } from "../availableBooks";
 import { UpToBooksList } from "../upToBooksList";
 import { MoreServices } from "../moreServices";
@@ -21,7 +19,7 @@ const UniBook = () => {
     "images/services/photo/photobooks/UniBook/5.jpg",
     "images/services/photo/photobooks/UniBook/6.jpg",
     "images/services/photo/photobooks/UniBook/7.jpg",
-    "images/services/photo/photobooks/UniBook/8.jpg"
+    "images/services/photo/photobooks/UniBook/8.jpg",
   ];
 
   const zoomInProperties = {
@@ -31,11 +29,11 @@ const UniBook = () => {
   };
 
   return (
-    <>
+    <section id="photobooks-unibook">
       <div className="row mt-3 mb-3">
         <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
           <h1 className="text-center">Фотокниги UniBook</h1>
-          
+
           {/* HD цифровий друк з імітацією фотопаперу FUJI Lustre для широкого екрану*/}
           <div className="row m-3 p-2">
             <div className="col-sm-12 col-md-7">
@@ -58,57 +56,56 @@ const UniBook = () => {
               </p>
             </div>
           </div>
-          
 
           {/* Товсті сторінки, що збільшують цінність, але не вартість */}
           {/* Для широких екранів */}
           <div className="d-none d-md-block">
-          <div className="row m-3 p-2">
-            <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">
-                Товсті сторінки, що збільшують цінність, але не вартість
-              </h3>
-              <p>
-                Хтось пропонує фотокниги з прошарком, щоб зменшити кількість
-                сторінок і не втратити загальне враження, а хтось підкреслює цим
-                солідність та вартість альбому. UniBook стандартно виготовляють
-                з картонним прошарком, тому він задовольняє потреби обох
-                категорій.
-              </p>
+            <div className="row m-3 p-2">
+              <div className="col-sm-12 col-md-5 px-3">
+                <h3 className="text-center">
+                  Товсті сторінки, що збільшують цінність, але не вартість
+                </h3>
+                <p>
+                  Хтось пропонує фотокниги з прошарком, щоб зменшити кількість
+                  сторінок і не втратити загальне враження, а хтось підкреслює
+                  цим солідність та вартість альбому. UniBook стандартно
+                  виготовляють з картонним прошарком, тому він задовольняє
+                  потреби обох категорій.
+                </p>
+              </div>
+              <div className="col-sm-12 col-md-7">
+                <img
+                  src="images/services/photo/photobooks/UniBook/2.jpg"
+                  alt="Товсті сторінки"
+                  style={{ width: "100%" }}
+                />
+              </div>
             </div>
-            <div className="col-sm-12 col-md-7">
-              <img
-                src="images/services/photo/photobooks/UniBook/2.jpg"
-                alt="Товсті сторінки"
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
           </div>
 
           {/* Для мобільних екранів */}
           <div className="d-block d-md-none">
-          <div className="row m-3 p-2">
-            <div className="col-sm-12 col-md-7">
-              <img
-                src="images/services/photo/photobooks/UniBook/2.jpg"
-                alt="Товсті сторінки"
-                style={{ width: "100%" }}
-              />
+            <div className="row m-3 p-2">
+              <div className="col-sm-12 col-md-7">
+                <img
+                  src="images/services/photo/photobooks/UniBook/2.jpg"
+                  alt="Товсті сторінки"
+                  style={{ width: "100%" }}
+                />
+              </div>
+              <div className="col-sm-12 col-md-5 px-3">
+                <h3 className="text-center">
+                  Товсті сторінки, що збільшують цінність, але не вартість
+                </h3>
+                <p>
+                  Хтось пропонує фотокниги з прошарком, щоб зменшити кількість
+                  сторінок і не втратити загальне враження, а хтось підкреслює
+                  цим солідність та вартість альбому. UniBook стандартно
+                  виготовляють з картонним прошарком, тому він задовольняє
+                  потреби обох категорій.
+                </p>
+              </div>
             </div>
-            <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">
-                Товсті сторінки, що збільшують цінність, але не вартість
-              </h3>
-              <p>
-                Хтось пропонує фотокниги з прошарком, щоб зменшити кількість
-                сторінок і не втратити загальне враження, а хтось підкреслює цим
-                солідність та вартість альбому. UniBook стандартно виготовляють
-                з картонним прошарком, тому він задовольняє потреби обох
-                категорій.
-              </p>
-            </div>
-          </div>
           </div>
 
           {/* Новинка - UniBook Light! Сторінки без прошарку роблять його ще цікавішим. */}
@@ -138,52 +135,51 @@ const UniBook = () => {
           {/* Для широких екранів */}
 
           <div className="d-none d-md-block">
-          <div className="row m-3 p-2">
-            <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">
-                Звісно, це Lay Flat з розворотом на 180°
-              </h3>
-              <p>
-                Ну, а як інакше? Фотокниги з панорамними знімками та знімками на
-                весь розворот просто зобов'язані розкриватись на 180°. Це
-                безкомпромісне рішення, тому так, UniBook — це фотокнига саме з
-                такою будовою блоку.
-              </p>
-            </div>
-            <div className="col-sm-12 col-md-7">
-              <img
-                src="images/services/photo/photobooks/UniBook/4.jpg"
-                alt="Flat"
-                style={{ width: "100%" }}
+            <div className="row m-3 p-2">
+              <div className="col-sm-12 col-md-5 px-3">
+                <h3 className="text-center">
+                  Звісно, це Lay Flat з розворотом на 180°
+                </h3>
+                <p>
+                  Ну, а як інакше? Фотокниги з панорамними знімками та знімками
+                  на весь розворот просто зобов'язані розкриватись на 180°. Це
+                  безкомпромісне рішення, тому так, UniBook — це фотокнига саме
+                  з такою будовою блоку.
+                </p>
+              </div>
+              <div className="col-sm-12 col-md-7">
+                <img
+                  src="images/services/photo/photobooks/UniBook/4.jpg"
+                  alt="Flat"
+                  style={{ width: "100%" }}
                 />
+              </div>
             </div>
-          </div>
-          </div>
-                
-          {/* Для мобільних екранів */}     
-          <div className="d-block d-md-none">
-          <div className="row m-3 p-2">
-            <div className="col-sm-12 col-md-7">
-              <img
-                src="images/services/photo/photobooks/UniBook/4.jpg"
-                alt="Flat"
-                style={{ width: "100%" }}
-                />
-            </div>
-            <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">
-                Звісно, це Lay Flat з розворотом на 180°
-              </h3>
-              <p>
-                Ну, а як інакше? Фотокниги з панорамними знімками та знімками на
-                весь розворот просто зобов'язані розкриватись на 180°. Це
-                безкомпромісне рішення, тому так, UniBook — це фотокнига саме з
-                такою будовою блоку.
-              </p>
-            </div>
-          </div>
           </div>
 
+          {/* Для мобільних екранів */}
+          <div className="d-block d-md-none">
+            <div className="row m-3 p-2">
+              <div className="col-sm-12 col-md-7">
+                <img
+                  src="images/services/photo/photobooks/UniBook/4.jpg"
+                  alt="Flat"
+                  style={{ width: "100%" }}
+                />
+              </div>
+              <div className="col-sm-12 col-md-5 px-3">
+                <h3 className="text-center">
+                  Звісно, це Lay Flat з розворотом на 180°
+                </h3>
+                <p>
+                  Ну, а як інакше? Фотокниги з панорамними знімками та знімками
+                  на весь розворот просто зобов'язані розкриватись на 180°. Це
+                  безкомпромісне рішення, тому так, UniBook — це фотокнига саме
+                  з такою будовою блоку.
+                </p>
+              </div>
+            </div>
+          </div>
 
           {/* Обкладинка */}
           <div className="row m-3 p-2">
@@ -214,7 +210,7 @@ const UniBook = () => {
           </div>
         </div>
 
-        <CalculatingPole/>
+        <CalculatingPole />
 
         <div className="row">
           <div className="col-md-1"></div>
@@ -251,7 +247,7 @@ const UniBook = () => {
 
         {UpToBooksList()}
       </div>
-    </>
+    </section>
   );
 };
 export default UniBook;

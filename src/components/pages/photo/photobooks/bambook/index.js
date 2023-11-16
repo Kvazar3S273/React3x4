@@ -1,15 +1,13 @@
 import React from "react";
 import { Zoom } from "react-slideshow-image";
-import { HashLink } from 'react-router-hash-link';
-import { ShowCalculator } from '../calculator';
+import { HashLink } from "react-router-hash-link";
+import { ShowCalculator } from "../calculator";
 import "../../style.css";
 import ClaimBambook from "./claimBambook";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCalculator
-} from "@fortawesome/free-solid-svg-icons";
+import { faCalculator } from "@fortawesome/free-solid-svg-icons";
 import { AvailableBamBooks } from "../availableBooks";
-import { MoreServices } from "../moreServices"
+import { MoreServices } from "../moreServices";
 import { UpToBooksList } from "../upToBooksList";
 import CalculatingPole from "../calculatingPole";
 const BamBook = () => {
@@ -42,7 +40,7 @@ const BamBook = () => {
   };
 
   return (
-    <>
+    <section id="photobooks-bambook">
       <div className="row mt-3 mb-3">
         <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
           <h1 className="text-center">Фотокниги BamBook</h1>
@@ -80,64 +78,64 @@ const BamBook = () => {
           {/* Основа */}
           {/* Для широких екранів */}
           <div className="d-none d-md-block">
-          <div className="row m-3 p-2">
-            <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">Основа</h3>
-              <p>
-                Основа між розворотами — ідентична фотокнигам slimbook. В
-                bambook не використовуються пластикові чи картонні прошарки між
-                розворотами сторінок, завдяки чому книжковий блок виглядає
-                достатньо цупким та гнучким одночасно. В той самий час,
-                спеціальний склад між сторінками гарантує відсутність деформацій
-                розворотів при правильних умовах зберігання фотокниг. В
-                фотокнигах bambook Ви маєте змогу створювати макети обсягами до
-                40 розворотів.
-              </p>
+            <div className="row m-3 p-2">
+              <div className="col-sm-12 col-md-5 px-3">
+                <h3 className="text-center">Основа</h3>
+                <p>
+                  Основа між розворотами — ідентична фотокнигам slimbook. В
+                  bambook не використовуються пластикові чи картонні прошарки
+                  між розворотами сторінок, завдяки чому книжковий блок виглядає
+                  достатньо цупким та гнучким одночасно. В той самий час,
+                  спеціальний склад між сторінками гарантує відсутність
+                  деформацій розворотів при правильних умовах зберігання
+                  фотокниг. В фотокнигах bambook Ви маєте змогу створювати
+                  макети обсягами до 40 розворотів.
+                </p>
+              </div>
+              <div className="col-sm-12 col-md-7">
+                <Zoom {...zoomInProperties}>
+                  {img_slider2.map((each, index) => (
+                    <div key={index} style={{ width: "100%" }}>
+                      <img
+                        style={{ objectFit: "cover", width: "100%" }}
+                        src={each}
+                      />
+                    </div>
+                  ))}
+                </Zoom>
+              </div>
             </div>
-            <div className="col-sm-12 col-md-7">
-              <Zoom {...zoomInProperties}>
-                {img_slider2.map((each, index) => (
-                  <div key={index} style={{ width: "100%" }}>
-                    <img
-                      style={{ objectFit: "cover", width: "100%" }}
-                      src={each}
-                    />
-                  </div>
-                ))}
-              </Zoom>
-            </div>
-          </div>
           </div>
 
-          {/* Для мобільних екранів */}     
+          {/* Для мобільних екранів */}
           <div className="d-block d-md-none">
-          <div className="row m-3 p-2">
-            <div className="col-sm-12 col-md-7">
-              <Zoom {...zoomInProperties}>
-                {img_slider2.map((each, index) => (
-                  <div key={index} style={{ width: "100%" }}>
-                    <img
-                      style={{ objectFit: "cover", width: "100%" }}
-                      src={each}
-                    />
-                  </div>
-                ))}
-              </Zoom>
+            <div className="row m-3 p-2">
+              <div className="col-sm-12 col-md-7">
+                <Zoom {...zoomInProperties}>
+                  {img_slider2.map((each, index) => (
+                    <div key={index} style={{ width: "100%" }}>
+                      <img
+                        style={{ objectFit: "cover", width: "100%" }}
+                        src={each}
+                      />
+                    </div>
+                  ))}
+                </Zoom>
+              </div>
+              <div className="col-sm-12 col-md-5 px-3">
+                <h3 className="text-center">Основа</h3>
+                <p>
+                  Основа між розворотами — ідентична фотокнигам slimbook. В
+                  bambook не використовуються пластикові чи картонні прошарки
+                  між розворотами сторінок, завдяки чому книжковий блок виглядає
+                  достатньо цупким та гнучким одночасно. В той самий час,
+                  спеціальний склад між сторінками гарантує відсутність
+                  деформацій розворотів при правильних умовах зберігання
+                  фотокниг. В фотокнигах bambook Ви маєте змогу створювати
+                  макети обсягами до 40 розворотів.
+                </p>
+              </div>
             </div>
-            <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">Основа</h3>
-              <p>
-                Основа між розворотами — ідентична фотокнигам slimbook. В
-                bambook не використовуються пластикові чи картонні прошарки між
-                розворотами сторінок, завдяки чому книжковий блок виглядає
-                достатньо цупким та гнучким одночасно. В той самий час,
-                спеціальний склад між сторінками гарантує відсутність деформацій
-                розворотів при правильних умовах зберігання фотокниг. В
-                фотокнигах bambook Ви маєте змогу створювати макети обсягами до
-                40 розворотів.
-              </p>
-            </div>
-          </div>
           </div>
 
           {/* Папір */}
@@ -146,7 +144,7 @@ const BamBook = () => {
               <img
                 src="images/services/photo/photobooks/BamBook/5.jpg"
                 alt="Папір"
-                style={{width:"100%"}}
+                style={{ width: "100%" }}
               />
             </div>
             <div className="col-sm-12 col-md-5 px-3">
@@ -168,66 +166,66 @@ const BamBook = () => {
           {/* Ламінація — Ілюмінація */}
           {/* Для широких екранів */}
           <div className="d-none d-md-block">
-          <div className="row m-3 p-2">
-            <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">Ламінація — Ілюмінація</h3>
-              <p>
-                Це те, що ми називаємо БамБук Ілюмінат. З одного боку, це той
-                самий БамБук, з іншого — абсолютно інша по якості та сприйняттю
-                фотокнига. Багатомісячні експерименти та пошук правильних
-                цифрових матеріалів дозволяють з впевненістю сказати, що це
-                абсолютно новий вид поліграфічної фотокниги. Глянцеве покриття
-                робить кольори насиченими та глибокоми. Блиск — надає
-                презентабельності та розкоші. Виберіть при замовленні Бамбука
-                опцію «ламінація» і переконайтесь на власні очі — це абсолютно
-                нова фотокнига.
-              </p>
+            <div className="row m-3 p-2">
+              <div className="col-sm-12 col-md-5 px-3">
+                <h3 className="text-center">Ламінація — Ілюмінація</h3>
+                <p>
+                  Це те, що ми називаємо БамБук Ілюмінат. З одного боку, це той
+                  самий БамБук, з іншого — абсолютно інша по якості та
+                  сприйняттю фотокнига. Багатомісячні експерименти та пошук
+                  правильних цифрових матеріалів дозволяють з впевненістю
+                  сказати, що це абсолютно новий вид поліграфічної фотокниги.
+                  Глянцеве покриття робить кольори насиченими та глибокоми.
+                  Блиск — надає презентабельності та розкоші. Виберіть при
+                  замовленні Бамбука опцію «ламінація» і переконайтесь на власні
+                  очі — це абсолютно нова фотокнига.
+                </p>
+              </div>
+              <div className="col-sm-12 col-md-7">
+                <Zoom {...zoomInProperties}>
+                  {img_slider4.map((each, index) => (
+                    <div key={index} style={{ width: "100%" }}>
+                      <img
+                        style={{ objectFit: "cover", width: "100%" }}
+                        src={each}
+                      />
+                    </div>
+                  ))}
+                </Zoom>
+              </div>
             </div>
-            <div className="col-sm-12 col-md-7">
-              <Zoom {...zoomInProperties}>
-                {img_slider4.map((each, index) => (
-                  <div key={index} style={{ width: "100%" }}>
-                    <img
-                      style={{ objectFit: "cover", width: "100%" }}
-                      src={each}
-                    />
-                  </div>
-                ))}
-              </Zoom>
-            </div>
-          </div>
           </div>
 
-          {/* Для мобільних екранів */}     
+          {/* Для мобільних екранів */}
           <div className="d-block d-md-none">
-          <div className="row m-3 p-2">
-            <div className="col-sm-12 col-md-7">
-              <Zoom {...zoomInProperties}>
-                {img_slider4.map((each, index) => (
-                  <div key={index} style={{ width: "100%" }}>
-                    <img
-                      style={{ objectFit: "cover", width: "100%" }}
-                      src={each}
-                    />
-                  </div>
-                ))}
-              </Zoom>
+            <div className="row m-3 p-2">
+              <div className="col-sm-12 col-md-7">
+                <Zoom {...zoomInProperties}>
+                  {img_slider4.map((each, index) => (
+                    <div key={index} style={{ width: "100%" }}>
+                      <img
+                        style={{ objectFit: "cover", width: "100%" }}
+                        src={each}
+                      />
+                    </div>
+                  ))}
+                </Zoom>
+              </div>
+              <div className="col-sm-12 col-md-5 px-3">
+                <h3 className="text-center">Ламінація — Ілюмінація</h3>
+                <p>
+                  Це те, що ми називаємо БамБук Ілюмінат. З одного боку, це той
+                  самий БамБук, з іншого — абсолютно інша по якості та
+                  сприйняттю фотокнига. Багатомісячні експерименти та пошук
+                  правильних цифрових матеріалів дозволяють з впевненістю
+                  сказати, що це абсолютно новий вид поліграфічної фотокниги.
+                  Глянцеве покриття робить кольори насиченими та глибокоми.
+                  Блиск — надає презентабельності та розкоші. Виберіть при
+                  замовленні Бамбука опцію «ламінація» і переконайтесь на власні
+                  очі — це абсолютно нова фотокнига.
+                </p>
+              </div>
             </div>
-            <div className="col-sm-12 col-md-5 px-3">
-              <h3 className="text-center">Ламінація — Ілюмінація</h3>
-              <p>
-                Це те, що ми називаємо БамБук Ілюмінат. З одного боку, це той
-                самий БамБук, з іншого — абсолютно інша по якості та сприйняттю
-                фотокнига. Багатомісячні експерименти та пошук правильних
-                цифрових матеріалів дозволяють з впевненістю сказати, що це
-                абсолютно новий вид поліграфічної фотокниги. Глянцеве покриття
-                робить кольори насиченими та глибокоми. Блиск — надає
-                презентабельності та розкоші. Виберіть при замовленні Бамбука
-                опцію «ламінація» і переконайтесь на власні очі — це абсолютно
-                нова фотокнига.
-              </p>
-            </div>
-          </div>
           </div>
 
           {/* Обкладинка */}
@@ -257,10 +255,9 @@ const BamBook = () => {
               </p>
             </div>
           </div>
-          
         </div>
 
-        <CalculatingPole/>
+        <CalculatingPole />
 
         <div className="row">
           <div className="col-md-1"></div>
@@ -296,10 +293,8 @@ const BamBook = () => {
         {MoreServices()}
 
         {UpToBooksList()}
-
-
       </div>
-    </>
+    </section>
   );
 };
 export default BamBook;
