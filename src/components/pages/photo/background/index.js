@@ -3,7 +3,8 @@ import "../style.css";
 
 const Background = () => {
   return (
-    <section id="background">
+    // <section id="background">
+    <section>
       <div className="row mt-3 mb-3">
         <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
           <h1 className="text-center">Заміна фону</h1>

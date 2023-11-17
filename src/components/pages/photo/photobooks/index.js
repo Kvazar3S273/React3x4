@@ -28,13 +28,65 @@ const Photobooks = () => {
 
       <ServicePhotoBookCards />
 
-      {isPhotoPhotobooksUniBook ? <UniBook /> : ""}
-      {isPhotoPhotobooksBamBook ? <BamBook /> : ""}
-      {isPhotoPhotobooksSlimBook ? <SlimBook /> : ""}
-      {isPhotoPhotobooksPrintBook? <PrintBook /> : ""}
-      {isPhotoPhotobooksPhotoBook? <PhotoBook /> : ""}
-      {isPhotoPhotobooksPlanshet? <Planshet /> : ""}
-
+      {isPhotoPhotobooksUniBook ? (
+        <>
+          <section id="photobooks-unibook">
+            <UniBook />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+      
+      {isPhotoPhotobooksBamBook ? (
+        <>
+          <section id="photobooks-bambook">
+            <BamBook />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+      
+      {isPhotoPhotobooksSlimBook ? (
+        <>
+          <section id="photobooks-slibook">
+            <SlimBook />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+      
+      {isPhotoPhotobooksPrintBook ? (
+        <>
+          <section id="photobooks-printbook">
+            <PrintBook />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+      
+      {isPhotoPhotobooksPhotoBook ? (
+        <>
+          <section id="photobooks-photobook">
+            <PhotoBook />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+      
+      {isPhotoPhotobooksPlanshet ? (
+        <>
+          <section id="photobooks-planshet">
+            <Planshet />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
       
     </div>
   );

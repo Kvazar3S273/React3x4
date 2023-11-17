@@ -15,9 +15,8 @@ import Photobooks from "./photobooks";
 import Fotoprint from "./fotoprint";
 
 const PhotoPage = () => {
-
   const {
-    isPhotoFnd, 
+    isPhotoFnd,
     isPhotoFotoprint,
     isPhotoPhotobooks,
     isPhotoScan,
@@ -26,26 +25,114 @@ const PhotoPage = () => {
     isPhotoBackground,
     isPhotoAddition,
     isPhotoBottle,
-    isPhotoPhotopicture
+    isPhotoPhotopicture,
   } = useSelector((state) => state.foto);
 
   return (
     <>
-    
-    <CarouselPhoto />
-    <ServicePhotoCards />
+      <CarouselPhoto />
+      <ServicePhotoCards />
 
-      {isPhotoFnd ? <Fnd /> : ""}
-      {isPhotoFotoprint ? <Fotoprint /> : ""}
-      {isPhotoPhotobooks ? <Photobooks /> : ""}
-      {isPhotoScan ? <ScanPage /> : ""}
-      {isPhotoDuplicate ? <Duplicate /> : ""}
-      {isPhotoRestoration ? <Restoration /> : ""}
-      {isPhotoBackground ? <Background /> : ""}
-      {isPhotoAddition ? <Addition /> : ""}
-      {isPhotoBottle ? <Bottle /> : ""}
-      {isPhotoPhotopicture ? <Photopicture /> : ""}
+      {isPhotoFnd ? (
+        <>
+          <section id="fnd">
+            <Fnd />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
       
+      {isPhotoFotoprint ? (
+        <>
+          <section id="printfoto">
+            <Fotoprint />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+      
+      {isPhotoPhotobooks ? (
+        <>
+          <section id="photobooks">
+            <Photobooks />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+      
+      {isPhotoScan ? (
+        <>
+          <section id="scan">
+            <ScanPage />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+      
+      {isPhotoDuplicate ? (
+        <>
+          <section id="duplicate">
+            <Duplicate />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+      
+      {isPhotoRestoration ? (
+        <>
+          <section id="restoration">
+            <Restoration />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+      
+      {isPhotoBackground ? (
+        <>
+          <section id="background">
+            <Background />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+      
+      {isPhotoAddition ? (
+        <>
+          <section id="addition">
+            <Addition />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+      
+      {isPhotoBottle ? (
+        <>
+          <section id="bottle">
+            <Bottle />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+      
+      {isPhotoPhotopicture ? (
+        <>
+          <section id="photopicture">
+            <Photopicture />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
     </>
   );
 };
