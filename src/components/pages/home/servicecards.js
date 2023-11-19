@@ -121,7 +121,7 @@ const ServiceCards = () => {
                 <HashLink 
                 // aria-current="page" to="/comp"\
                 smooth
-                to="/comp#component"
+                to="/comp#vhs"
                 >
                   <button type="button" class="btn btn-secondary" onClick={handleClickVhs}>Детальніше...</button>
                 </HashLink>

@@ -11,7 +11,7 @@ const Laminate = () => {
   }, []);
 
   return (
-    <section id="laminate">
+    <section>
       <div className="row mt-3 mb-3">
         <div className="col py-3" style={{ backgroundColor: "#e0e3e5" }}>
           <h1 className="text-center">Ламінування документів</h1>

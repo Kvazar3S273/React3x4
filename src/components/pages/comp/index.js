@@ -26,22 +26,99 @@ const CompPage = () => {
 
   return (
     <>
-    <CarouselComp />
-    <ServiceCompCards />
+      <CarouselComp />
+      <ServiceCompCards />
 
-      {isCompXerox ? <Xerox /> : ""}
+      {isCompXerox ? (
+        <>
+          <section id="xerox">
+            <Xerox />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
+      {isCompScan ? (
+        <>
+          <section id="scaner">
+            <Scaner />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
+      {isCompLaminate ? (
+        <>
+          <section id="laminate">
+            <Laminate />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
+      {isCompBinder ? (
+        <>
+          <section id="binder">
+            <Binder />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
+      {isCompUsbflash ? (
+        <>
+          <section id="usbflash">
+            <Usbflash />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
+      {isCompVhs ? (
+        <>
+          <section id="vhs">
+            <Vhs />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
+      {isCompDiscprint ? (
+        <>
+          <section id="discprint">
+            <Discprint />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
+      {isCompEmail ? (
+        <>
+          <section id="email">
+            <Email />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
+      {/* {isCompXerox ? <Xerox /> : ""}
       {isCompScan ? <Scaner /> : ""}
       {isCompLaminate ? <Laminate /> : ""}
       {isCompBinder ? <Binder /> : ""}
       {isCompUsbflash ? <Usbflash /> : ""}
       {isCompVhs ? <Vhs /> : ""}
       {isCompDiscprint ? <Discprint /> : ""}
-      {isCompEmail ? <Email /> : ""}
-      
+      {isCompEmail ? <Email /> : ""} */}
     </>
   );
-
-  
 };
 
-export default CompPage
+export default CompPage;
