@@ -52,7 +52,97 @@ const PoligraphPage = () => {
       <CarouselPoligraph />
       <ServicePoligraphCards />
 
-      {isPoligraphVisitcard ? <Visitcard /> : ""}
+      {isPoligraphVisitcard ? (
+        <>
+          <section id="visitcard">
+            <Visitcard />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
+      {isPoligraphFlyer ? (
+        <>
+          <section id="flyer">
+            <Flyer />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
+      {isPoligraphCalendar ? (
+        <>
+          <section id="calendar">
+            <Calendar />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
+      {isPoligraphTag ? (
+        <>
+          <section id="tag">
+            <Tag />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
+      {isPoligraphSticker ? (
+        <>
+          <section id="sticker">
+            <Sticker />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
+      {isPoligraphHanger ? (
+        <>
+          <section id="hanger">
+            <Hanger />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
+      {isPoligraphOracal ? (
+        <>
+          <section id="oracal">
+            <Oracal />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
+      {isPoligraphBaner ? (
+        <>
+          <section id="baner">
+            <Baner />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
+      {isPoligraphPvc ? (
+        <>
+          <section id="pvc">
+            <Pvc />
+          </section>
+        </>
+      ) : (
+        ""
+      )}
+
+      {/* {isPoligraphVisitcard ? <Visitcard /> : ""}
       {isPoligraphFlyer ? <Flyer /> : ""}
       {isPoligraphCalendar ? <Calendar /> : ""}
       {isPoligraphTag ? <Tag /> : ""}
@@ -60,68 +150,88 @@ const PoligraphPage = () => {
       {isPoligraphHanger ? <Hanger /> : ""}
       {isPoligraphOracal ? <Oracal /> : ""}
       {isPoligraphBaner ? <Baner /> : ""}
-      {isPoligraphPvc ? <Pvc /> : ""}
+      {isPoligraphPvc ? <Pvc /> : ""} */}
 
       {isPoligraphBuklet ? (
         <>
           <section id="other"></section>
           <Buklet />
-        </> 
-        ) : ("")}
+        </>
+      ) : (
+        ""
+      )}
       {isPoligraphPlakat ? (
         <>
           <section id="other"></section>
           <Plakat />
-        </> 
-        ) : ("")}
+        </>
+      ) : (
+        ""
+      )}
       {isPoligraphBroshura ? (
         <>
           <section id="other"></section>
           <Broshura />
-        </> 
-        ) : ("")}
+        </>
+      ) : (
+        ""
+      )}
       {isPoligraphCalendar3d ? (
         <>
           <section id="other"></section>
           <Calendar3d />
-        </> 
-        ) : ("")}
+        </>
+      ) : (
+        ""
+      )}
       {isPoligraphMenu ? (
         <>
           <section id="other"></section>
           <Menu />
-        </> 
-        ) : ("")}
+        </>
+      ) : (
+        ""
+      )}
       {isPoligraphBloknot ? (
         <>
           <section id="other"></section>
           <Bloknot />
-        </> 
-        ) : ("")}
+        </>
+      ) : (
+        ""
+      )}
       {isPoligraphCards ? (
         <>
           <section id="other"></section>
           <Cards />
         </>
-        ) : ("")}
+      ) : (
+        ""
+      )}
       {isPoligraphLeaf ? (
         <>
           <section id="other"></section>
           <Leaf />
         </>
-        ) : ("")}
+      ) : (
+        ""
+      )}
       {isPoligraphKonvert ? (
         <>
           <section id="other"></section>
           <Konvert />
         </>
-        ) : ("")}
+      ) : (
+        ""
+      )}
       {isPoligraphBlank ? (
         <>
           <section id="other"></section>
           <Blank />
         </>
-        ) : ("")}
+      ) : (
+        ""
+      )}
 
       <Claim />
     </>

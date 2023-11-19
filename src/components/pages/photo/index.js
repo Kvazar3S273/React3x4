@@ -31,6 +31,20 @@ const PhotoPage = () => {
   return (
     <>
       <CarouselPhoto />
+      {/* {!isPhotoFnd &&
+        !isPhotoFotoprint &&
+        !isPhotoPhotobooks &&
+        !isPhotoScan &&
+        !isPhotoDuplicate &&
+        !isPhotoRestoration &&
+        !isPhotoBackground &&
+        !isPhotoAddition &&
+        !isPhotoBottle &&
+        !isPhotoPhotopicture && (
+          <>
+            <ServicePhotoCards />
+          </>
+        )} */}
       <ServicePhotoCards />
 
       {isPhotoFnd ? (
@@ -42,7 +56,7 @@ const PhotoPage = () => {
       ) : (
         ""
       )}
-      
+
       {isPhotoFotoprint ? (
         <>
           <section id="printfoto">
@@ -52,7 +66,7 @@ const PhotoPage = () => {
       ) : (
         ""
       )}
-      
+
       {isPhotoPhotobooks ? (
         <>
           <section id="photobooks">
@@ -62,7 +76,7 @@ const PhotoPage = () => {
       ) : (
         ""
       )}
-      
+
       {isPhotoScan ? (
         <>
           <section id="scan">
@@ -72,7 +86,7 @@ const PhotoPage = () => {
       ) : (
         ""
       )}
-      
+
       {isPhotoDuplicate ? (
         <>
           <section id="duplicate">
@@ -82,7 +96,7 @@ const PhotoPage = () => {
       ) : (
         ""
       )}
-      
+
       {isPhotoRestoration ? (
         <>
           <section id="restoration">
@@ -92,7 +106,7 @@ const PhotoPage = () => {
       ) : (
         ""
       )}
-      
+
       {isPhotoBackground ? (
         <>
           <section id="background">
@@ -102,7 +116,7 @@ const PhotoPage = () => {
       ) : (
         ""
       )}
-      
+
       {isPhotoAddition ? (
         <>
           <section id="addition">
@@ -112,7 +126,7 @@ const PhotoPage = () => {
       ) : (
         ""
       )}
-      
+
       {isPhotoBottle ? (
         <>
           <section id="bottle">
@@ -122,7 +136,7 @@ const PhotoPage = () => {
       ) : (
         ""
       )}
-      
+
       {isPhotoPhotopicture ? (
         <>
           <section id="photopicture">
@@ -132,7 +146,6 @@ const PhotoPage = () => {
       ) : (
         ""
       )}
-
     </>
   );
 };

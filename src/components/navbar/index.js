@@ -625,7 +625,7 @@ const Header = () => {
               <Dropdown.Item href="#/action-1">
                 <HashLink
                   smooth
-                  to="/poligraph#component"
+                  to="/poligraph#visitcard"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickVisitcard}>Візитки</h6>
@@ -635,7 +635,7 @@ const Header = () => {
               <Dropdown.Item href="#/action-2">
                 <HashLink
                   smooth
-                  to="/poligraph#component"
+                  to="/poligraph#flyer"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickFlyer}>Листівки, флаєри</h6>
@@ -645,7 +645,7 @@ const Header = () => {
               <Dropdown.Item href="#/action-4">
                 <HashLink
                   smooth
-                  to="/poligraph#component"
+                  to="/poligraph#calendar"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickCalendar}>Календарі</h6>
@@ -655,7 +655,7 @@ const Header = () => {
               <Dropdown.Item href="#/action-5">
                 <HashLink
                   smooth
-                  to="/poligraph#component"
+                  to="/poligraph#tag"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickTag}>Цінники, бірки</h6>
@@ -665,7 +665,7 @@ const Header = () => {
               <Dropdown.Item href="#/action-6">
                 <HashLink
                   smooth
-                  to="/poligraph#component"
+                  to="/poligraph#sticker"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickSticker}>Наклейки</h6>
@@ -675,7 +675,7 @@ const Header = () => {
               <Dropdown.Item href="#/action-7">
                 <HashLink
                   smooth
-                  to="/poligraph#component"
+                  to="/poligraph#hanger"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickHanger}>Хенгери</h6>
@@ -685,7 +685,7 @@ const Header = () => {
               <Dropdown.Item href="#/action-8">
                 <HashLink
                   smooth
-                  to="/poligraph#component"
+                  to="/poligraph#oracal"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickOracal}>Самоклейка плівка</h6>
@@ -695,7 +695,7 @@ const Header = () => {
               <Dropdown.Item href="#/action-9">
                 <HashLink
                   smooth
-                  to="/poligraph#component"
+                  to="/poligraph#baner"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickBaner}>Банер</h6>
@@ -705,14 +705,14 @@ const Header = () => {
               <Dropdown.Item href="#/action-10">
                 <HashLink
                   smooth
-                  to="/poligraph#component"
+                  to="/poligraph#pvc"
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickPvc}>Друк на ПВХ</h6>
                 </HashLink>
               </Dropdown.Item>
 
-              {/* Фотокниги */}
+              {/* Інша поліграфія */}
 
               <Dropdown as={ButtonGroup}>
                 <Button

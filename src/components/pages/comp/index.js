@@ -109,14 +109,6 @@ const CompPage = () => {
         ""
       )}
 
-      {/* {isCompXerox ? <Xerox /> : ""}
-      {isCompScan ? <Scaner /> : ""}
-      {isCompLaminate ? <Laminate /> : ""}
-      {isCompBinder ? <Binder /> : ""}
-      {isCompUsbflash ? <Usbflash /> : ""}
-      {isCompVhs ? <Vhs /> : ""}
-      {isCompDiscprint ? <Discprint /> : ""}
-      {isCompEmail ? <Email /> : ""} */}
     </>
   );
 };
