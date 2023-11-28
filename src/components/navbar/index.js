@@ -317,13 +317,17 @@ const Header = () => {
             />
 
             <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">
+              <Dropdown.Item 
+              // href="#/action-1"
+              >
                 <HashLink smooth to={"/photo#fnd"} style={{ color: "#000" }}>
                   <h6 onClick={handleClickFnd}>Фото на документи</h6>
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-2">
+              <Dropdown.Item 
+              // href="#/action-2"
+              >
                 <HashLink
                   smooth
                   to={"/photo#printfoto"}
@@ -333,13 +337,17 @@ const Header = () => {
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-4">
+              <Dropdown.Item 
+              // href="#/action-4"
+              >
                 <HashLink smooth to={"/photo#scan"} style={{ color: "#000" }}>
                   <h6 onClick={handleClickScan}>Сканування фотографій</h6>
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-5">
+              <Dropdown.Item 
+              // href="#/action-5"
+              >
                 <HashLink
                   smooth
                   to={"/photo#duplicate"}
@@ -349,7 +357,9 @@ const Header = () => {
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-6">
+              <Dropdown.Item 
+              // href="#/action-6"
+              >
                 <HashLink
                   smooth
                   to={"/photo#restoration"}
@@ -359,7 +369,9 @@ const Header = () => {
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-7">
+              <Dropdown.Item 
+              // href="#/action-7"
+              >
                 <HashLink
                   smooth
                   to={"/photo#background"}
@@ -369,7 +381,9 @@ const Header = () => {
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-8">
+              <Dropdown.Item 
+              // href="#/action-8"
+              >
                 <HashLink
                   smooth
                   to={"/photo#addition"}
@@ -379,13 +393,17 @@ const Header = () => {
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-9">
+              <Dropdown.Item 
+              // href="#/action-9"
+              >
                 <HashLink smooth to={"/photo#bottle"} style={{ color: "#000" }}>
                   <h6 onClick={handleClickBottle}>Етикетки на пляшку</h6>
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-10">
+              <Dropdown.Item 
+              // href="#/action-10"
+              >
                 <HashLink
                   smooth
                   to={"/photo#photopicture"}
@@ -437,7 +455,9 @@ const Header = () => {
                 />
 
                 <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-1">
+                  <Dropdown.Item 
+                  // href="#/action-1"
+                  >
                     <HashLink
                       smooth
                       to={"/photo#photobooks-bambook"}
@@ -446,7 +466,9 @@ const Header = () => {
                       <h6 onClick={handleClickPhotobookBamBook}>BamBook</h6>
                     </HashLink>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">
+                  <Dropdown.Item 
+                  // href="#/action-2"
+                  >
                     <HashLink
                       smooth
                       to={"/photo#photobooks-slimbook"}
@@ -455,7 +477,9 @@ const Header = () => {
                       <h6 onClick={handleClickPhotobookSlimBook}>SlimBook</h6>
                     </HashLink>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">
+                  <Dropdown.Item 
+                  // href="#/action-3"
+                  >
                     <HashLink
                       smooth
                       to={"/photo#photobooks-unibook"}
@@ -464,7 +488,9 @@ const Header = () => {
                       <h6 onClick={handleClickPhotobookUniBook}>UniBook</h6>
                     </HashLink>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#/action-4">
+                  <Dropdown.Item 
+                  // href="#/action-4"
+                  >
                     <HashLink
                       smooth
                       to={"/photo#photobooks-photobook"}
@@ -473,7 +499,9 @@ const Header = () => {
                       <h6 onClick={handleClickPhotobookPhotoBook}>PhotoBook</h6>
                     </HashLink>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#/action-5">
+                  <Dropdown.Item 
+                  // href="#/action-5"
+                  >
                     <HashLink
                       smooth
                       to={"/photo#photobooks-printbook"}
@@ -482,7 +510,9 @@ const Header = () => {
                       <h6 onClick={handleClickPhotobookPrintBook}>PrintBook</h6>
                     </HashLink>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#/action-6">
+                  <Dropdown.Item 
+                  // href="#/action-6"
+                  >
                     <HashLink
                       smooth
                       to={"/photo#photobooks-planshet"}
@@ -528,19 +558,25 @@ const Header = () => {
             />
 
             <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">
+              <Dropdown.Item 
+              // href="#/action-1"
+              >
                 <HashLink smooth to={"/comp#xerox"} style={{ color: "#000" }}>
                   <h6 onClick={handleClickXerox}>Ксерокопії</h6>
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-2">
+              <Dropdown.Item 
+              // href="#/action-2"
+              >
                 <HashLink smooth to={"/comp#scaner"} style={{ color: "#000" }}>
                   <h6 onClick={handleClickScaner}>Сканування</h6>
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-4">
+              <Dropdown.Item 
+              // href="#/action-4"
+              >
                 <HashLink
                   smooth
                   to={"/comp#laminate"}
@@ -550,13 +586,17 @@ const Header = () => {
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-5">
+              <Dropdown.Item 
+              // href="#/action-5"
+              >
                 <HashLink smooth to={"/comp#binder"} style={{ color: "#000" }}>
                   <h6 onClick={handleClickBinder}>Брошурування</h6>
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-6">
+              <Dropdown.Item 
+              // href="#/action-6"
+              >
                 <HashLink
                   smooth
                   to={"/comp#usbflash"}
@@ -566,13 +606,17 @@ const Header = () => {
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-7">
+              <Dropdown.Item 
+              // href="#/action-7"
+              >
                 <HashLink smooth to={"/comp#vhs"} style={{ color: "#000" }}>
                   <h6 onClick={handleClickVhs}>Оцифровка відеокасет</h6>
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-8">
+              <Dropdown.Item 
+              // href="#/action-8"
+              >
                 <HashLink
                   smooth
                   to={"/comp#discprint"}
@@ -582,7 +626,9 @@ const Header = () => {
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-9">
+              <Dropdown.Item 
+              // href="#/action-9"
+              >
                 <HashLink smooth to={"/comp#email"} style={{ color: "#000" }}>
                   <h6 onClick={handleClickEmail}>Послуги E-mail</h6>
                 </HashLink>
@@ -622,90 +668,108 @@ const Header = () => {
             />
 
             <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">
+              <Dropdown.Item 
+              // href="#/action-1"
+              >
                 <HashLink
                   smooth
-                  to="/poligraph#visitcard"
+                  to={"/poligraph#visitcard"}
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickVisitcard}>Візитки</h6>
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-2">
+              <Dropdown.Item 
+              // href="#/action-2"
+              >
                 <HashLink
                   smooth
-                  to="/poligraph#flyer"
+                  to={"/poligraph#flyer"}
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickFlyer}>Листівки, флаєри</h6>
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-4">
+              <Dropdown.Item 
+              // href="#/action-4"
+              >
                 <HashLink
                   smooth
-                  to="/poligraph#calendar"
+                  to={"/poligraph#calendar"}
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickCalendar}>Календарі</h6>
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-5">
+              <Dropdown.Item 
+              // href="#/action-5"
+              >
                 <HashLink
                   smooth
-                  to="/poligraph#tag"
+                  to={"/poligraph#tag"}
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickTag}>Цінники, бірки</h6>
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-6">
+              <Dropdown.Item 
+              // href="#/action-6"
+              >
                 <HashLink
                   smooth
-                  to="/poligraph#sticker"
+                  to={"/poligraph#sticker"}
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickSticker}>Наклейки</h6>
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-7">
+              <Dropdown.Item 
+              // href="#/action-7"
+              >
                 <HashLink
                   smooth
-                  to="/poligraph#hanger"
+                  to={"/poligraph#hanger"}
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickHanger}>Хенгери</h6>
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-8">
+              <Dropdown.Item 
+              // href="#/action-8"
+              >
                 <HashLink
                   smooth
-                  to="/poligraph#oracal"
+                  to={"/poligraph#oracal"}
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickOracal}>Самоклейка плівка</h6>
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-9">
+              <Dropdown.Item 
+              // href="#/action-9"
+              >
                 <HashLink
                   smooth
-                  to="/poligraph#baner"
+                  to={"/poligraph#baner"}
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickBaner}>Банер</h6>
                 </HashLink>
               </Dropdown.Item>
 
-              <Dropdown.Item href="#/action-10">
+              <Dropdown.Item 
+              // href="#/action-10"
+              >
                 <HashLink
                   smooth
-                  to="/poligraph#pvc"
+                  to={"/poligraph#pvc"}
                   style={{ color: "#000" }}
                 >
                   <h6 onClick={handleClickPvc}>Друк на ПВХ</h6>
@@ -727,7 +791,7 @@ const Header = () => {
                   <NavDropdown.Item onClick={() => setNavExpanded(false)}>
                     <HashLink
                       smooth
-                      to="/poligraph#component"
+                      to="/poligraph#other"
                       // style={{ color: "#fff" }}
                     >
                       <h6
@@ -754,91 +818,111 @@ const Header = () => {
                 />
 
                 <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-1">
+                  <Dropdown.Item 
+                  // href="#/action-1"
+                  >
                     <HashLink
                       smooth
-                      to="/poligraph#component"
+                      to={"/poligraph#other"}
                       style={{ color: "#000" }}
                     >
                       <h6 onClick={handleClickBuklet}>Буклети</h6>
                     </HashLink>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">
+                  <Dropdown.Item 
+                  // href="#/action-2"
+                  >
                     <HashLink
                       smooth
-                      to="/poligraph#component"
+                      to={"/poligraph#other"}
                       style={{ color: "#000" }}
                     >
                       <h6 onClick={handleClickPlakat}>Плакати</h6>
                     </HashLink>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">
+                  <Dropdown.Item 
+                  // href="#/action-3"
+                  >
                     <HashLink
                       smooth
-                      to="/poligraph#component"
+                      to="/poligraph#other"
                       style={{ color: "#000" }}
                     >
                       <h6 onClick={handleClickBroshura}>Брошури</h6>
                     </HashLink>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#/action-4">
+                  <Dropdown.Item 
+                  // href="#/action-4"
+                  >
                     <HashLink
                       smooth
-                      to="/poligraph#component"
+                      to="/poligraph#other"
                       style={{ color: "#000" }}
                     >
                       <h6 onClick={handleClickCalendar3d}>Об'ємні календарі</h6>
                     </HashLink>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#/action-5">
+                  <Dropdown.Item 
+                  // href="#/action-5"
+                  >
                     <HashLink
                       smooth
-                      to="/poligraph#component"
+                      to="/poligraph#other"
                       style={{ color: "#000" }}
                     >
                       <h6 onClick={handleClickMenu}>Меню</h6>
                     </HashLink>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#/action-6">
+                  <Dropdown.Item 
+                  // href="#/action-6"
+                  >
                     <HashLink
                       smooth
-                      to="/poligraph#component"
+                      to="/poligraph#other"
                       style={{ color: "#000" }}
                     >
                       <h6 onClick={handleClickBloknot}>Блокноти</h6>
                     </HashLink>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#/action-7">
+                  <Dropdown.Item 
+                  // href="#/action-7"
+                  >
                     <HashLink
                       smooth
-                      to="/poligraph#component"
+                      to="/poligraph#other"
                       style={{ color: "#000" }}
                     >
                       <h6 onClick={handleClickCards}>Пластикові картки</h6>
                     </HashLink>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#/action-8">
+                  <Dropdown.Item 
+                  // href="#/action-8"
+                  >
                     <HashLink
                       smooth
-                      to="/poligraph#component"
+                      to="/poligraph#other"
                       style={{ color: "#000" }}
                     >
                       <h6 onClick={handleClickLeaf}>Блоки для запису</h6>
                     </HashLink>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#/action-9">
+                  <Dropdown.Item 
+                  // href="#/action-9"
+                  >
                     <HashLink
                       smooth
-                      to="/poligraph#component"
+                      to="/poligraph#other"
                       style={{ color: "#000" }}
                     >
                       <h6 onClick={handleClickKonvert}>Конверти</h6>
                     </HashLink>
                   </Dropdown.Item>
-                  <Dropdown.Item href="#/action-10">
+                  <Dropdown.Item 
+                  // href="#/action-10"
+                  >
                     <HashLink
                       smooth
-                      to="/poligraph#component"
+                      to="/poligraph#other"
                       style={{ color: "#000" }}
                     >
                       <h6 onClick={handleClickBlank}>Бланки</h6>
