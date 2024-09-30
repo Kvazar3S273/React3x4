@@ -269,7 +269,7 @@ export function AvailableBamBooks() {
 
         <div className="row">
           <div className="col">{Available30x30()}</div>
-          <div className="col">{Available24x32()}</div>
+          {/* <div className="col">{Available24x32()}</div> */}
           <div className="col">{Available20x30()}</div>
           <div className="col">{Available29x19()}</div>
           <div className="col">{Available19x19()}</div>
@@ -292,11 +292,11 @@ export function AvailableSlimBooks() {
         <div className="row">
           <div className="col">{Available30x30()}</div>
           <div className="col">{Available20x30()}</div>
-          <div className="col">{Available18x24()}</div>
+          {/* <div className="col">{Available18x24()}</div> */}
           <div className="col">{Available23x23()}</div>
           <div className="col">{Available29x19()}</div>
           <div className="col">{Available19x19()}</div>
-          <div className="col">{Available15x15()}</div>
+          {/* <div className="col">{Available15x15()}</div> */}
         </div>
         
       </div>
@@ -337,7 +337,7 @@ export function AvailablePrintBooks() {
 
         <div className="row">
           <div className="col">{Available23x23()}</div>
-          <div className="col">{Available24x32()}</div>
+          {/* <div className="col">{Available24x32()}</div> */}
           <div className="col">{Available30x30()}</div>
           <div className="col">{Available20x30()}</div>
           <div className="col">{Available30x20()}</div>
@@ -387,10 +387,10 @@ export function AvailablePlanshets() {
           <div className="col">{AvailablePlanshetTrumo30x20()}</div>
           <div className="col">{AvailablePlanshetTrio20x30()}</div>
           <div className="col">{Available20x30Planshet()}</div>
-          <div className="col">{Available18x24Planshet()}</div>
+          {/* <div className="col">{Available18x24Planshet()}</div>
           <div className="col">{Available29x19Planshet()}</div>
           <div className="col">{Available23x23Planshet()}</div>
-          <div className="col">{Available19x19Planshet()}</div>
+          <div className="col">{Available19x19Planshet()}</div> */}
         </div>
 
       </div>

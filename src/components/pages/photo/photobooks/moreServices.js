@@ -25,8 +25,8 @@ export function MoreServices() {
                   </i>
                 </div>
                 <div className="col-md-9 col-9">
-                  <h4>Розробка макету</h4>
-                  <p>Дизайн макету <br/> 1 сторінки/обкладинки <br/>від 40 грн</p>
+                  <h4>Розробка макету*</h4>
+                  <p>Дизайн макету <br/> 1 сторінки/обкладинки <br/>від 70 грн</p>
                 </div>
               </div>
             </div>
@@ -43,7 +43,7 @@ export function MoreServices() {
                 </div>
                 <div className="col-md-9 col-9">
                   <h4>Термін розробки</h4>
-                  <p>Час розробки <br/>макету фотокниги <br/>від 5 днів</p>
+                  <p>Час розробки <br/>макету фотокниги <br/>від 14 днів</p>
                 </div>
               </div>
             </div>
@@ -82,6 +82,7 @@ export function MoreServices() {
                 </div>
               </div>
             </div>
+            <h5 className="text-center">*Розробка макету випускних альбомів розраховується окремо</h5>
             
           </div>
         </div>
