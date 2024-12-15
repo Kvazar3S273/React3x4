@@ -23,6 +23,7 @@ import ServicePoligraphCards from "./servicePoligraphCards";
 import Sticker from "./sticker";
 import Tag from "./tag";
 import Visitcard from "./visitcard";
+import Attention from "../home/attention";
 
 const PoligraphPage = () => {
   const {
@@ -50,6 +51,7 @@ const PoligraphPage = () => {
   return (
     <>
       <CarouselPoligraph />
+      <Attention />
       <ServicePoligraphCards />
 
       {isPoligraphVisitcard ? (

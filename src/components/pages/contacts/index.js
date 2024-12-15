@@ -92,12 +92,12 @@ const ContactsPage = () => {
                 </div>
                 <div className="col-md-3 col-sm-6 text-center">
                   <h3>
-                    <span className="badge rounded-pill m-3 p-5" style={{ background: "#626262 " }}>
+                    <span className="badge rounded-pill m-3 p-5" style={{ background: "#116C6E " }}>
                       СЕРЕДА<br />
-                      ----------<br />
-                      15:30 - 19:00<br />
-                      ----------<br />
-                      без перерви
+                      ---------- <br />
+                      10:00 - 19:00 <br />
+                      Перерва: <br />
+                      14:00 - 15:00
                     </span>
                   </h3>
                 </div>
@@ -106,12 +106,12 @@ const ContactsPage = () => {
               <div className="row justify-content-center">
                 <div className="col-md-3 col-sm-6 text-center">
                   <h3>
-                  <span className="badge rounded-pill m-3 p-5" style={{ background: "#116C6E" }}>
+                  <span className="badge rounded-pill m-3 p-5" style={{ background: "#626262" }}>
                       ЧЕТВЕР <br />
-                      ---------- <br />
-                      10:00 - 19:00 <br />
-                      Перерва: <br />
-                      14:00 - 15:00
+                      ----------<br />
+                      15:30 - 19:00<br />
+                      ----------<br />
+                      без перерви
                     </span>
                   </h3>
                 </div>

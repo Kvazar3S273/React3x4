@@ -5,11 +5,13 @@ import MakeFancybox from "./MakeFancybox";
 import Products from "./products";
 import Producers from "./producers";
 import { ScrollToTop } from "react-simple-scroll-up";
+import Attention from "./attention";
 
 const HomePage = () => {
   return (
     <>
       <Carousel />
+      <Attention />
       <ServiceCards />
       <MakeFancybox />
       <section id="products">

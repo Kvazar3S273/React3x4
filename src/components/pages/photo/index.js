@@ -13,6 +13,7 @@ import Bottle from "./bottle";
 import Fnd from "./fnd";
 import Photobooks from "./photobooks";
 import Fotoprint from "./fotoprint";
+import Attention from "../home/attention";
 
 const PhotoPage = () => {
   const {
@@ -45,6 +46,7 @@ const PhotoPage = () => {
             <ServicePhotoCards />
           </>
         )} */}
+        <Attention />
       <ServicePhotoCards />
 
       {isPhotoFnd ? (

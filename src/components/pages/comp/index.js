@@ -11,6 +11,7 @@ import Usbflash from "./usbflash";
 import Discprint from "./discprint";
 import Email from "./email";
 import Vhs from "./vhs";
+import Attention from "../home/attention";
 
 const CompPage = () => {
   const {
@@ -27,6 +28,7 @@ const CompPage = () => {
   return (
     <>
       <CarouselComp />
+      <Attention />
       <ServiceCompCards />
 
       {isCompXerox ? (
