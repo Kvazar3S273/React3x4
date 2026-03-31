@@ -26,7 +26,7 @@ export function MoreServices() {
                 </div>
                 <div className="col-md-9 col-9">
                   <h4>Розробка макету*</h4>
-                  <p>Дизайн макету <br/> 1 сторінки/обкладинки <br/>від 70 грн</p>
+                  <p>Дизайн макету <br/> 1 сторінки/обкладинки <br/>від 100 грн</p>
                 </div>
               </div>
             </div>

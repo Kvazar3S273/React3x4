@@ -58,7 +58,12 @@ const ContactsPage = () => {
               <p>
                 Маршрутними таксі:
                 <br />
-                №№ 35, 35а, 39
+                №№ 35, 35а
+              </p>
+              <p>
+                Автобусом:
+                <br />
+                № 6
               </p>
             </div>
           </div>
@@ -81,13 +86,13 @@ const ContactsPage = () => {
                 </div>
                 <div className="col-md-3 col-sm-6 text-center">
                   <h3>
-                    <span className="badge rounded-pill m-3 p-5" style={{ background: "#116C6E" }}>
-                      {/* <span className="badge rounded-pill m-3 p-5" style={{ background: "#626262" }}> */}
+                    {/* <span className="badge rounded-pill m-3 p-5" style={{ background: "#116C6E" }}> */}
+                    <span className="badge rounded-pill m-3 p-5" style={{ background: "#626262" }}> 
                       ВІВТОРОК<br />
                       ----------<br />
-                      10:00 - 19:00<br />
-                      Перерва: <br />
-                      14:00 - 15:00
+                      16:00 - 19:00<br />
+                      <br />
+                      Без перерви
                     </span>
                   </h3>
                 </div>
@@ -107,23 +112,25 @@ const ContactsPage = () => {
               <div className="row justify-content-center">
                 <div className="col-md-3 col-sm-6 text-center">
                   <h3>
-                  <span className="badge rounded-pill m-3 p-5" style={{ background: "#116C6E" }}>
+                  {/* <span className="badge rounded-pill m-3 p-5" style={{ background: "#116C6E" }}> */}
+                    <span className="badge rounded-pill m-3 p-5" style={{ background: "#626262" }}>
                       ЧЕТВЕР <br />
                       ----------<br />
-                      10:00 - 19:00<br />
-                      Перерва: <br />
-                      14:00 - 15:00
+                      16:00 - 19:00<br />
+                      <br />
+                      Без перерви
                     </span>
                   </h3>
                 </div>
                 <div className="col-md-3 col-sm-6 text-center">
                   <h3>
-                  <span className="badge rounded-pill m-3 p-5" style={{ background: "#116C6E " }}>
+                  {/* <span className="badge rounded-pill m-3 p-5" style={{ background: "#116C6E " }}> */}
+                    <span className="badge rounded-pill m-3 p-5" style={{ background: "#626262" }}>
                       П'ЯТНИЦЯ<br />
                       ----------<br />
-                      10:00 - 19:00<br />
-                      Перерва: <br />
-                      14:00 - 15:00
+                     15:00 - 19:00<br />
+                      <br />
+                      Без перерви
                     </span>
                   </h3>
                 </div>
